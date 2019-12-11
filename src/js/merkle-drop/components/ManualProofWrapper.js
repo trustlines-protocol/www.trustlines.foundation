@@ -2,12 +2,15 @@ import React, { useCallback, useState } from "react"
 
 import ManualProof from "./ManualProof"
 
-function ManualProofWrapper({ proof, amount }) {
+function ManualProofWrapper({ proof, amount, requestTermsAndCondition }) {
   const [showProof, setShowProof] = useState(false)
 
-  const handleToggle = useCallback(() => {
-    setShowProof(!showProof)
-  }, [showProof])
+  const handleToggle = useCallback(async () => {
+    const accepted = await requestTermsAndCondition()
+    if (accepted) {
+      setShowProof(!showProof)
+    }
+  }, [requestTermsAndCondition, showProof])
 
   let showProofToggleClassNames = "fas is-clickable fa-2x "
   if (showProof) {

@@ -40,6 +40,16 @@ function ClaimFlow() {
   const [txHash, setTxHash] = useState("")
   const [confirmations, setConfirmations] = useState(0)
   const [errorMessage, setErrorMessage] = useState("")
+  const [onAcceptTermsAndCondition, setOnAcceptTermsAndCondition] = useState(
+    () => () => {}
+  )
+  const [
+    handleDeclineTermsAndCondition,
+    setOnDeclineTermsAndCondition,
+  ] = useState(() => () => {})
+  const [acceptedTermsAndCondition, setAcceptedTermsAndCondition] = useState(
+    false
+  )
   const [
     showTermsAndConditionsModal,
     setShowTermsAndConditionsModal,
@@ -100,7 +110,6 @@ function ClaimFlow() {
   }, [])
 
   const claim = useCallback(() => {
-    closeTermsAndConditionsModal()
     setInternalState(STATE.CLAIM_START)
     requestPermission()
       .then(permission => {
@@ -135,20 +144,40 @@ function ClaimFlow() {
       })
   }, [address, amount, proof, handleSign, handleConfirmation])
 
+  const requestTermsAndConditionsAcceptance = useCallback(() => {
+    return new Promise(resolve => {
+      if (acceptedTermsAndCondition) {
+        resolve(true)
+      } else {
+        // We need a function to return a function, as react treats functions special
+        setOnAcceptTermsAndCondition(() => () => {
+          setShowTermsAndConditionsModal(false)
+          setAcceptedTermsAndCondition(true)
+          resolve(true)
+        })
+        // We need a function to return a function, as react treats functions special
+        setOnDeclineTermsAndCondition(() => () => {
+          setShowTermsAndConditionsModal(false)
+          resolve(false)
+        })
+        setShowTermsAndConditionsModal(true)
+      }
+    })
+  }, [acceptedTermsAndCondition])
+
+  const handelClaimRequest = useCallback(async () => {
+    const acceptedTermsAndCondition = await requestTermsAndConditionsAcceptance()
+    if (acceptedTermsAndCondition) {
+      claim()
+    }
+  }, [claim, requestTermsAndConditionsAcceptance])
+
   const reset = useCallback(() => {
     setConfirmations(0)
     setErrorMessage("")
     setTxHash("")
     setInternalState(STATE.INPUT)
   }, [])
-
-  const openTermsAndConditionsModal = () => {
-    setShowTermsAndConditionsModal(true)
-  }
-
-  const closeTermsAndConditionsModal = () => {
-    setShowTermsAndConditionsModal(false)
-  }
 
   const Headline = () => (
     <div className="has-text-left p-b-lg">
@@ -221,18 +250,22 @@ function ClaimFlow() {
               proof={proof}
               currentAmount={currentAmount}
               originalAmount={amount}
-              onClaim={openTermsAndConditionsModal}
+              onClaim={handelClaimRequest}
               reset={reset}
               chainState={chainState}
             />
             {showTermsAndConditionsModal && (
               <TermsAndConditionsModal
-                onReject={closeTermsAndConditionsModal}
-                onAccept={claim}
+                onReject={handleDeclineTermsAndCondition}
+                onAccept={onAcceptTermsAndCondition}
               />
             )}
           </ColumnsWrapper>
-          <ManualProofWrapper proof={proof} amount={amount} />
+          <ManualProofWrapper
+            proof={proof}
+            amount={amount}
+            requestTermsAndCondition={requestTermsAndConditionsAcceptance}
+          />
         </div>
       )
     case STATE.CLAIM_START:
