@@ -1,6 +1,11 @@
 import React, { useCallback, useState } from "react"
 import * as backend from "./api/backend"
-import {getDefaultAccount, requestPermission, sameAddress, verifyChainId} from "../common/web3"
+import {
+  getDefaultAccount,
+  requestPermission,
+  sameAddress,
+  verifyChainId,
+} from "../common/web3"
 import * as web3 from "./api/web3"
 import AddressInput from "./components/AddressInput"
 import ClaimAmount from "./components/ClaimAmount"
@@ -17,7 +22,7 @@ import ClaimFailed from "./components/ClaimFailed"
 import { useChainState } from "./state/chainState"
 import ColumnsWrapper from "./components/ColumnsWrapper"
 import ManualProofWrapper from "./components/ManualProofWrapper"
-import {useAccount} from "./state/account"
+import { useAccount } from "./state/account"
 
 const STATE = {
   INPUT: "input",
@@ -33,11 +38,11 @@ const STATE = {
 
 function ClaimFlow() {
   const [internalState, setInternalState] = useState(STATE.INPUT)
-  const [address, setAddress] = useState("")
+  const [claimAddress, setClaimAddress] = useState("")
   const [proof, setProof] = useState([])
-  const [currentAmount, setCurrentAmount] = useState("")
-  const [amount, setAmount] = useState("")
-  const account = useAccount()
+  const [currentClaimAmount, setCurrentClaimAmount] = useState("")
+  const [originalClaimAmount, setOriginalClaimAmount] = useState("")
+  const web3Account = useAccount()
   const chainState = useChainState()
   const [txHash, setTxHash] = useState("")
   const [confirmations, setConfirmations] = useState(0)
@@ -80,7 +85,7 @@ function ClaimFlow() {
 
   const submit = useCallback(address => {
     setInternalState(STATE.LOADING)
-    setAddress(address)
+    setClaimAddress(address)
     backend
       .fetchTokenEntitlement(address)
       .then(data => {
@@ -90,57 +95,50 @@ function ClaimFlow() {
         if (currentTokenBalance.toString() === "0") {
           setInternalState(STATE.NO_TOKENS)
         } else {
-          setProof(proof)
-          setCurrentAmount(currentTokenBalance)
-          setAmount(originalTokenBalance)
-          setInternalState(STATE.SHOW_PROOF)
+          showProof(proof, currentTokenBalance, originalTokenBalance)
         }
       })
       .catch(error => {
         console.error(error)
         if (error.code === backend.SERVER_ERROR_CODE) {
-          setErrorMessage(
+          showError(
             "Could not fetch token entitlement. There was an internal server error, please try again later."
           )
         } else {
-          setErrorMessage(
+          showError(
             "Could not fetch token entitlement. The server is unreachable, please check your internet connection."
           )
         }
-        setInternalState(STATE.ERROR)
       })
   }, [])
 
   const claim = useCallback(async () => {
     setInternalState(STATE.CLAIM_START)
-    if (! await requestPermission()) {
-      setErrorMessage(
+    if (!(await requestPermission())) {
+      showError(
         "In order to claim your tokens you have to give this site permission to your wallet."
       )
-      setInternalState(STATE.ERROR)
     }
-    // We can not use the account state variable, since this gets updated
+    // We can not use the web3Account state variable, since this gets updated
     // by an interval and might not be correct at this point in time.
-    else if (!sameAddress(await getDefaultAccount(), address)) {
-      setErrorMessage(
+    else if (!sameAddress(await getDefaultAccount(), claimAddress)) {
+      showError(
         `The selected account in your Web3 enabled browser does not match
                the merkle drop address and you can only claim the tokens for an
                account you control. To claim your tokens,
                please change the account of your Web3
                enabled browser or MetaMask plugin, or try a different address.`
       )
-      setInternalState(STATE.ERROR)
     } else if (!(await verifyChainId(process.env.REACT_APP_CHAIN_ID))) {
-      setErrorMessage(
+      showError(
         `You are connected to the wrong chain. To claim your tokens please connect
         to the ${process.env.REACT_APP_CHAIN_NAME}`
       )
-      setInternalState(STATE.ERROR)
     } else {
       try {
         await web3.claimTokens(
-          address,
-          amount,
+          claimAddress,
+          originalClaimAmount,
           proof,
           handleSign,
           handleConfirmation
@@ -148,19 +146,20 @@ function ClaimFlow() {
       } catch (error) {
         console.error(error)
         if (error.code === web3.TRANSACTION_REVERTED_ERROR_CODE) {
-          setErrorMessage(
-            "Your transaction have been reverted. Did you try to claim your tokens twice?"
+          showError(
+            "Your transaction have been reverted. Did you try to claim your tokens twice?",
+            { state: STATE.TRANSACTION_FAILED }
           )
-          setInternalState(STATE.TRANSACTION_FAILED)
         } else if (error.code === web3.USER_REJECTED_ERROR_CODE) {
           setInternalState(STATE.SHOW_PROOF)
         } else {
-          setErrorMessage("Something went wrong with your transaction.")
-          setInternalState(STATE.TRANSACTION_FAILED)
+          showError("Something went wrong with your transaction.", {
+            state: STATE.TRANSACTION_FAILED,
+          })
         }
       }
     }
-  }, [address, amount, proof, handleSign, handleConfirmation])
+  }, [claimAddress, originalClaimAmount, proof, handleSign, handleConfirmation])
 
   const requestTermsAndConditionsAcceptance = useCallback(() => {
     return new Promise(resolve => {
@@ -183,7 +182,7 @@ function ClaimFlow() {
     })
   }, [acceptedTermsAndCondition])
 
-  const handelClaimRequest = useCallback(async () => {
+  const handleClaimRequest = useCallback(async () => {
     const acceptedTermsAndCondition = await requestTermsAndConditionsAcceptance()
     if (acceptedTermsAndCondition) {
       claim()
@@ -197,11 +196,24 @@ function ClaimFlow() {
     setInternalState(STATE.INPUT)
   }, [])
 
+  const showError = (errorMessage, options = { state: STATE.ERROR }) => {
+    setErrorMessage(errorMessage)
+    setInternalState(options.state)
+  }
+
+  const showProof = (proof, currentClaimAmount, originalClaimAmount) => {
+    setProof(proof)
+    setCurrentClaimAmount(currentClaimAmount)
+    setOriginalClaimAmount(originalClaimAmount)
+    setInternalState(STATE.SHOW_PROOF)
+  }
+
   let wrongAccountSelected = false
 
   // account can be undefined, if website has no permissions yet to read the account
-  if (account) {
-    wrongAccountSelected = !sameAddress(account, address)
+  // In this case, we do not know whether the account is wrong
+  if (web3Account) {
+    wrongAccountSelected = !sameAddress(web3Account, claimAddress)
   }
 
   const Headline = () => (
@@ -245,7 +257,7 @@ function ClaimFlow() {
         <div>
           <Headline />
           <ColumnsWrapper headline={"Check address eligibility"}>
-            <AddressDisplay address={address} />
+            <AddressDisplay address={claimAddress} />
             <div className="box has-text-centered">
               <h6 className="subtitle is-6 has-text-danger has-text-weight-semibold">
                 <span className="icon is-medium has-text-danger">
@@ -268,14 +280,14 @@ function ClaimFlow() {
         <div>
           <Headline />
           <ColumnsWrapper headline={"Check address eligibility"}>
-            <AddressDisplay address={address} />
+            <AddressDisplay address={claimAddress} />
           </ColumnsWrapper>
           <ColumnsWrapper>
             <ClaimAmount
               proof={proof}
-              currentAmount={currentAmount}
-              originalAmount={amount}
-              onClaim={handelClaimRequest}
+              currentAmount={currentClaimAmount}
+              originalAmount={originalClaimAmount}
+              onClaim={handleClaimRequest}
               reset={reset}
               chainState={chainState}
               wrongAccount={wrongAccountSelected}
@@ -289,7 +301,7 @@ function ClaimFlow() {
           </ColumnsWrapper>
           <ManualProofWrapper
             proof={proof}
-            amount={amount}
+            amount={originalClaimAmount}
             requestTermsAndCondition={requestTermsAndConditionsAcceptance}
           />
         </div>

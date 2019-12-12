@@ -59,10 +59,12 @@ export async function verifyChainId(chainId) {
   return (await web3.eth.getChainId()) === parseInt(chainId)
 }
 
+/// Queries the default account. Returns undefined if wallet locked, or if website has no permission to query.
 export async function getDefaultAccount() {
   return (await web3.eth.getAccounts())[0]
 }
 
+/// Compares two hex encoded addresses ignoring the checksum
 export function sameAddress(address1, address2) {
   return address1.toLowerCase() === address2.toLowerCase()
 }

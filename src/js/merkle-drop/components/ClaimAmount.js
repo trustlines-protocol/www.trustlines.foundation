@@ -66,9 +66,9 @@ function ClaimAmount({
             <p className="has-text-left has-text-grey">
               The selected account in your Web3 enabled browser does not match
               the merkle drop address and you can only claim the tokens for an
-              account you control. To claim your tokens,
-              please change the account of your Web3
-              enabled browser or MetaMask plugin, or try a different address.
+              account you control. To claim your tokens, please change the
+              account of your Web3 enabled browser or MetaMask plugin, or try to
+              claim the tokens for a different address.
             </p>
           )}
         </div>
