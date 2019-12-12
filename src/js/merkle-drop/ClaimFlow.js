@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from "react"
 import * as backend from "./api/backend"
-import { requestPermission } from "../common/web3"
+import {getDefaultAccount, requestPermission, sameAddress, verifyChainId} from "../common/web3"
 import * as web3 from "./api/web3"
 import AddressInput from "./components/AddressInput"
 import ClaimAmount from "./components/ClaimAmount"
@@ -17,6 +17,7 @@ import ClaimFailed from "./components/ClaimFailed"
 import { useChainState } from "./state/chainState"
 import ColumnsWrapper from "./components/ColumnsWrapper"
 import ManualProofWrapper from "./components/ManualProofWrapper"
+import {useAccount} from "./state/account"
 
 const STATE = {
   INPUT: "input",
@@ -36,6 +37,7 @@ function ClaimFlow() {
   const [proof, setProof] = useState([])
   const [currentAmount, setCurrentAmount] = useState("")
   const [amount, setAmount] = useState("")
+  const account = useAccount()
   const chainState = useChainState()
   const [txHash, setTxHash] = useState("")
   const [confirmations, setConfirmations] = useState(0)
@@ -109,26 +111,41 @@ function ClaimFlow() {
       })
   }, [])
 
-  const claim = useCallback(() => {
+  const claim = useCallback(async () => {
     setInternalState(STATE.CLAIM_START)
-    requestPermission()
-      .then(permission => {
-        if (!permission) {
-          setErrorMessage(
-            "In order to claim your tokens you have to give this site permission to your wallet."
-          )
-          setInternalState(STATE.ERROR)
-          return
-        }
-        return web3.claimTokens(
+    if (! await requestPermission()) {
+      setErrorMessage(
+        "In order to claim your tokens you have to give this site permission to your wallet."
+      )
+      setInternalState(STATE.ERROR)
+    }
+    // We can not use the account state variable, since this gets updated
+    // by an interval and might not be correct at this point in time.
+    else if (!sameAddress(await getDefaultAccount(), address)) {
+      setErrorMessage(
+        `The selected account in your Web3 enabled browser does not match
+               the merkle drop address and you can only claim the tokens for an
+               account you control. To claim your tokens,
+               please change the account of your Web3
+               enabled browser or MetaMask plugin, or try a different address.`
+      )
+      setInternalState(STATE.ERROR)
+    } else if (!(await verifyChainId(process.env.REACT_APP_CHAIN_ID))) {
+      setErrorMessage(
+        `You are connected to the wrong chain. To claim your tokens please connect
+        to the ${process.env.REACT_APP_CHAIN_NAME}`
+      )
+      setInternalState(STATE.ERROR)
+    } else {
+      try {
+        await web3.claimTokens(
           address,
           amount,
           proof,
           handleSign,
           handleConfirmation
         )
-      })
-      .catch(error => {
+      } catch (error) {
         console.error(error)
         if (error.code === web3.TRANSACTION_REVERTED_ERROR_CODE) {
           setErrorMessage(
@@ -141,7 +158,8 @@ function ClaimFlow() {
           setErrorMessage("Something went wrong with your transaction.")
           setInternalState(STATE.TRANSACTION_FAILED)
         }
-      })
+      }
+    }
   }, [address, amount, proof, handleSign, handleConfirmation])
 
   const requestTermsAndConditionsAcceptance = useCallback(() => {
@@ -178,6 +196,13 @@ function ClaimFlow() {
     setTxHash("")
     setInternalState(STATE.INPUT)
   }, [])
+
+  let wrongAccountSelected = false
+
+  // account can be undefined, if website has no permissions yet to read the account
+  if (account) {
+    wrongAccountSelected = !sameAddress(account, address)
+  }
 
   const Headline = () => (
     <div className="has-text-left p-b-lg">
@@ -253,6 +278,7 @@ function ClaimFlow() {
               onClaim={handelClaimRequest}
               reset={reset}
               chainState={chainState}
+              wrongAccount={wrongAccountSelected}
             />
             {showTermsAndConditionsModal && (
               <TermsAndConditionsModal

@@ -58,3 +58,11 @@ export async function requestPermission() {
 export async function verifyChainId(chainId) {
   return (await web3.eth.getChainId()) === parseInt(chainId)
 }
+
+export async function getDefaultAccount() {
+  return (await web3.eth.getAccounts())[0]
+}
+
+export function sameAddress(address1, address2) {
+  return address1.toLowerCase() === address2.toLowerCase()
+}

@@ -16,9 +16,9 @@ export async function claimTokens(
   )
   try {
     return await contract.methods
-      .withdrawFor(address, value, proof)
+      .withdraw(value, proof)
       .send({
-        from: (await web3.eth.getAccounts())[0],
+        from: address,
       })
       .on("transactionHash", hash => onSign && onSign(hash))
       .on(

@@ -11,14 +11,16 @@ function ClaimAmount({
   onClaim,
   reset,
   chainState,
+  wrongAccount,
 }) {
   const handleClaim = useCallback(() => {
     onClaim(proof, originalAmount)
   }, [onClaim, proof, originalAmount])
 
   const canClaim =
-    chainState === CHAIN_STATE.CONNECTED ||
-    chainState === CHAIN_STATE.CHAIN_UNKNOWN
+    (chainState === CHAIN_STATE.CONNECTED ||
+      chainState === CHAIN_STATE.CHAIN_UNKNOWN) &&
+    !wrongAccount
 
   return (
     <div className="columns is-centered">
@@ -58,6 +60,15 @@ function ClaimAmount({
               We were unable to check the chain you are connected to, please
               make sure you are connected to the&nbsp;
               {process.env.REACT_APP_CHAIN_NAME} before proceeding.
+            </p>
+          )}
+          {wrongAccount && (
+            <p className="has-text-left has-text-grey">
+              The selected account in your Web3 enabled browser does not match
+              the merkle drop address and you can only claim the tokens for an
+              account you control. To claim your tokens,
+              please change the account of your Web3
+              enabled browser or MetaMask plugin, or try a different address.
             </p>
           )}
         </div>
