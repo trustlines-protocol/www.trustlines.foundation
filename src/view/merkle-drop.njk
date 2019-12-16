@@ -7,13 +7,22 @@
 {% endblock %}
 
 {% block content %}
+
+  {% if env.SHOW_MERKLE_DROP === 'true' %}
+    <section class="section content-wrapper">
+        <div id="root" />
+    </section>
+  {% endif %}
+
   <section class="section">
     <div class="container">
       <div class="content">
 
+      {% if env.SHOW_MERKLE_DROP === 'false' %}
         <h1>Trustlines Merkle Drop</h1>
+      {% endif %}
 
-        <p>Transaction fees on the Trustlines Blockchain will be paid in Trustlines Coins (TLC). A Merkle drop on Ethereum will distribute Trustlines Network Tokens (TLN), which can be converted into TLC using a token bridge. The Merkle drop will:</p>
+        <p>The Merkle drop will:</p>
 
         <p>&nbsp;</p>
 
@@ -55,13 +64,6 @@
       </div>
     </div>
   </section>
-
-  {% if env.SHOW_MERKLE_DROP === 'true' %}
-    <section class="section content-wrapper">
-        <div id="root" />
-    </section>
-  {% endif %}
-
   <div class="content">
     <p>&nbsp;</p>
     <p>&nbsp;</p>
