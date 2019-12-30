@@ -7,9 +7,20 @@
 {% endblock %}
 
 {% block content %}
+
+  {% if env.SHOW_MERKLE_DROP === 'true' %}
+    <section class="section content-wrapper">
+      <div id="root"/>
+    </section>
+  {% endif %}
+
   <section class="section">
     <div class="container">
       <div class="content">
+
+        {% if env.SHOW_MERKLE_DROP === 'false' %}
+          <h1>Trustlines Merkle Drop</h1>
+        {% endif %}
 
         <div class="columns">
           <div class="column is-1"></div>
@@ -106,7 +117,7 @@
 
             <h3>2. Why did you choose a Merkle drop?</h3>
             <p>The Trustlines Foundation designed the distribution method based on the idea of
-              <a href="https://medium.com/@DJohnstonEC/the-smartdrop-model-859888916d94" target="_blank">smart drop</a>.</p>
+              <a href="https://medium.com/@DJohnstonEC/the-smartdrop-model-859888916d94" target="_blank">smart drops</a>.</p>
             <p>The Merkle drop is used as a tool to</p>
             <ul>
               <li>Reward early contributors, e.g. validators, testers, and developers</li>
@@ -115,7 +126,7 @@
             </ul>
           </p>
 
-          <h3>3. Can I receive multiple allocations of TLN?</h3>
+          <h3>3. Can someone have multiple allocations of TLN?</h3>
           <p>Yes. There are two ways in which this could happen.</p>
           <ol>
             <li>You happen to control the private key of multiple eligible Ethereum addresses.</li>
@@ -135,8 +146,8 @@
               <a href="https://trustlines.network/" target="_blank">Trustlines Network</a>
               ecosystem. This includes, for example, testers and
               <a href="https://explore.laika.trustlines.foundation/" target="_blank">testnet</a>
-              validators, as well as those who whitelisted their address to become validators, but did not secure a slot in the
-              <a href="auction/">auction</a>
+              validatorsas well as those who whitelisted their address to become validators, but did not secure a slot in the
+              <a href="auction/">auction</a>.
             </li>
             <li>People who were interested in participating in the drop via
               <a href="https://twitter.com/TrustlinesFound/status/1201901024576987137" target="_blank">our community channels</a>
@@ -168,13 +179,13 @@
             <a href="https://etherscan.io/address/0x18BDC736b23Ff7294BED9fa988a1443357C7B0ed" target="_blank">bridge contract</a>
             on Ethereum.</p>
 
-          <h3>8. Is TLN freely transferable/tradeable?</h3>
-          <p>Yes, it’s an ERC20 token on the Ethereum mainchain.</p>
+          <h3>8. Are Trustlines Network Tokens, TLN, freely transferable?</h3>
+          <p>Yes, TLN is an ERC20 token on Ethereum.</p>
 
-          <h3>9. Is TLC freely transferable?</h3>
-          <p>Yes.</p>
+          <h3>9. Are Trustlines Network Coins, TLC, freely transferable?</h3>
+          <p>Yes. You can transfer TLC freely on Trustlines Blockchain.</p>
 
-          <h3>10. When will people actually use the Trustlines Blockchain?</h3>
+          <h3>10. When can people actually use the Trustlines Blockchain?</h3>
           <p>The
             <a href="https://explore.tlbc.trustlines.foundation/" target="_blank">Trustlines Blockchain</a>
             went live November 21st and since then people have been building use cases for the blockchain.</p>
@@ -183,7 +194,7 @@
           <p>The Trustlines Foundation expects that ineligibility of all Ethereum addresses, who have not claimed their tokens, will happen by the end of 2021.</p>
 
           <h3>12. Does the amount I’m able to claim decay at some point?</h3>
-          <p>Yes. The amount of TLN that can be claimed will decay linearly over two years beginning January 2020.</p>
+          <p>Yes. The tokens people are entitled to will begin to decay linearly over two years starting from 31.12.2019 at 23:59 CET.</p>
 
           <h3>13. If I provided an Ethereum address for the Merkle drop or think I’m included in the receiver list, am I being sent TLN automatically?</h3>
           <p>No. You must submit a Merkle proof from an eligible Ethereum address by yourself. Check
@@ -197,7 +208,7 @@
             <a href="https://en.wikipedia.org/wiki/Merkle_tree" target="_blank">Merkle root</a>. People can provide a proof to this contract and withdraw tokens they are entitled to.
             <a href="index.html">The Trustlines Foundation</a>
             has a web service that allows people to either claim their tokens via a web3 integration (e.g. Metamask) or calculate the needed proof. Once the proof has been created and eligibility established, it can be submitted to the
-            <a href="#" target="_blank">Merkle drop smart contract</a>.</p>
+            <a href="https://etherscan.io/address/0x0a6f0c541be542c098b7ee03c9c634f20bcf8422" target="_blank">Merkle drop smart contract</a>.</p>
 
           <h3>15. Do I have to use the Trustlines Foundation’s website to claim TLN?</h3>
           <p>No, you can produce your own proof for the Merkle drop. The logic behind the creation of the Merkle tree is
