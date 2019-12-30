@@ -10,7 +10,8 @@
 
   {% if env.SHOW_MERKLE_DROP === 'true' %}
     <section class="section content-wrapper">
-      <div id="root"/>
+        <div id="root" />
+
     </section>
   {% endif %}
 
@@ -218,17 +219,10 @@
       </div>
 
     </div>
-  </div>
-</section>
-
-{% if env.SHOW_MERKLE_DROP === 'true' %}
-  <section class="section content-wrapper">
-    <div id="root"/>
   </section>
-{% endif %}
-
-<div class="content">
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
-</div>
+  <div class="content">
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+  </div>
+  
 {% endblock %}

@@ -222,7 +222,9 @@ function ClaimFlow() {
       <p className="has-text-justified has-text-grey">
         Using this website, you can check if any of your addresses are eligible
         to withdraw Trustlines Network Tokens (TLN), create the needed Merkle
-        proof or claim your tokens directly via a web3 integration.
+        proofs or claim your tokens directly via a web3 integration. Please note
+        that claiming TLN is subject to these{" "}
+        <a href="terms-conditions-merkle-drop.html">Terms and Conditions</a>.
       </p>
     </div>
   )
