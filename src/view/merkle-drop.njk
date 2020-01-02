@@ -10,7 +10,7 @@
 
   {% if env.SHOW_MERKLE_DROP === 'true' %}
     <section class="section content-wrapper">
-        <div id="root" />
+      <div id="root"/>
 
     </section>
   {% endif %}
@@ -205,7 +205,9 @@
           <h3>14. How does the Merkle drop work?</h3>
           <p>The Merkle drop is a smart contract deployed on the
             <a href="https://ethereum.org/" target="_blank">Ethereum blockchain</a>
-            that contains <a href="https://github.com/trustlines-protocol/merkle-drop-data" target="_blank">a list of addresses</a> and claimable Trustlines Network Tokens per address in the form of a
+            that contains
+            <a href="https://github.com/trustlines-protocol/merkle-drop-data" target="_blank">a list of addresses</a>
+            and claimable Trustlines Network Tokens per address in the form of a
             <a href="https://en.wikipedia.org/wiki/Merkle_tree" target="_blank">Merkle root</a>. People can provide a proof to this contract and withdraw tokens they are entitled to.
             <a href="index.html">The Trustlines Foundation</a>
             has a web service that allows people to either claim their tokens via a web3 integration (e.g. Metamask) or calculate the needed proof. Once the proof has been created and eligibility established, it can be submitted to the
@@ -224,5 +226,5 @@
     <p>&nbsp;</p>
     <p>&nbsp;</p>
   </div>
-  
+
 {% endblock %}
