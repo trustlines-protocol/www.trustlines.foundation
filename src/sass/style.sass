@@ -1,7 +1,7 @@
 @charset "utf-8"
 
 // trustlines fonts
-@import url('https://fonts.googleapis.com/css?family=Gothic+A1:400,900&display=swap')
+@import url("https://fonts.googleapis.com/css?family=Gothic+A1:400,900&display=swap")
 
 // trustlines brand colors
 $tl-blue: #1E8CC3
@@ -16,7 +16,7 @@ $tl-grey-dark: #323232
 
 $tl-background-gradient: linear-gradient(41deg, rgba(185, 230, 250, 0.25) 0%, rgba(135, 75, 160, 0.2) 100%)
 $tl-background-gradient-dark: linear-gradient(22.58deg, #195A87 0%, #874BA0 100%)
-$tl-background-gradient-light: linear-gradient(34.79deg, rgba(185,230,250,0.5) 0%, rgba(135,75,160,0.2) 100%)
+$tl-background-gradient-light: linear-gradient(34.79deg, rgba(185, 230, 250, 0.5) 0%, rgba(135, 75, 160, 0.2) 100%)
 
 // override global bulma variables
 $fullhd-enabled: false
@@ -24,8 +24,8 @@ $fullhd-enabled: false
 $grey: $tl-grey
 $primary: $tl-blue
 $info: $tl-blue-light
-$family-primary: 'Gothic A1'
-$family-secondary: 'Gothic A1'
+$family-primary: "Gothic A1"
+$family-secondary: "Gothic A1"
 $footer-background-color: $tl-blue-very-dark
 
 $navbar-height: 3.5rem
@@ -44,7 +44,7 @@ $input-focus-box-shadow-color: $tl-blue-light
 $input-focus-box-shadow-size: 0px 0px 2px 2px
 $input-background-color: transparent
 $divider-color: $tl-blue-light
-$divider-thickness: .1rem
+$divider-thickness: 0.1rem
 $divider-background-color: $tl-blue-light
 $box-background-color: $tl-blue-light
 $title-color: $tl-blue-light
@@ -52,6 +52,7 @@ $subtitle-color: $tl-blue
 $modal-card-head-background-color: $tl-blue-white
 $modal-card-title-size: 1.25rem
 $modal-card-title-color: $tl-blue-dark
+
 // $modal-card-foot-radius: 0px
 
 // custom classes or extensions
@@ -61,7 +62,7 @@ $modal-card-title-color: $tl-blue-dark
       color: $tl-blue-light
 
 .is-background-gradient-dark
-  background-image: $tl-background-gradient-dark // gradients are not a background-color, bulma has no variable for this
+  background-image: $tl-background-gradient-dark
 
 .is-background-gradient-light
   background-image: $tl-background-gradient-light
@@ -100,11 +101,15 @@ body
   display: inline-block
   visibility: hidden
 
-@import "../../node_modules/bulma/bulma.sass"
-@import "../../node_modules/bulma-divider/dist/css/bulma-divider"
-@import "../../node_modules/@creativebulma/bulma-collapsible/src/sass/index.sass"
+@import ../../node_modules/bulma/bulma.sass
+@import ../../node_modules/bulma-divider/dist/css/bulma-divider
+@import ../../node_modules/@creativebulma/bulma-collapsible/src/sass/index.sass
 @import include/spacing
 @import include/content
 @import include/navigation
 @import include/footer
 @import include/spinner
+
+.mdt object
+  height: 24.5em
+  box-shadow: 2px 2px 15px #323232
