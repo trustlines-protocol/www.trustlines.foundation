@@ -3,7 +3,7 @@
 
 {% block bodyScripts %}
   {{ super() }}
-  <script src="/js/{{ env.npm_package_version | urlencode }}/merkle-drop.js"></script>
+  <script src="js/{{ env.npm_package_version | urlencode }}/merkle-drop.js"></script>
 {% endblock %}
 
 {% block content %}
@@ -17,8 +17,7 @@
 
   <div class="columns">
     <div class="column is-1"></div>
-    <div class="column is-10 mdt">
-      <hr/>
+    <div class="column is-10 mdt content">
       <center>
         <object width="695" height="515" data="https://www.youtube-nocookie.com/embed/bHLYpZstZKs"></object>
       </center>
