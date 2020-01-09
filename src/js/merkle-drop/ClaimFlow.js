@@ -14,7 +14,6 @@ import ClaimWait from "./components/ClaimWait"
 import RetryButton from "./components/RetryButton"
 import AddressDisplay from "./components/AddressDisplay"
 import ClaimStart from "./components/ClaimStart"
-import IntroParagraph from "./components/IntroParagraph"
 import Error from "./components/Error"
 import TermsAndConditionsModal from "./components/TermsAndConditionsModal"
 import WaitCard from "./components/WaitCard"
@@ -237,7 +236,6 @@ function ClaimFlow() {
           <ColumnsWrapper headline={"Check address eligibility"}>
             <AddressInput onSubmit={submit} chainState={chainState} autoFocus />
           </ColumnsWrapper>
-          <IntroParagraph />
         </div>
       )
     case STATE.LOADING:
@@ -251,7 +249,6 @@ function ClaimFlow() {
               This process may take up a few seconds.
             </WaitCard>
           </ColumnsWrapper>
-          <IntroParagraph />
         </div>
       )
     case STATE.NO_TOKENS:
@@ -274,7 +271,6 @@ function ClaimFlow() {
               </div>
             </div>
           </ColumnsWrapper>
-          <IntroParagraph />
         </div>
       )
     case STATE.SHOW_PROOF:
