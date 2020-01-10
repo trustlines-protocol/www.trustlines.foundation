@@ -3,7 +3,7 @@
 
 {% block bodyScripts %}
   {{ super() }}
-  <script src="/js/{{ env.npm_package_version | urlencode }}/merkle-drop.js"></script>
+  <script src="js/{{ env.npm_package_version | urlencode }}/merkle-drop.js"></script>
 {% endblock %}
 
 {% block content %}
@@ -15,6 +15,15 @@
     </section>
   {% endif %}
 
+  <div class="columns">
+    <div class="column is-1"></div>
+    <div class="column is-10 mdt content">
+      <center>
+        <object width="695" height="515" data="https://www.youtube-nocookie.com/embed/bHLYpZstZKs"></object>
+      </center>
+    </div>
+  </div>
+
   <section class="section">
     <div class="container">
       <div class="content">
@@ -22,15 +31,6 @@
         {% if env.SHOW_MERKLE_DROP === 'false' %}
           <h1>Trustlines Merkle Drop</h1>
         {% endif %}
-
-        <div class="columns">
-          <div class="column is-1"></div>
-          <div class="column is-10">
-            <h1>Trustlines Merkle drop</h1>
-            <hr/>
-            <p>Transaction fees on the Trustlines Blockchain will be paid in Trustlines Coins (TLC). A Merkle drop on Ethereum will distribute Trustlines Network Tokens (TLN), which can be converted into TLC using a token bridge.</p>
-          </div>
-        </div>
 
         <div class="columns">
           <div class="column is-1"></div>
@@ -48,62 +48,6 @@
               will have to provide a Merkle proof to this contract which shows that they are entitled to TLN.</p>
             <p>Trustlines Foundation aims to distribute up to 70% of TLN of which 50% will be allocated in the first Merkle drop. More details will be communicated once the final Merkle drop list has been created.</p>
             <p>The tokens won’t be pushed onto accounts, but will instead have to be claimed from the Merkle drop smart contract.</p>
-          </div>
-        </div>
-
-        <div class="columns">
-          <div class="column is-1"></div>
-          <div class="column is-10">
-            <h2>The Merkle drop will</h2>
-          </div>
-        </div>
-
-        <div class="columns">
-          <div class="column is-1"></div>
-          <div class="column is-1 has-text-centered">
-            <img src="/img/icon-reward.svg">
-          </div>
-          <div class="column is-7">
-            Reward
-            <strong>early contributors</strong>, e.g. validators, testers, developers and others.
-            <hr/>
-          </div>
-        </div>
-
-        <div class="columns">
-          <div class="column is-1"></div>
-          <div class="column is-1 has-text-centered">
-            <img src="/img/icon-target.svg">
-          </div>
-          <div class="column is-7">
-            Target
-            <strong>potential stakeholders</strong>
-            of the Trustlines Network, e.g. individuals/ projects aligned with the mission of Trustlines, who may turn into users of the Trustlines technology stack.
-            <hr/>
-          </div>
-        </div>
-
-        <div class="columns">
-          <div class="column is-1"></div>
-          <div class="column is-1 has-text-centered">
-            <img src="/img/icon-audience.svg">
-          </div>
-          <div class="column is-7">
-            Make TLC available to a
-            <strong>wide audience</strong>
-            consisting of addresses and individuals from within the crypto and community currency ecosystems.
-            <hr/>
-          </div>
-        </div>
-
-        <div class="columns">
-          <div class="column is-1"></div>
-          <div class="column is-10 mdt">
-            <h2>Merkle Drop Tutorial</h2>
-            <br/>
-            <center>
-              <object width="695" height="515" data="https://www.youtube-nocookie.com/embed/bHLYpZstZKs"></object>
-            </center>
           </div>
         </div>
 
@@ -192,7 +136,7 @@
             went live November 21st and since then people have been building use cases for the blockchain.</p>
 
           <h3>11. When does the Merkle drop end?</h3>
-          <p>The Trustlines Foundation expects that ineligibility of all Ethereum addresses, who have not claimed their tokens, will happen by the end of 2021.</p>
+          <p>The ineligibility of all Ethereum addresses, who have not claimed their tokens, will happen on December 31st, 2021, at 10:59 pm (UTC).</p>
 
           <h3>12. Does the amount I’m able to claim decay at some point?</h3>
           <p>Yes. The tokens people are entitled to will begin to decay linearly over two years starting from 31.12.2019 at 23:59 CET.</p>
