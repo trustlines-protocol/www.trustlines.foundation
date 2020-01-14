@@ -39,7 +39,8 @@
             <p>Yes.</p>
 
             <h3>How do you use Trustlines?</h3>
-            <p>Users are presumed to make use of the Trustlines Protocol (see Trustlines Protocol) with an application.</p>
+            <p>Users are presumed to make use of the Trustlines Protocol (see
+              <a href="protocol.html">Trustlines Protocol</a>) with an application.</p>
 
             <h3>Can I change the credit I have given my friends?</h3>
             <p>Yes. You can update the amount of credit you want to trust your friend with at any point in time, except if your friend has already exceeded the new limit you want to set before you update it.</p>
@@ -70,37 +71,38 @@
             <h2>General</h2>
 
             <h3>What is the Trustlines Network?</h3>
-            <p>The Trustlines Network ecosystem (short: Trustlines Network) describes the ecosystem of individuals, projects, and entities aligned on the idea of mapping trust-based relationships on to trustless infrastructure. Sometimes this is also simply
-              referred to as the Trustlines Network. No single entity owns, is or can be in charge of this construct.</p>
+            <p>The Trustlines Network is an ecosystem of individuals, projects, and entities aligned on the idea of mapping trust-based relationships on to trustless infrastructure. No single entity owns, is or can be in charge of this construct.</p>
 
             <h3>What problem are you solving?</h3>
             <p>The Trustlines Foundation is promoting financial and economic inclusion of all people through decentralized peer-to-peer network protocols that serve common accounting.</p>
 
             <h3>Do you have a whitepaper?</h3>
             <p>There is no whitepaper but you can view all relevant code within Github and you can read the
-              <a href="/trustlines-101.html">Trustlines 101</a>
+              <a href="trustlines-101.html">Trustlines 101</a>
               here</p>
 
             <h3>When will all of this be live?</h3>
-            <p>Trustlines Blockchain is currently live on testnet and aims to go live on mainnet Q4 of 2019.</p>
+            <p>The Trustlines Blockchain went live November 21st. You can read more about the launch in the
+              <a href="https://medium.com/trustlines-foundation/t-x-launching-the-trustlines-blockchain-ffeb82b6989b" target="_blank">Launching the Trustlines Blockchain blog post</a>. A blockchain explorer for Trustlines Blockchain can be found at
+              <a href="https://explore.tlbc.trustlines.foundation/" target="_blank">https://explore.tlbc.trustlines.foundation/</a>.</p>
 
             <h2>Currency Networks</h2>
 
             <h3>What is a currency network?</h3>
-            <p>The Trustlines currency networks are the foundation of the Trustlines functionalities and are implemented on-chain. This contract type is the core smart contract that end users can interact with. The contract records all properties a currency
-              network has (e.g. symbol, name of currency network and fee structure) and account information (e.g. users - blockchain addresses, balances and trustlines). Trustlines are modeled as “accounts” within the currency networks and keep a record of the
-              credit lines two parties have agreed upon as well as their current balance.</p>
+            <p>The Trustlines currency networks are the fundamental infrastructure of the Trustlines functionalities and are implemented on-chain. This contract type is the core smart contract that end users can interact with. The contract records all properties
+              a currency network has (e.g. symbol, name of currency network and fee structure) and account information (e.g. users - blockchain addresses, balances and trustlines). Trustlines are modeled as “accounts” within the currency networks and keep a record
+              of the credit lines two parties have agreed upon as well as their current balance.</p>
 
             <h3>Are transfers of currency network IOUs and transfers of collateralized tokens (e.g. Bitcoin) the same?</h3>
-            <p>No. Collateralized tokens such as Bitcoin or TLC are backed by a certain collateral such as hashing power (in the case of Bitcoin) or stake (in the case of TLC). Currency networks inherit their values from the trust that exists between the
-              individual users on the network.</p>
+            <p>No. Collateralized tokens such as Bitcoin or Trustlines Network Coins (TLC) are backed by a certain collateral such as hashing power (in the case of Bitcoin) or stake (in the case of TLC). Currency networks inherit their values from the trust that
+              exists between the individual users on the network.</p>
 
             <h3>How do I join a currency network</h3>
             <p>To join a currency network you need to send a Trustlines request to another person that is also using the Trustlines Blockchain.</p>
 
             <h3>How do I create a currency network?</h3>
             <p>Follow the specification for currency network smart contracts on our
-              <a href="https://github.com/trustlines-protocol">GitHub</a>.</p>
+              <a href="https://github.com/trustlines-protocol" target="_blank">GitHub</a>.</p>
 
             <h3>Is it possible to make a currency network with interests set on trustlines?</h3>
             <p>Yes, if this is enabled in the smart contract that defines the currency network, users can add interest rates on a trustline. This would allow the issuer of the IOU to increase his or her credit limit at the cost of an added interest fee.</p>
@@ -126,20 +128,21 @@
               <li>Forwarding user signed transactions from a mobile app to the Trustlines Blockchain</li>
               <li>Indexing and storing event information</li>
               <li>Sending relevant blockchain events (including push notifications) to the mobile app</li>
-              <li>Discovering a path between a sender and a receiver in the graph of trustlines by using Dijkstra's Algorithm, considering the shortest path in a number of hops.</li>
+              <li>Discovering a path between a sender and a receiver in the graph of trustlines by using
+                <a href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm" target="_blank">Dijkstra's Algorithm</a>, considering the shortest path in a number of hops.</li>
             </ul>
             <p>Users do not need to trust relay servers with their accounts (private keys), as transactions are signed locally on their device and validated by the currency networks on the Trustlines Blockchain.</p>
 
             <h3>What are the requirements for running a Relay Server?</h3>
             <p>You can find the specifications needed to run a relay server on our
-              <a href="https://github.com/trustlines-protocol/relay">GitHub</a>.</p>
+              <a href="https://github.com/trustlines-protocol/relay" target="_blank">GitHub relay repository</a>.</p>
 
             <h3>Do users need to use a path that is calculated by a relay server or are there alternatives?</h3>
             <p>It is possible to calculate and specify your own path or even use your own relay server. However, most users might prefer not to do so.</p>
 
             <h3>How do relay servers collect topology for the pathfinding process?</h3>
             <p>If the relay server uses the code which is provided by the Trustlines Foundation via
-              <a href="https://github.com/trustlines-protocol/relay">Github</a>
+              <a href="https://github.com/trustlines-protocol/relay" target="_blank">Github</a>
               it will use Dijkstra's algorithm to find the shortest path between sender and receiver.</p>
 
             <h2>Blockchain</h2>
@@ -149,25 +152,27 @@
               allows for decentralized governance of the system.</p>
 
             <h3>How does the sidechain work?</h3>
-            <p>The Trustlines Blockchain will be a minimal viable Proof-of-Stake (mPoS) Ethereum sidechain based on
-              <a href="https://wiki.parity.io/Aura">Parity’s Aura consensus algorithm</a>. Aura (known from Kovan, poa.network, xDAI, and others) is usually used in PoA chains. We added the following features:</p>
+            <p>The Trustlines Blockchain will be a minimal viable Proof-of-Stake (mPoS)
+              <a href="https://ethereum.org/" target="_blank">Ethereum</a>
+              sidechain based on
+              <a href="https://wiki.parity.io/Aura" target="_blank">Parity's Aura consensus algorithm</a>. Aura (known from Kovan, poa.network, xDAI, and others) is usually used in Proof of Authority chains. We added the following features:</p>
             <ol>
               <li>Anonymous validators</li>
               <li>Staking and slashing mechanisms to combat equivocation</li>
-              <li>Hard-forking as an additional defense mechanism</li>
+              <li>Hard forking as an additional defense mechanism</li>
             </ol>
 
-            <h3>How’s the Trustlines Blockchain different from dPoS?</h3>
+            <h3>How's the Trustlines Blockchain different from Delegated Proof of Stake?</h3>
             <p>Validator slots cannot be delegated, hence the Trustlines Blockchain does not support dPoS. Also, dPoS typically relies on social reputation systems which is not the case for our approach.</p>
 
             <h2>Validators</h2>
 
             <h3>What is a Trustlines validator?</h3>
-            <p>A Trustlines validator is a person or entity that has won the validator auction and is part of the active validator set of the Trustlines Blockchain. Initially, the Trustlines Blockchain will have a maximum of 55 validator slots which will have
-              one Trustlines validator per slot. The number of validators and validator slots may increase or decrease in the future according to what the Trustlines community decides. The validators have the responsibility of ensuring the security of the
-              Trustlines Blockchain by validating transactions and adding blocks to the existing blockchain. They earn Trustlines Network Coins in form of transaction fees and block rewards in this process. Additionally, Trustlines validators monitor the
-              Trustlines bridge to ensure a Trustlines Network Token to Trustlines Network Coin transfer and decide on blockchain forks and resulting protocol changes with the rest of the Trustlines ecosystem. To ensure that a Trustlines validator is able to
-              fulfill his role, we suggest that a Trustlines validator should meet the following criteria:</p>
+            <p>A Trustlines validator is a person or entity that has won a slot in the validator auction and is part of the active validator set of the Trustlines Blockchain. Initially, the Trustlines Blockchain will have a maximum of 55 validator slots which
+              will have one Trustlines validator per slot. The number of validators and validator slots may increase or decrease in the future according to what the Trustlines community decides. The validators have the responsibility of ensuring the security of
+              the Trustlines Blockchain by validating transactions and adding blocks to the existing blockchain. They earn Trustlines Network Coins in form of transaction fees and block rewards in this process. Additionally, Trustlines validators monitor the
+              Trustlines bridge to ensure Trustlines Network Token to Trustlines Network Coin transfers and decide on blockchain forks and resulting protocol changes with the rest of the Trustlines ecosystem. To ensure that a Trustlines validator is able to
+              fulfill their role, we suggest that a validator should meet the following criteria:</p>
             <ul>
               <li>Be technologically minded and able to run a Trustlines Blockchain node without a dedicated UI</li>
               <li>Have the necessary financial means to take part in the validator auction</li>
@@ -185,46 +190,46 @@
             </ol>
 
             <h3>Why do you need my email and name if validators are anonymous?</h3>
-            <p>The Trustlines Foundation uses your email to notify you where you can whitelist an Ehereum address so that you may bid at the validator auction. Note that you do not need to use a personal email for this process and that the emails will be deleted
-              afterwards. We welcome that you use a throwaway email (see
-              <a href="https://www.google.com/search?q=throwaway+email">google throwaway email</a>), but note that the time at which you add your email and receive an email from the Trustlines Foundation can vary greatly (up to 9 months depending on when the next
-              validator auction starts). Therefore, consider using an email you can access at a later point in time.</p>
+            <p>The Trustlines Foundation uses your email to notify you where you can whitelist an Ehereum address so that you may bid at the validator auction. Note that you do not need to use a personal email for this process and that the email addresses will
+              be deleted afterwards. We welcome that you use a throwaway email (see
+              <a href="https://www.google.com/search?q=throwaway+email" target="_blank">google throwaway email</a>), but note that the time at which you add your email and receive an email from the Trustlines Foundation can vary greatly (up to 9 months depending
+              on when the next validator auction starts). Therefore, consider using an email you can access at a later point in time.</p>
 
             <h3>How many Trustlines Network Coins will I earn?</h3>
-            <p>The initial block reward will be 3 TLC. Transaction fees added to the block are variable.</p>
+            <p>The initial block reward will be 3 TLC. Transaction fees added to the block vary.</p>
 
             <h3>I'm not good at checking my email, how do I keep up?</h3>
-            <p>Follow us on
-              <a href="https://twitter.com/TrustlinesFound">Twitter</a>!</p>
+            <p>Follow
+              <a href="https://twitter.com/TrustlinesFound" target="_blank">Trustlines Foundation on Twitter</a>!</p>
 
-            <h3>I won a slot at the auction and I’m a Trustlines validator, what now?</h3>
+            <h3>I won a slot at the auction and I'm a Trustlines validator, what now?</h3>
             <ul>
               <li>
                 <strong>Run a validator node</strong><br/>
-                Now you need to launch a Trustlines validator node. If you’re unsure how to do this, start by familiarizing yourself with the process by
-                <a href="https://youtu.be/ozB--QRiPvw">watching this video</a>. You can find the full
-                <a href="https://github.com/trustlines-protocol/blockchain#quickstart">documentation</a>
+                Now you need to launch a Trustlines validator node. If you're unsure how to do this, start by familiarizing yourself with the process by watching the
+                <a href="https://youtu.be/ozB--QRiPvw" target="_blank">How to Install a Trustlines Node for Laika Testnet video</a>. You can find the full
+                <a href="https://github.com/trustlines-protocol/blockchain#quickstart" target="_blank">documentation</a>
                 on the
-                <a href="https://github.com/trustlines-protocol">Trustlines Protocol Github</a>
+                <a href="https://github.com/trustlines-protocol" target="_blank">Trustlines Protocol Github</a>
                 organization.
               </li>
               <li>
                 <strong>Participate in governance</strong><br/>
                 The Trustlines Foundation currently announces proposed forks on
-                <a href="https://www.reddit.com/r/Trustlines/">Reddit</a>
-                which you will need to familiarize yourself with. You can discuss the proposed forks and other governance topics on the Trustlines reddit or any other forum that validators wish to use.
+                <a href="https://www.reddit.com/r/Trustlines/" target="_blank">the /r/Trustlines subreddit</a>
+                which you will need to familiarize yourself with. You can discuss the proposed forks and other governance topics on the Trustlines subreddit or any other forum that validators wish to use.
               </li>
             </ul>
 
             <h3>What happens after 9 months?</h3>
-            <p>Once the 9 months have passed, validators can withdraw their stake provided it didn’t get slashed due to equivocation. A new auction will be announced to find the next set of validator candidates.</p>
+            <p>Once the 9 months have passed, validators can withdraw their stake provided it didn't get slashed due to equivocation. A new auction will be announced to find the next set of validator candidates.</p>
 
             <h3>How technically savvy should I be to run a Trustlines node?</h3>
             <p>You should know how to install a node and patch software updates regularly via your terminal.</p>
 
-            <h3>What happens if I win a slot but I don’t run a Trustlines node?</h3>
+            <h3>What happens if I win a slot but I don't run a Trustlines node?</h3>
             <p>You will fail to propose any blocks and will subsequently not earn any Trustlines Network Coins (TLC). After some time of inactivity, active validators would most likely propose a fork which would remove you from the validator set. Keep in mind
-              that this will not negatively affect your ETH staked on Ethereum.</p>
+              that this will not negatively affect your ETH staked on Ethereum. It does mean that the staked amount will still remain locked until the end of the validation period.</p>
 
             <h3>What happens if I won a slot but the Trustlines protocol fails/people lose interest?</h3>
             <p>After 9 months have passed, you will still be able to reclaim your initial stake. Any other resources invested such as paying for server uptime will be your costs to bear and you will not be able to ask for compensation. Please see the
@@ -233,7 +238,7 @@
 
             <h2>Auction</h2>
 
-            <h3>What is the Trustlines auction?</h3>
+            <h3>What is the Trustlines validator auction?</h3>
             <p>The Trustlines validator auction is a Dutch auction held to discover the fair opportunity cost value, i.e. price of a validator slot. The Ethereum addresses of successful bidders in a successful auction will be included in the validator set.</p>
 
             <p>
@@ -243,7 +248,7 @@
             <p>
               <strong>Timing</strong>: The auction ends at the earliest of two full calendar weeks starting from the start date or when the 55th successful bid is received by the smart contract. Whichever comes first.</p>
             <p>
-              <strong>Threshold</strong>: If fewer than 20 Ethereum addresses have successfully participated at the time the auction ends, it will fail. No validator slots will be awarded and all participants can withdraw their bids. If 20 or more successful bids
+              <strong>Threshold</strong>: If less than 20 Ethereum addresses have successfully participated at the time the auction ends, it will fail. No validator slots will be awarded and all participants can withdraw their bids. If 20 or more successful bids
               were received, the auction will succeed.</p>
             <p>
               <strong>Limited validator slots</strong>: 55 validator slots are up for auction for the first 9-month validation period.</p>
@@ -252,26 +257,26 @@
 
             <p>
               <strong>Offline</strong>: To sign up offline, meet the Trustlines team in person at a meetup or conference. Follow us on
-              <a href="https://twitter.com/TrustlinesFound">Twitter</a>
+              <a href="https://twitter.com/TrustlinesFound" target="_blank">Twitter</a>
               to see when and where the next possibilities to sign up occur.</p>
             <p>
               <strong>Online</strong>: Use
-              <a href="https://medium.com/trustlines-foundation/become-a-trustlines-validator-candidate-using-proof-of-sociality-ef67d0cf1e86">Proof-of-Sociability</a>. Send a DM with your email address to
-              <a href="https://twitter.com/tl_validator">@tl_validator</a>
+              <a href="https://medium.com/trustlines-foundation/become-a-trustlines-validator-candidate-using-proof-of-sociality-ef67d0cf1e86" target="_blank">Proof-of-Sociability</a>. Send a DM with your email address to
+              <a href="https://twitter.com/tl_validator" target="_blank">@tl_validator</a>
               on Twitter.</p>
 
             <h3>Why should I be a Trustlines validator?</h3>
             <p>The Trustlines Blockchain is a minimal viable Proof of Stake sidechain to Ethereum and is governed by a greenfield governance model. In this experimental consensus model, validators can gain technical and governance experience.</p>
-            <p>Besides the technical validator capabilities mentioned above, validators will also receive block rewards (as to be defined within the chain spec) in the form of Trustlines Network Coins. This only applies under the condition that they actively run
-              their validator node and take part in block creation. They will also be in a position to charge transaction fees for transactions that are included within the blocks a validator creates.</p>
+            <p>Besides the technical validator capabilities mentioned above, validators will also receive block rewards (as to be defined within the chain spec, currently 3 TLC per block) in the form of Trustlines Network Coins. This only applies under the
+              condition that they actively run their validator node and take part in block creation. They will also be in a position to charge transaction fees for transactions that are included within the blocks a validator creates.</p>
             <p>Note that receiving block rewards and transaction fees is dependent on a community of emerging validators and the potential users of the Trustlines Blockchain. The Trustlines Foundation cannot guarantee that a Trustlines Blockchain including the
               chain spec as proposed by the Trustlines Foundation actually emerges out of the actions of these third party stakeholders. Hence, participating in the auction and thereby agreeing to the
               <a href="/terms-conditions.html">Terms and Conditions</a>
               does not entail a right or an entitlement in any way whatsoever to either becoming and/or remaining a validator or receiving block rewards and/or transaction fees.</p>
 
             <h3>What happens when the auction ends?</h3>
-            <p>The slot price is defined as the last successful bid. This amount will be locked as your stake for 9 months. Consequently, you will need to start your Trustlines node with validator rights and begin proposing blocks. Any amount you bid above the
-              final slot price can be withdrawn once the auction smart contract is set in a withdrawal state. Please see the
+            <p>The slot price is defined as the last successful bid. This amount will be locked as your stake for 9 months. Consequently, you will need to start your Trustlines Blockchain node with validator rights and begin proposing blocks. Any amount you bid
+              above the final slot price can be withdrawn once the auction smart contract is set in a withdrawal state. Please see the
               <a href="/auction.html">auction page</a>
               for further details.</p>
 
@@ -305,7 +310,9 @@
             <p>The initial block reward of the Trustlines Blockchain will be 3 Trustlines Network Coins (TLC) per block.</p>
 
             <h3>Does Trustlines have tokens on Ethereum?</h3>
-            <p>Yes. The Trustlines Network Token (TLN) is an ERC20 token on the Ethereum mainchain.</p>
+            <p>Yes. The Trustlines Network Token (TLN) is an ERC20 token on the
+              <a href="https://ethereum.org/" target="_blank">Ethereum</a>
+              mainchain.</p>
 
             <h3>Do new users need to buy the Trustlines Network Token in order to join the Trustlines Blockchain?</h3>
             <p>New users can choose to</p>
@@ -317,21 +324,26 @@
             </ol>
 
             <h3>Who will receive tokens in the Merkle drop?</h3>
-            <p>The Merkle drop aims to reach a broad audience covering early contributors, testers, developers, potential stakeholders, and more generally a wide audience from the crypto and community currency ecosystems.</p>
+            <p>The Merkle drop aims to reach a broad audience covering early contributors, testers, developers, potential stakeholders, and more generally a wide audience from the crypto and community currency ecosystems. For the accessibility of Trustlines
+              Network Tokens, the Foundation emphasized eligibility in groups that it sees as aligned with its mission.</p>
 
-            <h2>Uses cases and Cooperation</h2>
+            <h2>Use cases and cooperation</h2>
 
             <h3>What is People-Powered Money (PPM)?</h3>
             <p>The Trustlines Network supports the creation of blockchain-based p2p currency networks. In dense societal networks and due to the transitive nature of financial relationships, one could imagine a plethora of financial use cases that employ these
               networks. Chief among them would be the ability to engage in economic transactions that could be viewed as a substitute for general payments of all kinds. This twist, i.e. the transition from a credit registry towards a system that could be used to
-              facilitate payment-like transactions is comparable to the principles of LETS-systems or, for example the unofficial financial network “Hawala”.</p>
+              facilitate payment-like transactions is comparable to the principles of
+              <a href="https://en.wikipedia.org/wiki/Local_exchange_trading_system" target="_blank">LETS-systems</a>
+              or, for example the unofficial financial network
+              <a href="https://en.wikipedia.org/wiki/Hawala" target="_blank">“Hawala”</a>.</p>
 
-            <p>
-              <a href="https://medium.com/trustlines-protocol/people-powered-money-on-the-trustlines-protocol-ed411a86cc35">People-Powered Money vision blog post</a>.</p>
+            <p>Read more in our
+              <a href="https://medium.com/trustlines-protocol/people-powered-money-on-the-trustlines-protocol-ed411a86cc35" target="_blank">People-Powered Money vision blog post</a>.</p>
 
             <h3>Which other use cases are there?</h3>
-            <p>The Trustlines Protocol is open source and may be used to develop any use case by anyone. To be supported by the Trustlines Foundation, the use case must align with the
-              <a href="https://trustlines.foundation/">Trustlines Foundation's mission</a>.</p>
+            <p>The
+              <a href="protocol.html">Trustlines Protocol</a>
+              is open source and may be used to develop any use case by anyone. To be supported by the Trustlines Foundation, the use case must align with the Foundation's mission.</p>
 
             <h3>I'm a fan of Trustlines, how can I contribute?</h3>
             <p>Follow us on
@@ -340,7 +352,7 @@
               <a href="https://github.com/trustlines-protocol">GitHub</a>, or take part in governance discussions.</p>
 
             <h3>I'm building a dapp and want to integrate the Trustlines Protocol. Where do I start?</h3>
-            <p>That’s great! Feel free to let us know by
+            <p>That's great! Feel free to let us know by
               <a href="mailto:info@trustlines.foundation">reaching out to us</a>. You can also start by going to the
               <a href="https://github.com/trustlines-protocol">Trustlines Protocol Github</a>
               and read any relevant documentation. You can ask any technical question on
