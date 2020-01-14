@@ -15,16 +15,21 @@
             <p class="content-large">More specifically, the Trustlines Protocol implementation will include the components used to calculate paths and store transactions:</p>
 
             <ul class="content-large">
-              <li>The Trustlines Blockchain, which is a mPoS (minimal viable Proof of Stake) sidechain to ethereum and stores transactions</li>
-              <li>The relay servers, which calculates the optimal paths and relay the transactions sent by applications they are connected to.</li>
-              <li>The client library, a high-level API, which enables applications to interact with the smart contract system on the blockchain via the relay servers</li>
-              <li>The smart contract system which include the currency networks and other smart contacts supporting currency network related transactions (e.g. identity contract(s))</li>
-            </ul>
+              <li>The Trustlines Blockchain, which is a mPoS (minimal viable Proof of Stake) sidechain to
+                <a href="https://ethereum.org/" target="_blank">Ethereum and stores transactions</li>
+                <li>The relay servers, which calculates the optimal paths and relay the transactions sent by applications they are connected to.</li>
+                <li>The client library, a high-level API, which enables applications to interact with the smart contract system on the blockchain via the relay servers</li>
+                <li>The smart contract system which include the currency networks and other smart contacts supporting currency network related transactions (e.g. identity contract(s))</li>
+              </ul>
 
             <h2>1. Trustlines Blockchain</h2>
 
             <p>The Trustlines Blockchain is a single-purpose blockchain for applications that fall in line with the Trustlines mission of promoting financial and economic inclusion of all people through decentralized peer-to-peer network protocols that serve
               common accounting.</p>
+
+            <p>The Trustlines Blockchain went live November 21st. You can read more about the launch in the
+              <a href="https://medium.com/trustlines-foundation/t-x-launching-the-trustlines-blockchain-ffeb82b6989b" target="_blank">Launching the Trustlines Blockchain blog post</a>. A blockchain explorer for Trustlines Blockchain can be found at
+              <a href="https://explore.tlbc.trustlines.foundation/" target="_blank">https://explore.tlbc.trustlines.foundation/</a>.</p>
 
             <p>The Trustlines Blockchain will support the Trustlines Network to provide a flexible mechanism to adapt to changes that need to be done to ensure scalability, cheap transaction costs and censorship resistance. The Trustlines Foundation, therefore,
               defined the following requirements for the Trustlines Blockchain:</p>
@@ -33,37 +38,40 @@
               <li>Should have the capacity for up to 10M Trustlines Transfers per day</li>
               <li>Transaction cost should ideally be &lt; &euro;0.01</li>
               <li>Must be censorship-resistant</li>
-              <li>Must feature the EVM (<a href="https://en.wikipedia.org/wiki/Ethereum">Ethereum Virtual Machine</a>)</li>
+              <li>Must feature the
+                <a href="https://en.wikipedia.org/wiki/Ethereum" target="_blank">Ethereum Virtual Machine</a>.</li>
             </ul>
 
             <p>The Trustlines Blockchain is based on
-              <a href="https://wiki.parity.io/Aura">Parity's Aura consensus algorithm</a>, which was initially designed for Proof of Authority chains and comes with a client implementation (<a href="https://github.com/paritytech/parity-ethereum">Parity</a>).</p>
+              <a href="https://wiki.parity.io/Aura" target="_blank">Parity's Aura consensus algorithm</a>, which was initially designed for Proof of Authority chains and comes with a client implementation (<a href="https://github.com/paritytech/parity-ethereum" target="_blank">Parity</a>).</p>
 
             <h3>Aura functional description</h3>
             <p>Aura uses a predefined set of known authorities that fill in as validators. These authorities are assigned time slots in a
-              <a href="https://en.wikipedia.org/wiki/Round-robin_scheduling">round robin</a>
+              <a href="https://en.wikipedia.org/wiki/Round-robin_scheduling" target="_blank">round robin</a>
               fashion in which they can produce a block which increases the blockchain length. Blocks can be counted as finalized if more than 50% of validators build on top of them. This relies on an honest and online majority assumption as well as an
               asynchronous network.</p>
 
             <h3>mPoS (minimal viable Proof of Stake) implementation</h3>
             <p>Contrary to
-              <a href="https://en.wikipedia.org/wiki/Proof-of-authority">PoA</a>
-              (Proof of Authority) blockchains such as Parity’s Aura consensus implementation, in the planned mPoS system, validators are anonymous. Introducing anonymous validators, however, creates the need to ensure that no entity can easily acquire 51% of the
-              voting power. Popular chains like Ethereum 2.0 can achieve this by making buying 51% of the voting power prohibitively expensive. A new, unknown, blockchain such as the Trustlines Blockchain cannot plan for this.</p>
+              <a href="https://en.wikipedia.org/wiki/Proof-of-authority" target="_blank">Proof of Authority</a>
+              blockchains such as Parity’s Aura consensus implementation, in the planned mPoS system, validators are anonymous. Introducing anonymous validators, however, creates the need to ensure that no entity can easily acquire 51% of the voting power. Popular
+              chains like
+              <a href="https://github.com/ethereum/eth2.0-specs" target="_blank">Ethereum 2.0</a>
+              can achieve this by making buying 51% of the voting power prohibitively expensive. A new, unknown, blockchain such as the Trustlines Blockchain cannot plan for this.</p>
 
-            <p>Our mPoS implementation, therefore, replaces the known authorities with anonymous validators that are defined through a validator auction in which bids of winners will be converted to stakes of Ether on the Ethereum blockchain for nine months. The
+            <p>Our mPoS implementation, therefore, replaces the known authorities with anonymous validators that are defined through a validator auction in which bids of winners will be converted to stakes of ETH on the Ethereum blockchain for nine months. The
               participants of the auction additionally need to be part of a whitelisted set of candidates. By adding minimal PoS (Proof of Stake) features (staking process of the validator depositing an amount of Ethereum - and slashing process of rendering the
               deposits permanently inaccessible if certain criteria are fulfilled), we create a consensus algorithm implementation which employs sufficient safety measures for the Trustlines Blockchain. This ensures a reduced risk of Trustlines validators acting
               hazardously by equivocating (signing 2 different blocks for the same time slot with their private key).</p>
 
-            <h3>Hard-forking as an additional security option</h3>
+            <h3>Hard forking as an additional security option</h3>
             <p>Anonymous validators and PoS features can not ensure security from various attacks or other threats such as, but not limited to, inactive validators, reorganization of blocks if validators collude, withholding blocks temporarily, building empty
-              blocks, censoring certain transactions or filling blocks with unusable information. Therefore, if needed, and as an additional defense mechanism, the Trustlines Blockchain is intended to hard-fork to address these security risks and threats.</p>
+              blocks, censoring certain transactions or filling blocks with unusable information. Therefore, if needed, and as an additional defense mechanism, the Trustlines Blockchain is intended to hard fork to address these security risks and threats.</p>
 
-            <p>Hard-forks are a simple, yet powerful way to remove misbehaving validators or prevent other attack scenarios without the need to slash deposits of Trustlines Validators. Since we expect that there will be a well-aligned community, we assume that
-              coordination efforts around this will be manageable and hard-forking should be able to be carried out fairly easy. Any distribution of agreed on updates resulting in hard-forks can occur via an update function and/or by providing a configuration file
+            <p>Hard forks are a simple, yet powerful way to remove misbehaving validators or prevent other attack scenarios without the need to slash deposits of Trustlines Validators. Since we expect that there will be a well-aligned community, we assume that
+              coordination efforts around this will be manageable and hard forking should be able to be carried out fairly easy. Any distribution of agreed on updates resulting in hard forks can occur via an update function and/or by providing a configuration file
               via the Trustlines Foundation
-              <a href="https://github.com/trustlines-protocol">GitHub repo</a>
+              <a href="https://github.com/trustlines-protocol" target="_blank">GitHub organization</a>
               that validators can then add directly into their configuration directory of their clients.</p>
 
             <h2>2. The smart contract system</h2>
@@ -82,7 +90,7 @@
             <p>To do this, the user will sign a message providing information about the trustlines transfer to be executed. The delegate service will forward a transaction containing this message and signature to an identity contract deployed on the Trustlines
               Blockchain. By doing so, the delegate service pays for the blockchain specific fees. The identity contract can then verify the signature provided by the user and execute its trustlines transfer depicted in the message. We use identity contracts as
               specified in
-              <a href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1077.md">EIP 1077</a>
+              <a href="https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1077.md" target="_blank">EIP 1077</a>
               (or at least similar to the former) to implement delegates.</p>
 
             <h2>3. Relay servers</h2>
@@ -94,15 +102,18 @@
               <li>Indexing and storing event information</li>
               <li>Sending relevant blockchain events (including push notifications) to the mobile app</li>
               <li>Discovering a path between a sender and a receiver in the graph of trustlines by using
-                <a href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm">Dijkstra's Algorithm</a>, considering the shortest path in a number of hops.</li>
+                <a href="https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm" target="_blank">Dijkstra's Algorithm</a>, considering the shortest path in a number of hops.</li>
             </ol>
 
             <p>Users do not need to trust relay servers with their accounts (private keys), as transactions are signed locally on their device and validated by the currency networks on the Trustlines Blockchain.</p>
 
             <h2>4. The client library</h2>
 
-            <p>The clientlib is a Javascript library which makes it easy to build applications on top of the Trustlines Protocol since it encapsulates app client functionalities in a ready to use way. It provides a high-level API to enable applications to
-              interact with the smart contract system on the Trustlines Blockchain via a relay server.</p>
+            <p>The
+              <a href="https://github.com/trustlines-protocol/clientlib" target="_blank">clientlib</a>
+              is a Javascript library which makes it easy to build applications on top of the
+              <a href="protocol.html">Trustlines Protocol</a>
+              since it encapsulates app client functionalities in a ready to use way. It provides a high-level API to enable applications to interact with the smart contract system on the Trustlines Blockchain via a relay server.</p>
 
             <h3 class="content-large">Useful terms and definitions from the Trustlines Protocol</h3>
 
