@@ -10,9 +10,9 @@ function NewsletterSection() {
   }
 
   return (
-    <NewsletterWrapper className="has-background-light has-text-black">
+    <NewsletterWrapper className="has-background-light has-text-black has-decent-padding">
       <div className="columns">
-        <div className="column has-decent-margin is-half is-offset-one-quarter has-text-centered">
+        <div className="column is-half is-offset-one-quarter has-text-centered">
           <Appeal className="has-text-black">
             Be the first to hear about Trustlines Protocol related updates,
             subscribe to our newsletter!
@@ -20,7 +20,7 @@ function NewsletterSection() {
         </div>
       </div>
       <div className="columns">
-        <div className="column has-decent-margin is-4 is-offset-4">
+        <div className="column is-4 is-offset-4">
           <SubscribeForm onSubscriptionSend={handleSubscription} />
         </div>
       </div>

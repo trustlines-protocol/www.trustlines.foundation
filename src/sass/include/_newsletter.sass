@@ -6,8 +6,8 @@
 .has-thin-padding
   padding: 30px
 
-.has-decent-margin
-  margin: 50px
+.has-decent-padding
+  padding: 50px
 
 .is-big-checkbox
   // Don't use the scale transformation, since it makes it blurry and harms the
@@ -28,3 +28,13 @@
 
 .is-fullwidth
   width: 100%
+
+// Custom hover effect to invert button colors instead of the darkening by Bulma
+.button,.is-light
+  &:hover
+    background-color: $light !important
+    color: $light-invert !important
+
+// Two following columns should have a gap in-between
+.columns + .columns
+  margin-top: 30px

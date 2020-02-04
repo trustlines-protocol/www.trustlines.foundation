@@ -4,7 +4,7 @@ export default function CloseButton(props) {
   return (
     <button
       {...props}
-      className={`button is-text is-paddingless has-text-light ${props.className}`}
+      className={`button is-text is-paddingless is-light is-inverted {props.className}`}
     >
       No thanks
     </button>
