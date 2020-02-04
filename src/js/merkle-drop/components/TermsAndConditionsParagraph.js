@@ -7,7 +7,7 @@ function TermsAndConditionsParagraph(props) {
    * be kept in sync with each other!
    */
   return (
-    <div class="content">
+    <div className="content">
       <h1>Background</h1>
 
       <h2>The Merkle Drop and the role of the Foundation</h2>
@@ -171,28 +171,30 @@ function TermsAndConditionsParagraph(props) {
       </p>
 
       <table>
-        <tr>
-          <td>Type of smart contract standard</td>
-          <td>
-            <a href="https://en.wikipedia.org/wiki/ERC-20">ERC20</a>
-          </td>
-        </tr>
-        <tr>
-          <td>Quantity of tokens</td>
-          <td>80 Million</td>
-        </tr>
-        <tr>
-          <td>Decimals</td>
-          <td>18</td>
-        </tr>
-        <tr>
-          <td>Symbol</td>
-          <td>TLN</td>
-        </tr>
-        <tr>
-          <td>Name</td>
-          <td>Trustlines Network Token</td>
-        </tr>
+        <tbody>
+          <tr>
+            <td>Type of smart contract standard</td>
+            <td>
+              <a href="https://en.wikipedia.org/wiki/ERC-20">ERC20</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Quantity of tokens</td>
+            <td>80 Million</td>
+          </tr>
+          <tr>
+            <td>Decimals</td>
+            <td>18</td>
+          </tr>
+          <tr>
+            <td>Symbol</td>
+            <td>TLN</td>
+          </tr>
+          <tr>
+            <td>Name</td>
+            <td>Trustlines Network Token</td>
+          </tr>
+        </tbody>
       </table>
 
       <p>
@@ -259,22 +261,24 @@ function TermsAndConditionsParagraph(props) {
       </p>
 
       <table>
-        <tr>
-          <td>Retained by Foundation</td>
-          <td>30%</td>
-        </tr>
-        <tr>
-          <td>Reserved for future token distribution methods</td>
-          <td>Min 20%</td>
-        </tr>
-        <tr>
-          <td>Early contributors and potential future stakeholders</td>
-          <td>Max 30%</td>
-        </tr>
-        <tr>
-          <td>Wide target audience</td>
-          <td>Min 20%</td>
-        </tr>
+        <tbody>
+          <tr>
+            <td>Retained by Foundation</td>
+            <td>30%</td>
+          </tr>
+          <tr>
+            <td>Reserved for future token distribution methods</td>
+            <td>Min 20%</td>
+          </tr>
+          <tr>
+            <td>Early contributors and potential future stakeholders</td>
+            <td>Max 30%</td>
+          </tr>
+          <tr>
+            <td>Wide target audience</td>
+            <td>Min 20%</td>
+          </tr>
+        </tbody>
       </table>
 
       <h3>Groups of Eligible Parties</h3>
