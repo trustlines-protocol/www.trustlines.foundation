@@ -45,6 +45,33 @@ jobs:
           name: Build production
           command: yarn build
 
+  docker:
+    executor: node
+    steps:
+      - setup_remote_docker
+      - attach_workspace:
+          at: "~"
+      - run:
+          name: Build docker preview image
+          command: yarn docker-preview
+      - run:
+          name: Login to dockerhub
+          command: |
+            echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USER" --password-stdin
+      - run:
+          name: Upload image
+          command: |
+            CLEAN_BRANCH=${CIRCLE_BRANCH##*/}
+            # e.g. transforms 'bridge/pre-release' to 'pre-release'
+
+            docker tag preview.trustlines.foundation trustlines/preview.trustlines.foundation:$CLEAN_BRANCH
+            docker tag preview.trustlines.foundation trustlines/preview.trustlines.foundation:$CLEAN_BRANCH$CIRCLE_BUILD_NUM
+            docker push trustlines/preview.trustlines.foundation:$CLEAN_BRANCH
+            docker push trustlines/preview.trustlines.foundation:$CLEAN_BRANCH$CIRCLE_BUILD_NUM
+
+            echo Uploaded trustlines/preview.trustlines.foundation:$CLEAN_BRANCH, trustlines/preview.trustlines.foundation:$CLEAN_BRANCH$CIRCLE_BUILD_NUM
+
+
 workflows:
   version: 2
   default:
@@ -56,3 +83,8 @@ workflows:
       - build:
           requires:
             - install
+      - docker:
+          context: docker-credentials
+          requires:
+            - install
+
