@@ -50,10 +50,13 @@
     "webpack-merge": "^4.2.1"
   },
   "scripts": {
+    "docker-preview": "yarn run build-preview && docker build . -t preview.trustlines.foundation",
+    "build-preview": "yarn run clean && yarn run build-html-preview && yarn run build-css && yarn run build-js && yarn run build-assets",
     "build": "yarn run clean && yarn run build-html && yarn run build-css && yarn run build-js && yarn run build-assets",
     "watch": "yarn run clean && yarn run build-assets && concurrently --kill-others -p \"[{name}]\" -n \"HTML,JS,CSS,SERVE,LIVERELOAD\" -c \"bgBlue.bold,bgMagenta.bold,bgGreen.bold,bgCyan.bold,bgYellow.bold\" \"yarn run watch-html\" \"yarn run watch-js\" \"yarn run watch-css\" \"serve --no-clipboard --listen 8080 ./dist\" \"livereload ./src --wait 1000 --extraExts 'njk,sass,scss,json'\"",
     "clean": "yarn run clean-html && yarn run clean-css && yarn run clean-js && yarn run clean-assets",
     "build-html": "yarn run clean-html && NODE_ENV=production dotenv -e .env.production -e .env.example -- nunjucks **/*.njk --path ./src/view/ --out ./dist/ && yarn run minify-html",
+    "build-html-preview": "yarn run clean-html && NODE_ENV=preview dotenv -e .env.preview -e .env.example -- nunjucks **/*.njk --path ./src/view/ --out ./dist/ && yarn run minify-html",
     "minify-html": "html-minifier --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true --input-dir ./dist/ --output-dir ./dist/ --file-ext html",
     "watch-html": "yarn run clean-html && NODE_ENV=development dotenv -e .env.development -e .env.example -- nunjucks **/*.njk --path ./src/view/ --out ./dist/ --watch",
     "clean-html": "del -f ./dist/**/*.html",
