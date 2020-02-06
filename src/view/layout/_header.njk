@@ -12,6 +12,11 @@
           </a>
       </div>
 
+      {# The following span is used to display additional information
+       # when one serves a preview version of the website. We do set
+       # the WHOAMI environment variable on CircleCI when building an
+       # image meant to be used for previews.
+       #}
       <span style="color:red;font-size:75%;">
             {{ env.WHOAMI}}
       </span>

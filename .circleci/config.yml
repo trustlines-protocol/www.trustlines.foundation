@@ -54,6 +54,8 @@ jobs:
       - run:
           name: Build docker preview image
           command: |
+            # The preview website will show the WHOAMI string in the
+            # header (see _header.njk)
             export WHOAMI="${CIRCLE_BRANCH} ${CIRCLE_BUILD_NUM} ${CIRCLE_SHA1}"
             yarn docker-preview
       - run:
