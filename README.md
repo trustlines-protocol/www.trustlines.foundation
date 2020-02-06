@@ -1,25 +1,7 @@
-Build Release Version
-=====================
-```bash
-yarn install
-yarn build
-```
+# Trustlines Foundation Website
 
-Deploy Release Version
-======================
-```bash
-yarn install
-yarn deploy
-```
-This will automatically **push** to the gh-pages branch.
+This are the sources for the Trustlines Foundation
+[website](https://trustlines.foundation).
 
-Development
-===========
-```bash
-yarn install
-yarn watch
-```
-Open http://localhost:8080
-
-Known / Open Issues
-============
+Please take a look at the [developer documentation](README-dev.md) for technical
+instructions.

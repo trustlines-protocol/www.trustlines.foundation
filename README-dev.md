@@ -1,5 +1,39 @@
 # Developer Documentation
 
+## Basics
+
+### Development 
+
+The following command sequence will install all dependencies and run a local
+development server. Such will automatically detect changes in the code and
+update the view. The website can be viewed at http://localhost:8080.
+
+```sh
+$ yarn install
+$ yarn watch
+```
+
+### Build
+
+To build a release version configured for production run the following:
+
+```sh
+$ yarn install
+$ yarn build
+```
+
+### Deploy
+
+Execute the following to deploy a new production release and push it to
+_GH-Pages_ pages. The final result can be seen at https://trustlines.foundation.
+
+```sh
+$ yarn install
+$ yarn deploy
+```
+
+---
+
 ## Review Procedure
 
 After a technical review of a PR, a member of the comms team should review the
