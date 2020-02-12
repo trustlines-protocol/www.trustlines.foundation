@@ -45,6 +45,33 @@ jobs:
           name: Build production
           command: yarn build
 
+  deploy:
+    executor: node
+    steps:
+      - attach_workspace:
+          at: "~"
+      - run:
+          name: Setup ssh key
+          command: |
+            mkdir ~/.ssh
+            chmod 700 ~/.ssh
+            echo > ~/.ssh/known_hosts 'github.com ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAq2A7hRGmdnm9tUDbO9IDSwBK6TbQa+PXYPCPy6rbTrTtw7PHkccKrpp0yVhp5HdEIcKr6pLlVDBfOLX9QUsyCOV0wzfjIJNlGEYsdlLJizHhbn2mUjvSAHQqZETYP81eFzLQNnPHt4EVVUh7VfDESU84KezmD5QlWpXLmvU31/yMf+Se8xhHTvKSCZIFImWwoG6mbUoWf9nzpIoaSjB+weqqUUmpaaasXVal72J+UX2B+2RPW3RcT0eOzQgqlJL3RKrTJvdsjE3JEAvGq3lGHSZXy28G3skua2SmVi/w4yCE6gbODqnTWlg7+wC604ydGXA8VJiS5ap43JXiUFFAaQ=='
+            echo ${SSH_KEY_GITHUB} | base64 --decode - >~/.ssh/id_ed25519
+            chmod 0600 ~/.ssh/id_ed25519
+      - run:
+          name: Configure git
+          command: |
+            git config --global url."ssh://git@github.com".insteadOf "https://github.com" || true
+            git config --global gc.auto 0 || true
+            git config --global user.email "auto-deploy@circleci"
+            git config --global user.name "auto-deploy"
+
+      - run:
+          name: Deploy website to gh-pages branch
+          command: |
+            unset SSH_AUTH_SOCK  # use the key we just installed
+            yarn deploy
+
   docker:
     executor: node
     steps:
@@ -80,15 +107,33 @@ workflows:
   version: 2
   default:
     jobs:
-      - install
+      - install:
+          filters:
+            branches:
+              ignore: gh-pages
       - lint:
+          filters:
+            branches:
+              ignore: gh-pages
           requires:
             - install
       - build:
+          filters:
+            branches:
+              ignore: gh-pages
           requires:
             - install
       - docker:
+          filters:
+            branches:
+              ignore: gh-pages
           context: docker-credentials
           requires:
             - install
-
+      - deploy:
+          context: deploy-www.trustlines.foundation
+          filters:
+            branches:
+              only: master
+          requires:
+            - install
