@@ -71,7 +71,7 @@
     "clean-assets": "del -f ./dist/img/**/* && del -f ./dist/CNAME",
     "format": "eslint ./src/**/*.js ./webpack.*.js --fix",
     "lint": "eslint ./src/**/*.js",
-    "deploy": "WHOAMI= yarn run build && gh-pages --dist dist --branch gh-pages"
+    "deploy": "WHOAMI= yarn run build && gh-pages --dist dist --branch gh-pages -m 'Auto commit updates [ci skip]'"
   },
   "husky": {
     "hooks": {
