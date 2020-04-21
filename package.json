@@ -67,8 +67,8 @@
     "build-js-preview": "yarn run clean-js && NODE_ENV=development webpack --config webpack.dev.js",
     "watch-js": "yarn run clean-js && NODE_ENV=development webpack --watch --config webpack.dev.js",
     "clean-js": "del -f ./dist/js/**/*",
-    "build-assets": "cpy ./src/images/* ./dist/img/ && cpy ./CNAME ./dist/ && cpy ./src/images/favicon.ico ./dist/ && cpy ./auction-summary.json ./dist/",
-    "clean-assets": "del -f ./dist/img/**/* && del -f ./dist/CNAME",
+    "build-assets": "cpy ./src/images/* ./dist/img/ && cpy ./CNAME ./dist/ && cpy ./src/images/favicon.ico ./dist/ && cpy ./auction-summary.json ./dist/ && cpy ./src/fonts* ./dist/fonts",
+    "clean-assets": "del -f ./dist/img/**/* && del -f ./dist/CNAME && del -f ./dist/fonts/*",
     "format": "eslint ./src/**/*.js ./webpack.*.js --fix",
     "lint": "eslint ./src/**/*.js",
     "deploy": "WHOAMI= yarn run build && gh-pages --dist dist --branch gh-pages -m 'Auto commit updates [ci skip]'"
