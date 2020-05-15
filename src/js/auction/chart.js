@@ -41,16 +41,9 @@ function getTooltipRow(chartState, dataPoint, point) {
   if (point.address) {
     row.push(`Bidder: ${point.address}`)
   }
-  if (chartState.currency === "ETH") {
-    row.push(`Slot Price: ${roundUp(point.slotPrice)} ETH`)
-    if (point.bidValue) {
-      row.push(`Bid Price:  ${(point.bidValue / ETH_BASE).toFixed(3)} ETH`)
-    }
-  } else {
-    row.push(`Slot Price: ${point.slotPrice} WEI`)
-    if (point.bidValue) {
-      row.push(`Bid Price:  ${point.bidValue} WEI`)
-    }
+  row.push(`Slot Price: ${roundUp(point.slotPrice)} ETH`)
+  if (point.bidValue) {
+    row.push(`Bid Price:  ${(point.bidValue / ETH_BASE).toFixed(3)} ETH`)
   }
   return row
 }
@@ -149,13 +142,7 @@ function renderChart(bids, priceFunction, chartState) {
             ticks: {
               callback: function(value, index) {
                 if (index % 5 === 0) {
-                  if (chartState.currency === "ETH") {
-                    return (value / ETH_BASE).toFixed(2) + " ETH "
-                  } else {
-                    return (
-                      value.toExponential().replace(/e\+?/, "x10^") + " WEI "
-                    )
-                  }
+                  return (value / ETH_BASE).toFixed(2) + " ETH "
                 } else {
                   return ""
                 }
