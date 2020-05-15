@@ -1,7 +1,7 @@
 import $ from "jquery"
 import moment from "moment-timezone"
 
-import { ETH_BASE } from "../common/const"
+import { TLN_BASE } from "../common/const"
 import { roundUp } from "../common/math"
 import { renderState, renderSlots, renderCurrentPrice } from "./legend"
 
@@ -41,9 +41,9 @@ function getTooltipRow(chartState, dataPoint, point) {
   if (point.address) {
     row.push(`Bidder: ${point.address}`)
   }
-  row.push(`Slot Price: ${roundUp(point.slotPrice)} ETH`)
+  row.push(`Slot Price: ${roundUp(point.slotPrice)} TLN`)
   if (point.bidValue) {
-    row.push(`Bid Price:  ${(point.bidValue / ETH_BASE).toFixed(3)} ETH`)
+    row.push(`Bid Price:  ${(point.bidValue / TLN_BASE).toFixed(3)} TLN`)
   }
   return row
 }
@@ -142,7 +142,7 @@ function renderChart(bids, priceFunction, chartState) {
             ticks: {
               callback: function(value, index) {
                 if (index % 5 === 0) {
-                  return (value / ETH_BASE).toFixed(2) + " ETH "
+                  return (value / TLN_BASE).toFixed(2) + " TLN "
                 } else {
                   return ""
                 }

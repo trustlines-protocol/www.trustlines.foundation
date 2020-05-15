@@ -1,7 +1,7 @@
-import { ETH_BASE } from "./const"
+import { TLN_BASE } from "./const"
 
 export function roundUp(price) {
-  return Math.ceil((price / ETH_BASE) * 1000) / 1000
+  return Math.ceil((price / TLN_BASE) * 1000) / 1000
 }
 
 export function parseTokenAmount(amount) {
