@@ -19,6 +19,10 @@
     <div class="container">
       <div class="content">
 
+        {% if env.ENABLE_AUCTION_PARTICIPATION === 'true' %}
+          <div id="rootAuctionApp"></div>
+        {% endif %}
+
         <h1>Trustlines Validator Auction</h1>
 
         <p class="content-large">The Trustlines validator auction is used to determine the first set of validators for the Trustlines Blockchain. The first set of validators will be valid for nine months. To participate in the auction, a whitelisted Ethereum address has to bid by sending TLN to the auction contract after it has started and before it has ended. The amount must be greater or equal to the current price.</p>
