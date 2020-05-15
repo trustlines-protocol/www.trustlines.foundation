@@ -50,7 +50,7 @@ export function renderCurrentPrice(chartState) {
     return
   }
 
-  currentPrice.html(roundUp(price) + "ETH")
+  currentPrice.html(roundUp(price) + "TLN")
   currentPriceDesc.show()
   currentPrice.show()
 }
