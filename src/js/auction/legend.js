@@ -3,8 +3,6 @@ import { roundUp } from "../common/math"
 
 const currentPrice = $("#current-price")
 const currentPriceDesc = $("#current-price-desc")
-const weiToggleButton = $("#wei-button")
-const ethToggleButton = $("#eth-button")
 
 function calculateRemainingSecondsString(remainingSeconds) {
   if (!remainingSeconds) {
@@ -52,39 +50,12 @@ export function renderCurrentPrice(chartState) {
     return
   }
 
-  let priceString
-  if (chartState.currency === "ETH") {
-    priceString = roundUp(price) + " ETH"
-  } else {
-    priceString = price + " WEI"
-  }
-  currentPrice.html(priceString)
+  currentPrice.html(roundUp(price) + "ETH")
   currentPriceDesc.show()
   currentPrice.show()
 }
 
-function toggleCurrenyClasses(activeSelector, inactiveSelector) {
-  activeSelector.addClass("is-selected")
-  activeSelector.removeClass("is-outlined")
-  inactiveSelector.addClass("is-outlined")
-  inactiveSelector.removeClass("is-selected")
-}
-
 export default function initLegend(chartState) {
-  ethToggleButton.click(() => {
-    chartState.setETHCurrency()
-    renderCurrentPrice(chartState)
-    chartState.updateChart()
-    toggleCurrenyClasses(ethToggleButton, weiToggleButton)
-  })
-
-  weiToggleButton.click(() => {
-    chartState.setWEICurrency()
-    renderCurrentPrice(chartState)
-    chartState.updateChart()
-    toggleCurrenyClasses(weiToggleButton, ethToggleButton)
-  })
-
   setInterval(() => {
     chartState.decrementRemainingSeconds()
     renderState(chartState)
