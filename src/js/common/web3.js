@@ -68,3 +68,50 @@ export async function getDefaultAccount() {
 export function sameAddress(address1, address2) {
   return address1.toLowerCase() === address2.toLowerCase()
 }
+
+export async function sendContractTransaction(
+  web3FunctionCall,
+  sender,
+  onSign,
+  onConfirmation
+) {
+  console.log(sender)
+  try {
+    return await web3FunctionCall
+      .send({
+        from: sender,
+      })
+      .on("transactionHash", hash => onSign && onSign(hash))
+      .on(
+        "confirmation",
+        (confirmationNumber, receipt) =>
+          onConfirmation && onConfirmation(confirmationNumber, receipt)
+      )
+  } catch (error) {
+    // As there seem to be no common error format, this is the best we can do
+    if (error.message.includes("revert")) {
+      throw new TransactionRevertedError(error.message)
+    } else if (error.message.includes("denied")) {
+      throw new UserRejectedError(error.message)
+    } else {
+      throw new Error(error.message)
+    }
+  }
+}
+
+export const USER_REJECTED_ERROR_CODE = "USER_REJECTED_ERROR"
+export const TRANSACTION_REVERTED_ERROR_CODE = "TRANSACTION_REVERTED_ERROR"
+
+class UserRejectedError extends Error {
+  constructor(...args) {
+    super(...args)
+    this.code = USER_REJECTED_ERROR_CODE
+  }
+}
+
+class TransactionRevertedError extends Error {
+  constructor(...args) {
+    super(...args)
+    this.code = TRANSACTION_REVERTED_ERROR_CODE
+  }
+}

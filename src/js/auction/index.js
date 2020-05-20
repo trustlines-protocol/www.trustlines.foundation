@@ -1,18 +1,16 @@
 import $ from "jquery"
 import initCollapsibles from "./collapsibles"
-import initModal from "./termsAndConditionsModal"
-import initChart from "./chart"
-import initLegend from "./legend"
-import ChartState from "./chartState"
+import initChart from "./chart/chart"
+import initLegend from "./chart/legend"
+import ChartState from "./chart/chartState"
 import ReactDOM from "react-dom"
 import React from "react"
-import AuctionApp from "./App"
+import AuctionApp from "./bidbox/App"
 
 $(() => {
   const chartState = new ChartState()
 
   initCollapsibles()
-  initModal()
   initLegend(chartState)
   initChart(chartState)
 })

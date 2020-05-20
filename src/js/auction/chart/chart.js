@@ -1,8 +1,8 @@
 import $ from "jquery"
 import moment from "moment-timezone"
 
-import { TLN_BASE } from "../common/const"
-import { roundUp } from "../common/math"
+import { TLN_BASE } from "../../common/const"
+import { roundUp } from "../../common/math"
 import { renderState, renderSlots, renderCurrentPrice } from "./legend"
 
 const loadingMessage = $("#loading-message")
@@ -317,5 +317,5 @@ export default function initChart(chartState) {
   fetchAuctionDataAndRender(chartState, 800)
   setInterval(() => {
     fetchAuctionDataAndRender(chartState, 0)
-  }, 10000)
+  }, 20000)
 }

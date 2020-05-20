@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import getWeb3, { verifyChainId } from "../../common/web3"
+import getWeb3, { verifyChainId } from "../web3"
 
 export const CHAIN_STATE = {
   CONNECTING: "connecting",
