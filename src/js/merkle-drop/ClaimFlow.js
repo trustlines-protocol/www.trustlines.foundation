@@ -18,10 +18,10 @@ import Error from "./components/Error"
 import TermsAndConditionsModal from "./components/TermsAndConditionsModal"
 import WaitCard from "./components/WaitCard"
 import ClaimFailed from "./components/ClaimFailed"
-import { useChainState } from "./state/chainState"
+import { useChainState } from "../common/state/chainState"
 import ColumnsWrapper from "./components/ColumnsWrapper"
 import ManualProofWrapper from "./components/ManualProofWrapper"
-import { useAccount } from "./state/account"
+import { useAccount } from "../common/state/account"
 import Warning from "./components/Warning"
 
 const STATE = {

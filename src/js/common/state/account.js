@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import getWeb3, { getDefaultAccount } from "../../common/web3"
+import getWeb3, { getDefaultAccount } from "../web3"
 
 export function useAccount() {
   const [account, setAccount] = useState("")

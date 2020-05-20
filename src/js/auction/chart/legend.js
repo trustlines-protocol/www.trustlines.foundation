@@ -1,5 +1,5 @@
 import $ from "jquery"
-import { roundUp } from "../common/math"
+import { roundUp } from "../../common/math"
 
 const currentPrice = $("#current-price")
 const currentPriceDesc = $("#current-price-desc")
@@ -50,7 +50,7 @@ export function renderCurrentPrice(chartState) {
     return
   }
 
-  currentPrice.html(roundUp(price) + "TLN")
+  currentPrice.html(roundUp(price) + " TLN")
   currentPriceDesc.show()
   currentPrice.show()
 }

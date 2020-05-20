@@ -3,7 +3,7 @@ import React, { useCallback } from "react"
 import Button from "./Button"
 import RetryButton from "./RetryButton"
 import Warning from "./Warning"
-import { CHAIN_STATE } from "../state/chainState"
+import { CHAIN_STATE } from "../../common/state/chainState"
 import { parseTokenAmount } from "../../common/math"
 
 function ClaimAmount({
