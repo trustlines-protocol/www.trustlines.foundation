@@ -50,7 +50,8 @@ function ClaimAmount({
             <br />
             <span className="subtitle is-6 has-text-success">
               {parseTokenAmount(currentAmount)} TLN claimable out of
-              original&nbsp;{parseTokenAmount(originalAmount)} TLN
+              original&nbsp;
+              {parseTokenAmount(originalAmount)} TLN
             </span>
           </div>
         </div>

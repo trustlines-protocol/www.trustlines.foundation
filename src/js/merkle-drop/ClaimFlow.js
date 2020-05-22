@@ -163,7 +163,9 @@ function ClaimFlow() {
         if (error.code === web3.TRANSACTION_REVERTED_ERROR_CODE) {
           showError(
             "Your transaction have been reverted. Did you try to claim your tokens twice?",
-            { state: STATE.TRANSACTION_FAILED }
+            {
+              state: STATE.TRANSACTION_FAILED,
+            }
           )
         } else if (error.code === web3.USER_REJECTED_ERROR_CODE) {
           setInternalState(STATE.SHOW_PROOF)
