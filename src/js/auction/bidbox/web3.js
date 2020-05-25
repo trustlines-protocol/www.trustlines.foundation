@@ -47,7 +47,7 @@ export async function isWhitelisted(address) {
     .call()
 }
 
-export async function getBidAmountByReceipt(receipt) {
+export async function getPaidSlotPriceByReceipt(receipt) {
   const bidEventsInBlock = await getBidEventsInBlock(receipt.blockNumber)
   const bidEventsByTransaction = filterEventsByTransaction(
     bidEventsInBlock,
@@ -64,7 +64,7 @@ async function getBidEventsInBlock(blockNumber) {
     toBlock: blockNumber,
   }
 
-  return await merkleDropContract.getPastEvents("Bid", eventFilter)
+  return await merkleDropContract.getPastEvents("BidSubmitted", eventFilter)
 }
 
 function filterEventsByTransaction(events, transactionHash) {
@@ -80,7 +80,7 @@ function throwIfNoSingleEvent(events) {
 }
 
 function parseBidEventTokenAmount(bidEvent) {
-  return bidEvent.returnValues.value.toString()
+  return bidEvent.returnValues.slotPrice.toString()
 }
 
 function getAuctionContract() {

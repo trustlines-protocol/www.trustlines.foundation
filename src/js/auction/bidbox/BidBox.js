@@ -13,6 +13,8 @@ import {
 } from "../../common/web3"
 import * as auctionWeb3 from "./web3"
 import * as blockexplorer from "../../common/blockexplorer"
+import { useCurrentPrice } from "./state/currentPrice"
+import { parseTokenAmount } from "../../common/math"
 
 const MAX_UINT =
   "115792089237316195423570985008687907853269984665640564039457584007913129639935"
@@ -32,6 +34,8 @@ const STATE = {
 export default function BidBox() {
   const web3Account = useAccount()
   const chainState = useChainState()
+
+  const currentPrice = useCurrentPrice()
 
   const [internalState, setInternalState] = useState(
     STATE.PARTICIPATE_IN_AUCTION
@@ -54,6 +58,11 @@ export default function BidBox() {
     () => setIsVisibleTermsAndCondition(true),
     []
   )
+
+  const setPaidSlotPriceByReceipt = useCallback(async receipt => {
+    const paidSlotPrice = await auctionWeb3.getPaidSlotPriceByReceipt(receipt)
+    setPaidSlotPrice(paidSlotPrice)
+  }, [])
 
   const handleAcceptTermsAndCondition = useCallback(async () => {
     setIsVisibleTermsAndCondition(false)
@@ -140,6 +149,7 @@ export default function BidBox() {
           if (
             confirmationNumber === parseInt(process.env.REACT_APP_CONFIRMATIONS)
           ) {
+            setPaidSlotPriceByReceipt(receipt)
             setInternalState(STATE.SUCCESSFUL_BID)
           }
           setConfirmations(confirmationNumber)
@@ -147,7 +157,7 @@ export default function BidBox() {
         return currentHash
       })
     },
-    [setTxHash, setInternalState]
+    [setPaidSlotPriceByReceipt]
   )
 
   const makeBid = useCallback(async () => {
@@ -309,7 +319,12 @@ export default function BidBox() {
           </div>
           <div className="column">
             <MessageBlock>
-              You can now make a bid in the Trustlines Validator Auction
+              You can now make a bid in the Trustlines Validator Auction. <br />
+              {currentPrice
+                ? `Current slot price is ${parseTokenAmount(
+                    currentPrice.toString()
+                  )} TLN.`
+                : "Could not fetch current slot price."}
             </MessageBlock>
           </div>
           <div className="column">
@@ -357,7 +372,19 @@ export default function BidBox() {
             />
           </div>
           <div className="column">
-            <MessageBlock>{"Paid slot price: " + paidSlotPrice}</MessageBlock>
+            <MessageBlock>
+              {`Paid slot price: ${parseTokenAmount(paidSlotPrice)} TLN`}
+              <br />
+              You can check your transaction on{" "}
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href={blockexplorer.generateTransactionUrl(txHash)}
+              >
+                Etherscan
+              </a>
+              .
+            </MessageBlock>
           </div>
         </div>
       )
