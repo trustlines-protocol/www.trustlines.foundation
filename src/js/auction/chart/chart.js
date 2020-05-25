@@ -42,9 +42,6 @@ function getTooltipRow(chartState, dataPoint, point) {
     row.push(`Bidder: ${point.address}`)
   }
   row.push(`Slot Price: ${roundUp(point.slotPrice)} TLN`)
-  if (point.bidValue) {
-    row.push(`Bid Price:  ${(point.bidValue / TLN_BASE).toFixed(3)} TLN`)
-  }
   return row
 }
 
