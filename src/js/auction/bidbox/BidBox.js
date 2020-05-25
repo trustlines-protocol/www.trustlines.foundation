@@ -118,7 +118,7 @@ export default function BidBox() {
     } catch (error) {
       console.error(error)
       if (error.code === TRANSACTION_REVERTED_ERROR_CODE) {
-        showError("Your transaction has been reverted", {
+        showError("Your transaction has been reverted.", {
           state: STATE.TRANSACTION_ERROR,
         })
       } else if (error.code === USER_REJECTED_ERROR_CODE) {
@@ -152,7 +152,6 @@ export default function BidBox() {
 
   const makeBid = useCallback(async () => {
     try {
-      // TODO only approve current auction price
       await auctionWeb3.bid(
         await getDefaultAccount(),
         hash => {
@@ -164,7 +163,7 @@ export default function BidBox() {
     } catch (error) {
       console.error(error)
       if (error.code === TRANSACTION_REVERTED_ERROR_CODE) {
-        showError("Your transaction has been reverted", {
+        showError("Your transaction has been reverted.", {
           state: STATE.TRANSACTION_ERROR,
         })
       } else if (error.code === USER_REJECTED_ERROR_CODE) {
@@ -229,12 +228,15 @@ export default function BidBox() {
       return (
         <div>
           <div className="column">
-            <MainHeader text="Participate in auction" />
+            <MainHeader
+              faIcon="fa fa-arrow-circle-right"
+              text="Participate in auction"
+            />
           </div>
           <div className="column">
             <MessageBlock>
-              In order to begin with your participation, please read our terms
-              and conditions.
+              In order to begin with your participation, please read and accept
+              our terms and conditions.
             </MessageBlock>
           </div>
           <div className="column">
@@ -260,7 +262,10 @@ export default function BidBox() {
       return (
         <div>
           <div className="column">
-            <MainHeader text="Connect wallet" />
+            <MainHeader
+              faIcon="fa fa-arrow-circle-right"
+              text="Connect wallet"
+            />
           </div>
           <div className="column">
             <MessageBlock>
@@ -276,7 +281,10 @@ export default function BidBox() {
       return (
         <div>
           <div className="column">
-            <MainHeader text="Approve Withdrawal" />
+            <MainHeader
+              faIcon="fa fa-arrow-circle-right"
+              text="Approve Withdrawal"
+            />
           </div>
           <div className="column">
             <MessageBlock>
@@ -294,7 +302,10 @@ export default function BidBox() {
       return (
         <div>
           <div className="column">
-            <MainHeader text="Make your bid" />
+            <MainHeader
+              faIcon="fa fa-arrow-circle-right"
+              text="Make your bid"
+            />
           </div>
           <div className="column">
             <MessageBlock>
@@ -313,7 +324,7 @@ export default function BidBox() {
         <div>
           <div className="column">
             <MainHeader
-              faIcon="fa fa-spinner"
+              faIcon="fa fa-spinner fa-pulse"
               text="Waiting for confirmation..."
             />
           </div>
@@ -322,7 +333,7 @@ export default function BidBox() {
               Your transaction has been sent and we are waiting for
               confirmation.
               <br />
-              Check status on &nbsp;
+              Check status on{" "}
               <a
                 target="_blank"
                 rel="noopener noreferrer"
@@ -379,14 +390,14 @@ export default function BidBox() {
         <div>
           <div className="column">
             <MainHeader
-              icon="fa fa-exclamation-circle"
+              faIcon="fa fa-exclamation-circle"
               text="Something went wrong"
             />
           </div>
           <div className="column">
             <MessageBlock>
               {errorMessage} <br />
-              Check what went wrong on &nbsp;
+              Check what went wrong on{" "}
               <a
                 target="_blank"
                 rel="noopener noreferrer"
