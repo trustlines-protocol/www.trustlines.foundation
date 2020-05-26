@@ -27,6 +27,7 @@ const STATE = {
   WAITING_FOR_APPROVE_CONFIRMATION: "WaitingForApproveConfirmationState",
   MAKE_BID: "MakeBidState",
   WAITING_FOR_BID_CONFIRMATION: "WaitingForBidState",
+  WAITING_FOR_WEB3_BROWSER_ACTION: "WaitingForWeb3BrowserAction",
   SUCCESSFUL_BID: "SuccessfulBidState",
   ERROR: "ErrorState",
   TRANSACTION_ERROR: "TransactionErrorState",
@@ -41,7 +42,7 @@ export default function BidBox() {
   const [internalState, setInternalState] = useState(
     STATE.PARTICIPATE_IN_AUCTION
   )
-  const [paidSlotPrice, setPaidSlotPrice] = useState(123)
+  const [paidSlotPrice, setPaidSlotPrice] = useState(0)
   const [isVisibleTermsAndCondition, setIsVisibleTermsAndCondition] = useState(
     false
   )
@@ -81,11 +82,12 @@ export default function BidBox() {
   )
 
   const connect = useCallback(async () => {
+    setInternalState(STATE.WAITING_FOR_WEB3_BROWSER_ACTION)
     const success = await requestPermission()
     if (success) {
       setInternalState(STATE.MAKE_BID)
     } else {
-      // Nothing
+      setInternalState(STATE.CONNECT_WALLET)
     }
   }, [])
 
@@ -109,6 +111,7 @@ export default function BidBox() {
   )
 
   const approve = useCallback(async () => {
+    setInternalState(STATE.WAITING_FOR_WEB3_BROWSER_ACTION)
     try {
       // TODO only approve current auction price
       await auctionWeb3.approve(
@@ -127,6 +130,7 @@ export default function BidBox() {
           state: STATE.TRANSACTION_ERROR,
         })
       } else if (error.code === USER_REJECTED_ERROR_CODE) {
+        setInternalState(STATE.MAKE_BID)
         console.log("User rejected")
       } else {
         showError("Something went wrong with your transaction.", {
@@ -157,6 +161,7 @@ export default function BidBox() {
   )
 
   const makeBid = useCallback(async () => {
+    setInternalState(STATE.WAITING_FOR_WEB3_BROWSER_ACTION)
     try {
       await auctionWeb3.bid(
         await getDefaultAccount(),
@@ -173,6 +178,7 @@ export default function BidBox() {
           state: STATE.TRANSACTION_ERROR,
         })
       } else if (error.code === USER_REJECTED_ERROR_CODE) {
+        setInternalState(STATE.MAKE_BID)
         console.log("User rejected")
       } else {
         showError("Something went wrong with your transaction.", {
@@ -399,6 +405,19 @@ export default function BidBox() {
                 Etherscan
               </a>
               .
+            </MessageBlock>
+          </div>
+        </div>
+      )
+    case STATE.WAITING_FOR_WEB3_BROWSER_ACTION:
+      return (
+        <div>
+          <div className="column">
+            <MainHeader faIcon="fa fa-spinner fa-pulse" text="Waiting..." />
+          </div>
+          <div className="column">
+            <MessageBlock>
+              Please follow the instructions of your Web3 enabled browser.
             </MessageBlock>
           </div>
         </div>
