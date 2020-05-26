@@ -282,6 +282,22 @@ export default function BidBox() {
             case.
           </Error>
         )
+      case BidderState.NO_ETH:
+        return (
+          <Error title="Not enough funds">
+            It seems that the current selected account has no funds to pay for
+            transactions. You will need to send ETH to the selected account to
+            proceed.
+          </Error>
+        )
+      case BidderState.NOT_ENOUGH_TOKENS:
+        return (
+          <Error title="Not enough TLN">
+            It seems that the current selected account does not have enough TLN
+            to bid at the current price. In order to proceed send TLN to the
+            current selected account.
+          </Error>
+        )
       case BidderState.ALREADY_BID:
         return (
           <Error title="Already bid">
@@ -299,6 +315,7 @@ export default function BidBox() {
         )
       default:
         console.error("Unexpectedly reached default case.")
+        return <Error title="Something went wrong">Internal error</Error>
     }
   }
 
@@ -509,5 +526,6 @@ export default function BidBox() {
 
     default:
       console.error("Unexpectedly reached default branch.")
+      return <Error title="Something went wrong">Internal error</Error>
   }
 }

@@ -29,6 +29,12 @@ export async function approve(address, amount, onSign, onConfirmation) {
   )
 }
 
+export async function fetchTokenBalance(address) {
+  return getTokenContract()
+    .methods.balanceOf(address)
+    .call()
+}
+
 export async function fetchAllowance(address) {
   return getTokenContract()
     .methods.allowance(address, process.env.AUCTION_ADDRESS)

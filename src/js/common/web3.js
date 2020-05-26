@@ -55,6 +55,10 @@ export async function requestPermission() {
   }
 }
 
+export async function fetchBalance(address) {
+  return web3.eth.getBalance(address)
+}
+
 export async function verifyChainId(chainId) {
   return (await web3.eth.getChainId()) === parseInt(chainId)
 }
