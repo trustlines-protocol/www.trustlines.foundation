@@ -42,9 +42,16 @@ export async function fetchCurrentPrice() {
 }
 
 export async function isWhitelisted(address) {
-  return getTokenContract()
-    .methods.allowance(address, process.env.AUCTION_ADDRESS)
+  return getAuctionContract()
+    .methods.whitelist(address)
     .call()
+}
+
+export async function hasBid(address) {
+  const bid = await getAuctionContract()
+    .methods.bids(address)
+    .call()
+  return !bid.eq(0)
 }
 
 export async function getPaidSlotPriceByReceipt(receipt) {

@@ -15,6 +15,8 @@ import * as auctionWeb3 from "./web3"
 import * as blockexplorer from "../../common/blockexplorer"
 import { useCurrentPrice } from "./state/currentPrice"
 import { parseTokenAmount } from "../../common/math"
+import { BidderState, useBidderState } from "./state/bidderState"
+import Error from "./components/Error"
 
 const MAX_UINT =
   "115792089237316195423570985008687907853269984665640564039457584007913129639935"
@@ -22,7 +24,6 @@ const MAX_UINT =
 const STATE = {
   PARTICIPATE_IN_AUCTION: "ParticipateInAuctionState",
   CONNECT_WALLET: "ConnectWalletState",
-  APPROVE: "ApproveState",
   WAITING_FOR_APPROVE_CONFIRMATION: "WaitingForApproveConfirmationState",
   MAKE_BID: "MakeBidState",
   WAITING_FOR_BID_CONFIRMATION: "WaitingForBidState",
@@ -34,8 +35,8 @@ const STATE = {
 export default function BidBox() {
   const web3Account = useAccount()
   const chainState = useChainState()
-
   const currentPrice = useCurrentPrice()
+  const bidderState = useBidderState(web3Account, currentPrice)
 
   const [internalState, setInternalState] = useState(
     STATE.PARTICIPATE_IN_AUCTION
@@ -68,12 +69,7 @@ export default function BidBox() {
     setIsVisibleTermsAndCondition(false)
     const account = await getDefaultAccount()
     if (account) {
-      const allowance = await auctionWeb3.fetchAllowance(account)
-      if (allowance.gt(0)) {
-        setInternalState(STATE.MAKE_BID)
-      } else {
-        setInternalState(STATE.APPROVE)
-      }
+      setInternalState(STATE.MAKE_BID)
     } else {
       setInternalState(STATE.CONNECT_WALLET)
     }
@@ -87,7 +83,7 @@ export default function BidBox() {
   const connect = useCallback(async () => {
     const success = await requestPermission()
     if (success) {
-      setInternalState(STATE.APPROVE)
+      setInternalState(STATE.MAKE_BID)
     } else {
       // Nothing
     }
@@ -233,6 +229,73 @@ export default function BidBox() {
     default:
   }
 
+  if (internalState === STATE.MAKE_BID) {
+    switch (bidderState) {
+      case BidderState.LOADING:
+        return (
+          <div>
+            <div className="column">
+              <MainHeader faIcon="fa fa-spinner fa-pulse" text="Loading..." />
+            </div>
+            <div className="column">
+              <MessageBlock />
+            </div>
+          </div>
+        )
+      case BidderState.NO_ALLOWANCE:
+        return (
+          <div>
+            <div className="column">
+              <MainHeader
+                faIcon="fa fa-arrow-circle-right"
+                text="Approve Withdrawal"
+              />
+            </div>
+            <div className="column">
+              <MessageBlock>
+                In order to proceed, please approve the withdrawal of TLN by the
+                auction contract for {web3Account}.
+              </MessageBlock>
+            </div>
+            <div className="column">
+              <ActionButton label="Approve" onClick={approve} />
+            </div>
+          </div>
+        )
+      case BidderState.NOT_WHITELISTED:
+        return (
+          <Error title="Not whitelisted">
+            The selected account {web3Account} is not whitelisted.
+          </Error>
+        )
+      case BidderState.WRONG_ALLOWANCE:
+        return (
+          <Error title="Too low allowance">
+            The allowance for this account is lower than the current auction
+            price. Please manually fix this as this website can not handle this
+            case.
+          </Error>
+        )
+      case BidderState.ALREADY_BID:
+        return (
+          <Error title="Already bid">
+            The selected account {web3Account} has already bid.
+          </Error>
+        )
+      case BidderState.READY_TO_BID:
+        //Nothing to do
+        break
+      case BidderState.Error:
+        return (
+          <Error title="Something went wrong">
+            We could not determine the current auction state
+          </Error>
+        )
+      default:
+        console.error("Unexpectedly reached default case.")
+    }
+  }
+
   switch (internalState) {
     case STATE.PARTICIPATE_IN_AUCTION:
       return (
@@ -287,27 +350,6 @@ export default function BidBox() {
           </div>
         </div>
       )
-    case STATE.APPROVE:
-      return (
-        <div>
-          <div className="column">
-            <MainHeader
-              faIcon="fa fa-arrow-circle-right"
-              text="Approve Withdrawal"
-            />
-          </div>
-          <div className="column">
-            <MessageBlock>
-              In order to proceed, please approve the withdrawal of TLN by the
-              auction contract for {web3Account}.
-            </MessageBlock>
-          </div>
-          <div className="column">
-            <ActionButton label="Approve" onClick={approve} />
-          </div>
-        </div>
-      )
-
     case STATE.MAKE_BID:
       return (
         <div>
