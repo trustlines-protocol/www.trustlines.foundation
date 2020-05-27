@@ -14,7 +14,7 @@ import {
 import * as auctionWeb3 from "./web3"
 import * as blockexplorer from "../../common/blockexplorer"
 import { useCurrentPrice } from "./state/currentPrice"
-import { parseTokenAmount } from "../../common/math"
+import { formatTLNAmount } from "../../common/math"
 import { BidderState, useBidderState } from "./state/bidderState"
 import Error from "./components/Error"
 
@@ -386,9 +386,9 @@ export default function BidBox() {
             <MessageBlock>
               You can now make a bid in the Trustlines Validator Auction. <br />
               {currentPrice
-                ? `Current slot price is ${parseTokenAmount(
+                ? `Current slot price is ${formatTLNAmount(
                     currentPrice.toString()
-                  )} TLN.`
+                  )}.`
                 : "Could not fetch current slot price."}
             </MessageBlock>
           </div>
@@ -451,7 +451,7 @@ export default function BidBox() {
           </div>
           <div className="column">
             <MessageBlock>
-              {`Paid slot price: ${parseTokenAmount(paidSlotPrice)} TLN`}
+              {`Paid slot price: ${formatTLNAmount(paidSlotPrice)}`}
               <br />
               You can check your transaction on{" "}
               <a

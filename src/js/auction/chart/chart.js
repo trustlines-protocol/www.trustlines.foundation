@@ -2,7 +2,7 @@ import $ from "jquery"
 import moment from "moment-timezone"
 
 import { TLN_BASE } from "../../common/const"
-import { roundUp } from "../../common/math"
+import { formatTLNAmount } from "../../common/math"
 import { renderState, renderSlots, renderCurrentPrice } from "./legend"
 
 const loadingMessage = $("#loading-message")
@@ -41,7 +41,7 @@ function getTooltipRow(chartState, dataPoint, point) {
   if (point.address) {
     row.push(`Bidder: ${point.address}`)
   }
-  row.push(`Slot Price: ${roundUp(point.slotPrice)} TLN`)
+  row.push(`Slot Price: ${formatTLNAmount(point.slotPrice)}`)
   return row
 }
 
@@ -138,11 +138,11 @@ function renderChart(bids, priceFunction, chartState) {
             type: "logarithmic",
             ticks: {
               callback: function(value, index) {
-                if (index % 5 === 0) {
-                  return (value / TLN_BASE).toFixed(2) + " TLN "
-                } else {
-                  return ""
+                const formattedValue = formatTLNAmount(value)
+                if (formattedValue.startsWith(1) || index === 0) {
+                  return formattedValue
                 }
+                return ""
               },
             },
           },
