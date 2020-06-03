@@ -84,14 +84,14 @@
           </div>
           <div class="columns chart-addons">
             <div class="column is-7">
-              <div class="is-rounded button is-background-gradient-dark has-text-white" id="address-reveal-link">Reveal contract address</div>
+              <div class="is-rounded button is-background-gradient-dark has-text-white is-button-styled" id="address-reveal-link">Reveal Contract address</div>
               <div id="address">
                 <h5 class="subtitle is-5 has-text-weight-bold is-marginless has-text-primary" >
                   {{ env.AUCTION_ADDRESS }}
                 </h5>
-                <p class="has-text-danger m-b-none">Remember to increase the transaction gas.</p>
+                <p class="has-text-danger m-b-none">Do not diretly send eth or tokens to this address.</p>
               </div>
-              <div class="has-text-grey" id="address-description">Contract Address</div>
+              <div class="has-text-grey" id="address-description">Auction contract Address</div>
             </div>
             <div class="column is-5">
               <h5 class="subtitle is-3 has-text-weight-bold is-marginless has-text-primary" id="current-price">
@@ -163,12 +163,12 @@
           <div class="container has-text-centered">
             <div class="columns is-centered">
               <div class="column is-one-third">
-                <button id="terms-and-conditions-modal-button-reject" class="button is-rounded has-text-weight-bold is-outlined is-primary is-fullwidth">
+                <button id="terms-and-conditions-modal-button-reject" class="button is-rounded has-text-weight-bold is-outlined is-primary is-fullwidth is-button-styled">
                   Reject
                 </button>
               </div>
               <div class="column is-one-third">
-                <button id="terms-and-conditions-modal-button-accept" class="button is-rounded has-text-weight-bold has-text-white is-background-gradient-dark is-fullwidth">
+                <button id="terms-and-conditions-modal-button-accept" class="button is-rounded has-text-weight-bold has-text-white is-background-gradient-dark is-fullwidth is-button-styled">
                   Accept
                 </button>
               </div>

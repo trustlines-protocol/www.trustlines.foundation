@@ -50,7 +50,7 @@ function TermsAndConditionsModal({ onReject, onAccept, children }) {
                 <div className="column is-one-third">
                   <button
                     id="terms-and-conditions-modal-button-reject"
-                    className="button is-rounded has-text-weight-bold is-outlined is-primary is-fullwidth"
+                    className="button is-rounded is-outlined is-primary is-fullwidth is-button-styled"
                     onClick={onReject}
                   >
                     Reject
@@ -59,7 +59,7 @@ function TermsAndConditionsModal({ onReject, onAccept, children }) {
                 <div className="column is-one-third">
                   <button
                     id="terms-and-conditions-modal-button-accept"
-                    className="button is-rounded has-text-weight-bold has-text-white is-background-gradient-dark is-fullwidth"
+                    className="button is-rounded has-text-white is-background-gradient-dark is-fullwidth is-button-styled"
                     onClick={onAccept}
                     disabled={!scrolledToModalBottom}
                   >
