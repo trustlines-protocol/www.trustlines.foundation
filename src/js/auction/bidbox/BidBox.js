@@ -17,6 +17,8 @@ import { useCurrentPrice } from "./state/currentPrice"
 import { formatTLNAmount } from "../../common/math"
 import { BidderState, useBidderState } from "./state/bidderState"
 import Error from "./components/Error"
+import TLNLink from "./components/TLNLink"
+import AuctionLink from "./components/AuctionLink"
 
 const MAX_UINT =
   "115792089237316195423570985008687907853269984665640564039457584007913129639935"
@@ -259,8 +261,9 @@ export default function BidBox() {
             </div>
             <div className="column">
               <MessageBlock>
-                In order to proceed, please approve the transfer of TLN by the
-                auction contract for {web3Account}.
+                In order to proceed, please approve the transfer of{" "}
+                <TLNLink>TLN</TLNLink> by the auction contract for {web3Account}
+                .
               </MessageBlock>
             </div>
             <div className="column">
@@ -294,8 +297,8 @@ export default function BidBox() {
         return (
           <Error title="Not enough TLN">
             It seems that the current selected account does not have enough TLN
-            to bid at the current price. In order to proceed send TLN to the
-            current selected account.
+            to bid at the current price. In order to proceed send{" "}
+            <TLNLink>TLN</TLNLink> to the current selected account.
           </Error>
         )
       case BidderState.ALREADY_BID:
@@ -384,7 +387,8 @@ export default function BidBox() {
           </div>
           <div className="column">
             <MessageBlock>
-              You can now make a bid in the Trustlines Validator Auction. <br />
+              You can now make a bid in the{" "}
+              <AuctionLink>Trustlines Validator Auction</AuctionLink>. <br />
               {currentPrice
                 ? `Current slot price is ${formatTLNAmount(
                     currentPrice.toString()
