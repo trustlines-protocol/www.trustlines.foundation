@@ -38,7 +38,7 @@ const STATE = {
 export default function BidBox() {
   const web3Account = useAccount()
   const chainState = useChainState()
-  const bidderState = useBidderState(web3Account, currentPrice)
+  const bidderState = useBidderState(web3Account)
 
   const [internalState, setInternalState] = useState(
     STATE.PARTICIPATE_IN_AUCTION
@@ -207,7 +207,7 @@ export default function BidBox() {
           <div className="column">
             <MainHeader
               faIcon="fa fa-exclamation-circle"
-              text="Participate in auction"
+              text="No Web3 browser detected"
             />
           </div>
           <div className="column">
@@ -328,7 +328,7 @@ export default function BidBox() {
           <div className="column">
             <MainHeader
               faIcon="fa fa-arrow-circle-right"
-              text="Participate in auction"
+              text="Accept the Terms and Conditions"
             />
           </div>
           <div className="column">
