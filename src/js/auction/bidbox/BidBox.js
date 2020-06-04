@@ -254,12 +254,12 @@ export default function BidBox() {
             <div className="column">
               <MainHeader
                 faIcon="fa fa-arrow-circle-right"
-                text="Approve Withdrawal"
+                text="Approve Transfer"
               />
             </div>
             <div className="column">
               <MessageBlock>
-                In order to proceed, please approve the withdrawal of TLN by the
+                In order to proceed, please approve the transfer of TLN by the
                 auction contract for {web3Account}.
               </MessageBlock>
             </div>
