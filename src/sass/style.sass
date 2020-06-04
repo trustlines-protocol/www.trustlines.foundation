@@ -105,6 +105,7 @@ $tl-grey-dark: #323232
 
 $tl-background-gradient: linear-gradient(41deg, rgba(185, 230, 250, 0.25) 0%, rgba(135, 75, 160, 0.2) 100%)
 $tl-background-gradient-dark: linear-gradient(22.58deg, #195A87 0%, #874BA0 100%)
+$tl-background-gradient-dark-hover: linear-gradient(22.58deg, lighten(#195A87, 10%) 0%, lighten(#874BA0, 10%) 100%)
 $tl-background-gradient-light: linear-gradient(34.79deg, rgba(185, 230, 250, 0.5) 0%, rgba(135, 75, 160, 0.2) 100%)
 
 // override global bulma variables
@@ -159,6 +160,8 @@ $modal-card-title-color: $tl-blue-dark
 
 .is-background-gradient-dark
   background-image: $tl-background-gradient-dark
+.is-background-gradient-dark:hover
+  background-image: $tl-background-gradient-dark-hover
 
 .is-background-gradient-light
   background-image: $tl-background-gradient-light
