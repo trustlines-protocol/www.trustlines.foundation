@@ -1,1 +1,3086 @@
-{"state":"Finished","bids":[{"bidder":"0x3F5948DE91A72e6885F18EEC428F465d65e5A686","bidValue":"0x4563918244f40000","slotPrice":"0x44a2b901d1897953","timestamp":1571072609},{"bidder":"0xA82289545e7a75aF8618c1Bd6816C26e3a8AE09c","bidValue":"0x3b73d34d69c60000","slotPrice":"0x3b6f1dcce337a505","timestamp":1571113210},{"bidder":"0x3343AD46C600a1c862A60FD5ce73396DdB43a0b6","bidValue":"0x3b1e8f6df72a0000","slotPrice":"0x3afc11c65c5e84e8","timestamp":1571115433},{"bidder":"0x9F20e2468F37A319992403B953cEB218CA9fE79a","bidValue":"0x38e62046fb1a0000","slotPrice":"0x387137e9292182d6","timestamp":1571128505},{"bidder":"0x47C2F6f13C97C4a4D36B4E695F26d648Ee053ec4","bidValue":"0x38347d8acc550000","slotPrice":"0x381b9e9a30bdbcd4","timestamp":1571130290},{"bidder":"0x008D2CE9D8134cEb368C5aeEaCd04AEF6020C3A0","bidValue":"0x33c39f3cd4350000","slotPrice":"0x3377b62fa6024137","timestamp":1571156830},{"bidder":"0xFda153D9ad9c51a5637F96C82427510bd8202847","bidValue":"0x31e073f54ac10000","slotPrice":"0x31d9d7181056561d","timestamp":1571166936},{"bidder":"0xD112F8122dCcDd64e18dbA537aC269F0F98B03B3","bidValue":"0x2b05699353b60000","slotPrice":"0x2ae563f22a31528d","timestamp":1571216742},{"bidder":"0xE21C2BB2d45434892C23059a32EDc6eC8108D0c4","bidValue":"0x29a2241af62c0000","slotPrice":"0x2817aa6ca7a8ca2c","timestamp":1571240396},{"bidder":"0x083fc10cE7e97CaFBaE0fE332a9c4384c5f54E45","bidValue":"0x26db992a3b180000","slotPrice":"0x26972d367cd23cb2","timestamp":1571254115},{"bidder":"0x102271367db59DA268A279dbC646FEf7203E940d","bidValue":"0x2614a5762fac0000","slotPrice":"0x260e3df26c4f2e8c","timestamp":1571259196},{"bidder":"0x93903dCbB0f0bE5Ac528238E9a10F642e401D569","bidValue":"0x25ed91051b248000","slotPrice":"0x25d8e213b485f6aa","timestamp":1571261205},{"bidder":"0x421c65B17a331deFee0aa401fe2541F8D1cAf46D","bidValue":"0x22b1c8c1227a0000","slotPrice":"0x228b6c2d1faf4ff5","timestamp":1571295425},{"bidder":"0x1A35cAC5aD61ED5AD42aE322cD71b915bddB6619","bidValue":"0x1b7a5f826f460000","slotPrice":"0x1b4dec12fa1b03bc","timestamp":1571391119},{"bidder":"0xEF1899d129f2dDF103cd94475DFd87A1D433f284","bidValue":"0x1acfd7c38a0e0000","slotPrice":"0x1ac99af4ba3b1b5b","timestamp":1571399400},{"bidder":"0xEF18997A4189a72952051B5bBf1DbE471403425c","bidValue":"0x1b38637ddfffdc00","slotPrice":"0x1a801809d685233e","timestamp":1571404105},{"bidder":"0xb4CA1c77518665e56B2c0c1ae7F1c56b9fC7Db0a","bidValue":"0x1a3aa0fc817d0000","slotPrice":"0x1a1011af450b65d8","timestamp":1571411424},{"bidder":"0x8Fd22E50Bd4dFCC28DDC2412c8b3fD8EF7835BF3","bidValue":"0x19701fc9d14a8000","slotPrice":"0x196cd5e5a04dc766","timestamp":1571422425},{"bidder":"0x4386Eb681DBf8b97A70577dDF46415EC4992c257","bidValue":"0x17979cfe362a0000","slotPrice":"0x178388fab6a60822","timestamp":1571458041},{"bidder":"0xD31e0eEC136353bc77b49d1FEE27292A8b5bdc93","bidValue":"0x17979cfe362a0000","slotPrice":"0x16f5a262095c5309","timestamp":1571469193},{"bidder":"0x33b9Bab2B8c094a42B4E50107ea477a2a2A66C93","bidValue":"0x16345785d8a00000","slotPrice":"0x15cba4a2ad22c537","timestamp":1571493982},{"bidder":"0x6a0CD7ec77a3014C35dbE2F8D18A512E962BDc47","bidValue":"0x17979cfe362a0000","slotPrice":"0x15b40238fa938f68","timestamp":1571496033},{"bidder":"0xEdbFa87722F7EefF9D711Ca5b084C6c00CA0765f","bidValue":"0x14dbba8969698000","slotPrice":"0x14d178874ff5a1c1","timestamp":1571516379},{"bidder":"0x2BAb548B6F7C07d5Bc72c342FB587Ca669628a20","bidValue":"0x11683df82fec37c3","slotPrice":"0x115d438220928139","timestamp":1571610160},{"bidder":"0xf176B51FDe516bCD8aab3778FBc4ac970423419e","bidValue":"0x105ca640de2f8000","slotPrice":"0x105bbd0031a79485","timestamp":1571642917},{"bidder":"0x68E1B4E5d789B1BE5c2de5990922C960B4Bbdb9a","bidValue":"0x10a741a462780000","slotPrice":"0x104eb0964172c757","timestamp":1571644657},{"bidder":"0x640D34E204Be6cbf8846D68C797971AAa4F91a98","bidValue":"0xfef566d47a7142f","slotPrice":"0xfe70ac64b6ce43d","timestamp":1571658774},{"bidder":"0x0863Be8F0abA8890922C50A75852085A7e324bd2","bidValue":"0x1298a2e67f060000","slotPrice":"0xfcc8cf02b7c6049","timestamp":1571662469},{"bidder":"0x83fb539DF9CBb74Ac642CA492308028819570eA9","bidValue":"0xf9751ff4cd89200","slotPrice":"0xf9235417e7bde96","timestamp":1571670736},{"bidder":"0x11B1785D9Ac81480c03210e89F1508c8c115888E","bidValue":"0xf877c923fa98000","slotPrice":"0xf853c0ebca8eb12","timestamp":1571672599},{"bidder":"0x9e557934B1f2488D37c1F739aC34eE1907C562C0","bidValue":"0xf8b0a10e4700000","slotPrice":"0xf84f6b91ce2ad47","timestamp":1571672638},{"bidder":"0x236dAA98f115caa9991A3894ae387CDc13eaaD1B","bidValue":"0xfae910354310000","slotPrice":"0xf8404eac3d7ffe5","timestamp":1571672774},{"bidder":"0xA63631814773DC207ec396cDba84D0cC40DB3788","bidValue":"0xf806194f61c8000","slotPrice":"0xf7ee49b1a64ead2","timestamp":1571673513},{"bidder":"0x74dc2D7B785C89057b862d70b308B91Bd2B1D0A4","bidValue":"0xfae910354310000","slotPrice":"0xf443939f0304c99","timestamp":1571682074},{"bidder":"0x02E61951f63C727e1B1daC5EdAb46a9EC3f6e54c","bidValue":"0xf207539952d0000","slotPrice":"0xf1cb0fc7821e5d1","timestamp":1571687952},{"bidder":"0x94BeE20aC9b9645d533a0bdf14fEB7bc8CDfCE30","bidValue":"0xf1ce7baf0668000","slotPrice":"0xf1bff4d56e0b52f","timestamp":1571688056},{"bidder":"0xdC0046B52e2E38AEe2271B6171ebb65cCD337518","bidValue":"0xf0b2441b8860000","slotPrice":"0xf08b4ba61f59469","timestamp":1571690958},{"bidder":"0x8C920861A976E125fA3664e35E91D4c73a90C8C9","bidValue":"0xf007bc5ca328000","slotPrice":"0xefce0f19da6c301","timestamp":1571692748},{"bidder":"0x9CBFC85263604529Dac5F6512985067331933785","bidValue":"0xeb5e06245ea0000","slotPrice":"0xe89750e2066ab5e","timestamp":1571710662},{"bidder":"0x663d3947f03eF5B387992b880aC85940057c13e3","bidValue":"0xe44308dad1a0000","slotPrice":"0xe3f413646dab41c","timestamp":1571722625},{"bidder":"0x743E2e09c20BcC93D7C2dA47DD0b5d1DA3A35fCf","bidValue":"0xe40a30f08538000","slotPrice":"0xe3a6892566e97dd","timestamp":1571723419},{"bidder":"0x3a16c4Ae8c82ebFB0AB475bB83C4BeD1c421aAa6","bidValue":"0xe4b4b8af6a70000","slotPrice":"0xe39b9c54adc569b","timestamp":1571723531},{"bidder":"0xe18c37a7da4F40eea18F55C5525244E1C4a3645b","bidValue":"0xe198e9df3cc0000","slotPrice":"0xe18c5a712677093","timestamp":1571728974},{"bidder":"0x22118560A79eb6b8f2AE267D64480c06DD1Cb243","bidValue":"0xde9915e36a2e1b9","slotPrice":"0xde88dd2caee39f3","timestamp":1571737074},{"bidder":"0xBA594f053bE04Ee8942d0d3fA05766F49C5516F8","bidValue":"0xdeeecae3a7e0000","slotPrice":"0xde529797347220d","timestamp":1571737650}],"contractAddress":"0x7255E01F934307FfB7a41FC78B6b1688f5dc6845","takenSlotsCount":45,"freeSlotsCount":10,"maxSlotsCount":55,"minSlotsCount":20,"whitelistedAddresses":["0xcAa365fA8AC13E40CD4Fb9Ed3B872827d7f56E1c","0x743E2e09c20BcC93D7C2dA47DD0b5d1DA3A35fCf","0x54c8C89cC6Ba1ff4062834c4Ff5A869ffD8C5b6b","0xEF1899d129f2dDF103cd94475DFd87A1D433f284","0x47C2F6f13C97C4a4D36B4E695F26d648Ee053ec4","0x33b9Bab2B8c094a42B4E50107ea477a2a2A66C93","0x640D34E204Be6cbf8846D68C797971AAa4F91a98","0x94BeE20aC9b9645d533a0bdf14fEB7bc8CDfCE30","0xB3311c91d7c1B305DA3567C2320B716B13F24F8A","0xa5BEb14b77F37Fa1E1E54A5F760D80e53f9C2dF6","0xDbCCB42659A6376C4772b7DFf7c7a055772ffF34","0xBA594f053bE04Ee8942d0d3fA05766F49C5516F8","0x11B1785D9Ac81480c03210e89F1508c8c115888E","0x56498039cEDe4E856cf5035Af21f8f972562B715","0x7e0C85F1685bc43BaCdC26E55C124C3d04c837D9","0x1D98664fc43B7cDa201f0DC7f506b685a75Ff4b6","0xef09303926BfB0E3Fbc30CE861f9fc67842E1c29","0x7B23775989DB6446c76695eA2d6C550b8F5239F5","0x6a0CD7ec77a3014C35dbE2F8D18A512E962BDc47","0xC1B628155c17a521EA16288Eb6158Fc8f1745bEE","0x74dc2D7B785C89057b862d70b308B91Bd2B1D0A4","0x68E1B4E5d789B1BE5c2de5990922C960B4Bbdb9a","0xEF18997A4189a72952051B5bBf1DbE471403425c","0xaCaF87A99d8056D5a2E8dAf1a9754301319f2d2e","0x5B0D6FD0B4aEab4aaa01b934279c58ff9510e32A","0x74B863dB5DAB737a7cd9bA53d668602CD85cf92d","0x008D2CE9D8134cEb368C5aeEaCd04AEF6020C3A0","0xa28C68edc0f6b844959aDAb260A0D7742cE543E4","0x421c65B17a331deFee0aa401fe2541F8D1cAf46D","0x6784e15EBE9497F315F5872d89a97F713BBF7952","0x02E61951f63C727e1B1daC5EdAb46a9EC3f6e54c","0x5ade5AA7b1f76de32d7e417626B04F61490094a4","0x316C58867adfC2aDf7C28F0B41F4De9f98667894","0x28898A6b762d9c400FF900EFF66F2885F0B28FAF","0xb4CA1c77518665e56B2c0c1ae7F1c56b9fC7Db0a","0x0863Be8F0abA8890922C50A75852085A7e324bd2","0xD31e0eEC136353bc77b49d1FEE27292A8b5bdc93","0xE21C2BB2d45434892C23059a32EDc6eC8108D0c4","0xEdbFa87722F7EefF9D711Ca5b084C6c00CA0765f","0x9FB9A4c0f201Bc7A3aE9b83c4c0e9892a16dc00B","0xdC0046B52e2E38AEe2271B6171ebb65cCD337518","0x50d1b9a839270229d63953BCCE253b0C145F9A4a","0x4386Eb681DBf8b97A70577dDF46415EC4992c257","0xeb124Cf478E4146a9CeDEFFdf8088cd90271010D","0x1A35cAC5aD61ED5AD42aE322cD71b915bddB6619","0x83fb539DF9CBb74Ac642CA492308028819570eA9","0x22118560A79eb6b8f2AE267D64480c06DD1Cb243","0x8Fd22E50Bd4dFCC28DDC2412c8b3fD8EF7835BF3","0x1Db43c2371aC77695b866212cDaA4151Ac500F8c","0xA1b02d8c67b0FDCF4E379855868DeB470E169cfB","0x6a97B098B710774288C3Dfba02947Bc9e9f49c40","0xdDe463CbE11c38540Ce7D7926E920035747c67DF","0xf176B51FDe516bCD8aab3778FBc4ac970423419e","0xeeAE5B16b091D9bc57eF4d05e48b78E2D119D292","0x381D491047033cC449819d2925d87Aa7b127442D","0x9f18ad6f1c59053cAC84d1a4941424392791F12B","0xA82289545e7a75aF8618c1Bd6816C26e3a8AE09c","0x9CBFC85263604529Dac5F6512985067331933785","0x4a18b6219f29B3CbfDF980fC2eF1a644a2dDbCef","0xBfa1d374d0e9b7d9a5741Fb08986F44817C78728","0x136a7141e34D2156AA1c26e46dDEFA93F57e3494","0x9e245A92caEc6E924AA854F292e4B9Cc9fC97479","0xd6f14ef43E6646495eD267D7a61be597Af5a513C","0x102271367db59DA268A279dbC646FEf7203E940d","0x3343AD46C600a1c862A60FD5ce73396DdB43a0b6","0xD3F8A83DD0F5C873be0973dbD67Bf0d441aE49d0","0x2674F614d6ac2D1148ef30c0FAa7aEdec1d3125e","0x37b87785F44fF680c80fd7dd8d822cFaBCF6766a","0xe8e29816dEb30479359d9A95434E7Bf6dFfc9c5e","0x945ae922eB4682FDd7c1a0245D5eFe9280726b39","0x606a832684c225351faA6B4E67FB436D586Fff72","0xfC406230322287bdd4a783daf16bD8d9990F6Aa6","0x9e557934B1f2488D37c1F739aC34eE1907C562C0","0xF59277d5614b525425D6129B76EE45268693E594","0x083fc10cE7e97CaFBaE0fE332a9c4384c5f54E45","0xCfEcbFd95F0305aa9Bf496Ec44Bb35808179aD67","0x3a16c4Ae8c82ebFB0AB475bB83C4BeD1c421aAa6","0x4F7361D9eaa42B3debfec13D9e69623314795751","0x3F5948DE91A72e6885F18EEC428F465d65e5A686","0x915C1f7E040D7f3E7e2a2491deEEEDfF75c3BA6c","0x702b7701DDE4B771EfA15F029f1248f6CD38C0D0","0x236dAA98f115caa9991A3894ae387CDc13eaaD1B","0x2BAb548B6F7C07d5Bc72c342FB587Ca669628a20","0xF208a4435b3d9EC0340819bC9aE727757E554575","0xADa813b1B805B0Db17c7df5F480FB42BD8133B90","0xc02B40D08ba3c9aD8A8D36b6E264cf5A83e079fF","0xE548b8500B6EB0480B37b1aF5DE4024a61F53813","0x4d971DDfC8D8B86eC7f4CBBC259FcC81c1432fad","0x4613e24E3327c393546846444AB28D901b0782B8","0xA63631814773DC207ec396cDba84D0cC40DB3788","0x38bAcCf089080f415E8FA0afb0772a21f1bDd024","0x9F20e2468F37A319992403B953cEB218CA9fE79a","0xc41A952E8EE9E90efD5A9926cB9032A7aaDe82De","0x93903dCbB0f0bE5Ac528238E9a10F642e401D569","0x96D6F216062a8929BE3FCE19d85d42f870F3DeA1","0xe18c37a7da4F40eea18F55C5525244E1C4a3645b","0x663d3947f03eF5B387992b880aC85940057c13e3","0x0cFE1dECfF7d8D5353e20D994B6DC13022d414c1","0xFda153D9ad9c51a5637F96C82427510bd8202847","0x8C920861A976E125fA3664e35E91D4c73a90C8C9","0xD112F8122dCcDd64e18dbA537aC269F0F98B03B3"],"currentBlocktimeInMs":1575558937000,"lowestSlotPriceInWEI":"1001252093761626637","priceFunction":[{"timestamp":1570528806,"slotPrice":"21e19e0c9bab2400000"},{"timestamp":1570530381,"slotPrice":"21510abbc49e19a448f"},{"timestamp":1570531956,"slotPrice":"1fbad205d9e657adeaa"},{"timestamp":1570533531,"slotPrice":"1d6572f6e3f737f2cc6"},{"timestamp":1570535106,"slotPrice":"1aa6f92e248c1c7a4cd"},{"timestamp":1570536681,"slotPrice":"17cbd533f8d829b9f1a"},{"timestamp":1570538256,"slotPrice":"150a606323e962ae476"},{"timestamp":1570539831,"slotPrice":"1281f1f76600c975248"},{"timestamp":1570541406,"slotPrice":"104017bfa218f787c1d"},{"timestamp":1570542981,"slotPrice":"e46e5610a0dc41bef3"},{"timestamp":1570544556,"slotPrice":"c921d917e688e541a9"},{"timestamp":1570546131,"slotPrice":"b1aa4d6dba941f1052"},{"timestamp":1570547706,"slotPrice":"9d88d64867ea53ed6e"},{"timestamp":1570549281,"slotPrice":"8c4296d69d10c82b9f"},{"timestamp":1570550856,"slotPrice":"7d688aaea30fe1ebc0"},{"timestamp":1570552431,"slotPrice":"709a1f96d6c94d7ce9"},{"timestamp":1570554006,"slotPrice":"6585299b3669593204"},{"timestamp":1570555581,"slotPrice":"5be496afbc2c4d0665"},{"timestamp":1570557156,"slotPrice":"537ec1be39972a1b5c"},{"timestamp":1570558731,"slotPrice":"4c23b0ac21e2b2a21e"},{"timestamp":1570560306,"slotPrice":"45ab7db35adbe1d9af"},{"timestamp":1570561881,"slotPrice":"3ff4f234f4ab3aff13"},{"timestamp":1570563456,"slotPrice":"3ae4598e1f90e650a3"},{"timestamp":1570565031,"slotPrice":"36628640cbd0081072"},{"timestamp":1570566606,"slotPrice":"325c04fca671490ef1"},{"timestamp":1570568181,"slotPrice":"2ec073d30b5ebf31fc"},{"timestamp":1570569756,"slotPrice":"2b81f9a5213471e6ad"},{"timestamp":1570571331,"slotPrice":"2894d60aace9e6332e"},{"timestamp":1570572906,"slotPrice":"25ef06b02ad34ddc2c"},{"timestamp":1570574481,"slotPrice":"2387fc85da2266ef86"},{"timestamp":1570576056,"slotPrice":"21585f4ff61b354782"},{"timestamp":1570577631,"slotPrice":"1f59db9ff0723057de"},{"timestamp":1570579206,"slotPrice":"1d86f9857f977d99d4"},{"timestamp":1570580781,"slotPrice":"1bdafac60edcafa3dd"},{"timestamp":1570582356,"slotPrice":"1a51beaae18703251f"},{"timestamp":1570583931,"slotPrice":"18e7aa98182d296033"},{"timestamp":1570585506,"slotPrice":"179996875828df6d7f"},{"timestamp":1570587081,"slotPrice":"1664bc9985926bbc68"},{"timestamp":1570588656,"slotPrice":"1546ab75375bbc8ec9"},{"timestamp":1570590231,"slotPrice":"143d3a94226379b7d1"},{"timestamp":1570591806,"slotPrice":"1346807b26a754f8f5"},{"timestamp":1570593381,"slotPrice":"1260ca6f34f13f9647"},{"timestamp":1570594956,"slotPrice":"118a95539d7ffce71c"},{"timestamp":1570596531,"slotPrice":"10c287a5dd4ae00d69"},{"timestamp":1570598106,"slotPrice":"10076c46d1fe597a54"},{"timestamp":1570599681,"slotPrice":"f582e087814b0ec54"},{"timestamp":1570601256,"slotPrice":"eb3d3d5acc023f2fe"},{"timestamp":1570602831,"slotPrice":"e197d6634a8c8e526"},{"timestamp":1570604406,"slotPrice":"d886055c771a5d881"},{"timestamp":1570605981,"slotPrice":"cffc5aee56c3d271f"},{"timestamp":1570607556,"slotPrice":"c7f07b65168633776"},{"timestamp":1570609131,"slotPrice":"c059009d705ac640c"},{"timestamp":1570610706,"slotPrice":"b92d5f61aa2f5fbfd"},{"timestamp":1570612281,"slotPrice":"b265d027f4da334e2"},{"timestamp":1570613856,"slotPrice":"abfb3a7788a943448"},{"timestamp":1570615431,"slotPrice":"a5e72301e8fa9d86f"},{"timestamp":1570617006,"slotPrice":"a0239bb2345c66aa5"},{"timestamp":1570618581,"slotPrice":"9aab3585feccd0ca4"},{"timestamp":1570620156,"slotPrice":"9578f4157d38b25ee"},{"timestamp":1570621731,"slotPrice":"90884292db4e9ef91"},{"timestamp":1570623306,"slotPrice":"8bd4e9d7956cffb87"},{"timestamp":1570624881,"slotPrice":"875b07a257e7877ad"},{"timestamp":1570626456,"slotPrice":"831706be188e4782b"},{"timestamp":1570628031,"slotPrice":"7f0597f8f8e1939a9"},{"timestamp":1570629606,"slotPrice":"7b23abec990cebf91"},{"timestamp":1570631181,"slotPrice":"776e6d3e4eda762f8"},{"timestamp":1570632756,"slotPrice":"73e33b9fb89f28f30"},{"timestamp":1570634331,"slotPrice":"707fa7398a0c340cd"},{"timestamp":1570635906,"slotPrice":"6d416c9143def7033"},{"timestamp":1570637481,"slotPrice":"6a2670c8d5916b5d9"},{"timestamp":1570639056,"slotPrice":"672cbe4f8509933ac"},{"timestamp":1570640631,"slotPrice":"645281c98cb8d247d"},{"timestamp":1570642206,"slotPrice":"61960763653f685b2"},{"timestamp":1570643781,"slotPrice":"5ef5b8381fb5ce2b5"},{"timestamp":1570645356,"slotPrice":"5c70181f1695b95ad"},{"timestamp":1570646931,"slotPrice":"5a03c390b6393f4db"},{"timestamp":1570648506,"slotPrice":"57af6dc4a06353841"},{"timestamp":1570650081,"slotPrice":"5571df008f5aeb8e1"},{"timestamp":1570651656,"slotPrice":"5349f2fa0c34c7afb"},{"timestamp":1570653231,"slotPrice":"51369772fd132fac4"},{"timestamp":1570654806,"slotPrice":"4f36cae3c5c251e11"},{"timestamp":1570656381,"slotPrice":"4d499b43555d11e65"},{"timestamp":1570657956,"slotPrice":"4b6e24f5fc3fe7fe9"},{"timestamp":1570659531,"slotPrice":"49a391c07ec31711b"},{"timestamp":1570661106,"slotPrice":"47e917dfe48095664"},{"timestamp":1570662681,"slotPrice":"463df9295ba546ad1"},{"timestamp":1570664256,"slotPrice":"44a182438d754b387"},{"timestamp":1570665831,"slotPrice":"431309ec08d6c5db3"},{"timestamp":1570667406,"slotPrice":"4191f0497a1fdcb1a"},{"timestamp":1570668981,"slotPrice":"401d9e4d3cdca94c7"},{"timestamp":1570670556,"slotPrice":"3eb5852328e667f2c"},{"timestamp":1570672131,"slotPrice":"3d591da6a18418bf4"},{"timestamp":1570673706,"slotPrice":"3c07e7e8c1a0bfd0d"},{"timestamp":1570675281,"slotPrice":"3ac16ab6f75bea35b"},{"timestamp":1570676856,"slotPrice":"39853334a727b5cc0"},{"timestamp":1570678431,"slotPrice":"3852d47258679a799"},{"timestamp":1570680006,"slotPrice":"3729e712cff8205ca"},{"timestamp":1570681581,"slotPrice":"360a08f626cb46fd7"},{"timestamp":1570683156,"slotPrice":"34f2dce607554c386"},{"timestamp":1570684731,"slotPrice":"33e40a4d915e75847"},{"timestamp":1570686306,"slotPrice":"32dd3cf12b49bd8c1"},{"timestamp":1570687881,"slotPrice":"31de24b13f2f2f533"},{"timestamp":1570689456,"slotPrice":"30e67548a62cf3bc4"},{"timestamp":1570691031,"slotPrice":"2ff5e6194bc64351e"},{"timestamp":1570692606,"slotPrice":"2f0c31f2bbf373a18"},{"timestamp":1570694181,"slotPrice":"2e2916e3a55a53dc1"},{"timestamp":1570695756,"slotPrice":"2d4c560b7a22590ed"},{"timestamp":1570697331,"slotPrice":"2c75b36d276a03c84"},{"timestamp":1570698906,"slotPrice":"2ba4f5c908cae5171"},{"timestamp":1570700481,"slotPrice":"2ad9e6759ae6d6fae"},{"timestamp":1570702056,"slotPrice":"2a14513c8dda744f5"},{"timestamp":1570703631,"slotPrice":"295404384ce23f7e6"},{"timestamp":1570705206,"slotPrice":"2898cfb663909552a"},{"timestamp":1570706781,"slotPrice":"27e28619312e1bbeb"},{"timestamp":1570708356,"slotPrice":"2730fbbbd4880cbfe"},{"timestamp":1570709931,"slotPrice":"268406d8f91204f2b"},{"timestamp":1570711506,"slotPrice":"25db7f725c61634e4"},{"timestamp":1570713081,"slotPrice":"25373f39297070a53"},{"timestamp":1570714656,"slotPrice":"24972178ffc6a2daf"},{"timestamp":1570716231,"slotPrice":"23fb0303b3673e444"},{"timestamp":1570717806,"slotPrice":"2362c21cbf174deb7"},{"timestamp":1570719381,"slotPrice":"22ce3e69393bbbaec"},{"timestamp":1570720956,"slotPrice":"223d58dcdaef23eb4"},{"timestamp":1570722531,"slotPrice":"21aff3aaa240d4de0"},{"timestamp":1570724106,"slotPrice":"2125f235e0b6f6206"},{"timestamp":1570725681,"slotPrice":"209f3903539ab267e"},{"timestamp":1570727256,"slotPrice":"201badabd6cb32f3e"},{"timestamp":1570728831,"slotPrice":"1f9b36cef378f2fea"},{"timestamp":1570730406,"slotPrice":"1f1dbc07afb668c3c"},{"timestamp":1570731981,"slotPrice":"1ea325e00c8d74f7e"},{"timestamp":1570733556,"slotPrice":"1e2b5dc6aa3e83bac"},{"timestamp":1570735131,"slotPrice":"1db64e044d3e02e69"},{"timestamp":1570736706,"slotPrice":"1d43e1b22e50ae744"},{"timestamp":1570738281,"slotPrice":"1cd404b07425b2bd8"},{"timestamp":1570739856,"slotPrice":"1c66a39d6962dd492"},{"timestamp":1570741431,"slotPrice":"1bfbabcd588884603"},{"timestamp":1570743006,"slotPrice":"1b930b42b050e785c"},{"timestamp":1570744581,"slotPrice":"1b2cb0a5e3d82936d"},{"timestamp":1570746156,"slotPrice":"1ac88b3ef46b8ea53"},{"timestamp":1570747731,"slotPrice":"1a668aee3f83629eb"},{"timestamp":1570749306,"slotPrice":"1a06a02621730811f"},{"timestamp":1570750881,"slotPrice":"19a8bbe4bb379ee8d"},{"timestamp":1570752456,"slotPrice":"194ccfae6c6ff9642"},{"timestamp":1570754031,"slotPrice":"18f2cd87c55f935bf"},{"timestamp":1570755606,"slotPrice":"189aa7f0a1cf15ae4"},{"timestamp":1570757181,"slotPrice":"184451debdd0d36a0"},{"timestamp":1570758756,"slotPrice":"17efbeb969e63d298"},{"timestamp":1570760331,"slotPrice":"179ce25475f47174c"},{"timestamp":1570761906,"slotPrice":"174bb0ec2d7efbedc"},{"timestamp":1570763481,"slotPrice":"16fc1f20f9efe1c81"},{"timestamp":1570765056,"slotPrice":"16ae21f36d398b1d6"},{"timestamp":1570766631,"slotPrice":"1661aec097f9a5e45"},{"timestamp":1570768206,"slotPrice":"1616bb3e6994e702b"},{"timestamp":1570769781,"slotPrice":"15cd3d782cd961ea2"},{"timestamp":1570771356,"slotPrice":"15852bcb14cba5d16"},{"timestamp":1570772931,"slotPrice":"153e7ce35d43153b5"},{"timestamp":1570774506,"slotPrice":"14f927b944679b71c"},{"timestamp":1570776081,"slotPrice":"14b5238dea915fb01"},{"timestamp":1570777656,"slotPrice":"147267e8c6f72fe7c"},{"timestamp":1570779231,"slotPrice":"1430ec95049887c1b"},{"timestamp":1570780806,"slotPrice":"13f0a99ed0c9fb4ee"},{"timestamp":1570782381,"slotPrice":"13b19751425c05872"},{"timestamp":1570783956,"slotPrice":"1373ae33bd197eeb6"},{"timestamp":1570785531,"slotPrice":"1336e707f3cb0808c"},{"timestamp":1570787106,"slotPrice":"12fb3ac7a1923293a"},{"timestamp":1570788681,"slotPrice":"12c0a2a2a2f175f47"},{"timestamp":1570790256,"slotPrice":"128717fd0cf2139de"},{"timestamp":1570791831,"slotPrice":"124e946d19a0c645b"},{"timestamp":1570793406,"slotPrice":"121711b9a1471f5d8"},{"timestamp":1570794981,"slotPrice":"11e089d8376be4c89"},{"timestamp":1570796556,"slotPrice":"11aaf6ebb2292e88b"},{"timestamp":1570798131,"slotPrice":"117653425d19d24cc"},{"timestamp":1570799706,"slotPrice":"11429954b8b467339"},{"timestamp":1570801281,"slotPrice":"110fc3c3c7bce0cf3"},{"timestamp":1570802856,"slotPrice":"10ddcd57e92fb3c0b"},{"timestamp":1570804431,"slotPrice":"10acb0ff4d38d7a46"},{"timestamp":1570806006,"slotPrice":"107c69cccb1532dd5"},{"timestamp":1570807581,"slotPrice":"104cf2f69df1b377c"},{"timestamp":1570809156,"slotPrice":"101e47d53c2620b06"},{"timestamp":1570810731,"slotPrice":"ff063e22665c103d"},{"timestamp":1570812306,"slotPrice":"fc342b6d07a9f113"},{"timestamp":1570813881,"slotPrice":"f96e00ba07cdb05c"},{"timestamp":1570815456,"slotPrice":"f6b37b6ead1aff12"},{"timestamp":1570817031,"slotPrice":"f4045abece5c904a"},{"timestamp":1570818606,"slotPrice":"f1605f9e3875155f"},{"timestamp":1570820181,"slotPrice":"eec74cb24036c689"},{"timestamp":1570821756,"slotPrice":"ec38e6438bb6c814"},{"timestamp":1570823331,"slotPrice":"e9b4f231fe9e17da"},{"timestamp":1570824906,"slotPrice":"e73b37e594b7de89"},{"timestamp":1570826481,"slotPrice":"e4cb80448598a87c"},{"timestamp":1570828056,"slotPrice":"e26595a5203e91d0"},{"timestamp":1570829631,"slotPrice":"e00943c385b154f7"},{"timestamp":1570831206,"slotPrice":"ddb657b63ed1ca78"},{"timestamp":1570832781,"slotPrice":"db6c9fe3cd813204"},{"timestamp":1570834356,"slotPrice":"d92bebf789f33cf3"},{"timestamp":1570835931,"slotPrice":"d6f40cd8c5c6da0e"},{"timestamp":1570837506,"slotPrice":"d4c4d4a0242127b0"},{"timestamp":1570839081,"slotPrice":"d29e168f5fda709d"},{"timestamp":1570840656,"slotPrice":"d07fa7075b20a82c"},{"timestamp":1570842231,"slotPrice":"ce695b80b688432c"},{"timestamp":1570843806,"slotPrice":"cc5b0a81d67fd00e"},{"timestamp":1570845381,"slotPrice":"ca548b988031afd9"},{"timestamp":1570846956,"slotPrice":"c855b75127d18343"},{"timestamp":1570848531,"slotPrice":"c65e672faf65df78"},{"timestamp":1570850106,"slotPrice":"c46e75a82a8f3f85"},{"timestamp":1570851681,"slotPrice":"c285be17e1296d08"},{"timestamp":1570853256,"slotPrice":"c0a41cbebfe99dc9"},{"timestamp":1570854831,"slotPrice":"bec96eb80a1e6caf"},{"timestamp":1570856406,"slotPrice":"bcf591f566e77133"},{"timestamp":1570857981,"slotPrice":"bb2865379c5f0811"},{"timestamp":1570859556,"slotPrice":"b961c808e2acbc37"},{"timestamp":1570861131,"slotPrice":"b7a19ab78d8b12c2"},{"timestamp":1570862706,"slotPrice":"b5e7be5083154726"},{"timestamp":1570864281,"slotPrice":"b43414998d4643c3"},{"timestamp":1570865856,"slotPrice":"b286800c35df59b8"},{"timestamp":1570867431,"slotPrice":"b0dee3d16cc4b39d"},{"timestamp":1570869006,"slotPrice":"af3d23bb92ee219c"},{"timestamp":1570870581,"slotPrice":"ada12442eab2e666"},{"timestamp":1570872156,"slotPrice":"ac0aca806d875be2"},{"timestamp":1570873731,"slotPrice":"aa79fc2992764dc6"},{"timestamp":1570875306,"slotPrice":"a8ee9f8c0f2656e9"},{"timestamp":1570876881,"slotPrice":"a7689b89bb1c8f87"},{"timestamp":1570878456,"slotPrice":"a5e7d794b61e305c"},{"timestamp":1570880031,"slotPrice":"a46c3bab2475ce4a"},{"timestamp":1570881606,"slotPrice":"a2f5b053db2d7ee4"},{"timestamp":1570883181,"slotPrice":"a1841e9a9cce7711"},{"timestamp":1570884756,"slotPrice":"a017700cd4c8cd7a"},{"timestamp":1570886331,"slotPrice":"9eaf8eb5539daaa5"},{"timestamp":1570887906,"slotPrice":"9d4c651a5b63b8f5"},{"timestamp":1570889481,"slotPrice":"9bedde39177b51dd"},{"timestamp":1570891056,"slotPrice":"9a93e583771c2f7d"},{"timestamp":1570892631,"slotPrice":"993e66dc959cb875"},{"timestamp":1570894206,"slotPrice":"97ed4e965e2eb355"},{"timestamp":1570895781,"slotPrice":"96a0896df2920a94"},{"timestamp":1570897356,"slotPrice":"95580489c9282a49"},{"timestamp":1570898931,"slotPrice":"9413ad7629c70f7a"},{"timestamp":1570900506,"slotPrice":"92d372236b79349c"},{"timestamp":1570902081,"slotPrice":"919740e2ba9b215e"},{"timestamp":1570903656,"slotPrice":"905f0864111cbd19"},{"timestamp":1570905231,"slotPrice":"8f2ab7b3be6991f4"},{"timestamp":1570906806,"slotPrice":"8dfa3e38323a90e6"},{"timestamp":1570908381,"slotPrice":"8ccd8baf91ab50e5"},{"timestamp":1570909956,"slotPrice":"8ba4902d8ed3389a"},{"timestamp":1570911531,"slotPrice":"8a7f3c197b87c61e"},{"timestamp":1570913106,"slotPrice":"895d802c3b80e233"},{"timestamp":1570914681,"slotPrice":"883f4d6e1bdb5043"},{"timestamp":1570916256,"slotPrice":"87249534fb7a9993"},{"timestamp":1570917831,"slotPrice":"860d492256b73574"},{"timestamp":1570919406,"slotPrice":"84f95b21c503ce09"},{"timestamp":1570920981,"slotPrice":"83e8bd66a6a95d52"},{"timestamp":1570922556,"slotPrice":"82db626b0a3acb08"},{"timestamp":1570924131,"slotPrice":"81d13ced6456b844"},{"timestamp":1570925706,"slotPrice":"80ca3fef86f62e82"},{"timestamp":1570927281,"slotPrice":"7fc65eb48861555e"},{"timestamp":1570928856,"slotPrice":"7ec58cbf83cacc25"},{"timestamp":1570930431,"slotPrice":"7dc7bdd217eeae0d"},{"timestamp":1570932006,"slotPrice":"7ccce5eabe0c5f78"},{"timestamp":1570933581,"slotPrice":"7bd4f943a3d2657b"},{"timestamp":1570935156,"slotPrice":"7adfec5106827d9e"},{"timestamp":1570936731,"slotPrice":"79edb3c00dbe141b"},{"timestamp":1570938306,"slotPrice":"78fe44758aec5ae3"},{"timestamp":1570939881,"slotPrice":"7811938c5588f53b"},{"timestamp":1570941456,"slotPrice":"772796547c764912"},{"timestamp":1570943031,"slotPrice":"76404251d29dfb7d"},{"timestamp":1570944606,"slotPrice":"755b8d3ad25bf203"},{"timestamp":1570946181,"slotPrice":"74796cf77905bce1"},{"timestamp":1570947756,"slotPrice":"7399d7a02a1c3bbd"},{"timestamp":1570949331,"slotPrice":"72bcc37c99ecf382"},{"timestamp":1570950906,"slotPrice":"71e22702bf6a80db"},{"timestamp":1570952481,"slotPrice":"7109f8d5da16ba12"},{"timestamp":1570954056,"slotPrice":"70342fc53d248e1f"},{"timestamp":1570955631,"slotPrice":"6f60c2cbbe05911f"},{"timestamp":1570957206,"slotPrice":"6e8fa90e3337388e"},{"timestamp":1570958781,"slotPrice":"6dc0d9db1faabf26"},{"timestamp":1570960356,"slotPrice":"6cf44ca941d04842"},{"timestamp":1570961931,"slotPrice":"6c29f91709c8704d"},{"timestamp":1570963506,"slotPrice":"6b61d6e9b023d66b"},{"timestamp":1570965081,"slotPrice":"6a9bde0c484017b2"},{"timestamp":1570966656,"slotPrice":"69d8068efbc0e6e8"},{"timestamp":1570968231,"slotPrice":"691648a63f1cd97a"},{"timestamp":1570969806,"slotPrice":"68569caa0b3b56e5"},{"timestamp":1570971381,"slotPrice":"6798fb151bfee2d2"},{"timestamp":1570972956,"slotPrice":"66dd5c8433982545"},{"timestamp":1570974531,"slotPrice":"6623b9b5627f351f"},{"timestamp":1570976106,"slotPrice":"656c0b8753f1bf9d"},{"timestamp":1570977681,"slotPrice":"64b64af8a8a01357"},{"timestamp":1570979256,"slotPrice":"640271272e1ee5a6"},{"timestamp":1570980831,"slotPrice":"6350774f5645c859"},{"timestamp":1570982406,"slotPrice":"62a056cb93adbb86"},{"timestamp":1570983981,"slotPrice":"61f209139ec4c088"},{"timestamp":1570985556,"slotPrice":"614587bc095d5eed"},{"timestamp":1570987131,"slotPrice":"609acc755e92e920"},{"timestamp":1570988706,"slotPrice":"5ff1d10bf2688339"},{"timestamp":1570990281,"slotPrice":"5f4a8f66ef6deff3"},{"timestamp":1570991856,"slotPrice":"5ea5018810d57ca3"},{"timestamp":1570993431,"slotPrice":"5e01218afe39de6b"},{"timestamp":1570995006,"slotPrice":"5d5ee9a4ad3ebd0f"},{"timestamp":1570996581,"slotPrice":"5cbe5423107b3f48"},{"timestamp":1570998156,"slotPrice":"5c1f5b6c7636d3a2"},{"timestamp":1570999731,"slotPrice":"5b81f9ff1b99c25c"},{"timestamp":1571001306,"slotPrice":"5ae62a709b51177f"},{"timestamp":1571002881,"slotPrice":"5a4be76d8e05de26"},{"timestamp":1571004456,"slotPrice":"59b32bb91550726c"},{"timestamp":1571006031,"slotPrice":"591bf22c53c2d6e6"},{"timestamp":1571007606,"slotPrice":"588635b6144350db"},{"timestamp":1571009181,"slotPrice":"57f1f15a5cde3e43"},{"timestamp":1571010756,"slotPrice":"575f2031f660c978"},{"timestamp":1571012331,"slotPrice":"56cdbd6a0bfbc27b"},{"timestamp":1571013906,"slotPrice":"563dc443bf46dee4"},{"timestamp":1571015481,"slotPrice":"55af3013d956e987"},{"timestamp":1571017056,"slotPrice":"5521fc42558d728c"},{"timestamp":1571018631,"slotPrice":"5496244a09ce3e9b"},{"timestamp":1571020206,"slotPrice":"540ba3b850302212"},{"timestamp":1571021781,"slotPrice":"5382762c938098c4"},{"timestamp":1571023356,"slotPrice":"52fa97581c77db97"},{"timestamp":1571024931,"slotPrice":"527402fda7f13878"},{"timestamp":1571026506,"slotPrice":"51eeb4f106a78899"},{"timestamp":1571028081,"slotPrice":"516aa916dcaa9118"},{"timestamp":1571029656,"slotPrice":"50e7db644ffce4eb"},{"timestamp":1571031231,"slotPrice":"506647dea8445c98"},{"timestamp":1571032806,"slotPrice":"4fe5ea9b12b6dfce"},{"timestamp":1571034381,"slotPrice":"4f66bfbe5b53e76f"},{"timestamp":1571035956,"slotPrice":"4ee8c37c820b81d8"},{"timestamp":1571037531,"slotPrice":"4e6bf21898949567"},{"timestamp":1571039106,"slotPrice":"4df047e46077ed27"},{"timestamp":1571040681,"slotPrice":"4d75c1401fd988de"},{"timestamp":1571042256,"slotPrice":"4cfc5a9a395c8603"},{"timestamp":1571043831,"slotPrice":"4c84106f0db01af3"},{"timestamp":1571045406,"slotPrice":"4c0cdf48aacd0819"},{"timestamp":1571046981,"slotPrice":"4b96c3be82bcc8cb"},{"timestamp":1571048556,"slotPrice":"4b21ba753768ed27"},{"timestamp":1571050131,"slotPrice":"4aadc01e701d0495"},{"timestamp":1571051706,"slotPrice":"4a3ad1786ebb8f58"},{"timestamp":1571053281,"slotPrice":"49c8eb4e08cfcc9d"},{"timestamp":1571054856,"slotPrice":"49580a764922eeb4"},{"timestamp":1571056431,"slotPrice":"48e82bd44e7ff9d9"},{"timestamp":1571058006,"slotPrice":"48794c5702f04a6d"},{"timestamp":1571059581,"slotPrice":"480b68f8f78f0d58"},{"timestamp":1571061156,"slotPrice":"479e7ec022b87b75"},{"timestamp":1571062731,"slotPrice":"47328abdb0e5644f"},{"timestamp":1571064306,"slotPrice":"46c78a0dce19d8a3"},{"timestamp":1571065881,"slotPrice":"465d79d780b17e94"},{"timestamp":1571067456,"slotPrice":"45f4574c6c80db9c"},{"timestamp":1571069031,"slotPrice":"458c1fa8ab67483c"},{"timestamp":1571070606,"slotPrice":"4524d0328f36f841"},{"timestamp":1571072181,"slotPrice":"44be663a8f574bd2"},{"timestamp":1571073756,"slotPrice":"4458df1afd4b88fa"},{"timestamp":1571075331,"slotPrice":"43f43837faf7de68"},{"timestamp":1571076906,"slotPrice":"43906eff26ba1fe9"},{"timestamp":1571078481,"slotPrice":"432d80e79a15f956"},{"timestamp":1571080056,"slotPrice":"42cb6b71a32d2971"},{"timestamp":1571081631,"slotPrice":"426a2c26ae6d7250"},{"timestamp":1571083206,"slotPrice":"4209c0991446a51f"},{"timestamp":1571084781,"slotPrice":"41aa2663f2a13bf4"},{"timestamp":1571086356,"slotPrice":"414b5b2b11060a52"},{"timestamp":1571087931,"slotPrice":"40ed5c9ab112e08a"},{"timestamp":1571089506,"slotPrice":"409028676a2c5384"},{"timestamp":1571091081,"slotPrice":"4033bc4e1297f42a"},{"timestamp":1571092656,"slotPrice":"3fd8161385c36458"},{"timestamp":1571094231,"slotPrice":"3f7d33849b6a19fc"},{"timestamp":1571095806,"slotPrice":"3f231275ef9dac3a"},{"timestamp":1571097381,"slotPrice":"3ec9b0c3ce4f29ea"},{"timestamp":1571098956,"slotPrice":"3e710c520fa5d7e5"},{"timestamp":1571100531,"slotPrice":"3e19230bfb0f2568"},{"timestamp":1571102106,"slotPrice":"3dc1f2e41f261d09"},{"timestamp":1571103681,"slotPrice":"3d6b79d43bfa74ed"},{"timestamp":1571105256,"slotPrice":"3d15b5dd24cc7378"},{"timestamp":1571106831,"slotPrice":"3cc0a5069cd53ae9"},{"timestamp":1571108406,"slotPrice":"3c6c455f3a88e51c"},{"timestamp":1571109981,"slotPrice":"3c1894fc53763b56"},{"timestamp":1571111556,"slotPrice":"3bc591f9d56e8112"},{"timestamp":1571113131,"slotPrice":"3b733a7a38a8c452"},{"timestamp":1571114706,"slotPrice":"3b218ca6524fda4f"},{"timestamp":1571116281,"slotPrice":"3ad086ad4f4e9c96"},{"timestamp":1571117856,"slotPrice":"3a8026c485a9be68"},{"timestamp":1571119431,"slotPrice":"3a306b276fb56720"},{"timestamp":1571121006,"slotPrice":"39e152177eefca80"},{"timestamp":1571122581,"slotPrice":"3992d9dc179a393b"},{"timestamp":1571124156,"slotPrice":"394500c26768e0ff"},{"timestamp":1571125731,"slotPrice":"38f7c51d5a4089a3"},{"timestamp":1571127306,"slotPrice":"38ab254579841e53"},{"timestamp":1571128881,"slotPrice":"385f1f98dc9c61f2"},{"timestamp":1571130456,"slotPrice":"3813b27b12912ba0"},{"timestamp":1571132031,"slotPrice":"37c8dc550793e396"},{"timestamp":1571133606,"slotPrice":"377e9b94efb3f627"},{"timestamp":1571135181,"slotPrice":"3734eeae387d9d0f"},{"timestamp":1571136756,"slotPrice":"36ebd4196d9141f8"},{"timestamp":1571138331,"slotPrice":"36a34a54269a0d61"},{"timestamp":1571139906,"slotPrice":"365b4fe0f35e4404"},{"timestamp":1571141481,"slotPrice":"3613e3474619d4df"},{"timestamp":1571143056,"slotPrice":"35cd031368909629"},{"timestamp":1571144631,"slotPrice":"3586add65caef5a6"},{"timestamp":1571146206,"slotPrice":"3540e225d257f7cb"},{"timestamp":1571147781,"slotPrice":"34fb9e9c131518eb"},{"timestamp":1571149356,"slotPrice":"34b6e1d7f221d6b8"},{"timestamp":1571150931,"slotPrice":"3472aa7cb4f8f141"},{"timestamp":1571152506,"slotPrice":"342ef73209df4a7c"},{"timestamp":1571154081,"slotPrice":"33ebc6a3ef366a9e"},{"timestamp":1571155656,"slotPrice":"33a91782a897151f"},{"timestamp":1571157231,"slotPrice":"3366e882ae52d44c"},{"timestamp":1571158806,"slotPrice":"3325385c99a6f59b"},{"timestamp":1571160381,"slotPrice":"32e405cd16d1a18b"},{"timestamp":1571161956,"slotPrice":"32a34f94d588fcce"},{"timestamp":1571163531,"slotPrice":"3263147877fb8aeb"},{"timestamp":1571165106,"slotPrice":"322353408ac3f050"},{"timestamp":1571166681,"slotPrice":"31e40ab96a037ca3"},{"timestamp":1571168256,"slotPrice":"31a539b340acc72f"},{"timestamp":1571169831,"slotPrice":"3166df01eca9ab54"},{"timestamp":1571171406,"slotPrice":"3128f97cfe4dd642"},{"timestamp":1571172981,"slotPrice":"30eb87ff9ee94d6d"},{"timestamp":1571174556,"slotPrice":"30ae89688b8256bb"},{"timestamp":1571176131,"slotPrice":"3071fc9a010fbe30"},{"timestamp":1571177706,"slotPrice":"3035e079b5cddb41"},{"timestamp":1571179281,"slotPrice":"2ffa33f0c6131ea0"},{"timestamp":1571180856,"slotPrice":"2fbef5ebac69f310"},{"timestamp":1571182431,"slotPrice":"2f84255a368d05bd"},{"timestamp":1571184006,"slotPrice":"2f49c12f70248814"},{"timestamp":1571185581,"slotPrice":"2f0fc861a15af3e2"},{"timestamp":1571187156,"slotPrice":"2ed639ea3b932600"},{"timestamp":1571188731,"slotPrice":"2e9d14c5d51b75cd"},{"timestamp":1571190306,"slotPrice":"2e6457f4150cde05"},{"timestamp":1571191881,"slotPrice":"2e2c0277ade51853"},{"timestamp":1571193456,"slotPrice":"2df413564fa629ab"},{"timestamp":1571195031,"slotPrice":"2dbc8998a3dd1e4f"},{"timestamp":1571196606,"slotPrice":"2d85644a3530638a"},{"timestamp":1571198181,"slotPrice":"2d4ea27972a34b7d"},{"timestamp":1571199756,"slotPrice":"2d184337a0ffd651"},{"timestamp":1571201331,"slotPrice":"2ce24598c8d0dbf4"},{"timestamp":1571202906,"slotPrice":"2caca8b3b998e691"},{"timestamp":1571204481,"slotPrice":"2c776ba1f6bc187b"},{"timestamp":1571206056,"slotPrice":"2c428d7faf3b674f"},{"timestamp":1571207631,"slotPrice":"2c0e0d6bb7fa6b7d"},{"timestamp":1571209206,"slotPrice":"2bd9ea877d57b8b7"},{"timestamp":1571210781,"slotPrice":"2ba623f70028be72"},{"timestamp":1571212356,"slotPrice":"2b72b8e0c413a7d3"},{"timestamp":1571213931,"slotPrice":"2b3fa86dd06227ab"},{"timestamp":1571215506,"slotPrice":"2b0cf1c99d9a3d95"},{"timestamp":1571217081,"slotPrice":"2ada94221660a4dd"},{"timestamp":1571218656,"slotPrice":"2aa88ea786b56e40"},{"timestamp":1571220231,"slotPrice":"2a76e08c984f5075"},{"timestamp":1571221806,"slotPrice":"2a45890649325de0"},{"timestamp":1571223381,"slotPrice":"2a14874be396eb09"},{"timestamp":1571224956,"slotPrice":"29e3da96f708d1b0"},{"timestamp":1571226531,"slotPrice":"29b382234e56adc5"},{"timestamp":1571228106,"slotPrice":"29837d2ee7e939d5"},{"timestamp":1571229681,"slotPrice":"2953caf9f055a8cc"},{"timestamp":1571231256,"slotPrice":"29246ac6bbde63b9"},{"timestamp":1571232831,"slotPrice":"28f55bd9b8c65633"},{"timestamp":1571234406,"slotPrice":"28c69d796f72517c"},{"timestamp":1571235981,"slotPrice":"28982eee760d9a25"},{"timestamp":1571237556,"slotPrice":"286a0f836e9e7952"},{"timestamp":1571239131,"slotPrice":"283c3e84f9076102"},{"timestamp":1571240706,"slotPrice":"280ebb41b4402ca0"},{"timestamp":1571242281,"slotPrice":"27e1850a30a740e2"},{"timestamp":1571243856,"slotPrice":"27b49b30ed6332f4"},{"timestamp":1571245431,"slotPrice":"2787fd0a50e32cf1"},{"timestamp":1571247006,"slotPrice":"275ba9eca367ab92"},{"timestamp":1571248581,"slotPrice":"272fa13005e21f84"},{"timestamp":1571250156,"slotPrice":"2703e22e6e98553e"},{"timestamp":1571251731,"slotPrice":"26d86c43a2fac841"},{"timestamp":1571253306,"slotPrice":"26ad3ecd2fc932a2"},{"timestamp":1571254881,"slotPrice":"2682592a6331b700"},{"timestamp":1571256456,"slotPrice":"2657babc49a6d0dc"},{"timestamp":1571258031,"slotPrice":"262d62e5a4901ef7"},{"timestamp":1571259606,"slotPrice":"2603510ae9013701"},{"timestamp":1571261181,"slotPrice":"25d98492341345e0"},{"timestamp":1571262756,"slotPrice":"25affce34b73ed2e"},{"timestamp":1571264331,"slotPrice":"2586b967955ba5af"},{"timestamp":1571265906,"slotPrice":"255db98a10c2cee0"},{"timestamp":1571267481,"slotPrice":"2534fcb755f1f6bb"},{"timestamp":1571269056,"slotPrice":"250c825d8b88f000"},{"timestamp":1571270631,"slotPrice":"24e449ec64b50c10"},{"timestamp":1571272206,"slotPrice":"24bc52d51b571e39"},{"timestamp":1571273781,"slotPrice":"24949c8a6bd8167a"},{"timestamp":1571275356,"slotPrice":"246d26808def28a9"},{"timestamp":1571276931,"slotPrice":"2445f02d32f56e09"},{"timestamp":1571278506,"slotPrice":"241ef9077ed2930d"},{"timestamp":1571280081,"slotPrice":"23f84088035d5ed9"},{"timestamp":1571281656,"slotPrice":"23d1c628be0464f8"},{"timestamp":1571283231,"slotPrice":"23ab89651046aa8a"},{"timestamp":1571284806,"slotPrice":"238589b9beee9ff5"},{"timestamp":1571286381,"slotPrice":"235fc6a4e94428a9"},{"timestamp":1571287956,"slotPrice":"233a3fa606f407c2"},{"timestamp":1571289531,"slotPrice":"2314f43de5e4a4bf"},{"timestamp":1571291106,"slotPrice":"22efe3eea109556a"},{"timestamp":1571292681,"slotPrice":"22cb0e3ba1df8195"},{"timestamp":1571294256,"slotPrice":"22a672a997718ac4"},{"timestamp":1571295831,"slotPrice":"228210be75c7310a"},{"timestamp":1571297406,"slotPrice":"225de8016f310903"},{"timestamp":1571298981,"slotPrice":"2239f7faf269bfb6"},{"timestamp":1571300556,"slotPrice":"22164034a6b12e52"},{"timestamp":1571302131,"slotPrice":"21f2c0396605e76c"},{"timestamp":1571303706,"slotPrice":"21cf77953c046e50"},{"timestamp":1571305281,"slotPrice":"21ac65d5603ded05"},{"timestamp":1571306856,"slotPrice":"21898a88329b5523"},{"timestamp":1571308431,"slotPrice":"2166e53d39a992e0"},{"timestamp":1571310006,"slotPrice":"214475851d26e892"},{"timestamp":1571311581,"slotPrice":"21223af1a3c3c8c4"},{"timestamp":1571313156,"slotPrice":"21003515ad413b18"},{"timestamp":1571314731,"slotPrice":"20de638532b57d8b"},{"timestamp":1571316306,"slotPrice":"20bcc5d540bfc3f8"},{"timestamp":1571317881,"slotPrice":"209b5b9bf56d7b12"},{"timestamp":1571319456,"slotPrice":"207a24707b3564ba"},{"timestamp":1571321031,"slotPrice":"20591feb0787f4fa"},{"timestamp":1571322606,"slotPrice":"20384da4d79d530b"},{"timestamp":1571324181,"slotPrice":"2017ad382b9ff1f4"},{"timestamp":1571325756,"slotPrice":"1ff73e4045df67f2"},{"timestamp":1571327331,"slotPrice":"1fd7005965858fdf"},{"timestamp":1571328906,"slotPrice":"1fb6f320c5d37f1f"},{"timestamp":1571330481,"slotPrice":"1f97163499814281"},{"timestamp":1571332056,"slotPrice":"1f77693407dae618"},{"timestamp":1571333631,"slotPrice":"1f57ebbf2c05066f"},{"timestamp":1571335206,"slotPrice":"1f389d770e68bce9"},{"timestamp":1571336781,"slotPrice":"1f197dfda5a3a66b"},{"timestamp":1571338356,"slotPrice":"1efa8cf5d227cf49"},{"timestamp":1571339931,"slotPrice":"1edbca0359fcc4d4"},{"timestamp":1571341506,"slotPrice":"1ebd34cae9aa505d"},{"timestamp":1571343081,"slotPrice":"1e9eccf20dfb966b"},{"timestamp":1571344656,"slotPrice":"1e80921f336f3209"},{"timestamp":1571346231,"slotPrice":"1e6283f9a32027d6"},{"timestamp":1571347806,"slotPrice":"1e44a22980b747c5"},{"timestamp":1571349381,"slotPrice":"1e26ec57c6ed7eeb"},{"timestamp":1571350956,"slotPrice":"1e09622e451877ef"},{"timestamp":1571352531,"slotPrice":"1dec03579e292c49"},{"timestamp":1571354106,"slotPrice":"1dcecf7f445a11ec"},{"timestamp":1571355681,"slotPrice":"1db1c65178b35420"},{"timestamp":1571357256,"slotPrice":"1d94e77b4747bb66"},{"timestamp":1571358831,"slotPrice":"1d7832aa855e13d6"},{"timestamp":1571360406,"slotPrice":"1d5ba78dcf28b296"},{"timestamp":1571361981,"slotPrice":"1d3f45d48584b452"},{"timestamp":1571363556,"slotPrice":"1d230d2ecbc0d6d7"},{"timestamp":1571365131,"slotPrice":"1d06fd4d856bd09e"},{"timestamp":1571366706,"slotPrice":"1ceb15e25498bd71"},{"timestamp":1571368281,"slotPrice":"1ccf569f960042b7"},{"timestamp":1571369856,"slotPrice":"1cb3bf3861ecb10c"},{"timestamp":1571371431,"slotPrice":"1c984f60878af3db"},{"timestamp":1571373006,"slotPrice":"1c7d06cc8b5194e9"},{"timestamp":1571374581,"slotPrice":"1c61e531a5d1f737"},{"timestamp":1571376156,"slotPrice":"1c46ea45c1b313a2"},{"timestamp":1571377731,"slotPrice":"1c2c15bf78e39df4"},{"timestamp":1571379306,"slotPrice":"1c11675612abd5ab"},{"timestamp":1571380881,"slotPrice":"1bf6dec182f70503"},{"timestamp":1571382456,"slotPrice":"1bdc7bba67352eeb"},{"timestamp":1571384031,"slotPrice":"1bc23dfa04e3b63d"},{"timestamp":1571385606,"slotPrice":"1ba8253a47b38506"},{"timestamp":1571387181,"slotPrice":"1b8e3135c017659b"},{"timestamp":1571388756,"slotPrice":"1b7461a79fecdd93"},{"timestamp":1571390331,"slotPrice":"1b5ab64bbb03b282"},{"timestamp":1571391906,"slotPrice":"1b412ede843022fa"},{"timestamp":1571393481,"slotPrice":"1b27cb1d0ad178fa"},{"timestamp":1571395056,"slotPrice":"1b0e8ac4fa3d3a4e"},{"timestamp":1571396631,"slotPrice":"1af56d949809b48e"},{"timestamp":1571398206,"slotPrice":"1adc734ac14a008a"},{"timestamp":1571399781,"slotPrice":"1ac39ba6ea5d0dc3"},{"timestamp":1571401356,"slotPrice":"1aaae6691bdad2f9"},{"timestamp":1571402931,"slotPrice":"1a925351f26738d4"},{"timestamp":1571404506,"slotPrice":"1a79e2229c0923f5"},{"timestamp":1571406081,"slotPrice":"1a61929cd6f521c4"},{"timestamp":1571407656,"slotPrice":"1a496482efa9d945"},{"timestamp":1571409231,"slotPrice":"1a315797c0c64419"},{"timestamp":1571410806,"slotPrice":"1a196b9eaf799387"},{"timestamp":1571412381,"slotPrice":"1a01a05bab0fc820"},{"timestamp":1571413956,"slotPrice":"19e9f5932c751eb0"},{"timestamp":1571415531,"slotPrice":"19d26b0a32c21db8"},{"timestamp":1571417106,"slotPrice":"19bb00864321d1e6"},{"timestamp":1571418681,"slotPrice":"19a3b5cd6762fb0d"},{"timestamp":1571420256,"slotPrice":"198c8aa62b9a2afa"},{"timestamp":1571421831,"slotPrice":"19757ed79e08cf64"},{"timestamp":1571423406,"slotPrice":"195e92294c79064e"},{"timestamp":1571424981,"slotPrice":"1947c46343d87145"},{"timestamp":1571426556,"slotPrice":"1931154e0f2dc96a"},{"timestamp":1571428131,"slotPrice":"191a84b2b46e8ee2"},{"timestamp":1571429706,"slotPrice":"1904125ab55b0dac"},{"timestamp":1571431281,"slotPrice":"18edbe100cad57c8"},{"timestamp":1571432856,"slotPrice":"18d7879d2e559d32"},{"timestamp":1571434431,"slotPrice":"18c16ecd046cebec"},{"timestamp":1571436006,"slotPrice":"18ab736aeee134ac"},{"timestamp":1571437581,"slotPrice":"18959542c319482c"},{"timestamp":1571439156,"slotPrice":"187fd420c8fefca0"},{"timestamp":1571440731,"slotPrice":"186a2fd1baf90a25"},{"timestamp":1571442306,"slotPrice":"1854a822c4b9d381"},{"timestamp":1571443881,"slotPrice":"183f3ce1813c1fce"},{"timestamp":1571445456,"slotPrice":"1829eddbfa7668fc"},{"timestamp":1571447031,"slotPrice":"1814bae0a8347e6d"},{"timestamp":1571448606,"slotPrice":"17ffa3be6e246114"},{"timestamp":1571450181,"slotPrice":"17eaa8449bd3535d"},{"timestamp":1571451756,"slotPrice":"17d5c842eac22499"},{"timestamp":1571453331,"slotPrice":"17c103897d9639e9"},{"timestamp":1571454906,"slotPrice":"17ac59e8dec41d92"},{"timestamp":1571456481,"slotPrice":"1797cb32004aef96"},{"timestamp":1571458056,"slotPrice":"1783573639dce46f"},{"timestamp":1571459631,"slotPrice":"176efdc7485c4c95"},{"timestamp":1571461206,"slotPrice":"175abeb74bcfbac4"},{"timestamp":1571462781,"slotPrice":"174699d8c7e9d0f1"},{"timestamp":1571464356,"slotPrice":"17328efea24236ca"},{"timestamp":1571465931,"slotPrice":"171e9dfc20dab1a4"},{"timestamp":1571467506,"slotPrice":"170ac6a4e9e73a7e"},{"timestamp":1571469081,"slotPrice":"16f708cd02d4c607"},{"timestamp":1571470656,"slotPrice":"16e36448ce99ed25"},{"timestamp":1571472231,"slotPrice":"16cfd8ed0d82d5a5"},{"timestamp":1571473806,"slotPrice":"16bc668edc7d436b"},{"timestamp":1571475381,"slotPrice":"16a90d03b2bf4b5c"},{"timestamp":1571476956,"slotPrice":"1695cc21624ee8c3"},{"timestamp":1571478531,"slotPrice":"1682a3be171723fa"},{"timestamp":1571480106,"slotPrice":"166f93b0549fe20d"},{"timestamp":1571481681,"slotPrice":"165c9bcef6ce94dc"},{"timestamp":1571483256,"slotPrice":"1649bbf1301a1839"},{"timestamp":1571484831,"slotPrice":"1636f3ee89243c91"},{"timestamp":1571486406,"slotPrice":"1624439edefb6be3"},{"timestamp":1571487981,"slotPrice":"1611aada639d3bfc"},{"timestamp":1571489556,"slotPrice":"15ff29799c73efbe"},{"timestamp":1571491131,"slotPrice":"15ecbf55611634cb"},{"timestamp":1571492706,"slotPrice":"15da6c46db586a2c"},{"timestamp":1571494281,"slotPrice":"15c8302785a15832"},{"timestamp":1571495856,"slotPrice":"15b60ad12ac672a8"},{"timestamp":1571497431,"slotPrice":"15a3fc1de5418210"},{"timestamp":1571499006,"slotPrice":"159203e81dfe3f9b"},{"timestamp":1571500581,"slotPrice":"1580220a8b98ee41"},{"timestamp":1571502156,"slotPrice":"156e5660323c1e4b"},{"timestamp":1571503731,"slotPrice":"155ca0c46241797a"},{"timestamp":1571505306,"slotPrice":"154b0112b776d98d"},{"timestamp":1571506881,"slotPrice":"153977271931c8eb"},{"timestamp":1571508456,"slotPrice":"152802ddb8607491"},{"timestamp":1571510031,"slotPrice":"1516a4130fa22f34"},{"timestamp":1571511606,"slotPrice":"15055aa3e25ed60e"},{"timestamp":1571513181,"slotPrice":"14f4266d3c142602"},{"timestamp":1571514756,"slotPrice":"14e3074c6fa50f98"},{"timestamp":1571516331,"slotPrice":"14d1fd1f16dbb3b8"},{"timestamp":1571517906,"slotPrice":"14c107c31129cad7"},{"timestamp":1571519481,"slotPrice":"14b0271683c15a0f"},{"timestamp":1571521056,"slotPrice":"149f5af7d829c488"},{"timestamp":1571522631,"slotPrice":"148ea345bc592dca"},{"timestamp":1571524206,"slotPrice":"147dffdf2150535d"},{"timestamp":1571525781,"slotPrice":"146d70a33b34930e"},{"timestamp":1571527356,"slotPrice":"145cf57180207580"},{"timestamp":1571528931,"slotPrice":"144c8e29a7b3681d"},{"timestamp":1571530506,"slotPrice":"143c3aabaa73ae4f"},{"timestamp":1571532081,"slotPrice":"142bfad7c1051277"},{"timestamp":1571533656,"slotPrice":"141bce8e64429569"},{"timestamp":1571535231,"slotPrice":"140bb5b04b968a4b"},{"timestamp":1571536806,"slotPrice":"13fbb01e6d185876"},{"timestamp":1571538381,"slotPrice":"13ebbdb9fcc98b40"},{"timestamp":1571539956,"slotPrice":"13dbde646c2d1d0b"},{"timestamp":1571541531,"slotPrice":"13cc11ff6907b9c1"},{"timestamp":1571543106,"slotPrice":"13bc586cde28bd92"},{"timestamp":1571544681,"slotPrice":"13acb18ef12c117a"},{"timestamp":1571546256,"slotPrice":"139d1d48031a551b"},{"timestamp":1571547831,"slotPrice":"138d9b7aafafd7c4"},{"timestamp":1571549406,"slotPrice":"137e2c09cc7dcbb0"},{"timestamp":1571550981,"slotPrice":"136eced86862c619"},{"timestamp":1571552556,"slotPrice":"135f83c9cba755a4"},{"timestamp":1571554131,"slotPrice":"13504ac17658a835"},{"timestamp":1571555706,"slotPrice":"134123a320e255f9"},{"timestamp":1571557281,"slotPrice":"13320e52bae77602"},{"timestamp":1571558856,"slotPrice":"13230ab46ae9ad7f"},{"timestamp":1571560431,"slotPrice":"131418ac8defca42"},{"timestamp":1571562006,"slotPrice":"1305381fb669c215"},{"timestamp":1571563581,"slotPrice":"12f668f2acc52489"},{"timestamp":1571565156,"slotPrice":"12e7ab0a6ddefa3a"},{"timestamp":1571566731,"slotPrice":"12d8fe4c2b4ad2ba"},{"timestamp":1571568306,"slotPrice":"12ca629d4a3f5321"},{"timestamp":1571569881,"slotPrice":"12bbd7e363b6165d"},{"timestamp":1571571456,"slotPrice":"12ad5e04435d1c41"},{"timestamp":1571573031,"slotPrice":"129ef4e5e7b6e6b3"},{"timestamp":1571574606,"slotPrice":"12909c6e8110aed4"},{"timestamp":1571576181,"slotPrice":"1282548471a2ba1a"},{"timestamp":1571577756,"slotPrice":"12741d0e4cd34087"},{"timestamp":1571579331,"slotPrice":"1265f5f2d65a15ca"},{"timestamp":1571580906,"slotPrice":"1257df1902a99114"},{"timestamp":1571582481,"slotPrice":"1249d867f5eee9bd"},{"timestamp":1571584056,"slotPrice":"123be1c703c8dd21"},{"timestamp":1571585631,"slotPrice":"122dfb1daefde115"},{"timestamp":1571587206,"slotPrice":"12202453a885c56e"},{"timestamp":1571588781,"slotPrice":"12125d50d0128829"},{"timestamp":1571590356,"slotPrice":"1204a5fd32d68df0"},{"timestamp":1571591931,"slotPrice":"11f6fe410b1f20f3"},{"timestamp":1571593506,"slotPrice":"11e96604c0d9e954"},{"timestamp":1571595081,"slotPrice":"11dbdd30e7bbdc8e"},{"timestamp":1571596656,"slotPrice":"11ce63ae406ef6bd"},{"timestamp":1571598231,"slotPrice":"11c0f965b6bf79a1"},{"timestamp":1571599806,"slotPrice":"11b39e406242cc97"},{"timestamp":1571601381,"slotPrice":"11a6522785510614"},{"timestamp":1571602956,"slotPrice":"119915048d466931"},{"timestamp":1571604531,"slotPrice":"118be6c11141dd31"},{"timestamp":1571606106,"slotPrice":"117ec746d2c6e685"},{"timestamp":1571607681,"slotPrice":"1171b67fbc802f50"},{"timestamp":1571609256,"slotPrice":"1164b455e24343fd"},{"timestamp":1571610831,"slotPrice":"1157c0b381111c79"},{"timestamp":1571612406,"slotPrice":"114adb82fe1eaff6"},{"timestamp":1571613981,"slotPrice":"113e04aee67d207e"},{"timestamp":1571615556,"slotPrice":"11313c21ef77c371"},{"timestamp":1571617131,"slotPrice":"112481c6f565d1ad"},{"timestamp":1571618706,"slotPrice":"1117d588fbeaf9d3"},{"timestamp":1571620281,"slotPrice":"110b37532d462966"},{"timestamp":1571621856,"slotPrice":"10fea710d9fd017d"},{"timestamp":1571623431,"slotPrice":"10f224ad78df6c80"},{"timestamp":1571625006,"slotPrice":"10e5b014a65aef81"},{"timestamp":1571626581,"slotPrice":"10d949322428a5e3"},{"timestamp":1571628156,"slotPrice":"10cceff1d96df53f"},{"timestamp":1571629731,"slotPrice":"10c0a43fd1a22591"},{"timestamp":1571631306,"slotPrice":"10b466083d065c5f"},{"timestamp":1571632881,"slotPrice":"10a835376fff29e3"},{"timestamp":1571634456,"slotPrice":"109c11b9e28e32d5"},{"timestamp":1571636031,"slotPrice":"108ffb7c305864eb"},{"timestamp":1571637606,"slotPrice":"1083f26b183c401b"},{"timestamp":1571639181,"slotPrice":"1077f6737c2042cd"},{"timestamp":1571640756,"slotPrice":"106c078260555794"},{"timestamp":1571642331,"slotPrice":"10602584eb9db892"},{"timestamp":1571643906,"slotPrice":"1054506866e18fae"},{"timestamp":1571645481,"slotPrice":"1048881a3cafac48"},{"timestamp":1571647056,"slotPrice":"103ccc87f90fa5b9"},{"timestamp":1571648631,"slotPrice":"10311d9f491fa5c6"},{"timestamp":1571650206,"slotPrice":"10257b4dfb1b25d2"},{"timestamp":1571651781,"slotPrice":"1019e581fdc5772f"},{"timestamp":1571653356,"slotPrice":"100e5c2960248933"},{"timestamp":1571654931,"slotPrice":"1002df3251a15989"},{"timestamp":1571656506,"slotPrice":"ff76e8b212a151c"},{"timestamp":1571658081,"slotPrice":"fec0a223d543d52"},{"timestamp":1571659656,"slotPrice":"fe0b1e633ff9cd0"},{"timestamp":1571661231,"slotPrice":"fd565c5b22c0dbe"},{"timestamp":1571662806,"slotPrice":"fca25af836d55c6"},{"timestamp":1571664381,"slotPrice":"fbef19291f40277"},{"timestamp":1571665956,"slotPrice":"fb3c95de64bb42c"},{"timestamp":1571667531,"slotPrice":"fa8ad00a6d267f0"},{"timestamp":1571669106,"slotPrice":"f9d9c6a17d9650a"},{"timestamp":1571670681,"slotPrice":"f9297899b065f0e"},{"timestamp":1571672256,"slotPrice":"f879e4eaf744828"},{"timestamp":1571673831,"slotPrice":"f7cb0a8f12e3502"},{"timestamp":1571675406,"slotPrice":"f71ce88190a0d18"},{"timestamp":1571676981,"slotPrice":"f66f7dbfc6beeff"},{"timestamp":1571678556,"slotPrice":"f5c2c948cf3667b"},{"timestamp":1571680131,"slotPrice":"f516ca1d89b2b56"},{"timestamp":1571681706,"slotPrice":"f46b7f408f53665"},{"timestamp":1571683281,"slotPrice":"f3c0e7b634bf1b4"},{"timestamp":1571684856,"slotPrice":"f31702848518910"},{"timestamp":1571686431,"slotPrice":"f26dceb33fcb174"},{"timestamp":1571688006,"slotPrice":"f1c54b4bcf7d8f0"},{"timestamp":1571689581,"slotPrice":"f11d7759518d8d5"},{"timestamp":1571691156,"slotPrice":"f07651e883892c7"},{"timestamp":1571692731,"slotPrice":"efcfda07d012931"},{"timestamp":1571694306,"slotPrice":"ef2a0ec73c92b9f"},{"timestamp":1571695881,"slotPrice":"ee84ef386f5014e"},{"timestamp":1571697456,"slotPrice":"ede07a6eabfef2e"},{"timestamp":1571699031,"slotPrice":"ed3caf7ec88a012"},{"timestamp":1571700606,"slotPrice":"ec998d7f330517e"},{"timestamp":1571702181,"slotPrice":"ebf71387e92726f"},{"timestamp":1571703756,"slotPrice":"eb5540b2766355a"},{"timestamp":1571705331,"slotPrice":"eab41419f0b7ebd"},{"timestamp":1571706906,"slotPrice":"ea138cdaf6c749f"},{"timestamp":1571708481,"slotPrice":"e973aa13a7aa31d"},{"timestamp":1571710056,"slotPrice":"e8d46ae3a8a8797"},{"timestamp":1571711631,"slotPrice":"e835ce6c195738c"},{"timestamp":1571713206,"slotPrice":"e797d3cf959499b"},{"timestamp":1571714781,"slotPrice":"e6fa7a323278d39"},{"timestamp":1571716356,"slotPrice":"e65dc0b977ad2e5"},{"timestamp":1571717931,"slotPrice":"e5c1a68c61596c3"},{"timestamp":1571719506,"slotPrice":"e5262ad3598afb7"},{"timestamp":1571721081,"slotPrice":"e48b4cb83556f10"},{"timestamp":1571722656,"slotPrice":"e3f10b6636b9773"},{"timestamp":1571724231,"slotPrice":"e357660a016b407"},{"timestamp":1571725806,"slotPrice":"e2be5bd19f2fda9"},{"timestamp":1571727381,"slotPrice":"e225ebec7cf4a57"},{"timestamp":1571728956,"slotPrice":"e18e158b62397b2"},{"timestamp":1571730531,"slotPrice":"e0f6d7e072fd7bb"},{"timestamp":1571732106,"slotPrice":"e060321f2bd9a7a"},{"timestamp":1571733681,"slotPrice":"dfca237c606dbbf"},{"timestamp":1571735256,"slotPrice":"df34ab2e3430b79"},{"timestamp":1571736831,"slotPrice":"de9fc86c1fad1bd"}]}
+{
+  "state": "Not Started",
+  "bids": [],
+  "contractAddress": "0xED0FA720D4150F7b1572b68d1f8C708ddf9da5B7",
+  "takenSlotsCount": 0,
+  "freeSlotsCount": 36,
+  "maxSlotsCount": 36,
+  "minSlotsCount": 15,
+  "whitelistedAddresses": [],
+  "currentBlocktimeInMs": 1591283517000,
+  "initialPriceInWEI": "50000000000000000000000000",
+  "priceFunction": [
+    {
+      "timestamp": 1591703940,
+      "slotPrice": "295be96e64066972000000"
+    },
+    {
+      "timestamp": 1591705515,
+      "slotPrice": "28ab6d9a3582fe4d0b1133"
+    },
+    {
+      "timestamp": 1591707090,
+      "slotPrice": "26bb8d60247dae07cce883"
+    },
+    {
+      "timestamp": 1591708665,
+      "slotPrice": "23e256d6614747cbe27c8a"
+    },
+    {
+      "timestamp": 1591710240,
+      "slotPrice": "2088d32cd39d08c34ac831"
+    },
+    {
+      "timestamp": 1591711815,
+      "slotPrice": "1d0c51c1f143deef7b7e03"
+    },
+    {
+      "timestamp": 1591713390,
+      "slotPrice": "19af2aa9055664f5be2c07"
+    },
+    {
+      "timestamp": 1591714965,
+      "slotPrice": "16979fde8003f5eb7f180b"
+    },
+    {
+      "timestamp": 1591716540,
+      "slotPrice": "13d63cfd6d5f7a29382247"
+    },
+    {
+      "timestamp": 1591718115,
+      "slotPrice": "116d8b00f4c5cde4197cb2"
+    },
+    {
+      "timestamp": 1591719690,
+      "slotPrice": "f585d181acea1bdaa727c"
+    },
+    {
+      "timestamp": 1591721265,
+      "slotPrice": "d8e063847241cfeb6c350"
+    },
+    {
+      "timestamp": 1591722840,
+      "slotPrice": "c04d899362d98b7355fe9"
+    },
+    {
+      "timestamp": 1591724415,
+      "slotPrice": "ab374920fabafc593feb2"
+    },
+    {
+      "timestamp": 1591725990,
+      "slotPrice": "99161d4a2e0ce34848227"
+    },
+    {
+      "timestamp": 1591727565,
+      "slotPrice": "8974238fa130bb16faefd"
+    },
+    {
+      "timestamp": 1591729140,
+      "slotPrice": "7bed0d49f7eb99618ebd8"
+    },
+    {
+      "timestamp": 1591730715,
+      "slotPrice": "702c89f1853414064f7b9"
+    },
+    {
+      "timestamp": 1591732290,
+      "slotPrice": "65ec3b80b54d06e6662da"
+    },
+    {
+      "timestamp": 1591733865,
+      "slotPrice": "5cf1912a1f5d3b0ee5bd6"
+    },
+    {
+      "timestamp": 1591735440,
+      "slotPrice": "550bd6f1706969323af03"
+    },
+    {
+      "timestamp": 1591737015,
+      "slotPrice": "4e1281a9a4ab05845fb73"
+    },
+    {
+      "timestamp": 1591738590,
+      "slotPrice": "47e3bf51fd8861256f7a0"
+    },
+    {
+      "timestamp": 1591740165,
+      "slotPrice": "426344e218cb71d814334"
+    },
+    {
+      "timestamp": 1591741740,
+      "slotPrice": "3d795416692d49aebe0cf"
+    },
+    {
+      "timestamp": 1591743315,
+      "slotPrice": "3911ed631f61286484cb4"
+    },
+    {
+      "timestamp": 1591744890,
+      "slotPrice": "351c293e1308850a16485"
+    },
+    {
+      "timestamp": 1591746465,
+      "slotPrice": "3189af48081385817a23d"
+    },
+    {
+      "timestamp": 1591748040,
+      "slotPrice": "2e4e47aa0c46f08b44347"
+    },
+    {
+      "timestamp": 1591749615,
+      "slotPrice": "2b5f7fc164c6fea7633c0"
+    },
+    {
+      "timestamp": 1591751190,
+      "slotPrice": "28b460591bec3689ca901"
+    },
+    {
+      "timestamp": 1591752765,
+      "slotPrice": "26453098bd0364034309d"
+    },
+    {
+      "timestamp": 1591754340,
+      "slotPrice": "240b439776406cd2485ed"
+    },
+    {
+      "timestamp": 1591755915,
+      "slotPrice": "2200cf1ec524646787b5a"
+    },
+    {
+      "timestamp": 1591757490,
+      "slotPrice": "2020c93f984d4f56d15dd"
+    },
+    {
+      "timestamp": 1591759065,
+      "slotPrice": "1e66cbbea9832101ee89a"
+    },
+    {
+      "timestamp": 1591760640,
+      "slotPrice": "1ccefc40371de4bd29cb2"
+    },
+    {
+      "timestamp": 1591762215,
+      "slotPrice": "1b55f839678d3c837dba1"
+    },
+    {
+      "timestamp": 1591763790,
+      "slotPrice": "19f8c44c96137bac4cfe8"
+    },
+    {
+      "timestamp": 1591765365,
+      "slotPrice": "18b4be01d3fa6e14e331e"
+    },
+    {
+      "timestamp": 1591766940,
+      "slotPrice": "17878fd654af4339e785b"
+    },
+    {
+      "timestamp": 1591768515,
+      "slotPrice": "166f271cc0207e1ef2d02"
+    },
+    {
+      "timestamp": 1591770090,
+      "slotPrice": "1569ab4891c2bc381eb40"
+    },
+    {
+      "timestamp": 1591771665,
+      "slotPrice": "14757695f8a1e6805f5ff"
+    },
+    {
+      "timestamp": 1591773240,
+      "slotPrice": "13910fac7356fc39d42c9"
+    },
+    {
+      "timestamp": 1591774815,
+      "slotPrice": "12bb2431569541f87c959"
+    },
+    {
+      "timestamp": 1591776390,
+      "slotPrice": "11f2841655608be21f529"
+    },
+    {
+      "timestamp": 1591777965,
+      "slotPrice": "11361d934348093bb92ed"
+    },
+    {
+      "timestamp": 1591779540,
+      "slotPrice": "1084f998b5f63af2ca6da"
+    },
+    {
+      "timestamp": 1591781115,
+      "slotPrice": "fde38cfff0ea0a641b4d"
+    },
+    {
+      "timestamp": 1591782690,
+      "slotPrice": "f4110ea0e5fed1d3464b"
+    },
+    {
+      "timestamp": 1591784265,
+      "slotPrice": "eacca5402fa6cf020f61"
+    },
+    {
+      "timestamp": 1591785840,
+      "slotPrice": "e20be2eeb83ed461b652"
+    },
+    {
+      "timestamp": 1591787415,
+      "slotPrice": "d9c54898c6645ba0f009"
+    },
+    {
+      "timestamp": 1591788990,
+      "slotPrice": "d1f02cdeea529e9d2444"
+    },
+    {
+      "timestamp": 1591790565,
+      "slotPrice": "ca84a63bd4e5ed4b48d8"
+    },
+    {
+      "timestamp": 1591792140,
+      "slotPrice": "c37b778f08eacb52ed2e"
+    },
+    {
+      "timestamp": 1591793715,
+      "slotPrice": "bccdfed6118904deed4b"
+    },
+    {
+      "timestamp": 1591795290,
+      "slotPrice": "b67625f43b5bb5bcd700"
+    },
+    {
+      "timestamp": 1591796865,
+      "slotPrice": "b06e554444b5790f15fa"
+    },
+    {
+      "timestamp": 1591798440,
+      "slotPrice": "aab16773a9e78e28a9a5"
+    },
+    {
+      "timestamp": 1591800015,
+      "slotPrice": "a53a9ed1ac4e20e177de"
+    },
+    {
+      "timestamp": 1591801590,
+      "slotPrice": "a0059bbb0cf9ae4b0a61"
+    },
+    {
+      "timestamp": 1591803165,
+      "slotPrice": "9b0e54036bcf5cae38df"
+    },
+    {
+      "timestamp": 1591804740,
+      "slotPrice": "96510b5e50d4460d9b38"
+    },
+    {
+      "timestamp": 1591806315,
+      "slotPrice": "91ca4c5a8f41ad450071"
+    },
+    {
+      "timestamp": 1591807890,
+      "slotPrice": "8d76e24878de497ca874"
+    },
+    {
+      "timestamp": 1591809465,
+      "slotPrice": "8953d3a1bd03e589b4fd"
+    },
+    {
+      "timestamp": 1591811040,
+      "slotPrice": "855e5d075359ac877163"
+    },
+    {
+      "timestamp": 1591812615,
+      "slotPrice": "8193ecad28b4038fc2bd"
+    },
+    {
+      "timestamp": 1591814190,
+      "slotPrice": "7df21e5011e63039459a"
+    },
+    {
+      "timestamp": 1591815765,
+      "slotPrice": "7a76b76e88479cb0ab2d"
+    },
+    {
+      "timestamp": 1591817340,
+      "slotPrice": "771fa404d517e6e34393"
+    },
+    {
+      "timestamp": 1591818915,
+      "slotPrice": "73eaf36082b56e2bee4c"
+    },
+    {
+      "timestamp": 1591820490,
+      "slotPrice": "70d6d571f311c4c36b81"
+    },
+    {
+      "timestamp": 1591822065,
+      "slotPrice": "6de1983a2670e1c65a40"
+    },
+    {
+      "timestamp": 1591823640,
+      "slotPrice": "6b09a57e85c93f72be6f"
+    },
+    {
+      "timestamp": 1591825215,
+      "slotPrice": "684d80b82efe7c8afafd"
+    },
+    {
+      "timestamp": 1591826790,
+      "slotPrice": "65abc51a3be66dc208f5"
+    },
+    {
+      "timestamp": 1591828365,
+      "slotPrice": "632323dfddedebb1ce41"
+    },
+    {
+      "timestamp": 1591829940,
+      "slotPrice": "60b262ab0ae7b4f34219"
+    },
+    {
+      "timestamp": 1591831515,
+      "slotPrice": "5e585a07b1b41c59b5c9"
+    },
+    {
+      "timestamp": 1591833090,
+      "slotPrice": "5c13f41e466c02b250c4"
+    },
+    {
+      "timestamp": 1591834665,
+      "slotPrice": "59e42b6b7abd25a9287e"
+    },
+    {
+      "timestamp": 1591836240,
+      "slotPrice": "57c809a4ce6ef65f519d"
+    },
+    {
+      "timestamp": 1591837815,
+      "slotPrice": "55bea6a6fc5f40c64784"
+    },
+    {
+      "timestamp": 1591839390,
+      "slotPrice": "53c72783762dae526847"
+    },
+    {
+      "timestamp": 1591840965,
+      "slotPrice": "51e0bd9ca0ca2c861e77"
+    },
+    {
+      "timestamp": 1591842540,
+      "slotPrice": "500aa5d1b193e4e6d9a9"
+    },
+    {
+      "timestamp": 1591844115,
+      "slotPrice": "4e4427bd48cb5ca9e06a"
+    },
+    {
+      "timestamp": 1591845690,
+      "slotPrice": "4c8c95056b6d41e3de45"
+    },
+    {
+      "timestamp": 1591847265,
+      "slotPrice": "4ae348b1e829c0357914"
+    },
+    {
+      "timestamp": 1591848840,
+      "slotPrice": "4947a697a05cba2669dd"
+    },
+    {
+      "timestamp": 1591850415,
+      "slotPrice": "47b91ac458f3b3669363"
+    },
+    {
+      "timestamp": 1591851990,
+      "slotPrice": "46371901c60bf96b9637"
+    },
+    {
+      "timestamp": 1591853565,
+      "slotPrice": "44c11c5594ea7811710a"
+    },
+    {
+      "timestamp": 1591855140,
+      "slotPrice": "4356a69276de63811222"
+    },
+    {
+      "timestamp": 1591856715,
+      "slotPrice": "41f73ff07a5b24286c27"
+    },
+    {
+      "timestamp": 1591858290,
+      "slotPrice": "40a276a6cbf39f8add49"
+    },
+    {
+      "timestamp": 1591859865,
+      "slotPrice": "3f57de93aff3ce743ac3"
+    },
+    {
+      "timestamp": 1591861440,
+      "slotPrice": "3e1710e4655783e17f89"
+    },
+    {
+      "timestamp": 1591863015,
+      "slotPrice": "3cdfabca5da119450fec"
+    },
+    {
+      "timestamp": 1591864590,
+      "slotPrice": "3bb1522b2ed9df875119"
+    },
+    {
+      "timestamp": 1591866165,
+      "slotPrice": "3a8bab61e0ff852d766e"
+    },
+    {
+      "timestamp": 1591867740,
+      "slotPrice": "396e62f8ce6eaea6b459"
+    },
+    {
+      "timestamp": 1591869315,
+      "slotPrice": "38592870e358c35e2550"
+    },
+    {
+      "timestamp": 1591870890,
+      "slotPrice": "374baf090296edb69fb0"
+    },
+    {
+      "timestamp": 1591872465,
+      "slotPrice": "3645ad86be9ce99dffce"
+    },
+    {
+      "timestamp": 1591874040,
+      "slotPrice": "3546de07e73baca6b8bf"
+    },
+    {
+      "timestamp": 1591875615,
+      "slotPrice": "344efdd28f96c96d43fa"
+    },
+    {
+      "timestamp": 1591877190,
+      "slotPrice": "335dcd2a6b292afade69"
+    },
+    {
+      "timestamp": 1591878765,
+      "slotPrice": "32730f26b9da2e81c7c3"
+    },
+    {
+      "timestamp": 1591880340,
+      "slotPrice": "318e898e2489fe475fb5"
+    },
+    {
+      "timestamp": 1591881915,
+      "slotPrice": "30b004b1c088c8de51db"
+    },
+    {
+      "timestamp": 1591883490,
+      "slotPrice": "2fd74b4ac8f01390489b"
+    },
+    {
+      "timestamp": 1591885065,
+      "slotPrice": "2f042a5bdc0a7f0a43ea"
+    },
+    {
+      "timestamp": 1591886640,
+      "slotPrice": "2e36711319c4e1b91168"
+    },
+    {
+      "timestamp": 1591888215,
+      "slotPrice": "2d6df0ad4715c181aabc"
+    },
+    {
+      "timestamp": 1591889790,
+      "slotPrice": "2caa7c5c3439f9cc5060"
+    },
+    {
+      "timestamp": 1591891365,
+      "slotPrice": "2bebe92e047f87825bca"
+    },
+    {
+      "timestamp": 1591892940,
+      "slotPrice": "2b320df41743f29df48a"
+    },
+    {
+      "timestamp": 1591894515,
+      "slotPrice": "2a7cc32f725d6a9adb1f"
+    },
+    {
+      "timestamp": 1591896090,
+      "slotPrice": "29cbe2f99940eb58b4ac"
+    },
+    {
+      "timestamp": 1591897665,
+      "slotPrice": "291f48f1cb1023d8ff6e"
+    },
+    {
+      "timestamp": 1591899240,
+      "slotPrice": "2876d22ac4cf57728925"
+    },
+    {
+      "timestamp": 1591900815,
+      "slotPrice": "27d25d188f8e56c7d47a"
+    },
+    {
+      "timestamp": 1591902390,
+      "slotPrice": "2731c98043b30bb2c120"
+    },
+    {
+      "timestamp": 1591903965,
+      "slotPrice": "2694f867a035249fd25c"
+    },
+    {
+      "timestamp": 1591905540,
+      "slotPrice": "25fbcc0761fe2ae2fd4e"
+    },
+    {
+      "timestamp": 1591907115,
+      "slotPrice": "256627bbff52ad489714"
+    },
+    {
+      "timestamp": 1591908690,
+      "slotPrice": "24d3eff902d14fcd8876"
+    },
+    {
+      "timestamp": 1591910265,
+      "slotPrice": "24450a3c404a328a7d4b"
+    },
+    {
+      "timestamp": 1591911840,
+      "slotPrice": "23b95d0201897cf4efbc"
+    },
+    {
+      "timestamp": 1591913415,
+      "slotPrice": "2330cfb965c804b064fc"
+    },
+    {
+      "timestamp": 1591914990,
+      "slotPrice": "22ab4ab9a7252f1fd036"
+    },
+    {
+      "timestamp": 1591916565,
+      "slotPrice": "2228b7382a92a5977de0"
+    },
+    {
+      "timestamp": 1591918140,
+      "slotPrice": "21a8ff3ee83ac29ec50b"
+    },
+    {
+      "timestamp": 1591919715,
+      "slotPrice": "212c0da280a15e4f6b88"
+    },
+    {
+      "timestamp": 1591921290,
+      "slotPrice": "20b1cdfa595d4ba0afd2"
+    },
+    {
+      "timestamp": 1591922865,
+      "slotPrice": "203a2c97d487e1e2be6e"
+    },
+    {
+      "timestamp": 1591924440,
+      "slotPrice": "1fc5167e8bd4eb59ea6b"
+    },
+    {
+      "timestamp": 1591926015,
+      "slotPrice": "1f52795cb689657b43f7"
+    },
+    {
+      "timestamp": 1591927590,
+      "slotPrice": "1ee243846b5eafeec6e4"
+    },
+    {
+      "timestamp": 1591929165,
+      "slotPrice": "1e7463e43c6f2b61c27b"
+    },
+    {
+      "timestamp": 1591930740,
+      "slotPrice": "1e08ca013d8549f73f7c"
+    },
+    {
+      "timestamp": 1591932315,
+      "slotPrice": "1d9f65f066b56a12e7cc"
+    },
+    {
+      "timestamp": 1591933890,
+      "slotPrice": "1d38285155c58da92f92"
+    },
+    {
+      "timestamp": 1591935465,
+      "slotPrice": "1cd3024819fce47f0dc1"
+    },
+    {
+      "timestamp": 1591937040,
+      "slotPrice": "1c6fe5784d898287c894"
+    },
+    {
+      "timestamp": 1591938615,
+      "slotPrice": "1c0ec3ffc119531cc685"
+    },
+    {
+      "timestamp": 1591940190,
+      "slotPrice": "1baf9071a6d4be5164cc"
+    },
+    {
+      "timestamp": 1591941765,
+      "slotPrice": "1b523dd219843f0141c2"
+    },
+    {
+      "timestamp": 1591943340,
+      "slotPrice": "1af6bf91afe243fed19b"
+    },
+    {
+      "timestamp": 1591944915,
+      "slotPrice": "1a9d098932bf5c064d42"
+    },
+    {
+      "timestamp": 1591946490,
+      "slotPrice": "1a450ff566e297ea15c3"
+    },
+    {
+      "timestamp": 1591948065,
+      "slotPrice": "19eec7738b58636af943"
+    },
+    {
+      "timestamp": 1591949640,
+      "slotPrice": "199a24fda8007940624e"
+    },
+    {
+      "timestamp": 1591951215,
+      "slotPrice": "19471de6bcd6754e7c7d"
+    },
+    {
+      "timestamp": 1591952790,
+      "slotPrice": "18f5a7d7a6e0bdfa69a3"
+    },
+    {
+      "timestamp": 1591954365,
+      "slotPrice": "18a5b8cbe81c31b800a2"
+    },
+    {
+      "timestamp": 1591955940,
+      "slotPrice": "1857470e5dde8f45d914"
+    },
+    {
+      "timestamp": 1591957515,
+      "slotPrice": "180a4936b18154bf7f7c"
+    },
+    {
+      "timestamp": 1591959090,
+      "slotPrice": "17beb62628559f6e64ea"
+    },
+    {
+      "timestamp": 1591960665,
+      "slotPrice": "177485053519574eba12"
+    },
+    {
+      "timestamp": 1591962240,
+      "slotPrice": "172bad40b0baf6bd3a11"
+    },
+    {
+      "timestamp": 1591963815,
+      "slotPrice": "16e4268787e7c07ce894"
+    },
+    {
+      "timestamp": 1591965390,
+      "slotPrice": "169de8c8664d80f247e8"
+    },
+    {
+      "timestamp": 1591966965,
+      "slotPrice": "1658ec2f2dc8c2081ade"
+    },
+    {
+      "timestamp": 1591968540,
+      "slotPrice": "16152923195f51c9b449"
+    },
+    {
+      "timestamp": 1591970115,
+      "slotPrice": "15d298446fa734c6e23c"
+    },
+    {
+      "timestamp": 1591971690,
+      "slotPrice": "1591326ab6fb454dec92"
+    },
+    {
+      "timestamp": 1591973265,
+      "slotPrice": "1550f0a282a60536b5fa"
+    },
+    {
+      "timestamp": 1591974840,
+      "slotPrice": "1511cc2beb7837fa71b3"
+    },
+    {
+      "timestamp": 1591976415,
+      "slotPrice": "14d3be787d52106cf16c"
+    },
+    {
+      "timestamp": 1591977990,
+      "slotPrice": "1496c129d026baecc4be"
+    },
+    {
+      "timestamp": 1591979565,
+      "slotPrice": "145ace0fa5c3e33c305e"
+    },
+    {
+      "timestamp": 1591981140,
+      "slotPrice": "141fdf267de760972bff"
+    },
+    {
+      "timestamp": 1591982715,
+      "slotPrice": "13e5ee960bcd8b93bfaa"
+    },
+    {
+      "timestamp": 1591984290,
+      "slotPrice": "13acf6afcbec8ae755ef"
+    },
+    {
+      "timestamp": 1591985865,
+      "slotPrice": "1374f1ed8fdf361d360c"
+    },
+    {
+      "timestamp": 1591987440,
+      "slotPrice": "133ddaf0297daf2c81c6"
+    },
+    {
+      "timestamp": 1591989015,
+      "slotPrice": "1307ac7e3168695c9318"
+    },
+    {
+      "timestamp": 1591990590,
+      "slotPrice": "12d26182c9a4f745e2ad"
+    },
+    {
+      "timestamp": 1591992165,
+      "slotPrice": "129df50c5eae7fe22e90"
+    },
+    {
+      "timestamp": 1591993740,
+      "slotPrice": "126a624b8a3eaec96a12"
+    },
+    {
+      "timestamp": 1591995315,
+      "slotPrice": "1237a491f9762dd5a645"
+    },
+    {
+      "timestamp": 1591996890,
+      "slotPrice": "1205b7515740c9f3d7a9"
+    },
+    {
+      "timestamp": 1591998465,
+      "slotPrice": "11d4961a6074ffc1e9ea"
+    },
+    {
+      "timestamp": 1592000040,
+      "slotPrice": "11a43c9bbc00a7327353"
+    },
+    {
+      "timestamp": 1592001615,
+      "slotPrice": "1174a6a13a514d9ac1cf"
+    },
+    {
+      "timestamp": 1592003190,
+      "slotPrice": "1145d012c11dc60ff1b3"
+    },
+    {
+      "timestamp": 1592004765,
+      "slotPrice": "1117b4f382cb2f83791b"
+    },
+    {
+      "timestamp": 1592006340,
+      "slotPrice": "10ea51611f7af17a7c33"
+    },
+    {
+      "timestamp": 1592007915,
+      "slotPrice": "10bda192d945c358efa7"
+    },
+    {
+      "timestamp": 1592009490,
+      "slotPrice": "1091a1d8babe56be72ae"
+    },
+    {
+      "timestamp": 1592011065,
+      "slotPrice": "10664e9ae9d6d3d2e520"
+    },
+    {
+      "timestamp": 1592012640,
+      "slotPrice": "103ba458d7c1a78f3716"
+    },
+    {
+      "timestamp": 1592014215,
+      "slotPrice": "10119fa8a0482267875c"
+    },
+    {
+      "timestamp": 1592015790,
+      "slotPrice": "fe83d3647abd5d4a92d"
+    },
+    {
+      "timestamp": 1592017365,
+      "slotPrice": "fbf79c329ed155ff8c9"
+    },
+    {
+      "timestamp": 1592018940,
+      "slotPrice": "f97522537e570579eca"
+    },
+    {
+      "timestamp": 1592020515,
+      "slotPrice": "f6fc3467a87ca72939e"
+    },
+    {
+      "timestamp": 1592022090,
+      "slotPrice": "f48ca246911b40bc43c"
+    },
+    {
+      "timestamp": 1592023665,
+      "slotPrice": "f2263cf5b59bdb4b13f"
+    },
+    {
+      "timestamp": 1592025240,
+      "slotPrice": "efc8d69fc7f3dd0ae46"
+    },
+    {
+      "timestamp": 1592026815,
+      "slotPrice": "ed74428c265b119928a"
+    },
+    {
+      "timestamp": 1592028390,
+      "slotPrice": "eb285516d944ad1ce4d"
+    },
+    {
+      "timestamp": 1592029965,
+      "slotPrice": "e8e4e3a7a85a23ac813"
+    },
+    {
+      "timestamp": 1592031540,
+      "slotPrice": "e6a9c4ac101d85af066"
+    },
+    {
+      "timestamp": 1592033115,
+      "slotPrice": "e476cf8e62620158f0b"
+    },
+    {
+      "timestamp": 1592034690,
+      "slotPrice": "e24bdcaed8b3dbc2391"
+    },
+    {
+      "timestamp": 1592036265,
+      "slotPrice": "e028c55d10484466170"
+    },
+    {
+      "timestamp": 1592037840,
+      "slotPrice": "de0d63d14803795ae4c"
+    },
+    {
+      "timestamp": 1592039415,
+      "slotPrice": "dbf9932570f445b8322"
+    },
+    {
+      "timestamp": 1592040990,
+      "slotPrice": "d9ed2f4ee7c325054b0"
+    },
+    {
+      "timestamp": 1592042565,
+      "slotPrice": "d7e8151925461d42186"
+    },
+    {
+      "timestamp": 1592044140,
+      "slotPrice": "d5ea221e78dbb007640"
+    },
+    {
+      "timestamp": 1592045715,
+      "slotPrice": "d3f334c3af7f623fb49"
+    },
+    {
+      "timestamp": 1592047290,
+      "slotPrice": "d2032c31c5b3bba9679"
+    },
+    {
+      "timestamp": 1592048865,
+      "slotPrice": "d019e850bf4969f0733"
+    },
+    {
+      "timestamp": 1592050440,
+      "slotPrice": "ce3749c2787e4d176ef"
+    },
+    {
+      "timestamp": 1592052015,
+      "slotPrice": "cc5b31dda0e85d34a5c"
+    },
+    {
+      "timestamp": 1592053590,
+      "slotPrice": "ca8582a9084fda08c44"
+    },
+    {
+      "timestamp": 1592055165,
+      "slotPrice": "c8b61ed66a01ce51776"
+    },
+    {
+      "timestamp": 1592056740,
+      "slotPrice": "c6ece9be5d0d096607b"
+    },
+    {
+      "timestamp": 1592058315,
+      "slotPrice": "c529c75bbc6a0858a8b"
+    },
+    {
+      "timestamp": 1592059890,
+      "slotPrice": "c36c9c47a9bf1ed400e"
+    },
+    {
+      "timestamp": 1592061465,
+      "slotPrice": "c1b54db45891f6cf22c"
+    },
+    {
+      "timestamp": 1592063040,
+      "slotPrice": "c003c16aac8f3b48336"
+    },
+    {
+      "timestamp": 1592064615,
+      "slotPrice": "be57ddc4b12a096ed0f"
+    },
+    {
+      "timestamp": 1592066190,
+      "slotPrice": "bcb189aafae5e7f8cbd"
+    },
+    {
+      "timestamp": 1592067765,
+      "slotPrice": "bb10ac9044a1cf2b3af"
+    },
+    {
+      "timestamp": 1592069340,
+      "slotPrice": "b9752e6e8df801e9fc3"
+    },
+    {
+      "timestamp": 1592070915,
+      "slotPrice": "b7def7c2b69b45eada0"
+    },
+    {
+      "timestamp": 1592072490,
+      "slotPrice": "b64df18a320d879f06e"
+    },
+    {
+      "timestamp": 1592074065,
+      "slotPrice": "b4c2053ebdff7e65230"
+    },
+    {
+      "timestamp": 1592075640,
+      "slotPrice": "b33b1cd43cb174b873f"
+    },
+    {
+      "timestamp": 1592077215,
+      "slotPrice": "b1b922b4c4ca5e3bc0e"
+    },
+    {
+      "timestamp": 1592078790,
+      "slotPrice": "b03c01be26e394d5198"
+    },
+    {
+      "timestamp": 1592080365,
+      "slotPrice": "aec3a53ee9efdeaafab"
+    },
+    {
+      "timestamp": 1592081940,
+      "slotPrice": "ad4ff8f399507de1be8"
+    },
+    {
+      "timestamp": 1592083515,
+      "slotPrice": "abe0e903d151a040135"
+    },
+    {
+      "timestamp": 1592085090,
+      "slotPrice": "aa7661ff9cd8d69802f"
+    },
+    {
+      "timestamp": 1592086665,
+      "slotPrice": "a91050dd1b4b3d58a76"
+    },
+    {
+      "timestamp": 1592088240,
+      "slotPrice": "a7aea2f5fea2d41fd92"
+    },
+    {
+      "timestamp": 1592089815,
+      "slotPrice": "a6514604e901377a214"
+    },
+    {
+      "timestamp": 1592091390,
+      "slotPrice": "a4f828232cfb2878216"
+    },
+    {
+      "timestamp": 1592092965,
+      "slotPrice": "a3a337c66adaa4c02f4"
+    },
+    {
+      "timestamp": 1592094540,
+      "slotPrice": "a25263beb8ff2502390"
+    },
+    {
+      "timestamp": 1592096115,
+      "slotPrice": "a1059b33ce71be6b077"
+    },
+    {
+      "timestamp": 1592097690,
+      "slotPrice": "9fbccda3a9fcc4d809c"
+    },
+    {
+      "timestamp": 1592099265,
+      "slotPrice": "9e77eadfc8fbdbefb7c"
+    },
+    {
+      "timestamp": 1592100840,
+      "slotPrice": "9d36e30be43f83c679f"
+    },
+    {
+      "timestamp": 1592102415,
+      "slotPrice": "9bf9a69b607ad0b5cb1"
+    },
+    {
+      "timestamp": 1592103990,
+      "slotPrice": "9ac0264fc8610e341cc"
+    },
+    {
+      "timestamp": 1592105565,
+      "slotPrice": "998a5336f636db77d52"
+    },
+    {
+      "timestamp": 1592107140,
+      "slotPrice": "98581ea90cfe1a89fc3"
+    },
+    {
+      "timestamp": 1592108715,
+      "slotPrice": "97297a47117a54e0c22"
+    },
+    {
+      "timestamp": 1592110290,
+      "slotPrice": "95fe57f8e8724a57c55"
+    },
+    {
+      "timestamp": 1592111865,
+      "slotPrice": "94d6a9ebf0c6878b777"
+    },
+    {
+      "timestamp": 1592113440,
+      "slotPrice": "93b262917c1584f2df8"
+    },
+    {
+      "timestamp": 1592115015,
+      "slotPrice": "9291749cce69af5b71c"
+    },
+    {
+      "timestamp": 1592116590,
+      "slotPrice": "9173d30221ee64331da"
+    },
+    {
+      "timestamp": 1592118165,
+      "slotPrice": "905970f4e199d97e240"
+    },
+    {
+      "timestamp": 1592119740,
+      "slotPrice": "8f4241e64dc93ced5ec"
+    },
+    {
+      "timestamp": 1592121315,
+      "slotPrice": "8e2e3984173b8110bc5"
+    },
+    {
+      "timestamp": 1592122890,
+      "slotPrice": "8d1d4bb7036776ec8f8"
+    },
+    {
+      "timestamp": 1592124465,
+      "slotPrice": "8c0f6ca199e5bf410b9"
+    },
+    {
+      "timestamp": 1592126040,
+      "slotPrice": "8b04909edaa9824b8aa"
+    },
+    {
+      "timestamp": 1592127615,
+      "slotPrice": "89fcac410cb8be23261"
+    },
+    {
+      "timestamp": 1592129190,
+      "slotPrice": "88f7b45045231f7d52c"
+    },
+    {
+      "timestamp": 1592130765,
+      "slotPrice": "87f59dc9b575cba73af"
+    },
+    {
+      "timestamp": 1592132340,
+      "slotPrice": "86f65dddd584e88a56a"
+    },
+    {
+      "timestamp": 1592133915,
+      "slotPrice": "85f9e9effc27ee56199"
+    },
+    {
+      "timestamp": 1592135490,
+      "slotPrice": "850037949cd6c035aec"
+    },
+    {
+      "timestamp": 1592137065,
+      "slotPrice": "84093c909f712d166ab"
+    },
+    {
+      "timestamp": 1592138640,
+      "slotPrice": "8314eed84383bf3dd84"
+    },
+    {
+      "timestamp": 1592140215,
+      "slotPrice": "8223448dfe323ced620"
+    },
+    {
+      "timestamp": 1592141790,
+      "slotPrice": "813434018a50f9deed1"
+    },
+    {
+      "timestamp": 1592143365,
+      "slotPrice": "8047b3aef00ab779b49"
+    },
+    {
+      "timestamp": 1592144940,
+      "slotPrice": "7f5dba3d92b5ef93994"
+    },
+    {
+      "timestamp": 1592146515,
+      "slotPrice": "7e763e7f44aca3e1b25"
+    },
+    {
+      "timestamp": 1592148090,
+      "slotPrice": "7d91376f60fb397ecaa"
+    },
+    {
+      "timestamp": 1592149665,
+      "slotPrice": "7cae9c31eabc4858f6d"
+    },
+    {
+      "timestamp": 1592151240,
+      "slotPrice": "7bce6412b1f89a675dc"
+    },
+    {
+      "timestamp": 1592152815,
+      "slotPrice": "7af0868489d7679c6b4"
+    },
+    {
+      "timestamp": 1592154390,
+      "slotPrice": "7a14fb2053ccb755f72"
+    },
+    {
+      "timestamp": 1592155965,
+      "slotPrice": "793bb9a458d02f10c31"
+    },
+    {
+      "timestamp": 1592157540,
+      "slotPrice": "7864b9f381c59369ac9"
+    },
+    {
+      "timestamp": 1592159115,
+      "slotPrice": "778ff414734f2d060f1"
+    },
+    {
+      "timestamp": 1592160690,
+      "slotPrice": "76bd6031096e7a60fb4"
+    },
+    {
+      "timestamp": 1592162265,
+      "slotPrice": "75ecf69545f255943d1"
+    },
+    {
+      "timestamp": 1592163840,
+      "slotPrice": "751eafaf1568942f536"
+    },
+    {
+      "timestamp": 1592165415,
+      "slotPrice": "7452840d2745b369467"
+    },
+    {
+      "timestamp": 1592166990,
+      "slotPrice": "73886c5e988c9aa53d4"
+    },
+    {
+      "timestamp": 1592168565,
+      "slotPrice": "72c061722b55a402711"
+    },
+    {
+      "timestamp": 1592170140,
+      "slotPrice": "71fa5c35857b15c8e44"
+    },
+    {
+      "timestamp": 1592171715,
+      "slotPrice": "713655b4cd9e72bfe02"
+    },
+    {
+      "timestamp": 1592173290,
+      "slotPrice": "70744719e64ded58689"
+    },
+    {
+      "timestamp": 1592174865,
+      "slotPrice": "6fb429abe93131c27bc"
+    },
+    {
+      "timestamp": 1592176440,
+      "slotPrice": "6ef5f6ce75987d2ec20"
+    },
+    {
+      "timestamp": 1592178015,
+      "slotPrice": "6e39a8013bde29ad72f"
+    },
+    {
+      "timestamp": 1592179590,
+      "slotPrice": "6d7f36df6e84b3acf79"
+    },
+    {
+      "timestamp": 1592181165,
+      "slotPrice": "6cc69d1f1c3f575490d"
+    },
+    {
+      "timestamp": 1592182740,
+      "slotPrice": "6c0fd490c3bc2c344bf"
+    },
+    {
+      "timestamp": 1592184315,
+      "slotPrice": "6b5ad71ece5d4b01700"
+    },
+    {
+      "timestamp": 1592185890,
+      "slotPrice": "6aa79eccfd4125f0253"
+    },
+    {
+      "timestamp": 1592187465,
+      "slotPrice": "69f625b7f3a0d2e83eb"
+    },
+    {
+      "timestamp": 1592189040,
+      "slotPrice": "69466614b2fe031660e"
+    },
+    {
+      "timestamp": 1592190615,
+      "slotPrice": "68985a303ace9811964"
+    },
+    {
+      "timestamp": 1592192190,
+      "slotPrice": "67ebfc6ef96f2a54388"
+    },
+    {
+      "timestamp": 1592193765,
+      "slotPrice": "6741474c60f8436c4f2"
+    },
+    {
+      "timestamp": 1592195340,
+      "slotPrice": "6698355a7de2c197273"
+    },
+    {
+      "timestamp": 1592196915,
+      "slotPrice": "65f0c1416a0e7a7bf6a"
+    },
+    {
+      "timestamp": 1592198490,
+      "slotPrice": "654ae5bf0ec04f8e3b1"
+    },
+    {
+      "timestamp": 1592200065,
+      "slotPrice": "64a69da6a381f56f0a1"
+    },
+    {
+      "timestamp": 1592201640,
+      "slotPrice": "6403e3e0389f823f45e"
+    },
+    {
+      "timestamp": 1592203215,
+      "slotPrice": "6362b368685e361e47c"
+    },
+    {
+      "timestamp": 1592204790,
+      "slotPrice": "62c3074ff3a43570fb2"
+    },
+    {
+      "timestamp": 1592206365,
+      "slotPrice": "6224dabb4c677307e00"
+    },
+    {
+      "timestamp": 1592207940,
+      "slotPrice": "618828e24c583c33011"
+    },
+    {
+      "timestamp": 1592209515,
+      "slotPrice": "60eced0fde7bec03e6f"
+    },
+    {
+      "timestamp": 1592211090,
+      "slotPrice": "605322a17cbf0c00dd5"
+    },
+    {
+      "timestamp": 1592212665,
+      "slotPrice": "5fbac50706416060ab6"
+    },
+    {
+      "timestamp": 1592214240,
+      "slotPrice": "5f23cfc247c264feb61"
+    },
+    {
+      "timestamp": 1592215815,
+      "slotPrice": "5e8e3e66c6e10b931ae"
+    },
+    {
+      "timestamp": 1592217390,
+      "slotPrice": "5dfa0c99430571974b7"
+    },
+    {
+      "timestamp": 1592218965,
+      "slotPrice": "5d67360f903578e5ea3"
+    },
+    {
+      "timestamp": 1592220540,
+      "slotPrice": "5cd5b690347f4862aee"
+    },
+    {
+      "timestamp": 1592222115,
+      "slotPrice": "5c4589f20e97731c4e3"
+    },
+    {
+      "timestamp": 1592223690,
+      "slotPrice": "5bb6ac1c1623957eaa5"
+    },
+    {
+      "timestamp": 1592225265,
+      "slotPrice": "5b29190527db6c180fa"
+    },
+    {
+      "timestamp": 1592226840,
+      "slotPrice": "5a9cccb3832bf47bbd7"
+    },
+    {
+      "timestamp": 1592228415,
+      "slotPrice": "5a11c33cc1c1a9460cb"
+    },
+    {
+      "timestamp": 1592229990,
+      "slotPrice": "5987f8c564472462c29"
+    },
+    {
+      "timestamp": 1592231565,
+      "slotPrice": "58ff6980a9d3387e0af"
+    },
+    {
+      "timestamp": 1592233140,
+      "slotPrice": "587811b0371652da865"
+    },
+    {
+      "timestamp": 1592234715,
+      "slotPrice": "57f1eda3ea321fca7aa"
+    },
+    {
+      "timestamp": 1592236290,
+      "slotPrice": "576cf9b98a6232b5337"
+    },
+    {
+      "timestamp": 1592237865,
+      "slotPrice": "56e9325c8e7004f3329"
+    },
+    {
+      "timestamp": 1592239440,
+      "slotPrice": "56669405da168cf367f"
+    },
+    {
+      "timestamp": 1592241015,
+      "slotPrice": "55e51b3b9098ab04c33"
+    },
+    {
+      "timestamp": 1592242590,
+      "slotPrice": "5564c490ca734c14848"
+    },
+    {
+      "timestamp": 1592244165,
+      "slotPrice": "54e58ca5653b93ad5ab"
+    },
+    {
+      "timestamp": 1592245740,
+      "slotPrice": "54677025b7d29a0c8b1"
+    },
+    {
+      "timestamp": 1592247315,
+      "slotPrice": "53ea6bca7bfa100ee22"
+    },
+    {
+      "timestamp": 1592248890,
+      "slotPrice": "536e7c587232b4b586a"
+    },
+    {
+      "timestamp": 1592250465,
+      "slotPrice": "52f39ea055db92fe872"
+    },
+    {
+      "timestamp": 1592252040,
+      "slotPrice": "5279cf7e76c633f4407"
+    },
+    {
+      "timestamp": 1592253615,
+      "slotPrice": "52010bdab797d2deb21"
+    },
+    {
+      "timestamp": 1592255190,
+      "slotPrice": "518950a837b0a1173cb"
+    },
+    {
+      "timestamp": 1592256765,
+      "slotPrice": "51129ae537ec9a0b6b8"
+    },
+    {
+      "timestamp": 1592258340,
+      "slotPrice": "509ce79add403c9171b"
+    },
+    {
+      "timestamp": 1592259915,
+      "slotPrice": "502833dd01add1b0859"
+    },
+    {
+      "timestamp": 1592261490,
+      "slotPrice": "4fb47cca1247df99e63"
+    },
+    {
+      "timestamp": 1592263065,
+      "slotPrice": "4f41bf8ad5278b18aee"
+    },
+    {
+      "timestamp": 1592264640,
+      "slotPrice": "4ecff9523d1b1bf2a8e"
+    },
+    {
+      "timestamp": 1592266215,
+      "slotPrice": "4e5f275d4db27d8def3"
+    },
+    {
+      "timestamp": 1592267790,
+      "slotPrice": "4def46f2d4c903fd771"
+    },
+    {
+      "timestamp": 1592269365,
+      "slotPrice": "4d8055635fb704b84f9"
+    },
+    {
+      "timestamp": 1592270940,
+      "slotPrice": "4d125008f6fff8bd3f6"
+    },
+    {
+      "timestamp": 1592272515,
+      "slotPrice": "4ca534470557a2aaeec"
+    },
+    {
+      "timestamp": 1592274090,
+      "slotPrice": "4c38ff8a2c19f20b89e"
+    },
+    {
+      "timestamp": 1592275665,
+      "slotPrice": "4bcdaf481ff7fd29c50"
+    },
+    {
+      "timestamp": 1592277240,
+      "slotPrice": "4b6340ff780606721d8"
+    },
+    {
+      "timestamp": 1592278815,
+      "slotPrice": "4af9b23793373bbc115"
+    },
+    {
+      "timestamp": 1592280390,
+      "slotPrice": "4a910080736b92f5017"
+    },
+    {
+      "timestamp": 1592281965,
+      "slotPrice": "4a29297292724a69c13"
+    },
+    {
+      "timestamp": 1592283540,
+      "slotPrice": "49c22aaebef41bad23b"
+    },
+    {
+      "timestamp": 1592285115,
+      "slotPrice": "495c01de03e1d36ed04"
+    },
+    {
+      "timestamp": 1592286690,
+      "slotPrice": "48f6acb17909648e91b"
+    },
+    {
+      "timestamp": 1592288265,
+      "slotPrice": "489228e2322a03a6c29"
+    },
+    {
+      "timestamp": 1592289840,
+      "slotPrice": "482e7431077a79fda82"
+    },
+    {
+      "timestamp": 1592291415,
+      "slotPrice": "47cb8c668f4f7625ba4"
+    },
+    {
+      "timestamp": 1592292990,
+      "slotPrice": "47696f52e529b4ee054"
+    },
+    {
+      "timestamp": 1592294565,
+      "slotPrice": "47081acda3dcf0629bc"
+    },
+    {
+      "timestamp": 1592296140,
+      "slotPrice": "46a78cb5ae73b6b19b1"
+    },
+    {
+      "timestamp": 1592297715,
+      "slotPrice": "4647c2f12acfc2dd0a3"
+    },
+    {
+      "timestamp": 1592299290,
+      "slotPrice": "45e8bb6d4f3b86a7489"
+    },
+    {
+      "timestamp": 1592300865,
+      "slotPrice": "458a741e54abc8049f5"
+    },
+    {
+      "timestamp": 1592302440,
+      "slotPrice": "452ceaff4ed5c70526b"
+    },
+    {
+      "timestamp": 1592304015,
+      "slotPrice": "44d01e12194ce590fdf"
+    },
+    {
+      "timestamp": 1592305590,
+      "slotPrice": "44740b5f3c2a35c0da5"
+    },
+    {
+      "timestamp": 1592307165,
+      "slotPrice": "4418b0f5cbc00751b00"
+    },
+    {
+      "timestamp": 1592308740,
+      "slotPrice": "43be0ceb4e9b2dfbafe"
+    },
+    {
+      "timestamp": 1592310315,
+      "slotPrice": "43641d5babf5563a03b"
+    },
+    {
+      "timestamp": 1592311890,
+      "slotPrice": "430ae0690a3fd108391"
+    },
+    {
+      "timestamp": 1592313465,
+      "slotPrice": "42b2543bb91f0d55c0b"
+    },
+    {
+      "timestamp": 1592315040,
+      "slotPrice": "425a770219149207d71"
+    },
+    {
+      "timestamp": 1592316615,
+      "slotPrice": "420346f08112885afdf"
+    },
+    {
+      "timestamp": 1592318190,
+      "slotPrice": "41acc24131247f4d29f"
+    },
+    {
+      "timestamp": 1592319765,
+      "slotPrice": "4156e7342c2392ddeca"
+    },
+    {
+      "timestamp": 1592321340,
+      "slotPrice": "4101b40f2b4461fbdf2"
+    },
+    {
+      "timestamp": 1592322915,
+      "slotPrice": "40ad271d854b40eb282"
+    },
+    {
+      "timestamp": 1592324490,
+      "slotPrice": "40593eb01b124e9c268"
+    },
+    {
+      "timestamp": 1592326065,
+      "slotPrice": "4005f91d3ae9e280f9f"
+    },
+    {
+      "timestamp": 1592327640,
+      "slotPrice": "3fb354c0950d126d644"
+    },
+    {
+      "timestamp": 1592329215,
+      "slotPrice": "3f614ffb1d81ed26fba"
+    },
+    {
+      "timestamp": 1592330790,
+      "slotPrice": "3f0fe932fecc6d496d9"
+    },
+    {
+      "timestamp": 1592332365,
+      "slotPrice": "3ebf1ed385cc1c26c9a"
+    },
+    {
+      "timestamp": 1592333940,
+      "slotPrice": "3e6eef4d09904ed0350"
+    },
+    {
+      "timestamp": 1592335515,
+      "slotPrice": "3e1f5914da5ae5b2a58"
+    },
+    {
+      "timestamp": 1592337090,
+      "slotPrice": "3dd05aa52ea9b89aada"
+    },
+    {
+      "timestamp": 1592338665,
+      "slotPrice": "3d81f27d0e768f14e8f"
+    },
+    {
+      "timestamp": 1592340240,
+      "slotPrice": "3d341f2049642eda64e"
+    },
+    {
+      "timestamp": 1592341815,
+      "slotPrice": "3ce6df1755e941a61a4"
+    },
+    {
+      "timestamp": 1592343390,
+      "slotPrice": "3c9a30ef5072e9253fb"
+    },
+    {
+      "timestamp": 1592344965,
+      "slotPrice": "3c4e1339d9651da460c"
+    },
+    {
+      "timestamp": 1592346540,
+      "slotPrice": "3c02848d146e040cb96"
+    },
+    {
+      "timestamp": 1592348115,
+      "slotPrice": "3bb78383897bcb04625"
+    },
+    {
+      "timestamp": 1592349690,
+      "slotPrice": "3b6d0ebc1e4c9adfd90"
+    },
+    {
+      "timestamp": 1592351265,
+      "slotPrice": "3b2324d9fe4bb7a9c8c"
+    },
+    {
+      "timestamp": 1592352840,
+      "slotPrice": "3ad9c484926dca25f0b"
+    },
+    {
+      "timestamp": 1592354415,
+      "slotPrice": "3a90ec6769ca56e2a1b"
+    },
+    {
+      "timestamp": 1592355990,
+      "slotPrice": "3a489b322ff75535bcf"
+    },
+    {
+      "timestamp": 1592357565,
+      "slotPrice": "3a00cf989f97258150c"
+    },
+    {
+      "timestamp": 1592359140,
+      "slotPrice": "39b988526864981ceb4"
+    },
+    {
+      "timestamp": 1592360715,
+      "slotPrice": "3972c41b2d7786b633e"
+    },
+    {
+      "timestamp": 1592362290,
+      "slotPrice": "392c81b26db91fe3ad7"
+    },
+    {
+      "timestamp": 1592363865,
+      "slotPrice": "38e6bfdb7ea4054d3e7"
+    },
+    {
+      "timestamp": 1592365440,
+      "slotPrice": "38a17d5d73b235062d8"
+    },
+    {
+      "timestamp": 1592367015,
+      "slotPrice": "385cb90317c62831c11"
+    },
+    {
+      "timestamp": 1592368590,
+      "slotPrice": "3818719adc3a55dd4e4"
+    },
+    {
+      "timestamp": 1592370165,
+      "slotPrice": "37d4a5f6d4076b7fdb9"
+    },
+    {
+      "timestamp": 1592371740,
+      "slotPrice": "379154ec95ed9182326"
+    },
+    {
+      "timestamp": 1592373315,
+      "slotPrice": "374e7d55407055a65a7"
+    },
+    {
+      "timestamp": 1592374890,
+      "slotPrice": "370c1e0d68084d1f14c"
+    },
+    {
+      "timestamp": 1592376465,
+      "slotPrice": "36ca35f50122f480390"
+    },
+    {
+      "timestamp": 1592378040,
+      "slotPrice": "3688c3ef640f2574cba"
+    },
+    {
+      "timestamp": 1592379615,
+      "slotPrice": "3647c6e335b09be3097"
+    },
+    {
+      "timestamp": 1592381190,
+      "slotPrice": "36073dba5d68039cdca"
+    },
+    {
+      "timestamp": 1592382765,
+      "slotPrice": "35c72761fe15303672a"
+    },
+    {
+      "timestamp": 1592384340,
+      "slotPrice": "358782ca648194fc343"
+    },
+    {
+      "timestamp": 1592385915,
+      "slotPrice": "35484ee703b1bc7a87d"
+    },
+    {
+      "timestamp": 1592387490,
+      "slotPrice": "35098aae5f59fe5d2c5"
+    },
+    {
+      "timestamp": 1592389065,
+      "slotPrice": "34cb351a0cdfd16cc13"
+    },
+    {
+      "timestamp": 1592390640,
+      "slotPrice": "348d4d269ce2c82d5bb"
+    },
+    {
+      "timestamp": 1592392215,
+      "slotPrice": "344fd1d39c50f93fdd6"
+    },
+    {
+      "timestamp": 1592393790,
+      "slotPrice": "3412c2237ff07915796"
+    },
+    {
+      "timestamp": 1592395365,
+      "slotPrice": "33d61d1b9fecd1b70c8"
+    },
+    {
+      "timestamp": 1592396940,
+      "slotPrice": "3399e1c42c59fb981fd"
+    },
+    {
+      "timestamp": 1592398515,
+      "slotPrice": "335e0f282351b9e912c"
+    },
+    {
+      "timestamp": 1592400090,
+      "slotPrice": "3322a455488e43f772a"
+    },
+    {
+      "timestamp": 1592401665,
+      "slotPrice": "32e7a05c1920cf1fecf"
+    },
+    {
+      "timestamp": 1592403240,
+      "slotPrice": "32ad024fc2183318d2b"
+    },
+    {
+      "timestamp": 1592404815,
+      "slotPrice": "3272c94619e0908dc4b"
+    },
+    {
+      "timestamp": 1592406390,
+      "slotPrice": "3238f4579854f8bbf5a"
+    },
+    {
+      "timestamp": 1592407965,
+      "slotPrice": "31ff829f460e1c3a096"
+    },
+    {
+      "timestamp": 1592409540,
+      "slotPrice": "31c6733abc8b0c783e8"
+    },
+    {
+      "timestamp": 1592411115,
+      "slotPrice": "318dc54a171b9aaadde"
+    },
+    {
+      "timestamp": 1592412690,
+      "slotPrice": "315577eff08873191e4"
+    },
+    {
+      "timestamp": 1592414265,
+      "slotPrice": "311d8a5151fd81ebc5e"
+    },
+    {
+      "timestamp": 1592415840,
+      "slotPrice": "30e5fb95b488567a68f"
+    },
+    {
+      "timestamp": 1592417415,
+      "slotPrice": "30aecae6f0642ab50a3"
+    },
+    {
+      "timestamp": 1592418990,
+      "slotPrice": "3077f77139c797b32a5"
+    },
+    {
+      "timestamp": 1592420565,
+      "slotPrice": "3041806317bd505d35d"
+    },
+    {
+      "timestamp": 1592422140,
+      "slotPrice": "300b64ed5d780cf0ba0"
+    },
+    {
+      "timestamp": 1592423715,
+      "slotPrice": "2fd5a4431f2e8778af8"
+    },
+    {
+      "timestamp": 1592425290,
+      "slotPrice": "2fa03d99ae00f40f037"
+    },
+    {
+      "timestamp": 1592426865,
+      "slotPrice": "2f6b302890732174624"
+    },
+    {
+      "timestamp": 1592428440,
+      "slotPrice": "2f367b2978d51a4fbce"
+    },
+    {
+      "timestamp": 1592430015,
+      "slotPrice": "2f021dd83e162fe49c7"
+    },
+    {
+      "timestamp": 1592431590,
+      "slotPrice": "2ece1772d7e821f491b"
+    },
+    {
+      "timestamp": 1592433165,
+      "slotPrice": "2e9a67395361edcd585"
+    },
+    {
+      "timestamp": 1592434740,
+      "slotPrice": "2e670c6dd16dfba56d5"
+    },
+    {
+      "timestamp": 1592436315,
+      "slotPrice": "2e340654789186ccc95"
+    },
+    {
+      "timestamp": 1592437890,
+      "slotPrice": "2e015433759b03077e0"
+    },
+    {
+      "timestamp": 1592439465,
+      "slotPrice": "2dcef552f1d25fc0a27"
+    },
+    {
+      "timestamp": 1592441040,
+      "slotPrice": "2d9ce8fd0975cd89285"
+    },
+    {
+      "timestamp": 1592442615,
+      "slotPrice": "2d6b2e7dcc69ddafaf6"
+    },
+    {
+      "timestamp": 1592444190,
+      "slotPrice": "2d39c52330d4a8f80ab"
+    },
+    {
+      "timestamp": 1592445765,
+      "slotPrice": "2d08ac3d10ef013a300"
+    },
+    {
+      "timestamp": 1592447340,
+      "slotPrice": "2cd7e31d23dfd8658a8"
+    },
+    {
+      "timestamp": 1592448915,
+      "slotPrice": "2ca76916f8a5476ffb4"
+    },
+    {
+      "timestamp": 1592450490,
+      "slotPrice": "2c773d7fed4271227fc"
+    },
+    {
+      "timestamp": 1592452065,
+      "slotPrice": "2c475faf2cb498d2e8d"
+    },
+    {
+      "timestamp": 1592453640,
+      "slotPrice": "2c17cefda6500c81b7a"
+    },
+    {
+      "timestamp": 1592455215,
+      "slotPrice": "2be88ac6081b7a49183"
+    },
+    {
+      "timestamp": 1592456790,
+      "slotPrice": "2bb99264bbf45d40ddc"
+    },
+    {
+      "timestamp": 1592458365,
+      "slotPrice": "2b8ae537de5e432e071"
+    },
+    {
+      "timestamp": 1592459940,
+      "slotPrice": "2b5c829f3d924a43a58"
+    },
+    {
+      "timestamp": 1592461515,
+      "slotPrice": "2b2e69fc4ebfb3a330f"
+    },
+    {
+      "timestamp": 1592463090,
+      "slotPrice": "2b009ab22b7ce378940"
+    },
+    {
+      "timestamp": 1592464665,
+      "slotPrice": "2ad314258f219b1b88a"
+    },
+    {
+      "timestamp": 1592466240,
+      "slotPrice": "2aa5d5bccb93e4c5182"
+    },
+    {
+      "timestamp": 1592467815,
+      "slotPrice": "2a78dedfcb1955aec67"
+    },
+    {
+      "timestamp": 1592469390,
+      "slotPrice": "2a4c2ef8055e19e55af"
+    },
+    {
+      "timestamp": 1592470965,
+      "slotPrice": "2a1fc5707ec5a75dbd3"
+    },
+    {
+      "timestamp": 1592472540,
+      "slotPrice": "29f3a1b5c03b5b814cf"
+    },
+    {
+      "timestamp": 1592474115,
+      "slotPrice": "29c7c335d4ea168681f"
+    },
+    {
+      "timestamp": 1592475690,
+      "slotPrice": "299c2960457b490b7df"
+    },
+    {
+      "timestamp": 1592477265,
+      "slotPrice": "2970d3a6110a3500419"
+    },
+    {
+      "timestamp": 1592478840,
+      "slotPrice": "2945c179abc368a9be2"
+    },
+    {
+      "timestamp": 1592480415,
+      "slotPrice": "291af24ef7fb97d4eab"
+    },
+    {
+      "timestamp": 1592481990,
+      "slotPrice": "28f0659b41c69d6dd93"
+    },
+    {
+      "timestamp": 1592483565,
+      "slotPrice": "28c61ad53ce37fcb960"
+    },
+    {
+      "timestamp": 1592485140,
+      "slotPrice": "289c1174fe15fee7183"
+    },
+    {
+      "timestamp": 1592486715,
+      "slotPrice": "287248f3f8687e9458f"
+    },
+    {
+      "timestamp": 1592488290,
+      "slotPrice": "2848c0ccf5fe20a3a4e"
+    },
+    {
+      "timestamp": 1592489865,
+      "slotPrice": "281f787c18668bc10e8"
+    },
+    {
+      "timestamp": 1592491440,
+      "slotPrice": "27f66f7ed18a16b8eff"
+    },
+    {
+      "timestamp": 1592493015,
+      "slotPrice": "27cda553e11824bca0f"
+    },
+    {
+      "timestamp": 1592494590,
+      "slotPrice": "27a5197b4e66ad75b69"
+    },
+    {
+      "timestamp": 1592496165,
+      "slotPrice": "277ccb7666b1768c1f1"
+    },
+    {
+      "timestamp": 1592497740,
+      "slotPrice": "2754bac7b9338bdfe5f"
+    },
+    {
+      "timestamp": 1592499315,
+      "slotPrice": "272ce6f31140bedb05e"
+    },
+    {
+      "timestamp": 1592500890,
+      "slotPrice": "27054f7d754b366341d"
+    },
+    {
+      "timestamp": 1592502465,
+      "slotPrice": "26ddf3ed206d8a20960"
+    },
+    {
+      "timestamp": 1592504040,
+      "slotPrice": "26b6d3c9817cacae53d"
+    },
+    {
+      "timestamp": 1592505615,
+      "slotPrice": "268fee9b356249afb0a"
+    },
+    {
+      "timestamp": 1592507190,
+      "slotPrice": "266943ec0396b5e13ce"
+    },
+    {
+      "timestamp": 1592508765,
+      "slotPrice": "2642d346dd3c225ad0f"
+    },
+    {
+      "timestamp": 1592510340,
+      "slotPrice": "261c9c37d516da9aee4"
+    },
+    {
+      "timestamp": 1592511915,
+      "slotPrice": "25f69e4c20b244a5dd1"
+    },
+    {
+      "timestamp": 1592513490,
+      "slotPrice": "25d0d91213099889ccd"
+    },
+    {
+      "timestamp": 1592515065,
+      "slotPrice": "25ab4c1917590e455c6"
+    },
+    {
+      "timestamp": 1592516640,
+      "slotPrice": "2585f6f1b23c671a622"
+    },
+    {
+      "timestamp": 1592518215,
+      "slotPrice": "2560d92d7a119d1ed5c"
+    },
+    {
+      "timestamp": 1592519790,
+      "slotPrice": "253bf25f16493c94656"
+    },
+    {
+      "timestamp": 1592521365,
+      "slotPrice": "2517421a3ba0c0a117f"
+    },
+    {
+      "timestamp": 1592522940,
+      "slotPrice": "24f2c7f3a99fbb1c152"
+    },
+    {
+      "timestamp": 1592524515,
+      "slotPrice": "24ce83812654e96e719"
+    },
+    {
+      "timestamp": 1592526090,
+      "slotPrice": "24aa74597b585e675e9"
+    },
+    {
+      "timestamp": 1592527665,
+      "slotPrice": "24869a147491428f856"
+    },
+    {
+      "timestamp": 1592529240,
+      "slotPrice": "2462f44adaeff2e1632"
+    },
+    {
+      "timestamp": 1592530815,
+      "slotPrice": "243f829673d6e8319ae"
+    },
+    {
+      "timestamp": 1592532390,
+      "slotPrice": "241c4491fc8310429eb"
+    },
+    {
+      "timestamp": 1592533965,
+      "slotPrice": "23f939d927cd5736c7e"
+    },
+    {
+      "timestamp": 1592535540,
+      "slotPrice": "23d662089b612e00874"
+    },
+    {
+      "timestamp": 1592537115,
+      "slotPrice": "23b3bcbdecfc7e1e332"
+    },
+    {
+      "timestamp": 1592538690,
+      "slotPrice": "239149979fb8e642a20"
+    },
+    {
+      "timestamp": 1592540265,
+      "slotPrice": "236f0835215e1c294f6"
+    },
+    {
+      "timestamp": 1592541840,
+      "slotPrice": "234cf836c84473409ad"
+    },
+    {
+      "timestamp": 1592543415,
+      "slotPrice": "232b193dce9b51712e0"
+    },
+    {
+      "timestamp": 1592544990,
+      "slotPrice": "23096aec53896e204fb"
+    },
+    {
+      "timestamp": 1592546565,
+      "slotPrice": "22e7ece555751eadeaa"
+    },
+    {
+      "timestamp": 1592548140,
+      "slotPrice": "22c69eccb011164760f"
+    },
+    {
+      "timestamp": 1592549715,
+      "slotPrice": "22a580471aeace47b04"
+    },
+    {
+      "timestamp": 1592551290,
+      "slotPrice": "228490fa26f3197858f"
+    },
+    {
+      "timestamp": 1592552865,
+      "slotPrice": "2263d08c3b11da509a5"
+    },
+    {
+      "timestamp": 1592554440,
+      "slotPrice": "22433ea491cac253e24"
+    },
+    {
+      "timestamp": 1592556015,
+      "slotPrice": "2222daeb385e899ee07"
+    },
+    {
+      "timestamp": 1592557590,
+      "slotPrice": "2202a5090afc6bc6bfa"
+    },
+    {
+      "timestamp": 1592559165,
+      "slotPrice": "21e29ca7b2f7f7f69d8"
+    },
+    {
+      "timestamp": 1592560740,
+      "slotPrice": "21c2c171a486a3e2990"
+    },
+    {
+      "timestamp": 1592562315,
+      "slotPrice": "21a313121cfc8f88c73"
+    },
+    {
+      "timestamp": 1592563890,
+      "slotPrice": "218391351eb8a47a6fd"
+    },
+    {
+      "timestamp": 1592565465,
+      "slotPrice": "21643b8771ca0367e91"
+    },
+    {
+      "timestamp": 1592567040,
+      "slotPrice": "214511b6a05cc2b243f"
+    },
+    {
+      "timestamp": 1592568615,
+      "slotPrice": "21261370f3b4b42d464"
+    },
+    {
+      "timestamp": 1592570190,
+      "slotPrice": "210740657377bdaca7a"
+    },
+    {
+      "timestamp": 1592571765,
+      "slotPrice": "20e89843e397d8e788f"
+    },
+    {
+      "timestamp": 1592573340,
+      "slotPrice": "20ca1abcc0f2d5a894b"
+    },
+    {
+      "timestamp": 1592574915,
+      "slotPrice": "20abc7814116974da55"
+    },
+    {
+      "timestamp": 1592576490,
+      "slotPrice": "208d9e434e809e89d8c"
+    },
+    {
+      "timestamp": 1592578065,
+      "slotPrice": "206f9eb5886700def1f"
+    },
+    {
+      "timestamp": 1592579640,
+      "slotPrice": "2051c88b3f792864cc1"
+    },
+    {
+      "timestamp": 1592581215,
+      "slotPrice": "20341b7874663bb81ff"
+    },
+    {
+      "timestamp": 1592582790,
+      "slotPrice": "20169731d58ed5b9836"
+    },
+    {
+      "timestamp": 1592584365,
+      "slotPrice": "1ff93b6cbed20621947"
+    },
+    {
+      "timestamp": 1592585940,
+      "slotPrice": "1fdc07df3533e8972e2"
+    },
+    {
+      "timestamp": 1592587515,
+      "slotPrice": "1fbefc3fe650c3cb81f"
+    },
+    {
+      "timestamp": 1592589090,
+      "slotPrice": "1fa2184627c4f7f645e"
+    },
+    {
+      "timestamp": 1592590665,
+      "slotPrice": "1f855ba9f2f5f547d2a"
+    },
+    {
+      "timestamp": 1592592240,
+      "slotPrice": "1f68c623e4f2c8b99cd"
+    },
+    {
+      "timestamp": 1592593815,
+      "slotPrice": "1f4c576d3cb45376359"
+    },
+    {
+      "timestamp": 1592595390,
+      "slotPrice": "1f300f3fd839b176b36"
+    },
+    {
+      "timestamp": 1592596965,
+      "slotPrice": "1f13ed563469c129e89"
+    },
+    {
+      "timestamp": 1592598540,
+      "slotPrice": "1ef7f16b69d9bc33557"
+    },
+    {
+      "timestamp": 1592600115,
+      "slotPrice": "1edc1b3b2c51b645d70"
+    },
+    {
+      "timestamp": 1592601690,
+      "slotPrice": "1ec06a81c987645e326"
+    },
+    {
+      "timestamp": 1592603265,
+      "slotPrice": "1ea4defc2540f56b69a"
+    },
+    {
+      "timestamp": 1592604840,
+      "slotPrice": "1e897867ba61a631598"
+    },
+    {
+      "timestamp": 1592606415,
+      "slotPrice": "1e6e3682977999a7ab9"
+    },
+    {
+      "timestamp": 1592607990,
+      "slotPrice": "1e53190b5f0f8264669"
+    },
+    {
+      "timestamp": 1592609565,
+      "slotPrice": "1e381fc143e6f5fe386"
+    },
+    {
+      "timestamp": 1592611140,
+      "slotPrice": "1e1d4a640899e8cc72d"
+    },
+    {
+      "timestamp": 1592612715,
+      "slotPrice": "1e0298b3ff285c9a644"
+    },
+    {
+      "timestamp": 1592614290,
+      "slotPrice": "1de80a72055b4361d9f"
+    },
+    {
+      "timestamp": 1592615865,
+      "slotPrice": "1dcd9f5f84bd00e2c19"
+    },
+    {
+      "timestamp": 1592617440,
+      "slotPrice": "1db3573e7124d6afea1"
+    },
+    {
+      "timestamp": 1592619015,
+      "slotPrice": "1d9931d14641e4d3c22"
+    },
+    {
+      "timestamp": 1592620590,
+      "slotPrice": "1d7f2edb073d8b27e79"
+    },
+    {
+      "timestamp": 1592622165,
+      "slotPrice": "1d654e1f3d541454e27"
+    },
+    {
+      "timestamp": 1592623740,
+      "slotPrice": "1d4b8f61f5736881190"
+    },
+    {
+      "timestamp": 1592625315,
+      "slotPrice": "1d31f267c03777432db"
+    },
+    {
+      "timestamp": 1592626890,
+      "slotPrice": "1d1876f5af91fdad5a7"
+    },
+    {
+      "timestamp": 1592628465,
+      "slotPrice": "1cff1cd155cde1b13ac"
+    },
+    {
+      "timestamp": 1592630040,
+      "slotPrice": "1ce5e3c0c3ee6619ca3"
+    },
+    {
+      "timestamp": 1592631615,
+      "slotPrice": "1ccccb8a895b79771b2"
+    },
+    {
+      "timestamp": 1592633190,
+      "slotPrice": "1cb3d3f5b1a224d9e44"
+    },
+    {
+      "timestamp": 1592634765,
+      "slotPrice": "1c9afcc9c3d4ab7c45c"
+    },
+    {
+      "timestamp": 1592636340,
+      "slotPrice": "1c8245cec00b137cb47"
+    },
+    {
+      "timestamp": 1592637915,
+      "slotPrice": "1c69aecd2008eb8f310"
+    },
+    {
+      "timestamp": 1592639490,
+      "slotPrice": "1c51378dd511d3e1ce0"
+    },
+    {
+      "timestamp": 1592641065,
+      "slotPrice": "1c38dfda461af5d9e79"
+    },
+    {
+      "timestamp": 1592642640,
+      "slotPrice": "1c20a77c4f86c2e7399"
+    },
+    {
+      "timestamp": 1592644215,
+      "slotPrice": "1c088e3e41f4bbbc163"
+    },
+    {
+      "timestamp": 1592645790,
+      "slotPrice": "1bf093eae032e5fc31f"
+    },
+    {
+      "timestamp": 1592647365,
+      "slotPrice": "1bd8b84d5efe35cc594"
+    },
+    {
+      "timestamp": 1592648940,
+      "slotPrice": "1bc0fb316426e8cc7b2"
+    },
+    {
+      "timestamp": 1592650515,
+      "slotPrice": "1ba95c6303b2837e6df"
+    },
+    {
+      "timestamp": 1592652090,
+      "slotPrice": "1b91dbaec0815322656"
+    },
+    {
+      "timestamp": 1592653665,
+      "slotPrice": "1b7a78e18b2fbf6b3be"
+    },
+    {
+      "timestamp": 1592655240,
+      "slotPrice": "1b6333c8bf4d2b71cf9"
+    },
+    {
+      "timestamp": 1592656815,
+      "slotPrice": "1b4c0c3224472cb72c5"
+    },
+    {
+      "timestamp": 1592658390,
+      "slotPrice": "1b3501ebeb37da92b2f"
+    },
+    {
+      "timestamp": 1592659965,
+      "slotPrice": "1b1e14c4ae68bbf033d"
+    },
+    {
+      "timestamp": 1592661540,
+      "slotPrice": "1b07448b6f31e9329fe"
+    },
+    {
+      "timestamp": 1592663115,
+      "slotPrice": "1af0910f96996fb985a"
+    },
+    {
+      "timestamp": 1592664690,
+      "slotPrice": "1ad9fa20f37b8628635"
+    },
+    {
+      "timestamp": 1592666265,
+      "slotPrice": "1ac37f8fb9039b72aa3"
+    },
+    {
+      "timestamp": 1592667840,
+      "slotPrice": "1aad212c7ec16d9b826"
+    },
+    {
+      "timestamp": 1592669415,
+      "slotPrice": "1a96dec83e9f7429be2"
+    },
+    {
+      "timestamp": 1592670990,
+      "slotPrice": "1a80b83454b73ef6faf"
+    },
+    {
+      "timestamp": 1592672565,
+      "slotPrice": "1a6aad427e5a7745b7f"
+    },
+    {
+      "timestamp": 1592674140,
+      "slotPrice": "1a54bdc4d89cdca5ec2"
+    },
+    {
+      "timestamp": 1592675715,
+      "slotPrice": "1a3ee98ddf682ed6d0a"
+    },
+    {
+      "timestamp": 1592677290,
+      "slotPrice": "1a2930706d5262fae3e"
+    },
+    {
+      "timestamp": 1592678865,
+      "slotPrice": "1a13923fb9f0ecca4fc"
+    },
+    {
+      "timestamp": 1592680440,
+      "slotPrice": "19fe0ecf58f49491ad9"
+    },
+    {
+      "timestamp": 1592682015,
+      "slotPrice": "19e8a5f33a4145c3057"
+    },
+    {
+      "timestamp": 1592683590,
+      "slotPrice": "19d3577fa791be4b3a3"
+    },
+    {
+      "timestamp": 1592685165,
+      "slotPrice": "19be234944957a9f156"
+    },
+    {
+      "timestamp": 1592686740,
+      "slotPrice": "19a909250dd4c44c615"
+    },
+    {
+      "timestamp": 1592688315,
+      "slotPrice": "199408e857d698662d7"
+    },
+    {
+      "timestamp": 1592689890,
+      "slotPrice": "197f2268ce48fd89614"
+    },
+    {
+      "timestamp": 1592691465,
+      "slotPrice": "196a557c736730e3077"
+    },
+    {
+      "timestamp": 1592693040,
+      "slotPrice": "1955a1f99e73841c522"
+    },
+    {
+      "timestamp": 1592694615,
+      "slotPrice": "194107b6fbd586704e6"
+    },
+    {
+      "timestamp": 1592696190,
+      "slotPrice": "192c868b8b5efc6834a"
+    },
+    {
+      "timestamp": 1592697765,
+      "slotPrice": "19181e4ea06adc657d4"
+    },
+    {
+      "timestamp": 1592699340,
+      "slotPrice": "1903ced7e02a8dc34d8"
+    },
+    {
+      "timestamp": 1592700915,
+      "slotPrice": "18ef97ff41c5ad83907"
+    },
+    {
+      "timestamp": 1592702490,
+      "slotPrice": "18db799d0ce79f6ff5b"
+    },
+    {
+      "timestamp": 1592704065,
+      "slotPrice": "18c77389d9368097dec"
+    },
+    {
+      "timestamp": 1592705640,
+      "slotPrice": "18b3859e8d9236477af"
+    },
+    {
+      "timestamp": 1592707215,
+      "slotPrice": "189fafb45f1eb10a7e7"
+    },
+    {
+      "timestamp": 1592708790,
+      "slotPrice": "188bf1a4d1634762cfa"
+    },
+    {
+      "timestamp": 1592710365,
+      "slotPrice": "18784b49b44543d1be0"
+    },
+    {
+      "timestamp": 1592711940,
+      "slotPrice": "1864bc7d242c37fcd02"
+    },
+    {
+      "timestamp": 1592713515,
+      "slotPrice": "185145198914067c334"
+    },
+    {
+      "timestamp": 1592715090,
+      "slotPrice": "183de4f9960d11f48d2"
+    },
+    {
+      "timestamp": 1592716665,
+      "slotPrice": "182a9bf847b5ee4063a"
+    },
+    {
+      "timestamp": 1592718240,
+      "slotPrice": "181769f0e530bb6987a"
+    },
+    {
+      "timestamp": 1592719815,
+      "slotPrice": "18044ebefd664b55b27"
+    },
+    {
+      "timestamp": 1592721390,
+      "slotPrice": "17f14a3e67c9a4e4a9a"
+    },
+    {
+      "timestamp": 1592722965,
+      "slotPrice": "17de5c4b437626e3b43"
+    },
+    {
+      "timestamp": 1592724540,
+      "slotPrice": "17cb84c1f61f8f248a4"
+    },
+    {
+      "timestamp": 1592726115,
+      "slotPrice": "17b8c37f2b6c92d19b1"
+    },
+    {
+      "timestamp": 1592727690,
+      "slotPrice": "17a6185fd519c40bb91"
+    },
+    {
+      "timestamp": 1592729265,
+      "slotPrice": "1793834128f739556a9"
+    },
+    {
+      "timestamp": 1592730840,
+      "slotPrice": "17810400a1a449f282f"
+    },
+    {
+      "timestamp": 1592732415,
+      "slotPrice": "176e9a7bfd278b8deea"
+    },
+    {
+      "timestamp": 1592733990,
+      "slotPrice": "175c46913c8240499fa"
+    },
+    {
+      "timestamp": 1592735565,
+      "slotPrice": "174a081ea3433665ed2"
+    },
+    {
+      "timestamp": 1592737140,
+      "slotPrice": "1737df02b62c196ad11"
+    },
+    {
+      "timestamp": 1592738715,
+      "slotPrice": "1725cb1c3be6a71a373"
+    },
+    {
+      "timestamp": 1592740290,
+      "slotPrice": "1713cc4a3b1eb073ee7"
+    },
+    {
+      "timestamp": 1592741865,
+      "slotPrice": "1701e26bfad8d63ccc4"
+    },
+    {
+      "timestamp": 1592743440,
+      "slotPrice": "16f00d6101224cfa297"
+    },
+    {
+      "timestamp": 1592745015,
+      "slotPrice": "16de4d091337c64d261"
+    },
+    {
+      "timestamp": 1592746590,
+      "slotPrice": "16cca144343b28fe1bc"
+    },
+    {
+      "timestamp": 1592748165,
+      "slotPrice": "16bb09f2a55ac49ea2d"
+    },
+    {
+      "timestamp": 1592749740,
+      "slotPrice": "16a986f4e48cdd6af10"
+    },
+    {
+      "timestamp": 1592751315,
+      "slotPrice": "1698182bacb7242d067"
+    },
+    {
+      "timestamp": 1592752890,
+      "slotPrice": "1686bd77f4c7e044dbc"
+    },
+    {
+      "timestamp": 1592754465,
+      "slotPrice": "167576baeea8f7995a8"
+    },
+    {
+      "timestamp": 1592756040,
+      "slotPrice": "166443d607bffd99408"
+    },
+    {
+      "timestamp": 1592757615,
+      "slotPrice": "165324aae7b62454589"
+    },
+    {
+      "timestamp": 1592759190,
+      "slotPrice": "1642191b701eb1efece"
+    },
+    {
+      "timestamp": 1592760765,
+      "slotPrice": "16312109bc1ce94322c"
+    },
+    {
+      "timestamp": 1592762340,
+      "slotPrice": "16203c581f374b80dc5"
+    },
+    {
+      "timestamp": 1592763915,
+      "slotPrice": "160f6ae925fe9f362fc"
+    },
+    {
+      "timestamp": 1592765490,
+      "slotPrice": "15feac9f948ee843c3e"
+    },
+    {
+      "timestamp": 1592767065,
+      "slotPrice": "15ee015e66137fb9300"
+    },
+    {
+      "timestamp": 1592768640,
+      "slotPrice": "15dd6908cd6a0154095"
+    },
+    {
+      "timestamp": 1592770215,
+      "slotPrice": "15cce38232e0d2bbae4"
+    },
+    {
+      "timestamp": 1592771790,
+      "slotPrice": "15bc70ae35a77432e94"
+    },
+    {
+      "timestamp": 1592773365,
+      "slotPrice": "15ac1070a994bbf9605"
+    },
+    {
+      "timestamp": 1592774940,
+      "slotPrice": "159bc2ad97f28abe80e"
+    },
+    {
+      "timestamp": 1592776515,
+      "slotPrice": "158b87493e3d67ebf53"
+    },
+    {
+      "timestamp": 1592778090,
+      "slotPrice": "157b5e280e7473693e1"
+    },
+    {
+      "timestamp": 1592779665,
+      "slotPrice": "156b472ead90e6829bc"
+    },
+    {
+      "timestamp": 1592781240,
+      "slotPrice": "155b4241f44bcc6692b"
+    },
+    {
+      "timestamp": 1592782815,
+      "slotPrice": "154b4f46ed9a79c14a5"
+    },
+    {
+      "timestamp": 1592784390,
+      "slotPrice": "153b6e22d6b31c7e91a"
+    },
+    {
+      "timestamp": 1592785965,
+      "slotPrice": "152b9ebb1f0d6342982"
+    },
+    {
+      "timestamp": 1592787540,
+      "slotPrice": "151be0f5673475cc1c3"
+    },
+    {
+      "timestamp": 1592789115,
+      "slotPrice": "150c34b7805bbe2a892"
+    },
+    {
+      "timestamp": 1592790690,
+      "slotPrice": "14fc99e76cd1b2144ef"
+    },
+    {
+      "timestamp": 1592792265,
+      "slotPrice": "14ed106b5e8eca7431a"
+    },
+    {
+      "timestamp": 1592793840,
+      "slotPrice": "14dd9829b78455f6b1b"
+    },
+    {
+      "timestamp": 1592795415,
+      "slotPrice": "14ce310908c4258a08c"
+    },
+    {
+      "timestamp": 1592796990,
+      "slotPrice": "14bedaf0121958513bf"
+    },
+    {
+      "timestamp": 1592798565,
+      "slotPrice": "14af95c5c20cbbf30ad"
+    },
+    {
+      "timestamp": 1592800140,
+      "slotPrice": "14a061713512015d8a4"
+    },
+    {
+      "timestamp": 1592801715,
+      "slotPrice": "14913dd9b5239e80914"
+    },
+    {
+      "timestamp": 1592803290,
+      "slotPrice": "14822ae6b9eab9dfac4"
+    },
+    {
+      "timestamp": 1592804865,
+      "slotPrice": "1473287fe7666edcb74"
+    },
+    {
+      "timestamp": 1592806440,
+      "slotPrice": "1464368d0e7e43c329a"
+    },
+    {
+      "timestamp": 1592808015,
+      "slotPrice": "145554f62c36faa1ac1"
+    },
+    {
+      "timestamp": 1592809590,
+      "slotPrice": "144683a3690e950dec0"
+    },
+    {
+      "timestamp": 1592811165,
+      "slotPrice": "1437c27d1903e731573"
+    },
+    {
+      "timestamp": 1592812740,
+      "slotPrice": "1429116bbb158c41e82"
+    },
+    {
+      "timestamp": 1592814315,
+      "slotPrice": "141a7057f905618baa4"
+    },
+    {
+      "timestamp": 1592815890,
+      "slotPrice": "140bdf2aa6982d688ef"
+    },
+    {
+      "timestamp": 1592817465,
+      "slotPrice": "13fd5dccc19e07cf085"
+    },
+    {
+      "timestamp": 1592819040,
+      "slotPrice": "13eeec27719657e3fbd"
+    },
+    {
+      "timestamp": 1592820615,
+      "slotPrice": "13e08a24071471ce1e1"
+    },
+    {
+      "timestamp": 1592822190,
+      "slotPrice": "13d237abfb8799ccb7b"
+    },
+    {
+      "timestamp": 1592823765,
+      "slotPrice": "13c3f4a8f0c321dd02a"
+    },
+    {
+      "timestamp": 1592825340,
+      "slotPrice": "13b5c104b106a3aaeb3"
+    },
+    {
+      "timestamp": 1592826915,
+      "slotPrice": "13a79ca92e478bfd55c"
+    },
+    {
+      "timestamp": 1592828490,
+      "slotPrice": "1399878081dc997acd3"
+    },
+    {
+      "timestamp": 1592830065,
+      "slotPrice": "138b8174eca575cbda8"
+    },
+    {
+      "timestamp": 1592831640,
+      "slotPrice": "137d8a70d5fbdec4f55"
+    },
+    {
+      "timestamp": 1592833215,
+      "slotPrice": "136fa25ecbdd54db41f"
+    },
+    {
+      "timestamp": 1592834790,
+      "slotPrice": "1361c929827986ebe99"
+    },
+    {
+      "timestamp": 1592836365,
+      "slotPrice": "1353febbd3fec6c6928"
+    },
+    {
+      "timestamp": 1592837940,
+      "slotPrice": "13464300bfeef73567e"
+    },
+    {
+      "timestamp": 1592839515,
+      "slotPrice": "133895e36b2a5d0252b"
+    },
+    {
+      "timestamp": 1592841090,
+      "slotPrice": "132af74f1f9f69703b1"
+    },
+    {
+      "timestamp": 1592842665,
+      "slotPrice": "131d672f4ba3d7e0790"
+    },
+    {
+      "timestamp": 1592844240,
+      "slotPrice": "130fe56f821cdfd7ad5"
+    },
+    {
+      "timestamp": 1592845815,
+      "slotPrice": "130271fb79bd4709515"
+    },
+    {
+      "timestamp": 1592847390,
+      "slotPrice": "12f50cbf0d2d721566b"
+    },
+    {
+      "timestamp": 1592848965,
+      "slotPrice": "12e7b5a63a68e7b5529"
+    },
+    {
+      "timestamp": 1592850540,
+      "slotPrice": "12da6c9d2290c4fcf50"
+    },
+    {
+      "timestamp": 1592852115,
+      "slotPrice": "12cd319009a1c13f03f"
+    },
+    {
+      "timestamp": 1592853690,
+      "slotPrice": "12c0046b560f1e99258"
+    },
+    {
+      "timestamp": 1592855265,
+      "slotPrice": "12b2e51b90e96a67925"
+    },
+    {
+      "timestamp": 1592856840,
+      "slotPrice": "12a5d38d64ef54e73dd"
+    },
+    {
+      "timestamp": 1592858415,
+      "slotPrice": "1298cfad9eb6348c777"
+    },
+    {
+      "timestamp": 1592859990,
+      "slotPrice": "128bd9692c4787d102a"
+    },
+    {
+      "timestamp": 1592861565,
+      "slotPrice": "127ef0ad1cf5f69e232"
+    },
+    {
+      "timestamp": 1592863140,
+      "slotPrice": "12721566a0ac8c51a71"
+    },
+    {
+      "timestamp": 1592864715,
+      "slotPrice": "126547830880d4b0b82"
+    },
+    {
+      "timestamp": 1592866290,
+      "slotPrice": "125886efc5490f2c0b4"
+    },
+    {
+      "timestamp": 1592867865,
+      "slotPrice": "124bd39a6897eac9073"
+    },
+    {
+      "timestamp": 1592869440,
+      "slotPrice": "123f2d70a35711c0ab5"
+    },
+    {
+      "timestamp": 1592871015,
+      "slotPrice": "12329460463e14189f8"
+    },
+    {
+      "timestamp": 1592872590,
+      "slotPrice": "12260857418f4b78503"
+    },
+    {
+      "timestamp": 1592874165,
+      "slotPrice": "12198943a43cc766bad"
+    },
+    {
+      "timestamp": 1592875740,
+      "slotPrice": "120d17139c5c7b7b4d7"
+    },
+    {
+      "timestamp": 1592877315,
+      "slotPrice": "1200b1b57681c4b0fe9"
+    },
+    {
+      "timestamp": 1592878890,
+      "slotPrice": "11f459179d984420643"
+    },
+    {
+      "timestamp": 1592880465,
+      "slotPrice": "11e80d289aa58835ff2"
+    },
+    {
+      "timestamp": 1592882040,
+      "slotPrice": "11dbcdd714a3e45c7a3"
+    },
+    {
+      "timestamp": 1592883615,
+      "slotPrice": "11cf9b11cfe2b41d75e"
+    },
+    {
+      "timestamp": 1592885190,
+      "slotPrice": "11c374c7ae761a84f13"
+    },
+    {
+      "timestamp": 1592886765,
+      "slotPrice": "11b75ae7af4eef8cd45"
+    },
+    {
+      "timestamp": 1592888340,
+      "slotPrice": "11ab4d60ee617e5a484"
+    },
+    {
+      "timestamp": 1592889915,
+      "slotPrice": "119f4c22a469c7e4feb"
+    },
+    {
+      "timestamp": 1592891490,
+      "slotPrice": "1193571c26696e71502"
+    },
+    {
+      "timestamp": 1592893065,
+      "slotPrice": "11876e3ce5cd5a89bc7"
+    },
+    {
+      "timestamp": 1592894640,
+      "slotPrice": "117b91746fece27f1cd"
+    },
+    {
+      "timestamp": 1592896215,
+      "slotPrice": "116fc0b26dd1ca134ba"
+    },
+    {
+      "timestamp": 1592897790,
+      "slotPrice": "1163fbe6a45cd6607f2"
+    },
+    {
+      "timestamp": 1592899365,
+      "slotPrice": "11584300f36bb6c32dc"
+    },
+    {
+      "timestamp": 1592900940,
+      "slotPrice": "114c95f1562d1ea4f5d"
+    },
+    {
+      "timestamp": 1592902515,
+      "slotPrice": "1140f4a7e2e88a401b2"
+    },
+    {
+      "timestamp": 1592904090,
+      "slotPrice": "11355f14ca5672ad7a2"
+    },
+    {
+      "timestamp": 1592905665,
+      "slotPrice": "1129d52857c5e6d8945"
+    },
+    {
+      "timestamp": 1592907240,
+      "slotPrice": "111e56d2f0d07313202"
+    },
+    {
+      "timestamp": 1592908815,
+      "slotPrice": "1112e405153b5f3ecb6"
+    },
+    {
+      "timestamp": 1592910390,
+      "slotPrice": "11077caf5e6b5782585"
+    },
+    {
+      "timestamp": 1592911965,
+      "slotPrice": "10fc20c27fcaad07d8e"
+    }
+  ]
+}
