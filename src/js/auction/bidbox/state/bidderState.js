@@ -14,7 +14,7 @@ export const BidderState = {
   ERROR: "error",
 }
 
-export function useBidderState(account, currentPrice) {
+export function useBidderState(account) {
   const [auctionState, setAuctionState] = useState(BidderState.LOADING)
 
   useEffect(() => {
@@ -37,6 +37,7 @@ export function useBidderState(account, currentPrice) {
           console.log("No account selected")
           return
         }
+        const currentPrice = await auctionWeb3.fetchCurrentPrice()
         if (!currentPrice) {
           setAuctionState(BidderState.LOADING)
           console.log("Current price not loaded")
@@ -69,6 +70,6 @@ export function useBidderState(account, currentPrice) {
 
     startCheckState()
     return () => clearInterval(env.chainCheckIntervalId)
-  }, [account, currentPrice])
+  }, [account])
   return auctionState
 }
