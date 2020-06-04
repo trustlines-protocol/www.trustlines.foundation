@@ -21,21 +21,14 @@
 
         <h1>Trustlines Validator Auction</h1>
 
-        <p class="content-large">The Trustlines validator auction is used to determine the first set of validators for the Trustlines Blockchain. The first set of validators will be valid for nine months. To participate in the auction, a whitelisted Ethereum address has to bid by sending ETH to the auction contract after it has started and before it has ended. The amount must be greater or equal to the current price.</p>
-        <p class="content-large">If you have been accepted as a validator candidate, please read the following information and instructions with great care.</p>
+        <p class="content-large">The Trustlines validator auction is used to determine the validator set for the Trustlines Blockchain. The validator set is valid for nine months. This auction is the second validator auction. To participate in the auction, a whitelisted Ethereum address has to bid with Trustlines Network Tokens (TLN) after the auction has started and before the auction has ended.</p>
+        <p class="content-large"><b>Please be sure to not send TLN directly to the auction contract, but instead use the bid process you can find on this website!</b></p>
 
         {% if env.SHOW_AUCTION === 'true' %}
           {# Chart #}
           <div id="loading-message"></div>
           <div class="level chart-addons">
-            <div class="level-left">
-              <div class="level-item">
-                <div class="buttons has-addons">
-                  <span id="eth-button" class="is-rounded button is-primary is-selected">ETH</span>
-                  <span id="wei-button" class="is-rounded button is-outlined is-primary">WEI</span>
-                </div>
-              </div>
-            </div>
+            <div class="level-left"></div>
             <div class="level-right">
               <div class="level-item">
                 <span class="icon is-medium slot-price-color p-b-xs">
@@ -49,7 +42,7 @@
                   <i class="fas fa-circle">
                   </i>
                 </span>
-                Bid Price
+                Bids
               </div>
             </div>
           </div>
@@ -87,14 +80,14 @@
           </div>
           <div class="columns chart-addons">
             <div class="column is-7">
-              <div class="is-rounded button is-background-gradient-dark has-text-white" id="address-reveal-link">Reveal contract address</div>
+              <div class="is-rounded button is-background-gradient-dark has-text-white is-button-styled" id="address-reveal-link">Reveal Contract address</div>
               <div id="address">
                 <h5 class="subtitle is-5 has-text-weight-bold is-marginless has-text-primary" >
-                  {{ env.AUCTION_ADDRESS }}
+                  <u><a href="{{ env.REACT_APP_EXPLORER_URL }}address/{{ env.AUCTION_ADDRESS }}" class="">{{ env.AUCTION_ADDRESS }}</a></u>
                 </h5>
-                <p class="has-text-danger m-b-none">Remember to increase the transaction gas.</p>
+                <p class="has-text-danger m-b-none">Do not diretly send eth or tokens to this address.</p>
               </div>
-              <div class="has-text-grey" id="address-description">Contract Address</div>
+              <div class="has-text-grey" id="address-description">Auction contract Address</div>
             </div>
             <div class="column is-5">
               <h5 class="subtitle is-3 has-text-weight-bold is-marginless has-text-primary" id="current-price">
@@ -104,49 +97,16 @@
           </div>
         {% endif %}
 
+        {% if env.ENABLE_AUCTION_PARTICIPATION === 'true' %}
+          <h3 class="title is-3 has-text-weight-bold has-text-primary">Participate in auction</h3>
+          <div id="rootAuctionApp"></div>
+        {% endif %}
+
         {% include "auction/_description.njk" %}
 
       </div>
     </div>
   </section>
-
-
-  {# Participate #}
-  <section class="hero background-gradient-light">
-    <div class="hero-body">
-      <div class="container">
-        <h1 class="title">
-          <a href="#collapsible-panel-1" data-action="collapse" class="has-text-white">
-            1. How to participate in the validator auction
-          </a>
-        </h1>
-      </div>
-    </div>
-  </section>
-  <div id="collapsible-panel-1" class="is-collapsible">
-    <div class="container">
-      {% include "auction/_participate.njk" %}
-    </div>
-  </div>
-
-
-  {# Withdraw #}
-  <section class="hero background-gradient-dark">
-    <div class="hero-body">
-      <div class="container">
-        <h1 class="title">
-          <a href="#collapsible-panel-2" data-action="collapse" class="has-text-white">
-            2. How to withdraw from the auction
-          </a>
-        </h1>
-      </div>
-    </div>
-  </section>
-  <div id="collapsible-panel-2" class="is-collapsible">
-    <div class="container">
-      {% include "auction/_withdraw.njk" %}
-    </div>
-  </div>
 
 
   {# Modal Dialog #}
@@ -166,12 +126,12 @@
           <div class="container has-text-centered">
             <div class="columns is-centered">
               <div class="column is-one-third">
-                <button id="terms-and-conditions-modal-button-reject" class="button is-rounded has-text-weight-bold is-outlined is-primary is-fullwidth">
+                <button id="terms-and-conditions-modal-button-reject" class="button is-rounded has-text-weight-bold is-outlined is-primary is-fullwidth is-button-styled">
                   Reject
                 </button>
               </div>
               <div class="column is-one-third">
-                <button id="terms-and-conditions-modal-button-accept" class="button is-rounded has-text-weight-bold has-text-white is-background-gradient-dark is-fullwidth">
+                <button id="terms-and-conditions-modal-button-accept" class="button is-rounded has-text-weight-bold has-text-white is-background-gradient-dark is-fullwidth is-button-styled">
                   Accept
                 </button>
               </div>

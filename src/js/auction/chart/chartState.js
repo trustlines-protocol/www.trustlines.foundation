@@ -1,17 +1,6 @@
-import { CURRENCY_ETH, CURRENCY_WEI } from "../common/const"
-
 export default class ChartState {
   constructor() {
-    this.currency = CURRENCY_ETH
     this.initialPropertiesSet = false
-  }
-
-  setETHCurrency() {
-    this.currency = CURRENCY_ETH
-  }
-
-  setWEICurrency() {
-    this.currency = CURRENCY_WEI
   }
 
   updateChart(params = {}) {

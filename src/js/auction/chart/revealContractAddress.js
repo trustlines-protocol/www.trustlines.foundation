@@ -1,6 +1,6 @@
 import $ from "jquery"
 
-import { SCROLL_THRESHOLD } from "../common/const"
+import { SCROLL_THRESHOLD } from "../../common/const"
 
 const auctionContractAddress = $("#address")
 const auctionContractAddressDescription = $("#address-description")

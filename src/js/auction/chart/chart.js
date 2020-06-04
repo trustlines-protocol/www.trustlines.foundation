@@ -1,8 +1,7 @@
 import $ from "jquery"
 import moment from "moment-timezone"
 
-import { ETH_BASE } from "../common/const"
-import { roundUp } from "../common/math"
+import { formatTLNAmount } from "../../common/math"
 import { renderState, renderSlots, renderCurrentPrice } from "./legend"
 
 const loadingMessage = $("#loading-message")
@@ -35,23 +34,13 @@ function getTooltipRow(chartState, dataPoint, point) {
   )
   row.push(
     `${moment(dataPoint.xLabel)
-      .tz("CET")
-      .format("MMM D, YYYY, h:mm:ss a")} CET`
+      .tz("UTC")
+      .format("MMM D, YYYY, h:mm:ss a")} UTC`
   )
   if (point.address) {
     row.push(`Bidder: ${point.address}`)
   }
-  if (chartState.currency === "ETH") {
-    row.push(`Slot Price: ${roundUp(point.slotPrice)} ETH`)
-    if (point.bidValue) {
-      row.push(`Bid Price:  ${(point.bidValue / ETH_BASE).toFixed(3)} ETH`)
-    }
-  } else {
-    row.push(`Slot Price: ${point.slotPrice} WEI`)
-    if (point.bidValue) {
-      row.push(`Bid Price:  ${point.bidValue} WEI`)
-    }
-  }
+  row.push(`Slot Price: ${formatTLNAmount(point.slotPrice)}`)
   return row
 }
 
@@ -148,17 +137,11 @@ function renderChart(bids, priceFunction, chartState) {
             type: "logarithmic",
             ticks: {
               callback: function(value, index) {
-                if (index % 5 === 0) {
-                  if (chartState.currency === "ETH") {
-                    return (value / ETH_BASE).toFixed(2) + " ETH "
-                  } else {
-                    return (
-                      value.toExponential().replace(/e\+?/, "x10^") + " WEI "
-                    )
-                  }
-                } else {
-                  return ""
+                const formattedValue = formatTLNAmount(value)
+                if (formattedValue.startsWith(1) || index === 0) {
+                  return formattedValue
                 }
+                return ""
               },
             },
           },
@@ -330,5 +313,5 @@ export default function initChart(chartState) {
   fetchAuctionDataAndRender(chartState, 800)
   setInterval(() => {
     fetchAuctionDataAndRender(chartState, 0)
-  }, 10000)
+  }, 20000)
 }

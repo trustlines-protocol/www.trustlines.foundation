@@ -18,10 +18,10 @@ import Error from "./components/Error"
 import TermsAndConditionsModal from "./components/TermsAndConditionsModal"
 import WaitCard from "./components/WaitCard"
 import ClaimFailed from "./components/ClaimFailed"
-import { useChainState } from "./state/chainState"
+import { useChainState } from "../common/state/chainState"
 import ColumnsWrapper from "./components/ColumnsWrapper"
 import ManualProofWrapper from "./components/ManualProofWrapper"
-import { useAccount } from "./state/account"
+import { useAccount } from "../common/state/account"
 import Warning from "./components/Warning"
 
 const STATE = {
@@ -163,7 +163,9 @@ function ClaimFlow() {
         if (error.code === web3.TRANSACTION_REVERTED_ERROR_CODE) {
           showError(
             "Your transaction have been reverted. Did you try to claim your tokens twice?",
-            { state: STATE.TRANSACTION_FAILED }
+            {
+              state: STATE.TRANSACTION_FAILED,
+            }
           )
         } else if (error.code === web3.USER_REJECTED_ERROR_CODE) {
           setInternalState(STATE.SHOW_PROOF)

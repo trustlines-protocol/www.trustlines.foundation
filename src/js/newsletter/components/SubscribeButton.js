@@ -7,7 +7,7 @@ export default function SubscribeButton(props) {
         {...props}
         type="submit"
         value="Submit"
-        className={`button is-primary has-shadow-primary is-rounded has-text-weight-bold ${props.className}`}
+        className={`newsletter-button button is-primary has-shadow-primary is-rounded has-text-weight-bold ${props.className}`}
       />
     </div>
   )

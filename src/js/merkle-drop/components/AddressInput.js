@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from "react"
 import Warning from "./Warning.js"
 import { isAddress } from "ethereum-address"
-import { CHAIN_STATE } from "../state/chainState"
+import { CHAIN_STATE } from "../../common/state/chainState"
 
 function AddressInput(props) {
   const addressRegex = new RegExp("^(0x)?[a-fA-F0-9]*$")
