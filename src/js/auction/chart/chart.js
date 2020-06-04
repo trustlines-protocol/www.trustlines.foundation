@@ -1,7 +1,6 @@
 import $ from "jquery"
 import moment from "moment-timezone"
 
-import { TLN_BASE } from "../../common/const"
 import { formatTLNAmount } from "../../common/math"
 import { renderState, renderSlots, renderCurrentPrice } from "./legend"
 
@@ -35,8 +34,8 @@ function getTooltipRow(chartState, dataPoint, point) {
   )
   row.push(
     `${moment(dataPoint.xLabel)
-      .tz("CET")
-      .format("MMM D, YYYY, h:mm:ss a")} CET`
+      .tz("UTC")
+      .format("MMM D, YYYY, h:mm:ss a")} UTC`
   )
   if (point.address) {
     row.push(`Bidder: ${point.address}`)
