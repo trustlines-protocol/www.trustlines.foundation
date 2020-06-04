@@ -13,12 +13,12 @@ import {
 } from "../../common/web3"
 import * as auctionWeb3 from "./web3"
 import * as blockexplorer from "../../common/blockexplorer"
-import { useCurrentPrice } from "./state/currentPrice"
 import { formatTLNAmount } from "../../common/math"
 import { BidderState, useBidderState } from "./state/bidderState"
 import Error from "./components/Error"
 import TLNLink from "./components/TLNLink"
 import AuctionLink from "./components/AuctionLink"
+import CurrentPrice from "./CurrentPrice"
 
 const MAX_UINT =
   "115792089237316195423570985008687907853269984665640564039457584007913129639935"
@@ -38,7 +38,6 @@ const STATE = {
 export default function BidBox() {
   const web3Account = useAccount()
   const chainState = useChainState()
-  const currentPrice = useCurrentPrice()
   const bidderState = useBidderState(web3Account, currentPrice)
 
   const [internalState, setInternalState] = useState(
@@ -389,11 +388,7 @@ export default function BidBox() {
             <MessageBlock>
               You can now make a bid in the{" "}
               <AuctionLink>Trustlines Validator Auction</AuctionLink>. <br />
-              {currentPrice
-                ? `Current slot price is ${formatTLNAmount(
-                    currentPrice.toString()
-                  )}.`
-                : "Could not fetch current slot price."}
+              Current slot price is <CurrentPrice />.
             </MessageBlock>
           </div>
           <div className="column">
