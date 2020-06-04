@@ -87,7 +87,7 @@
               <div class="is-rounded button is-background-gradient-dark has-text-white is-button-styled" id="address-reveal-link">Reveal Contract address</div>
               <div id="address">
                 <h5 class="subtitle is-5 has-text-weight-bold is-marginless has-text-primary" >
-                  {{ env.AUCTION_ADDRESS }}
+                  <u><a href="https://etherscan.io/address/{{ env.AUCTION_ADDRESS }}" class="">{{ env.AUCTION_ADDRESS }}</a></u>
                 </h5>
                 <p class="has-text-danger m-b-none">Do not diretly send eth or tokens to this address.</p>
               </div>
