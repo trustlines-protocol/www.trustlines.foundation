@@ -3,6 +3,7 @@ import MessageBlock from "../components/MessageBlock"
 import ActionButton from "../components/ActionButton"
 import TermsAndConditionsModal from "../../../common/components/TermsAndConditionsModal"
 import Screen from "./Screen"
+import TermsAndConditions from "../components/TermsAndConditions"
 
 export default function AcceptTermsAndConditions({ onAccept, onReject }) {
   const [isVisibleTermsAndCondition, setIsVisibleTermsAndCondition] = useState(
@@ -42,9 +43,7 @@ export default function AcceptTermsAndConditions({ onAccept, onReject }) {
           onReject={rejectTermsAndCondition}
           onAccept={acceptTermsAndCondition}
         >
-          Do you want to buy this washing machine
-          <br />
-          Do you?
+          <TermsAndConditions />
         </TermsAndConditionsModal>
       )}
     </Screen>
