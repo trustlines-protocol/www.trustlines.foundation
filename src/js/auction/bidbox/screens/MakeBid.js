@@ -9,7 +9,7 @@ export default function MakeBid({ makeBid }) {
   return (
     <Screen faIcon="fa fa-arrow-circle-right" title="Make your bid">
       <MessageBlock>
-        You can now make a bid in the{" "}
+        You can now make a bid in the {" "}
         <AuctionLink>Trustlines Validator Auction</AuctionLink>. <br />
         Current slot price is <CurrentPrice />.
       </MessageBlock>
