@@ -7,9 +7,12 @@ export default class ChartState {
     this.chart.update(params)
   }
 
-  decrementRemainingSeconds() {
+  decrementTimers() {
     if (this.remainingSeconds) {
       this.remainingSeconds = this.remainingSeconds - 1
+    }
+    if (this.secondsBeforeStart) {
+      this.secondsBeforeStart -= 1
     }
   }
 
@@ -25,6 +28,7 @@ export default class ChartState {
     this.currentBlocktimeInMs = result.currentBlocktimeInMs
     if (!this.initialPropertiesSet) {
       this.remainingSeconds = result.remainingSeconds
+      this.secondsBeforeStart = result.secondsBeforeStart
     }
 
     this.initialPropertiesSet = true

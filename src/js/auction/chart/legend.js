@@ -4,21 +4,26 @@ import { formatTLNAmount } from "../../common/math"
 const currentPrice = $("#current-price")
 const currentPriceDesc = $("#current-price-desc")
 
-function calculateRemainingSecondsString(remainingSeconds) {
-  if (!remainingSeconds) {
+function formatSecondsToString(seconds) {
+  if (!seconds) {
     return undefined
   }
-  const s = remainingSeconds % 60
-  const m = Math.floor((remainingSeconds % 3600) / 60)
-  const h = Math.floor((remainingSeconds % 86400) / 3600)
-  const d = Math.floor(remainingSeconds / 86400)
+  const s = seconds % 60
+  const m = Math.floor((seconds % 3600) / 60)
+  const h = Math.floor((seconds % 86400) / 3600)
+  const d = Math.floor(seconds / 86400)
   return `${d}d ${h}h ${m}m ${s}s`
 }
 
 export function renderState(chartState) {
   let timeString = chartState.state
   if (timeString === "Started") {
-    timeString = calculateRemainingSecondsString(chartState.remainingSeconds)
+    timeString = formatSecondsToString(chartState.remainingSeconds)
+  } else if (
+    timeString === "Not Started" &&
+    chartState.secondsBeforeStart > 0
+  ) {
+    timeString = formatSecondsToString(chartState.secondsBeforeStart)
   }
   $("#remaining-time").html(timeString)
 }
@@ -57,7 +62,7 @@ export function renderCurrentPrice(chartState) {
 
 export default function initLegend(chartState) {
   setInterval(() => {
-    chartState.decrementRemainingSeconds()
+    chartState.decrementTimers()
     renderState(chartState)
   }, 1000)
 }
