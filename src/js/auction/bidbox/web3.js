@@ -2,6 +2,30 @@ import getWeb3, { sendContractTransaction } from "../../common/web3"
 import AuctionABI from "../../abi/auction.json"
 import TokenABI from "../../abi/token.json"
 
+export const AuctionState = {
+  DEPLOYED: "DeployedState",
+  STARTED: "StartedState",
+  DEPOSIT_PENDING: "DepositPendingState",
+  ENDED: "EndedState",
+  FAILED: "FailedState",
+}
+
+const auctionStateMapping = [
+  AuctionState.DEPLOYED,
+  AuctionState.STARTED,
+  AuctionState.DEPOSIT_PENDING,
+  AuctionState.ENDED,
+  AuctionState.FAILED,
+]
+
+export async function fetchAuctionState() {
+  return auctionStateMapping[
+    await getAuctionContract()
+      .methods.auctionState()
+      .call()
+  ]
+}
+
 export async function bid(address, onSign, onConfirmation) {
   const auctionContract = getAuctionContract()
   const contractFunctionCall = auctionContract.methods.bid()

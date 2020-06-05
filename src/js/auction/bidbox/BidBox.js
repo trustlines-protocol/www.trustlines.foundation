@@ -232,6 +232,16 @@ export default function BidBox() {
             The selected account {web3Account} is not whitelisted.
           </Error>
         )
+      case BidderState.NOT_STARTED:
+        return (
+          <Error title="Auction has not started">
+            Please be a little more patient, the auction has not started yet.
+          </Error>
+        )
+      case BidderState.ENDED:
+        return (
+          <Error title="Auction ended">The auction has already ended.</Error>
+        )
       case BidderState.WRONG_ALLOWANCE:
         return (
           <Error title="Too low allowance">
