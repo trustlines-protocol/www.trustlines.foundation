@@ -47,10 +47,6 @@ export function useBidderState(account) {
           setAuctionState(BidderState.NOT_WHITELISTED)
         } else if (await auctionWeb3.hasBid(account)) {
           setAuctionState(BidderState.ALREADY_BID)
-        } else if (
-          (await auctionWeb3.fetchTokenBalance(account)).lt(currentPrice)
-        ) {
-          setAuctionState(BidderState.NOT_ENOUGH_TOKENS)
         } else if ((await fetchBalance(account)) === "0") {
           setAuctionState(BidderState.NO_ETH)
         } else if ((await auctionWeb3.fetchAllowance(account)).eq(0)) {
@@ -59,6 +55,10 @@ export function useBidderState(account) {
           (await auctionWeb3.fetchAllowance(account)).lt(currentPrice)
         ) {
           setAuctionState(BidderState.WRONG_ALLOWANCE)
+        } else if (
+          (await auctionWeb3.fetchTokenBalance(account)).lt(currentPrice)
+        ) {
+          setAuctionState(BidderState.NOT_ENOUGH_TOKENS)
         } else {
           setAuctionState(BidderState.READY_TO_BID)
         }
