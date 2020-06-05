@@ -11,7 +11,9 @@ export default function SuccessfulBid({ txHash, paidSlotPrice }) {
       title="You have successfully made your bid"
     >
       <MessageBlock>
-        {`You submitted a bid for a slot price of ${formatTLNAmount(paidSlotPrice)}`}
+        {`You submitted a bid for a slot price of ${formatTLNAmount(
+          paidSlotPrice
+        )}`}
         <br />
         You can check your transaction on{" "}
         <a
