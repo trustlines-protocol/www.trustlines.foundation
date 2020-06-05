@@ -22,6 +22,7 @@ import NoAllowance from "./screens/NoAllowance"
 import WaitForConfirmation from "./screens/WaitForConfirmation"
 import SuccessfulBid from "./screens/SuccessfulBid"
 import TransactionError from "./screens/TransactionError"
+import AlreadyBid from "./screens/AlreadyBid"
 
 const MAX_UINT =
   "115792089237316195423570985008687907853269984665640564039457584007913129639935"
@@ -66,6 +67,11 @@ export default function BidBox() {
 
   const setPaidSlotPriceByReceipt = useCallback(async receipt => {
     const paidSlotPrice = await auctionWeb3.getPaidSlotPriceByReceipt(receipt)
+    setPaidSlotPrice(paidSlotPrice)
+  }, [])
+
+  const setPaidSlotPriceByAddress = useCallback(async address => {
+    const paidSlotPrice = await auctionWeb3.getPaidSlotPriceByAddress(address)
     setPaidSlotPrice(paidSlotPrice)
   }, [])
 
@@ -267,10 +273,9 @@ export default function BidBox() {
           </Error>
         )
       case BidderState.ALREADY_BID:
+        setPaidSlotPriceByAddress(web3Account)
         return (
-          <Error title="Already bid">
-            The selected account {web3Account} has already bid.
-          </Error>
+          <AlreadyBid web3Account={web3Account} paidSlotPrice={paidSlotPrice} />
         )
       case BidderState.READY_TO_BID:
         //Nothing to do

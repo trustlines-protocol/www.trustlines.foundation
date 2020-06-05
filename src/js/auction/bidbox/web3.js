@@ -78,10 +78,13 @@ export async function isWhitelisted(address) {
 }
 
 export async function hasBid(address) {
-  const bid = await getAuctionContract()
+  return !(await getPaidSlotPriceByAddress(address)).eq(0)
+}
+
+export async function getPaidSlotPriceByAddress(address) {
+  return getAuctionContract()
     .methods.bids(address)
     .call()
-  return !bid.eq(0)
 }
 
 export async function getPaidSlotPriceByReceipt(receipt) {
