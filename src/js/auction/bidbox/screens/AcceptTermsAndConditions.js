@@ -30,7 +30,8 @@ export default function AcceptTermsAndConditions({ onAccept, onReject }) {
       title="Accept the Terms and Conditions"
     >
       <MessageBlock>
-        To proceed with the auction, you must read and accept our Terms and Conditions.
+        To proceed with the auction, you must read and accept our Terms and
+        Conditions.
       </MessageBlock>
       <ActionButton
         label="Terms & Conditions"
