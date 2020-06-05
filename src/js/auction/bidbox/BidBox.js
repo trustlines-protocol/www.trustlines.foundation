@@ -2,7 +2,6 @@ import React, { useState, useCallback } from "react"
 import MainHeader from "./components/MainHeader"
 import MessageBlock from "./components/MessageBlock"
 import ActionButton from "./components/ActionButton"
-import TermsAndConditionsModal from "../../common/components/TermsAndConditionsModal"
 import { useAccount } from "../../common/state/account"
 import { useChainState, CHAIN_STATE } from "../../common/state/chainState"
 import {
@@ -12,19 +11,23 @@ import {
   USER_REJECTED_ERROR_CODE,
 } from "../../common/web3"
 import * as auctionWeb3 from "./web3"
-import * as blockexplorer from "../../common/blockexplorer"
-import { formatTLNAmount } from "../../common/math"
 import { BidderState, useBidderState } from "./state/bidderState"
 import Error from "./components/Error"
 import TLNLink from "./components/TLNLink"
-import AuctionLink from "./components/AuctionLink"
 import CurrentPrice from "./CurrentPrice"
+import AcceptTermsAndConditions from "./screens/AcceptTermsAndConditions"
+import ConnectWallet from "./screens/ConnectWallet"
+import MakeBid from "./screens/MakeBid"
+import NoAllowance from "./screens/NoAllowance"
+import WaitForConfirmation from "./screens/WaitForConfirmation"
+import SuccessfulBid from "./screens/SuccessfulBid"
+import TransactionError from "./screens/TransactionError"
 
 const MAX_UINT =
   "115792089237316195423570985008687907853269984665640564039457584007913129639935"
 
 const STATE = {
-  PARTICIPATE_IN_AUCTION: "ParticipateInAuctionState",
+  ACCEPT_TERMS_AND_CONDITION: "AcceptTermsAndConditionState",
   CONNECT_WALLET: "ConnectWalletState",
   WAITING_FOR_APPROVE_CONFIRMATION: "WaitingForApproveConfirmationState",
   MAKE_BID: "MakeBidState",
@@ -41,24 +44,23 @@ export default function BidBox() {
   const bidderState = useBidderState(web3Account)
 
   const [internalState, setInternalState] = useState(
-    STATE.PARTICIPATE_IN_AUCTION
+    STATE.ACCEPT_TERMS_AND_CONDITION
   )
   const [paidSlotPrice, setPaidSlotPrice] = useState(0)
-  const [isVisibleTermsAndCondition, setIsVisibleTermsAndCondition] = useState(
-    false
-  )
 
   const [txHash, setTxHash] = useState("")
   const [confirmations, setConfirmations] = useState(0)
   const [errorMessage, setErrorMessage] = useState("")
 
-  const showError = (errorMessage, options = { state: STATE.ERROR }) => {
-    setErrorMessage(errorMessage)
-    setInternalState(options.state)
-  }
+  const reset = useCallback(() => {
+    setInternalState(STATE.ACCEPT_TERMS_AND_CONDITION)
+  }, [])
 
-  const showTermsAndConditionsModal = useCallback(
-    () => setIsVisibleTermsAndCondition(true),
+  const showError = useCallback(
+    (errorMessage, options = { state: STATE.ERROR }) => {
+      setErrorMessage(errorMessage)
+      setInternalState(options.state)
+    },
     []
   )
 
@@ -68,7 +70,6 @@ export default function BidBox() {
   }, [])
 
   const handleAcceptTermsAndCondition = useCallback(async () => {
-    setIsVisibleTermsAndCondition(false)
     const account = await getDefaultAccount()
     if (account) {
       setInternalState(STATE.MAKE_BID)
@@ -76,11 +77,6 @@ export default function BidBox() {
       setInternalState(STATE.CONNECT_WALLET)
     }
   }, [])
-
-  const handleRejectTermsAndCondition = useCallback(
-    () => setIsVisibleTermsAndCondition(false),
-    []
-  )
 
   const connect = useCallback(async () => {
     setInternalState(STATE.WAITING_FOR_WEB3_BROWSER_ACTION)
@@ -134,12 +130,10 @@ export default function BidBox() {
         setInternalState(STATE.MAKE_BID)
         console.log("User rejected")
       } else {
-        showError("Something went wrong with your transaction.", {
-          state: STATE.TRANSACTION_ERROR,
-        })
+        showError("Something went wrong.")
       }
     }
-  }, [handleApproveConfirmation])
+  }, [handleApproveConfirmation, showError])
 
   const handleBidConfirmation = useCallback(
     (confirmationNumber, receipt) => {
@@ -182,55 +176,40 @@ export default function BidBox() {
         setInternalState(STATE.MAKE_BID)
         console.log("User rejected")
       } else {
-        showError("Something went wrong with your transaction.", {
-          state: STATE.TRANSACTION_ERROR,
-        })
+        showError("Something went wrong.")
       }
     }
-  }, [handleBidConfirmation])
+  }, [handleBidConfirmation, showError])
 
   switch (chainState) {
     case CHAIN_STATE.CONNECTING:
       return (
         <div>
-          <div className="column">
-            <MainHeader text="Connecting..." />
-          </div>
-          <div className="column">
-            <MessageBlock />
-          </div>
+          <MainHeader text="Connecting..." />
+          <MessageBlock />
         </div>
       )
     case CHAIN_STATE.DISCONNECTED:
       return (
         <div>
-          <div className="column">
-            <MainHeader
-              faIcon="fa fa-exclamation-circle"
-              text="No Web3 browser detected"
-            />
-          </div>
-          <div className="column">
-            <MessageBlock>
-              You can not participate directly on this website as no Web3
-              browser was detected. In order to participate please install the
-              Metamask plugin, or browse this website with a Web3 enabled
-              browser.
-            </MessageBlock>
-          </div>
+          <MainHeader
+            faIcon="fa fa-exclamation-circle"
+            text="No Web3 browser detected"
+          />
+          <MessageBlock>
+            You can not participate directly on this website as no Web3 browser
+            was detected. In order to participate please install the Metamask
+            plugin, or browse this website with a Web3 enabled browser.
+          </MessageBlock>
         </div>
       )
     case CHAIN_STATE.WRONG_CHAIN:
       return (
         <div>
-          <div className="column">
-            <MainHeader faIcon="fa fa-exclamation-circle" text="Wrong chain" />
-          </div>
-          <div className="column">
-            <MessageBlock>
-              Please connect to the {process.env.REACT_APP_CHAIN_NAME}
-            </MessageBlock>
-          </div>
+          <MainHeader faIcon="fa fa-exclamation-circle" text="Wrong chain" />
+          <MessageBlock>
+            Please connect to the {process.env.REACT_APP_CHAIN_NAME}
+          </MessageBlock>
         </div>
       )
     default:
@@ -241,35 +220,12 @@ export default function BidBox() {
       case BidderState.LOADING:
         return (
           <div>
-            <div className="column">
-              <MainHeader faIcon="fa fa-spinner fa-pulse" text="Loading..." />
-            </div>
-            <div className="column">
-              <MessageBlock />
-            </div>
+            <MainHeader faIcon="fa fa-spinner fa-pulse" text="Loading..." />
+            <MessageBlock />
           </div>
         )
       case BidderState.NO_ALLOWANCE:
-        return (
-          <div>
-            <div className="column">
-              <MainHeader
-                faIcon="fa fa-arrow-circle-right"
-                text="Approve Transfer"
-              />
-            </div>
-            <div className="column">
-              <MessageBlock>
-                In order to proceed, please approve the transfer of{" "}
-                <TLNLink>TLN</TLNLink> by the auction contract for {web3Account}
-                .
-              </MessageBlock>
-            </div>
-            <div className="column">
-              <ActionButton label="Approve" onClick={approve} />
-            </div>
-          </div>
-        )
+        return <NoAllowance web3Account={web3Account} approve={approve} />
       case BidderState.NOT_WHITELISTED:
         return (
           <Error title="Not whitelisted">
@@ -296,8 +252,8 @@ export default function BidBox() {
         return (
           <Error title="Not enough TLN">
             It seems that the current selected account does not have enough TLN
-            to bid at the current price. In order to proceed send{" "}
-            <TLNLink>TLN</TLNLink> to the current selected account.
+            to bid at the current price <CurrentPrice />. In order to proceed
+            send <TLNLink>TLN</TLNLink> to the current selected account.
           </Error>
         )
       case BidderState.ALREADY_BID:
@@ -322,205 +278,45 @@ export default function BidBox() {
   }
 
   switch (internalState) {
-    case STATE.PARTICIPATE_IN_AUCTION:
+    case STATE.ACCEPT_TERMS_AND_CONDITION:
       return (
-        <div>
-          <div className="column">
-            <MainHeader
-              faIcon="fa fa-arrow-circle-right"
-              text="Accept the Terms and Conditions"
-            />
-          </div>
-          <div className="column">
-            <MessageBlock>
-              In order to begin with your participation, please read and accept
-              our terms and conditions.
-            </MessageBlock>
-          </div>
-          <div className="column">
-            <ActionButton
-              label="Terms & Conditions"
-              onClick={showTermsAndConditionsModal}
-            />
-          </div>
-          {isVisibleTermsAndCondition && (
-            <TermsAndConditionsModal
-              onReject={handleRejectTermsAndCondition}
-              onAccept={handleAcceptTermsAndCondition}
-            >
-              Do you want to buy this washing machine
-              <br />
-              Do you?
-            </TermsAndConditionsModal>
-          )}
-        </div>
+        <AcceptTermsAndConditions onAccept={handleAcceptTermsAndCondition} />
       )
-
     case STATE.CONNECT_WALLET:
-      return (
-        <div>
-          <div className="column">
-            <MainHeader
-              faIcon="fa fa-arrow-circle-right"
-              text="Connect wallet"
-            />
-          </div>
-          <div className="column">
-            <MessageBlock>
-              In order to proceed, please allow to connect to your wallet.
-            </MessageBlock>
-          </div>
-          <div className="column">
-            <ActionButton label="Connect" onClick={connect} />
-          </div>
-        </div>
-      )
+      return <ConnectWallet onConnect={connect} />
     case STATE.MAKE_BID:
-      return (
-        <div>
-          <div className="column">
-            <MainHeader
-              faIcon="fa fa-arrow-circle-right"
-              text="Make your bid"
-            />
-          </div>
-          <div className="column">
-            <MessageBlock>
-              You can now make a bid in the{" "}
-              <AuctionLink>Trustlines Validator Auction</AuctionLink>. <br />
-              Current slot price is <CurrentPrice />.
-            </MessageBlock>
-          </div>
-          <div className="column">
-            <ActionButton label="Place Bid" onClick={makeBid} />
-          </div>
-        </div>
-      )
-
+      return <MakeBid makeBid={makeBid} />
     case STATE.WAITING_FOR_APPROVE_CONFIRMATION:
     case STATE.WAITING_FOR_BID_CONFIRMATION:
-      return (
-        <div>
-          <div className="column">
-            <MainHeader
-              faIcon="fa fa-spinner fa-pulse"
-              text="Waiting for confirmation..."
-            />
-          </div>
-          <div className="column">
-            <MessageBlock>
-              Your transaction has been sent and we are waiting for
-              confirmation.
-              <br />
-              Check status on{" "}
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href={blockexplorer.generateTransactionUrl(txHash)}
-              >
-                Etherscan
-              </a>
-              .
-            </MessageBlock>
-          </div>
-        </div>
-      )
+      return <WaitForConfirmation txHash={txHash} />
     case STATE.WAITING_FOR_WEB3_BROWSER_ACTION:
       return (
         <div>
-          <div className="column">
-            <MainHeader faIcon="fa fa-spinner fa-pulse" text="Waiting..." />
-          </div>
-          <div className="column">
-            <MessageBlock>
-              Please follow the instructions of your Web3 enabled browser.
-            </MessageBlock>
-          </div>
+          <MainHeader faIcon="fa fa-spinner fa-pulse" text="Waiting..." />
+          <MessageBlock>
+            Please follow the instructions of your Web3 enabled browser.
+          </MessageBlock>
         </div>
       )
 
     case STATE.SUCCESSFUL_BID:
-      return (
-        <div>
-          <div className="column">
-            <MainHeader
-              faIcon="fa fa-check-circle"
-              text="You have successfully made your bid"
-            />
-          </div>
-          <div className="column">
-            <MessageBlock>
-              {`Paid slot price: ${formatTLNAmount(paidSlotPrice)}`}
-              <br />
-              You can check your transaction on{" "}
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href={blockexplorer.generateTransactionUrl(txHash)}
-              >
-                Etherscan
-              </a>
-              .
-            </MessageBlock>
-          </div>
-        </div>
-      )
+      return <SuccessfulBid txHash={txHash} paidSlotPrice={paidSlotPrice} />
 
     case STATE.ERROR:
       return (
         <div>
-          <div className="column">
-            <MainHeader
-              faIcon="fa fa-exclamation-circle"
-              text="Something went wrong"
-            />
-          </div>
-          <div className="column">
-            <MessageBlock>{errorMessage}</MessageBlock>
-          </div>
-          <div className="column">
-            <ActionButton
-              label="Try again"
-              onClick={() => {
-                setInternalState(STATE.PARTICIPATE_IN_AUCTION)
-              }}
-            />
-          </div>
+          <Error title="Something went wrong">{errorMessage}</Error>
+          <ActionButton label="Try again" onClick={reset} />
         </div>
       )
 
     case STATE.TRANSACTION_ERROR:
       return (
-        <div>
-          <div className="column">
-            <MainHeader
-              faIcon="fa fa-exclamation-circle"
-              text="Something went wrong"
-            />
-          </div>
-          <div className="column">
-            <MessageBlock>
-              {errorMessage} <br />
-              Check what went wrong on{" "}
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href={blockexplorer.generateTransactionUrl(txHash)}
-              >
-                Etherscan
-              </a>
-              .
-            </MessageBlock>
-          </div>
-          <div className="column">
-            <ActionButton
-              label="Try again"
-              onClick={() => {
-                setInternalState(STATE.PARTICIPATE_IN_AUCTION)
-              }}
-            />
-          </div>
-        </div>
+        <TransactionError
+          errorMessage={errorMessage}
+          txHash={txHash}
+          onTryAgain={reset}
+        />
       )
 
     default:
