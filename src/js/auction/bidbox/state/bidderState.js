@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react"
 import * as auctionWeb3 from "../web3"
+import { AuctionState } from "../web3"
 import { fetchBalance } from "../../../common/web3"
 
 export const BidderState = {
   LOADING: "loading",
+  NOT_STARTED: "notStarted",
+  ENDED: "ended",
   NOT_WHITELISTED: "notWhitelisted",
   NO_ALLOWANCE: "noAllowance",
   WRONG_ALLOWANCE: "wrongAllowance",
@@ -15,11 +18,11 @@ export const BidderState = {
 }
 
 export function useBidderState(account) {
-  const [auctionState, setAuctionState] = useState(BidderState.LOADING)
+  const [bidderState, setBidderState] = useState(BidderState.LOADING)
 
   useEffect(() => {
     if (!account) {
-      setAuctionState(BidderState.LOADING)
+      setBidderState(BidderState.LOADING)
       console.log("No account selected")
       return
     }
@@ -33,34 +36,46 @@ export function useBidderState(account) {
     async function startCheckState() {
       async function checkState() {
         if (!account) {
-          setAuctionState(BidderState.LOADING)
+          setBidderState(BidderState.LOADING)
           console.log("No account selected")
           return
         }
         const currentPrice = await auctionWeb3.fetchCurrentPrice()
         if (!currentPrice) {
-          setAuctionState(BidderState.LOADING)
+          setBidderState(BidderState.LOADING)
           console.log("Current price not loaded")
           return
         }
-        if (!(await auctionWeb3.isWhitelisted(account))) {
-          setAuctionState(BidderState.NOT_WHITELISTED)
+        if (
+          [
+            AuctionState.ENDED,
+            AuctionState.FAILED,
+            AuctionState.DEPOSIT_PENDING,
+          ].includes(await auctionWeb3.fetchAuctionState())
+        ) {
+          setBidderState(BidderState.ENDED)
+        } else if (!(await auctionWeb3.isWhitelisted(account))) {
+          setBidderState(BidderState.NOT_WHITELISTED)
         } else if (await auctionWeb3.hasBid(account)) {
-          setAuctionState(BidderState.ALREADY_BID)
+          setBidderState(BidderState.ALREADY_BID)
         } else if ((await fetchBalance(account)) === "0") {
-          setAuctionState(BidderState.NO_ETH)
+          setBidderState(BidderState.NO_ETH)
         } else if ((await auctionWeb3.fetchAllowance(account)).eq(0)) {
-          setAuctionState(BidderState.NO_ALLOWANCE)
+          setBidderState(BidderState.NO_ALLOWANCE)
         } else if (
           (await auctionWeb3.fetchAllowance(account)).lt(currentPrice)
         ) {
-          setAuctionState(BidderState.WRONG_ALLOWANCE)
+          setBidderState(BidderState.WRONG_ALLOWANCE)
+        } else if (
+          (await auctionWeb3.fetchAuctionState()) === AuctionState.DEPLOYED
+        ) {
+          setBidderState(BidderState.NOT_STARTED)
         } else if (
           (await auctionWeb3.fetchTokenBalance(account)).lt(currentPrice)
         ) {
-          setAuctionState(BidderState.NOT_ENOUGH_TOKENS)
+          setBidderState(BidderState.NOT_ENOUGH_TOKENS)
         } else {
-          setAuctionState(BidderState.READY_TO_BID)
+          setBidderState(BidderState.READY_TO_BID)
         }
       }
 
@@ -71,5 +86,5 @@ export function useBidderState(account) {
     startCheckState()
     return () => clearInterval(env.chainCheckIntervalId)
   }, [account])
-  return auctionState
+  return bidderState
 }
