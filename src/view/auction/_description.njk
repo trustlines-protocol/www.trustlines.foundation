@@ -1,16 +1,16 @@
 <div class="columns">
   <div class="column">
     <ul>
-      <li>The Trustlines validator auction is a smart contract on the Ethereum main chain. The Trustlines Foundation is going to trigger the start of the auction at a provisioned date and time by means of sending a transaction.</li>
-      <li>The auction defines a price per validator slot starting at 50,000,000 TLN that, during the course of the auction, continuously decreases according to a specified function. After two weeks, it reaches about 5000 TLN/ validator slot.</li>
-      <li>Access to the auction is restricted: Only accounts that have been whitelisted by the Trustlines Foundation prior to the start of the auction are eligible to participate in it and each whitelisted account can only participate once.</li>
+      <li>The Trustlines validator auction is a smart contract on Ethereum. The Trustlines Foundation is going to trigger the start of the auction at a provisioned date and time by sending a transaction.</li>
+      <li>The auction defines a price per validator slot starting at 50,000,000 TLN that, during the auction, continuously decreases according to a specified function. After two weeks, it will reach about 5000 TLN per validator slot. This is the minimum price set for the auction.</li>
+      <li>Access to the auction is restricted. Only accounts that have been whitelisted by the Trustlines Foundation before the start of the auction are eligible to participate. Each whitelisted account can only participate once.</li>
     </ul>
   </div>
   <div class="column">
     <ul>
-      <li>The auction ends with the 36th bid or after two weeks counted from the start time, whichever comes first. The number of participants at the end defines the result of the auction: If 15 or more accounts have participated it is successful, otherwise, it has failed.</li>
-      <li>If the auction has failed, all participants can withdraw the entirety of the TLN they used to bid by calling the auction contract's `withdraw` function. However, participants will not be granted the status of a validator on the Trustlines Blockchain.</li>
-      <li>If the auction is successful, the price of the last bid is defined as the "slot price". Every participant can withdraw the difference between the slot price and their bid by calling the withdraw function. Participants will be granted the status of a validator on the Trustlines Blockchain. All TLN that can not be withdrawn will be transferred to the deposit locker contract and be kept there as a stake for nine months.</li>
+      <li>The auction ends with the 36th bid, or after two weeks counted from the start time, whichever comes first. The number of participants at the end defines the result of the auction. If 15 or more accounts have participated, it is successful. Otherwise, it will fail.</li>
+      <li>If the auction fails, all participants can withdraw the entirety of the TLN they used to bid. They can withdraw their bid by calling the auction contract's `withdraw` function. However, participants will not be granted the status of a validator on the Trustlines Blockchain.</li>
+      <li>If the auction is successful, the last bid's price is defined as the "slot price." Every participant can withdraw the difference between the slot price and their bid by calling the withdraw function mentioned before. Participants of a successful auction will be granted the status of a validator on the Trustlines Blockchain. All TLN use in successful bids will be transferred to the deposit locker contract and kept there as a stake for the duration of the validator period. The length of the validator period is currently nine months.</li>
     </ul>
   </div>
 </div>

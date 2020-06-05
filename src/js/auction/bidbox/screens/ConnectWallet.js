@@ -7,7 +7,7 @@ export default function ConnectWallet({ onConnect }) {
   return (
     <Screen faIcon="fa fa-arrow-circle-right" title="Connect Wallet">
       <MessageBlock>
-        In order to proceed, please allow to connect to your wallet.
+        To proceed, connect a compatible Web3 wallet.
       </MessageBlock>
       <ActionButton label="Connect" onClick={onConnect} />
     </Screen>

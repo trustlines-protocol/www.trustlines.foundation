@@ -9,7 +9,7 @@ export default function WaitForConfirmation({ txHash }) {
       <MessageBlock>
         Your transaction has been sent and we are waiting for confirmation.
         <br />
-        Check status on{" "}
+        You can check the status on{" "}
         <a
           target="_blank"
           rel="noopener noreferrer"

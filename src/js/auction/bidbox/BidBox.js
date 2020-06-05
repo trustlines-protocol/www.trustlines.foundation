@@ -235,31 +235,25 @@ export default function BidBox() {
       case BidderState.WRONG_ALLOWANCE:
         return (
           <Error title="Too low allowance">
-            The allowance for this account is lower than the current auction
-            price. Please manually fix this as this website can not handle this
-            case.
+            The allowance for this account is lower than the current auction price. You will need to fix this manually, as this website can not handle this case.
           </Error>
         )
       case BidderState.NO_ETH:
         return (
           <Error title="Not enough funds">
-            It seems that the current selected account has no funds to pay for
-            transactions. You will need to send ETH to the selected account to
-            proceed.
+            The currently selected account doesn't have enough funds to pay for transactions. You will need to increase the amount of ETH on the account to proceed.
           </Error>
         )
       case BidderState.NOT_ENOUGH_TOKENS:
         return (
           <Error title="Not enough TLN">
-            It seems that the current selected account does not have enough TLN
-            to bid at the current price <CurrentPrice />. In order to proceed
-            send <TLNLink>TLN</TLNLink> to the current selected account.
+            The currently selected account doesn't have enough <TLNLink>TLN</TLNLink> to bid at the current price of <CurrentPrice />. To proceed, you will need more TLN on the account to bid at the current rate. You can also wait for the price of the auction to go down and bid at a lower price. The minimum bid price is 5,000 TLN.
           </Error>
         )
       case BidderState.ALREADY_BID:
         return (
           <Error title="Already bid">
-            The selected account {web3Account} has already bid.
+            The selected account {web3Account} has already bid in the auction. You can only bid once in the auction.
           </Error>
         )
       case BidderState.READY_TO_BID:
@@ -268,7 +262,7 @@ export default function BidBox() {
       case BidderState.Error:
         return (
           <Error title="Something went wrong">
-            We could not determine the current auction state
+            We could not determine the current auction state.
           </Error>
         )
       default:
