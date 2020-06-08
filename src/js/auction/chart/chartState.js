@@ -11,9 +11,8 @@ export default class ChartState {
     if (this.remainingSeconds) {
       this.remainingSeconds = this.remainingSeconds - 1
     }
-    if (this.secondsBeforeStart) {
-      this.secondsBeforeStart -= 1
-    }
+    this.secondsBeforeStart =
+      +process.env.AUCTION_START_TIMESTAMP - Math.round(new Date() / 1000)
   }
 
   mergeRestResult(result) {
@@ -28,7 +27,6 @@ export default class ChartState {
     this.currentBlocktimeInMs = result.currentBlocktimeInMs
     if (!this.initialPropertiesSet) {
       this.remainingSeconds = result.remainingSeconds
-      this.secondsBeforeStart = result.secondsBeforeStart
     }
 
     this.initialPropertiesSet = true
