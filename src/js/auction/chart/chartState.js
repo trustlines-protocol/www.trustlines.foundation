@@ -1,8 +1,4 @@
 export default class ChartState {
-  constructor() {
-    this.initialPropertiesSet = false
-  }
-
   updateChart(params = {}) {
     this.chart.update(params)
   }
@@ -25,10 +21,8 @@ export default class ChartState {
     this.currentPriceInWEI = result.currentPriceInWEI
     this.initialPriceInWEI = result.initialPriceInWEI
     this.currentBlocktimeInMs = result.currentBlocktimeInMs
-    if (!this.initialPropertiesSet) {
+    if (!this.remainingSeconds) {
       this.remainingSeconds = result.remainingSeconds
     }
-
-    this.initialPropertiesSet = true
   }
 }
