@@ -17,6 +17,7 @@ function formatSecondsToString(seconds) {
 
 export function renderState(chartState) {
   let timeString = chartState.state
+  let label = "Remaining Time"
   if (timeString === "Started") {
     timeString = formatSecondsToString(chartState.remainingSeconds)
   } else if (
@@ -24,8 +25,10 @@ export function renderState(chartState) {
     chartState.secondsBeforeStart > 0
   ) {
     timeString = formatSecondsToString(chartState.secondsBeforeStart)
+    label = "Until Auction starts"
   }
   $("#remaining-time").html(timeString)
+  $("#remaining-time-label").html(label)
 }
 
 export function renderSlots(chartState) {
