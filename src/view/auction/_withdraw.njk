@@ -35,23 +35,23 @@
       </figure>
     </li>
     <li>
-      You can then click on “Write” under the “withdraw” function to send a transaction to the contract withdrawing your overbids.<br />
+      You can then click on “Write” under the “withdraw” function to send a transaction to the contract withdrawing the excess from your bid.<br />
       <figure class="image">
         <img src="/img/screen-0010.png" />
       </figure>
     </li>
-    <li>This will open your Web3 interface asking you to sign the transaction. Once the transaction is successful, you should receive your overbid and your participation in the auction is over.</li>
+    <li>This will open your Web3 interface asking you to sign the transaction. Once the transaction is confirmed, you should receive the excess from your bid once the auction is over.</li>
   </ul>
 
 
   <h2>(Optional): Detailed procedure for closing the auction manually</h2>
 
-  <p>Before a withdrawal is possible, the auction contract needs to be put in a withdrawal state. This can be done by anyone, but will most likely be done by the Trustlines Foundation. To do this by yourself, determine the correct case and follow the instructions below. Note that these instructions will not work if the auction is ongoing.</p>
+  <p>Before a withdrawal is possible, the auction contract needs to be put in a withdrawal state. This can be done by anyone, but will most likely be done by the Trustlines Foundation. To do this by yourself, determine the correct case and follow the instructions below. Note that these instructions will not work if the auction is active.</p>
 
   <ul>
-    <li>Case 1: After reaching 55 bidders, the auction automatically goes to the “depositPending” state. The deposits must be transferred from the auction contract to the locker contract used for holding stakes. This is done by calling the depositBids() function on the contract. The contract will then be in the “Ended” state where users can withdraw their overbids.</li>
-    <li>Case 2: After two weeks, no one can bid in the auction anymore, the auction needs to be closed by calling the closeAuction() function. Deposits need to be transferred from the auction contract to the locker contract used for holding stakes by calling the depositBids() function. The contract will then be in the “Ended” state where users can withdraw their overbids.</li>
-    <li>Case 3: After two weeks, no one can bid in the auction anymore, the auction needs to be closed by calling the closeAuction() function. The contract will then be in the “Failed” state where users can withdraw their whole bids.</li>
+    <li>Case 1: After reaching 36 bidders, the auction automatically goes to the “depositPending” state. The deposits must be transferred from the auction contract to the locker deposit contract used for holding stakes. This is done by calling the depositBids() function on the contract. The contract will then be in the “Ended” state where users can withdraw the excess from their bids.</li>
+    <li>Case 2: After two weeks, no one can bid in the auction anymore, the auction needs to be closed by calling the closeAuction() function. Deposits need to be transferred from the auction contract to the locker deposit contract used for holding stakes by calling the depositBids() function. The contract will then be in the “Ended” state where users can withdraw the excess from their bids.</li>
+    <li>Case 3: After two weeks, no one can bid in the auction anymore, the auction needs to be closed by calling the closeAuction() function. The contract will then be in the “Failed” state where users can withdraw their entire bids. This can happen if the minimum participation level is not met.</li>
   </ul>
 
   <p>&nbsp;</p>
