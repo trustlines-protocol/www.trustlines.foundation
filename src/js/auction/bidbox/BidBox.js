@@ -22,6 +22,7 @@ import NoAllowance from "./screens/NoAllowance"
 import WaitForConfirmation from "./screens/WaitForConfirmation"
 import SuccessfulBid from "./screens/SuccessfulBid"
 import TransactionError from "./screens/TransactionError"
+import AlreadyBid from "./screens/AlreadyBid"
 
 const MAX_UINT =
   "115792089237316195423570985008687907853269984665640564039457584007913129639935"
@@ -270,12 +271,7 @@ export default function BidBox() {
           </Error>
         )
       case BidderState.ALREADY_BID:
-        return (
-          <Error title="Already bid">
-            The selected account {web3Account} has already bid in the auction.
-            You can only bid once in the auction.
-          </Error>
-        )
+        return <AlreadyBid web3Account={web3Account} />
       case BidderState.READY_TO_BID:
         //Nothing to do
         break

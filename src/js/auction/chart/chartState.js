@@ -1,16 +1,14 @@
 export default class ChartState {
-  constructor() {
-    this.initialPropertiesSet = false
-  }
-
   updateChart(params = {}) {
     this.chart.update(params)
   }
 
-  decrementRemainingSeconds() {
+  decrementTimers() {
     if (this.remainingSeconds) {
       this.remainingSeconds = this.remainingSeconds - 1
     }
+    this.secondsBeforeStart =
+      +process.env.AUCTION_START_TIMESTAMP - Math.round(new Date() / 1000)
   }
 
   mergeRestResult(result) {
@@ -23,10 +21,8 @@ export default class ChartState {
     this.currentPriceInWEI = result.currentPriceInWEI
     this.initialPriceInWEI = result.initialPriceInWEI
     this.currentBlocktimeInMs = result.currentBlocktimeInMs
-    if (!this.initialPropertiesSet) {
+    if (!this.remainingSeconds) {
       this.remainingSeconds = result.remainingSeconds
     }
-
-    this.initialPropertiesSet = true
   }
 }
