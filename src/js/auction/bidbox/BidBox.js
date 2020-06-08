@@ -70,11 +70,6 @@ export default function BidBox() {
     setPaidSlotPrice(paidSlotPrice)
   }, [])
 
-  const setPaidSlotPriceByAddress = useCallback(async address => {
-    const paidSlotPrice = await auctionWeb3.getPaidSlotPriceByAddress(address)
-    setPaidSlotPrice(paidSlotPrice)
-  }, [])
-
   const handleAcceptTermsAndCondition = useCallback(async () => {
     const account = await getDefaultAccount()
     if (account) {
@@ -273,10 +268,7 @@ export default function BidBox() {
           </Error>
         )
       case BidderState.ALREADY_BID:
-        setPaidSlotPriceByAddress(web3Account)
-        return (
-          <AlreadyBid web3Account={web3Account} paidSlotPrice={paidSlotPrice} />
-        )
+        return <AlreadyBid web3Account={web3Account} />
       case BidderState.READY_TO_BID:
         //Nothing to do
         break
