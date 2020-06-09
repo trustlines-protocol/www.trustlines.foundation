@@ -199,9 +199,9 @@ export default function BidBox() {
             text="No Web3 browser detected"
           />
           <MessageBlock>
-            You can not participate directly on this website as no Web3 browser
-            was detected. In order to participate please install the Metamask
-            plugin, or browse this website with a Web3 enabled browser.
+            You can not participate directly from this website as no Web3
+            browser was detected. To participate, install the MetaMask plugin,
+            or use a Web3 enabled browser.
           </MessageBlock>
         </div>
       )
