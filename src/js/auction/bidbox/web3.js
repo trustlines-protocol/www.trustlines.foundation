@@ -53,6 +53,34 @@ export async function approve(address, amount, onSign, onConfirmation) {
   )
 }
 
+export async function withdraw(address, onSign, onConfirmation) {
+  const auctionContract = getAuctionContract()
+  const contractFunctionCall = auctionContract.methods.withdraw()
+
+  return sendContractTransaction(
+    contractFunctionCall,
+    address,
+    onSign,
+    onConfirmation
+  )
+}
+
+export async function fetchValueToWithdraw(address) {
+  const auctionContract = getAuctionContract()
+  const auctionState = await fetchAuctionState()
+  if (auctionState === AuctionState.ENDED) {
+    return (await auctionContract.methods.bids(address).call()).sub(
+      await auctionContract.methods.lowestSlotPrice().call()
+    )
+  } else if (auctionState === AuctionState.FAILED) {
+    return auctionContract.methods.bids(address).call()
+  } else {
+    throw new Error(
+      `Cannot get value to withdraw with current auction state ${auctionState}`
+    )
+  }
+}
+
 export async function fetchTokenBalance(address) {
   return getTokenContract()
     .methods.balanceOf(address)

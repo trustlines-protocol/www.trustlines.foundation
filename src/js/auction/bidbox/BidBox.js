@@ -24,6 +24,10 @@ import SuccessfulBid from "./screens/SuccessfulBid"
 import TransactionError from "./screens/TransactionError"
 import AlreadyBid from "./screens/AlreadyBid"
 import NotStarted from "./screens/NotStarted"
+import WithdrawBid from "./screens/WithdrawBid"
+import SuccessfulWithdraw from "./screens/SuccessfulWithdraw"
+import NothingToWithdraw from "./screens/NothingToWithdraw"
+import DepositPending from "./screens/DepositPending"
 
 const MAX_UINT =
   "115792089237316195423570985008687907853269984665640564039457584007913129639935"
@@ -31,11 +35,11 @@ const MAX_UINT =
 const STATE = {
   ACCEPT_TERMS_AND_CONDITION: "AcceptTermsAndConditionState",
   CONNECT_WALLET: "ConnectWalletState",
-  WAITING_FOR_APPROVE_CONFIRMATION: "WaitingForApproveConfirmationState",
-  MAKE_BID: "MakeBidState",
-  WAITING_FOR_BID_CONFIRMATION: "WaitingForBidState",
+  READY_TO_TRANSACT_WITH_CONTRACT: "ReadyToTransactState",
+  WAITING_FOR_TRANSACTION_CONFIRMATION: "WaitingForConfirmationState",
   WAITING_FOR_WEB3_BROWSER_ACTION: "WaitingForWeb3BrowserAction",
   SUCCESSFUL_BID: "SuccessfulBidState",
+  SUCCESSFUL_WITHDRAW: "SuccessfulWithdrawState",
   ERROR: "ErrorState",
   TRANSACTION_ERROR: "TransactionErrorState",
 }
@@ -74,7 +78,7 @@ export default function BidBox() {
   const handleAcceptTermsAndCondition = useCallback(async () => {
     const account = await getDefaultAccount()
     if (account) {
-      setInternalState(STATE.MAKE_BID)
+      setInternalState(STATE.READY_TO_TRANSACT_WITH_CONTRACT)
     } else {
       setInternalState(STATE.CONNECT_WALLET)
     }
@@ -84,7 +88,7 @@ export default function BidBox() {
     setInternalState(STATE.WAITING_FOR_WEB3_BROWSER_ACTION)
     const success = await requestPermission()
     if (success) {
-      setInternalState(STATE.MAKE_BID)
+      setInternalState(STATE.READY_TO_TRANSACT_WITH_CONTRACT)
     } else {
       setInternalState(STATE.CONNECT_WALLET)
     }
@@ -99,7 +103,7 @@ export default function BidBox() {
           if (
             confirmationNumber === parseInt(process.env.REACT_APP_CONFIRMATIONS)
           ) {
-            setInternalState(STATE.MAKE_BID)
+            setInternalState(STATE.READY_TO_TRANSACT_WITH_CONTRACT)
           }
           setConfirmations(confirmationNumber)
         }
@@ -118,7 +122,7 @@ export default function BidBox() {
         MAX_UINT,
         hash => {
           setTxHash(hash)
-          setInternalState(STATE.WAITING_FOR_APPROVE_CONFIRMATION)
+          setInternalState(STATE.WAITING_FOR_TRANSACTION_CONFIRMATION)
         },
         handleApproveConfirmation
       )
@@ -129,7 +133,7 @@ export default function BidBox() {
           state: STATE.TRANSACTION_ERROR,
         })
       } else if (error.code === USER_REJECTED_ERROR_CODE) {
-        setInternalState(STATE.MAKE_BID)
+        setInternalState(STATE.READY_TO_TRANSACT_WITH_CONTRACT)
         console.log("User rejected")
       } else {
         showError("Something went wrong.")
@@ -164,7 +168,7 @@ export default function BidBox() {
         await getDefaultAccount(),
         hash => {
           setTxHash(hash)
-          setInternalState(STATE.WAITING_FOR_BID_CONFIRMATION)
+          setInternalState(STATE.WAITING_FOR_TRANSACTION_CONFIRMATION)
         },
         handleBidConfirmation
       )
@@ -175,13 +179,58 @@ export default function BidBox() {
           state: STATE.TRANSACTION_ERROR,
         })
       } else if (error.code === USER_REJECTED_ERROR_CODE) {
-        setInternalState(STATE.MAKE_BID)
+        setInternalState(STATE.READY_TO_TRANSACT_WITH_CONTRACT)
         console.log("User rejected")
       } else {
         showError("Something went wrong.")
       }
     }
   }, [handleBidConfirmation, showError])
+
+  const handleWithdrawConfirmation = useCallback(
+    (confirmationNumber, receipt) => {
+      // Workaround to access current hash
+      setTxHash(currentHash => {
+        // Only process incoming confirmations if it is about current transaction
+        if (receipt.transactionHash === currentHash) {
+          if (
+            confirmationNumber === parseInt(process.env.REACT_APP_CONFIRMATIONS)
+          ) {
+            setInternalState(STATE.SUCCESSFUL_WITHDRAW)
+          }
+          setConfirmations(confirmationNumber)
+        }
+        return currentHash
+      })
+    },
+    []
+  )
+
+  const withdraw = useCallback(async () => {
+    setInternalState(STATE.WAITING_FOR_WEB3_BROWSER_ACTION)
+    try {
+      await auctionWeb3.withdraw(
+        await getDefaultAccount(),
+        hash => {
+          setTxHash(hash)
+          setInternalState(STATE.WAITING_FOR_TRANSACTION_CONFIRMATION)
+        },
+        handleWithdrawConfirmation
+      )
+    } catch (error) {
+      console.error(error)
+      if (error.code === TRANSACTION_REVERTED_ERROR_CODE) {
+        showError("Your transaction has been reverted.", {
+          state: STATE.TRANSACTION_ERROR,
+        })
+      } else if (error.code === USER_REJECTED_ERROR_CODE) {
+        setInternalState(STATE.READY_TO_TRANSACT_WITH_CONTRACT)
+        console.log("User rejected")
+      } else {
+        showError("Something went wrong.")
+      }
+    }
+  }, [handleWithdrawConfirmation, showError])
 
   switch (chainState) {
     case CHAIN_STATE.CONNECTING:
@@ -217,7 +266,7 @@ export default function BidBox() {
     default:
   }
 
-  if (internalState === STATE.MAKE_BID) {
+  if (internalState === STATE.READY_TO_TRANSACT_WITH_CONTRACT) {
     switch (bidderState) {
       case BidderState.LOADING:
         return (
@@ -270,8 +319,13 @@ export default function BidBox() {
       case BidderState.ALREADY_BID:
         return <AlreadyBid web3Account={web3Account} />
       case BidderState.READY_TO_BID:
-        //Nothing to do
-        break
+        return <MakeBid makeBid={makeBid} />
+      case BidderState.READY_TO_WITHDRAW:
+        return <WithdrawBid withdraw={withdraw} account={web3Account} />
+      case BidderState.NOTHING_TO_WITHDRAW:
+        return <NothingToWithdraw />
+      case BidderState.WAITING_DEPOSIT:
+        return <DepositPending />
       case BidderState.Error:
         return (
           <Error title="Something went wrong">
@@ -291,10 +345,7 @@ export default function BidBox() {
       )
     case STATE.CONNECT_WALLET:
       return <ConnectWallet onConnect={connect} />
-    case STATE.MAKE_BID:
-      return <MakeBid makeBid={makeBid} />
-    case STATE.WAITING_FOR_APPROVE_CONFIRMATION:
-    case STATE.WAITING_FOR_BID_CONFIRMATION:
+    case STATE.WAITING_FOR_TRANSACTION_CONFIRMATION:
       return <WaitForConfirmation txHash={txHash} />
     case STATE.WAITING_FOR_WEB3_BROWSER_ACTION:
       return (
@@ -308,6 +359,9 @@ export default function BidBox() {
 
     case STATE.SUCCESSFUL_BID:
       return <SuccessfulBid txHash={txHash} paidSlotPrice={paidSlotPrice} />
+
+    case STATE.SUCCESSFUL_WITHDRAW:
+      return <SuccessfulWithdraw txHash={txHash} />
 
     case STATE.ERROR:
       return (
