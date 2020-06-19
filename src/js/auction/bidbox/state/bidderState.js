@@ -6,7 +6,9 @@ import { fetchBalance } from "../../../common/web3"
 export const BidderState = {
   LOADING: "loading",
   NOT_STARTED: "notStarted",
-  ENDED: "ended",
+  READY_TO_WITHDRAW: "readyToWithdraw",
+  NOTHING_TO_WITHDRAW: "nothingToWithdraw",
+  WAITING_DEPOSIT: "waitingDeposit",
   NOT_WHITELISTED: "notWhitelisted",
   NO_ALLOWANCE: "noAllowance",
   WRONG_ALLOWANCE: "wrongAllowance",
@@ -46,16 +48,22 @@ export function useBidderState(account) {
           console.log("Current price not loaded")
           return
         }
-        if (
-          [
-            AuctionState.ENDED,
-            AuctionState.FAILED,
-            AuctionState.DEPOSIT_PENDING,
-          ].includes(await auctionWeb3.fetchAuctionState())
-        ) {
-          setBidderState(BidderState.ENDED)
-        } else if (!(await auctionWeb3.isWhitelisted(account))) {
+        const auctionState = await auctionWeb3.fetchAuctionState()
+
+        if (!(await auctionWeb3.isWhitelisted(account))) {
           setBidderState(BidderState.NOT_WHITELISTED)
+        } else if (
+          [AuctionState.ENDED, AuctionState.FAILED].includes(auctionState)
+        ) {
+          if ((await fetchBalance(account)) === "0") {
+            setBidderState(BidderState.NO_ETH)
+          } else if ((await auctionWeb3.fetchValueToWithdraw(account)).gt(0)) {
+            setBidderState(BidderState.READY_TO_WITHDRAW)
+          } else {
+            setBidderState(BidderState.NOTHING_TO_WITHDRAW)
+          }
+        } else if (auctionState === AuctionState.DEPOSIT_PENDING) {
+          setBidderState(BidderState.WAITING_DEPOSIT)
         } else if (await auctionWeb3.hasBid(account)) {
           setBidderState(BidderState.ALREADY_BID)
         } else if ((await fetchBalance(account)) === "0") {
@@ -66,9 +74,7 @@ export function useBidderState(account) {
           (await auctionWeb3.fetchAllowance(account)).lt(currentPrice)
         ) {
           setBidderState(BidderState.WRONG_ALLOWANCE)
-        } else if (
-          (await auctionWeb3.fetchAuctionState()) === AuctionState.DEPLOYED
-        ) {
+        } else if (auctionState === AuctionState.DEPLOYED) {
           setBidderState(BidderState.NOT_STARTED)
         } else if (
           (await auctionWeb3.fetchTokenBalance(account)).lt(currentPrice)
