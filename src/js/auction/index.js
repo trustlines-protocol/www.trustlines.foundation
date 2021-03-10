@@ -15,6 +15,30 @@ $(() => {
   initLegend(chartState)
   initChart(chartState)
   initModal()
-})
 
-ReactDOM.render(<AuctionApp />, document.getElementById("rootAuctionApp"))
+  if (process.env.ENABLE_AUCTION_PARTICIPATION) {
+    $.ajax({
+      url: `${process.env.AUCTION_API_URL}`,
+      success: result => {
+        if (result.state === "Not Deployed") {
+          // nothing to do here
+          return
+        }
+        chartState.mergeRestResult(result)
+
+        let title = "Withdraw excess from your bid"
+
+        if (chartState.remainingSeconds >= 0) {
+          title = "Participate in the auction"
+        }
+        ReactDOM.render(
+          <AuctionApp title={title} />,
+          document.getElementById("rootAuctionApp")
+        )
+      },
+      error: function(err) {
+        console.error(err)
+      },
+    })
+  }
+})
