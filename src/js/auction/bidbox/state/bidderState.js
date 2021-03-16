@@ -42,13 +42,17 @@ export function useBidderState(account) {
           console.log("No account selected")
           return
         }
-        const currentPrice = await auctionWeb3.fetchCurrentPrice()
-        if (!currentPrice) {
-          setBidderState(BidderState.LOADING)
-          console.log("Current price not loaded")
-          return
-        }
+
         const auctionState = await auctionWeb3.fetchAuctionState()
+        let currentPrice = 0
+        if (AuctionState.STARTED === auctionState) {
+          currentPrice = await auctionWeb3.fetchCurrentPrice()
+          if (!currentPrice) {
+            setBidderState(BidderState.LOADING)
+            console.log("Current price not loaded")
+            return
+          }
+        }
 
         if (!(await auctionWeb3.isWhitelisted(account))) {
           setBidderState(BidderState.NOT_WHITELISTED)
