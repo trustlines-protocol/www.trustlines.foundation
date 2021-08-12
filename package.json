@@ -34,21 +34,21 @@
     "html-minifier": "^4.0.0",
     "husky": "^3.0.2",
     "livereload": "^0.8.0",
+    "mathjs": "^7.0.0",
     "moment-timezone": "^0.5.26",
     "node-sass": "^4.13.1",
     "nunjucks-cli": "^1.0.0",
     "prettier": "^1.18.2",
-    "react": "^16.8.6",
+    "react": "^17.0.2",
     "react-app-polyfill": "^1.0.1",
     "react-dev-utils": "^9.0.1",
-    "react-dom": "^16.8.6",
+    "react-dom": "^17.0.2",
     "react-notify-toast": "^0.5.0",
     "serve": "^11.1.0",
     "web3": "2.0.0-alpha.1",
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6",
-    "webpack-merge": "^4.2.1",
-    "mathjs": "^7.0.0"
+    "webpack-merge": "^4.2.1"
   },
   "scripts": {
     "docker-preview": "yarn run build-preview && docker build . -t preview.trustlines.foundation",
@@ -73,12 +73,21 @@
     "format": "eslint ./src/**/*.js ./webpack.*.js --fix",
     "prettier:big-tabs": "prettier --write --print-width 120 --no-semi --single-quote --tab-width 4  './src/**/*.js'",
     "lint": "eslint ./src/**/*.js",
-    "deploy": "WHOAMI= yarn run build && gh-pages --dist dist --branch gh-pages -m 'Auto commit updates [ci skip]'"
+    "deploy": "WHOAMI= yarn run build && gh-pages --dist dist --branch gh-pages -m 'Auto commit updates [ci skip]'",
+    "start": "gatsby develop"
   },
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint"
     }
   },
-  "dependencies": {}
+  "dependencies": {
+    "autoprefixer": "^10.3.1",
+    "gatsby": "^3.11.1",
+    "gatsby-plugin-postcss": "^4.11.0",
+    "gatsby-plugin-react-helmet": "^4.11.0",
+    "postcss": "^8.3.6",
+    "react-helmet": "^6.1.0",
+    "tailwindcss": "^2.2.7"
+  }
 }
