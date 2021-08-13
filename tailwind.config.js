@@ -19,6 +19,12 @@ module.exports = {
           lighter: "#3E3E48",
           DEFAULT: "#12121F",
         },
+        grey: {
+          lighter: "#DBDBDC",
+        },
+        "off-white": {
+          DEFAULT: "#F9F9F9",
+        },
         "coral-red": {
           lightest: "#EFAE95",
           lighter: "#FFD2BF",

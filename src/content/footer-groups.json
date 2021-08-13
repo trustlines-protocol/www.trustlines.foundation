@@ -1,0 +1,66 @@
+[
+  {
+    "label": "Websites",
+    "items": [
+      {
+        "label": "Blog",
+        "href": ""
+      },
+      {
+        "label": "Docs",
+        "href": ""
+      },
+      {
+        "label": "Trustlines Network",
+        "href": ""
+      }
+    ]
+  },
+  {
+    "label": "Community",
+    "items": [
+      {
+        "label": "Forum",
+        "href": ""
+      },
+      {
+        "label": "Newsletter",
+        "href": ""
+      },
+      {
+        "label": "Telegram",
+        "href": ""
+      }
+    ]
+  },
+  {
+    "label": "Developers",
+    "items": [
+      {
+        "label": "GitHub",
+        "href": ""
+      },
+      {
+        "label": "Dev Docs",
+        "href": ""
+      },
+      {
+        "label": "Technical Chat",
+        "href": ""
+      }
+    ]
+  },
+  {
+    "label": "Legal",
+    "items": [
+      {
+        "label": "Privacy Policy & Legal Imprint",
+        "href": ""
+      },
+      {
+        "label": "Merkle Drop Terms & Conditions",
+        "href": ""
+      }
+    ]
+  }
+]

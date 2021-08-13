@@ -1,0 +1,22 @@
+[
+  {
+    "label": "Protocol",
+    "to": "/protocol"
+  },
+  {
+    "label": "Auction",
+    "to": "/auction"
+  },
+  {
+    "label": "Merkle Drop",
+    "to": "/merkle-drop"
+  },
+  {
+    "label": "Grants",
+    "to": "/grants"
+  },
+  {
+    "label": "Contact",
+    "to": "/contact"
+  }
+]
