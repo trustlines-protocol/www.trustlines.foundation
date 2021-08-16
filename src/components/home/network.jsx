@@ -1,8 +1,8 @@
 import React from "react";
 
-import { ArrowRight } from "./icons/arrow-right";
-import world from "../images/world.svg";
-import worldHovered from "../images/world-hovered.svg";
+import { ArrowRight } from "../icons/arrow-right";
+import world from "../../images/world.svg";
+import worldHovered from "../../images/world-hovered.svg";
 
 export function HomeNetwork() {
   const [isHovered, setIsHovered] = React.useState(false);

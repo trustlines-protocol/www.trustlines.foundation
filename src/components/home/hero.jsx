@@ -1,8 +1,8 @@
 import React from "react";
 
-import { LinkButton } from "./link-button";
+import { LinkButton } from "../link-button";
 
-import worldMap from "../images/world-map.svg";
+import worldMap from "../../images/world-map.svg";
 
 export function HomeHero() {
   return (

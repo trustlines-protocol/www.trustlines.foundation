@@ -1,10 +1,10 @@
 import React from "react";
 
-import { Lock } from "./icons/lock";
-import { Settings } from "./icons/settings";
-import { SquareCheck } from "./icons/square-check";
-import { ArrowRight } from "./icons/arrow-right";
-import { Group } from "./icons/group";
+import { Lock } from "../icons/lock";
+import { Settings } from "../icons/settings";
+import { SquareCheck } from "../icons/square-check";
+import { ArrowRight } from "../icons/arrow-right";
+import { Group } from "../icons/group";
 
 const SLIDES = [
   {
