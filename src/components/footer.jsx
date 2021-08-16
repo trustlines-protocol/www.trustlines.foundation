@@ -6,8 +6,8 @@ import footerGroups from "../content/footer-groups";
 
 export function Footer() {
   return (
-    <div className="bg-grey-lighter py-20 px-4">
-      <div className="container mx-auto">
+    <div className="bg-grey-lighter">
+      <div className="container mx-auto px-4 py-20">
         <div className="flex flex-row justify-between mb-20">
           {footerGroups.map(group => (
             <div key={group.label} className="flex flex-col">

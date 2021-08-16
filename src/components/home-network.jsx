@@ -29,7 +29,7 @@ export function HomeNetwork() {
             The Foundation is part of the Trustlines Network Ecosystem. Find out
             more by visiting the Trustlines Network website.
           </p>
-          <ArrowRight />
+          <ArrowRight className="fill-current" />
         </div>
       </a>
     </section>

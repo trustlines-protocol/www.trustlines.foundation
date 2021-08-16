@@ -27,7 +27,7 @@ export function HomeRole() {
 
 function RoleItem(props) {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center max-w-xs px-4">
       <svg
         width="65"
         height="64"

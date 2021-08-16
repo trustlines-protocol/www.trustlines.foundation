@@ -54,6 +54,7 @@ module.exports = {
         },
         "dark-green": {
           DEFAULT: "#0EC390",
+          darker: "#0FA87F",
         },
         "cyber-yellow": {
           DEFAULT: "#FFD41E",

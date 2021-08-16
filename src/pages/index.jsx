@@ -6,6 +6,8 @@ import { HomeHero } from "../components/home-hero";
 import { HomeAbout } from "../components/home-about";
 import { HomeNetwork } from "../components/home-network";
 import { HomeRole } from "../components/home-role";
+import { HomeSlider } from "../components/home-slider";
+import { HomeSubscribe } from "../components/home-subscribe";
 
 function IndexPage() {
   return (
@@ -15,6 +17,8 @@ function IndexPage() {
       <HomeAbout />
       <HomeNetwork />
       <HomeRole />
+      <HomeSlider />
+      <HomeSubscribe />
     </Layout>
   );
 }
