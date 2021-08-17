@@ -1,6 +1,6 @@
 import React from "react";
 
-import protocolHero from "../../images/protocol-hero.svg";
+import protocolHero from "../images/protocol-hero.svg";
 
 export function ProtocolHero() {
   return (

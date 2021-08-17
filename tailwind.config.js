@@ -41,6 +41,7 @@ module.exports = {
           lightest: "#FFF0FF",
           lighter: "#897AE7",
           DEFAULT: "#7657ED",
+          pastel: "#E5E0FF",
         },
         "neon-pink": {
           DEFAULT: "#FFA0B7",
@@ -55,6 +56,7 @@ module.exports = {
         "dark-green": {
           DEFAULT: "#0EC390",
           darker: "#0FA87F",
+          pastel: "#D0FBE9",
         },
         "cyber-yellow": {
           DEFAULT: "#FFD41E",

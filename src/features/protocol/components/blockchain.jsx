@@ -1,12 +1,12 @@
 import React from "react";
 
-import { LinkButton } from "../link-button";
-import { Loading } from "../icons/loading";
-import { Smiley } from "../icons/smiley";
-import { Shield } from "../icons/shield";
-import { Branch } from "../icons/branch";
+import { LinkButton } from "../../common/components/link-button";
+import { Loading } from "../../common/components/icons/loading";
+import { Smiley } from "../../common/components/icons/smiley";
+import { Shield } from "../../common/components/icons/shield";
+import { Branch } from "../../common/components/icons/branch";
 
-import block from "../../images/block.svg";
+import block from "../images/block.svg";
 
 const CHARACTERISTICS = [
   {

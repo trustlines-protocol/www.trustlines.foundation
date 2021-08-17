@@ -1,8 +1,8 @@
 import React from "react";
 
-import { LinkButton } from "../link-button";
+import { LinkButton } from "../../common/components/link-button";
 
-import validators from "../../images/validators.svg";
+import validators from "../images/validators.svg";
 
 export function ProtocolValidators() {
   return (

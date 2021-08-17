@@ -1,6 +1,6 @@
 import React from "react";
 
-import { LinkButton } from "../link-button";
+import { LinkButton } from "../../common/components/link-button";
 
 const ROLES = [
   "Support research and governance of the Protocol",

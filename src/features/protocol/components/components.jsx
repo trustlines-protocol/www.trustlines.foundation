@@ -1,8 +1,8 @@
 import React from "react";
 
-import { LinkButton } from "../link-button";
+import { LinkButton } from "../../common/components/link-button";
 
-import protocolElements from "../../images/protocol-elements.svg";
+import protocolElements from "../images/protocol-elements.svg";
 
 const COMPONENTS = [
   {

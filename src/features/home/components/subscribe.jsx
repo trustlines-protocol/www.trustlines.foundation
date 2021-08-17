@@ -1,11 +1,11 @@
 import React from "react";
 
-import { Mail } from "../icons/mail";
-import { Check } from "../icons/check";
+import { Mail } from "../../common/components/icons/mail";
+import { Check } from "../../common/components/icons/check";
 
-import { isEmailValid } from "../../utils/validation";
+import { isEmailValid } from "../../common/utils/validation";
 
-import mail from "../../images/mail.svg";
+import mail from "../images/mail.svg";
 
 export function HomeSubscribe() {
   const [didSubscribe, setDidSubscribe] = React.useState(false);

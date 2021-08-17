@@ -1,11 +1,11 @@
 import React from "react";
 
-import { Layout } from "../components/layout";
-import { SEO } from "../components/seo";
-import { ProtocolHero } from "../components/protocol/hero";
-import { ProtocolComponents } from "../components/protocol/components";
-import { ProtocolBlockchain } from "../components/protocol/blockchain";
-import { ProtocolValidators } from "../components/protocol/validators";
+import { Layout } from "../features/common/components/layout";
+import { SEO } from "../features/common/components/seo";
+import { ProtocolHero } from "../features/protocol/components/hero";
+import { ProtocolComponents } from "../features/protocol/components/components";
+import { ProtocolBlockchain } from "../features/protocol/components/blockchain";
+import { ProtocolValidators } from "../features/protocol/components/validators";
 
 export default function Protocol() {
   return (

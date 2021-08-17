@@ -1,11 +1,11 @@
 import React from "react";
 
-import { Telegram } from "../icons/telegram";
-import { Twitter } from "../icons/twitter";
-import { YouTube } from "../icons/you-tube";
+import { Telegram } from "../../common/components/icons/telegram";
+import { Twitter } from "../../common/components/icons/twitter";
+import { YouTube } from "../../common/components/icons/you-tube";
 
-import socialLinks from "../../content/social-links";
-import elements from "../../images/elements.svg";
+import socialLinks from "../../common/content/social-links";
+import elements from "../images/elements.svg";
 
 const LINKS = [
   {
