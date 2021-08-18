@@ -8,8 +8,9 @@ export default function useAuctionAPI() {
     setIsFetching(true);
 
     fetch(process.env.AUCTION_API_URL)
-      .then(result => {
-        setResult(result);
+      .then(async result => {
+        const json = await result.json();
+        setResult(json);
       })
       .catch(error => {
         console.error(error);

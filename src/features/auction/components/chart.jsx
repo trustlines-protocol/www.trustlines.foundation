@@ -10,9 +10,11 @@ export function Chart(props) {
   }, [props.chartState]);
 
   return (
-    <div className="chart-container">
-      <canvas id="bids"></canvas>
-      <div className="chartjs-tooltip" id="tooltip"></div>
+    <div className="container mx-auto my-32">
+      <div className="chart-container">
+        <canvas id="bids"></canvas>
+        <div className="chartjs-tooltip" id="tooltip"></div>
+      </div>
     </div>
   );
 }

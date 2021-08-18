@@ -1,7 +1,10 @@
 import $ from "jquery";
 import moment from "moment-timezone";
+import Chart from "chart.js";
 
 import { formatTLNAmount } from "../../common/utils/math";
+
+import "../../../styles/chart.css";
 
 const loadingMessage = $("#loading-message");
 const chartAddons = $(".chart-addons");
@@ -87,14 +90,14 @@ function renderChart(bids, priceFunction, chartState) {
   }
 
   const ctx = window.document.getElementById("bids").getContext("2d");
-  const chart = new window.Chart(ctx, {
+  const chart = new Chart(ctx, {
     type: "line",
     data: {
       datasets: [
         {
           label: "Price Function",
           data: priceFunction,
-          borderColor: "rgb(135,75,160)",
+          borderColor: "#09E0A3",
           fill: false,
           pointRadius: 0,
           pointHitRadius: 1,
@@ -104,7 +107,7 @@ function renderChart(bids, priceFunction, chartState) {
           type: "bubble",
           label: "Bid Price",
           data: bids,
-          borderColor: "rgb(116,190,226)",
+          borderColor: "#BEB6EC",
           pointHitRadius: 1,
           fill: false,
         },
@@ -214,8 +217,8 @@ function renderChart(bids, priceFunction, chartState) {
       },
     },
   });
-  window.Chart.defaults.global.defaultFontFamily = "Gothic A1";
-  window.Chart.defaults.global.defaultFontSize = 16;
+  Chart.defaults.global.defaultFontFamily = "Gothic A1";
+  Chart.defaults.global.defaultFontSize = 16;
 
   chartState.chart = chart;
 }

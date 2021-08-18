@@ -1,16 +1,4 @@
 export default class ChartState {
-  constructor() {
-    this.takenSlotsCount = 36;
-    this.freeSlotsCount = 35;
-    this.maxSlotsCount = 40;
-    this.minSlotsCount = 50;
-    this.state = "Finished";
-    this.lowestSlotPriceInWEI = 1000000000000000000;
-    this.currentPriceInWEI = 1000000000000000000;
-    this.initialPriceInWEI = 1000000000000000000;
-    this.currentBlocktimeInMs = 12000000;
-  }
-
   updateChart(params = {}) {
     this.chart.update(params);
   }
