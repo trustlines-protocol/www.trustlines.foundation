@@ -7,6 +7,7 @@ import { Shield } from "../../common/components/icons/shield";
 import { Branch } from "../../common/components/icons/branch";
 
 import block from "../images/block.svg";
+import { Card } from "../../common/components/card";
 
 const CHARACTERISTICS = [
   {
@@ -57,12 +58,12 @@ export function ProtocolBlockchain() {
           <img src={block} alt="block" />
           <div className="grid grid-flow-cols grid-cols-2 grid-rows-2 gap-4 absolute top-8 left-28">
             {CHARACTERISTICS.map((characteristic, i) => (
-              <div className="rounded-2xl bg-grey-lighter flex flex-col justify-evenly items-center h-56 w-56 p-4">
+              <Card className="rounded-2xl flex-col justify-evenly items-center h-56 w-56 p-4">
                 {characteristic.icon}
                 <div className="text-rich-black text-2xl text-center">
                   {characteristic.text}
                 </div>
-              </div>
+              </Card>
             ))}
           </div>
         </div>

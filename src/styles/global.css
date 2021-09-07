@@ -1,3 +1,34 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  .hero-header {
+    @apply flex flex-row justify-between
+  }
+
+  .terms-and-conditions h1 {
+    @apply text-rich-black-lighter text-3xl font-semibold py-4
+  }
+
+  .terms-and-conditions h2 {
+    @apply text-2xl py-2
+  }
+
+  .terms-and-conditions ol {
+    @apply py-2
+  }
+
+  .terms-and-conditions li {
+    @apply py-1
+  }
+
+  .terms-and-conditions p {
+    @apply py-2
+  }
+
+  .terms-and-conditions pre {
+    @apply p-4 overflow-auto bg-rich-black-lighter rounded-xl;
+    white-space: pre-wrap;
+  }
+}

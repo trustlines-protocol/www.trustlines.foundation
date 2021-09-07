@@ -21,6 +21,7 @@ module.exports = {
         },
         grey: {
           lighter: "#DBDBDC",
+          DEFAULT: "#AAAABB",
         },
         "off-white": {
           DEFAULT: "#F9F9F9",
@@ -50,10 +51,12 @@ module.exports = {
           DEFAULT: "#FFDFE7",
         },
         "aquamarine-green": {
+          lighter: "#89E4C5",
           light: "#E1FFF3",
           DEFAULT: "#09E0A3",
         },
         "dark-green": {
+          lighter: "rgba(14, 195, 144, 0.25)",
           DEFAULT: "#0EC390",
           darker: "#0FA87F",
           pastel: "#D0FBE9",
@@ -66,6 +69,7 @@ module.exports = {
       boxShadow: {
         "card-blue": "0px 0px 25px rgba(0, 122, 255, 0.1)",
         "card-gray": "0px 0px 25px rgba(0, 0, 0, 0.08)",
+        "card-gray-light": "0px 0px 25px #111111",
         "card-neon-pink": "0px 0px 25px 0px rgba(255, 160, 183, 0.25)",
         "card-coral-red": " 0px 0px 12.1988px rgba(255, 124, 78, 0.22)",
         "card-dark-green": "0px 0px 12.1988px rgba(14, 195, 144, 0.17)",
@@ -82,6 +86,9 @@ module.exports = {
       scale: {
         "-100": "-1",
       },
+    },
+    container: {
+      padding: "4rem",
     },
   },
   variants: {

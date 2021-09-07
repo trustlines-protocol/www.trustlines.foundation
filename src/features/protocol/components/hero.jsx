@@ -5,7 +5,7 @@ import protocolHero from "../images/protocol-hero.svg";
 export function ProtocolHero() {
   return (
     <section className="container mx-auto px-4 mb-32 text-rich-black-lighter">
-      <div className="flex flex-row items-center justify-between">
+      <div className="hero-header">
         <div className="flex-1">
           <h1 className="text-6xl font-semibold leading-tight mb-10 text-rich-black">
             The
