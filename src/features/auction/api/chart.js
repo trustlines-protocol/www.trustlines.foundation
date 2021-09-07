@@ -88,10 +88,22 @@ function renderChart(bids, priceFunction, chartState) {
       priceFunction
     );
   }
+  const plugin = {
+    id: "custom_canvas_background_color",
+    beforeDraw: chart => {
+      const ctx = chart.canvas.getContext("2d");
+      ctx.save();
+      ctx.globalCompositeOperation = "destination-over";
+      ctx.fillStyle = "black";
+      ctx.fillRect(0, 0, chart.width, chart.height);
+      ctx.restore();
+    },
+  };
 
   const ctx = window.document.getElementById("bids").getContext("2d");
   const chart = new Chart(ctx, {
     type: "line",
+    // plugins: [plugin],
     data: {
       datasets: [
         {
@@ -107,7 +119,9 @@ function renderChart(bids, priceFunction, chartState) {
           type: "bubble",
           label: "Bid Price",
           data: bids,
-          borderColor: "#BEB6EC",
+          borderColor: "#7657ED",
+          borderWidth: 2,
+          backgroundColor: "#BEB6EC",
           pointHitRadius: 1,
           fill: false,
         },
@@ -217,8 +231,8 @@ function renderChart(bids, priceFunction, chartState) {
       },
     },
   });
-  Chart.defaults.global.defaultFontFamily = "Gothic A1";
-  Chart.defaults.global.defaultFontSize = 16;
+  Chart.defaults.global.defaultFontFamily = "Arial";
+  Chart.defaults.global.defaultFontSize = 12;
 
   chartState.chart = chart;
 }

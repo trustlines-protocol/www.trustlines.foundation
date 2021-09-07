@@ -5,6 +5,7 @@ import { SEO } from "../features/common/components/seo";
 import { AuctionHero } from "../features/auction/components/hero";
 import { Chart } from "../features/auction/components/chart";
 import { ChartLegend } from "../features/auction/components/chart-legend";
+import { AuctionWithdraw } from "../features/auction/components/withdraw";
 
 import ChartState from "../features/auction/api/chartState";
 import useAuctionAPI from "../features/auction/hooks/use-auction-api";
@@ -26,6 +27,7 @@ export default function Auction() {
       <AuctionHero />
       <ChartLegend chartState={chartState} />
       <Chart chartState={chartState} />
+      <AuctionWithdraw />
     </Layout>
   );
 }

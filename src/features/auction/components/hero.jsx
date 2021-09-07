@@ -1,11 +1,12 @@
 import React from "react";
 
 import auctionGraph from "../images/auction-graph.svg";
+import { Card } from "../../common/components/card";
 
 export function AuctionHero() {
   return (
     <section className="container mx-auto px-4 mb-32">
-      <div className="flex flex-row items-center justify-between">
+      <div className="hero-header">
         <div className="flex-1 flex flex-col">
           <h1 className="text-6xl font-semibold leading-tight mb-4">
             The Trustlines
@@ -16,7 +17,12 @@ export function AuctionHero() {
             The auction is used to determine the validator set for the
             Trustlines Blockchain. The set is valid for nine months. To
             participate in the auction,{" "}
-            <a href="/" className="underline" rel="noopener noreferrer">
+            <a
+              href="https://forum.trustlines.network/t/the-third-trustlines-validator-auction/131"
+              className="underline"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               a whitelisted Ethereum address
             </a>{" "}
             has to bid with Trustlines Network Tokens (TLN) after the auction
@@ -28,9 +34,9 @@ export function AuctionHero() {
         </div>
       </div>
       <div className="flex flex-row mt-6">
-        <div className="bg-majorelle-blue-pastel text-majorelle-blue py-2 flex flex-row w-full justify-center rounded-full">
+        <Card className="bg-majorelle-blue-pastel text-majorelle-blue w-full py-2">
           Please be sure to not send TLN directly to the auction contract!
-        </div>
+        </Card>
       </div>
     </section>
   );
