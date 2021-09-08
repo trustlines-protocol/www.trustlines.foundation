@@ -43,10 +43,11 @@ export function HomeSubscribe() {
           </h1>
           <div className="flex flex-row rounded-full bg-dark-green text-white h-14 my-4">
             <input
-              className="text-lg bg-dark-green w-full ml-6 px-2"
+              className="text-lg bg-dark-green w-full ml-6 px-2 placeholder-off-white"
               type="email"
               name="EMAIL"
               value={email}
+              placeholder="your@email.com|"
               onChange={event => setEmail(event.target.value)}
             />
             <div>

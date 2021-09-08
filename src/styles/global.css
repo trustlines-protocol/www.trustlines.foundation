@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @layer base {
+
+  input {
+    @apply focus:outline-none
+  }
+
   .hero-header {
     @apply flex flex-row justify-between
   }
@@ -30,5 +35,12 @@
   .terms-and-conditions pre {
     @apply p-4 overflow-auto bg-rich-black-lighter rounded-xl;
     white-space: pre-wrap;
+  }
+
+  .toggle-checkbox:checked {
+    @apply right-0 border-dark-green
+  }
+  .toggle-checkbox:checked + .toggle-label {
+    @apply bg-dark-green
   }
 }
