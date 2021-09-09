@@ -13,7 +13,7 @@ export function LinkButton(props) {
         target="_blank"
         rel="noreferrer noopener"
       >
-        {props.label || props.children}
+        {props.children || props.label}
       </a>
     </div>
   );
