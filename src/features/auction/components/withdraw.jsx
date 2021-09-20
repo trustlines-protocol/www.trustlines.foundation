@@ -56,7 +56,7 @@ export function AuctionWithdraw() {
             </div>
             <Button
               label="Terms & Conditions →"
-              className="bg-dark-green-lighter text-aquamarine-green-lighter"
+              className="px-8 py-4 bg-dark-green-lighter hover:bg-dark-green text-aquamarine-green-lighter"
               onClick={() => {
                 setShowModal(true);
               }}
@@ -95,14 +95,14 @@ export function AuctionWithdraw() {
                     type="button"
                     onClick={() => setShowModal(false)}
                     label="Reject"
-                    className="mx-2"
+                    className="px-8 py-4 mx-2"
                   />
                   <Button
                     isDark
                     type="button"
                     onClick={() => setShowModal(false)}
                     label="Accept"
-                    className="mx-2"
+                    className="px-8 py-4 mx-2"
                   />
                 </div>
               </div>
