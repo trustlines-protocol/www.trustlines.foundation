@@ -43,4 +43,34 @@
   .toggle-checkbox:checked + .toggle-label {
     @apply bg-dark-green
   }
+
+  .spinner {
+    @apply animate-spin border-4 border-majorelle-blue;
+    border-bottom-color: #E5E0FF;
+    border-radius: 50%;
+    border-right-color: #7657ED;
+    border-top-color: #7657ED;
+    height: 100px;
+    width: 100px;
+  }
+
+  .spinner-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 15px;
+  }
+
+  .video-container {
+    width: 460px;
+    height: 390px;
+  }
+
+  .merkle-drop-faq a {
+    @apply underline text-majorelle-blue
+  }
+
+  .merkle-drop-faq ul {
+    @apply list-disc list-inside
+  }
 }

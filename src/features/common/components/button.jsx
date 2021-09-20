@@ -8,9 +8,9 @@ export function Button(props) {
   return (
     <button
       {...props}
-      className={`px-8 py-4 rounded-full text-sm ${colorClassNames} ${props.className}`}
+      className={`rounded-full text-sm ${colorClassNames} ${props.className}`}
     >
-      {props.label}
+      {props.children || props.label}
     </button>
   );
 }

@@ -80,6 +80,9 @@ module.exports = {
         "-1": "-1",
         "-10": "-10",
       },
+      stroke: {
+        current: "currentColor",
+      },
       strokeWidth: {
         "4/3": "1.33",
       },
