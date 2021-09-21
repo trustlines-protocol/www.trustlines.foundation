@@ -7,7 +7,7 @@ export const GrantApply = () => {
   return (
     <Card className="bg-dark-green-pastel max-w-max">
       <div className="flex flex-col p-8">
-        <div className="flex items-center justify-center py-4">
+        <div className="flex items-center justify-center pb-4">
           <div className="mr-2">
             <FileText />
           </div>
