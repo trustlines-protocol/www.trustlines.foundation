@@ -20,7 +20,7 @@ export function ChartLegend({ chartState = {} }) {
 
   return (
     <section className="container mx-auto px-4">
-      <Card className="py-6">
+      <Card className="bg-grey-lighter py-6">
         <CurrentPrice
           status={status}
           lowestSlotPriceInWEI={lowestSlotPriceInWEI}

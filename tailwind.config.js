@@ -64,6 +64,7 @@ module.exports = {
         "cyber-yellow": {
           DEFAULT: "#FFD41E",
           darker: "#DCAE0B",
+          lighter: "rgba(255, 244, 209, 0.75)",
         },
       },
       boxShadow: {

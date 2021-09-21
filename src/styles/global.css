@@ -8,6 +8,10 @@
     @apply focus:outline-none
   }
 
+  li {
+    @apply mb-2
+  }
+
   .hero-header {
     @apply flex flex-row justify-between
   }

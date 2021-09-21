@@ -6,7 +6,7 @@ import navBarLinks from "../content/nav-bar-links.json";
 
 export function NavBar() {
   return (
-    <nav className="container mx-auto">
+    <nav className="container mx-auto px-0">
       <div className="flex flex-row items-center justify-between my-12">
         <Link
           to="/"

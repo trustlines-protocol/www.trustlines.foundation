@@ -58,7 +58,7 @@ export function ProtocolBlockchain() {
           <img src={block} alt="block" />
           <div className="grid grid-flow-cols grid-cols-2 grid-rows-2 gap-4 absolute top-8 left-28">
             {CHARACTERISTICS.map((characteristic, i) => (
-              <Card className="rounded-2xl flex-col justify-evenly items-center h-56 w-56 p-4">
+              <Card className="bg-grey-lighter rounded-2xl flex-col justify-evenly items-center h-56 w-56 p-4">
                 {characteristic.icon}
                 <div className="text-rich-black text-2xl text-center">
                   {characteristic.text}
