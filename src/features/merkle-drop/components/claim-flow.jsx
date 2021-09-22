@@ -10,17 +10,13 @@ import {
 } from "../../common/api/web3";
 
 import AddressInput from "./claim-components/address-input";
-import ClaimSuccess from "./claim-components/ClaimSuccess";
+import ClaimSuccess from "./claim-components/claim-success";
 import ClaimWait from "./claim-components/claim-wait";
-import RetryButton from "./claim-components/retry-button";
-import AddressDisplay from "./claim-components/address-display";
-import ClaimStart from "./claim-components/ClaimStart";
+import ClaimStart from "./claim-components/claim-start";
 import Error from "./claim-components/error";
-import TermsAndConditionsModal from "./claim-components/TermsAndConditionsModal";
 import WaitCard from "./claim-components/wait-card";
-import ClaimFailed from "./claim-components/ClaimFailed";
+import ClaimFailed from "./claim-components/claim-failed";
 import { useChainState } from "../../common/hooks/chain-state";
-import ManualProofWrapper from "./claim-components/ManualProofWrapper";
 import { useAccount } from "../../common/hooks/account";
 import { Card } from "../../common/components/card";
 import { QuestionMark } from "../../common/components/icons/question-mark";
@@ -274,48 +270,31 @@ function ClaimFlow() {
             onReject={handleDeclineTermsAndCondition}
             onAccept={onAcceptTermsAndCondition}
             requestTermsAndCondition={requestTermsAndConditionsAcceptance}
+            showTermsAndConditionsModal={showTermsAndConditionsModal}
           />
         );
       case STATE.CLAIM_START:
-        return (
-          <div className="columns is-centered">
-            <div className="column is-three-fifths">
-              <ClaimStart />
-            </div>
-          </div>
-        );
+        return <ClaimStart />;
       case STATE.CLAIM_WAIT:
         return <ClaimWait txHash={txHash} />;
       case STATE.CLAIM_END:
         return (
-          <div className="columns is-centered">
-            <div className="column is-three-fifths">
-              <ClaimSuccess
-                txHash={txHash}
-                confirmations={confirmations}
-                amount={claimedAmount}
-              />
-              <div className="columns is-centered">
-                <div className="column is-three-fifths">
-                  <RetryButton reset={reset} />
-                </div>
-              </div>
-            </div>
-          </div>
+          <ClaimSuccess
+            txHash={txHash}
+            confirmations={confirmations}
+            amount={claimedAmount}
+            reset={reset}
+          />
         );
       case STATE.ERROR:
         return <Error errorMessage={errorMessage} reset={reset} />;
       case STATE.TRANSACTION_FAILED:
         return (
-          <div className="columns is-centered">
-            <div className="column is-three-fifths">
-              <ClaimFailed
-                reset={reset}
-                errorMessage={errorMessage}
-                txHash={txHash}
-              />
-            </div>
-          </div>
+          <ClaimFailed
+            reset={reset}
+            errorMessage={errorMessage}
+            txHash={txHash}
+          />
         );
       default:
         console.error("Unexpectedly reached default branch.");
@@ -335,6 +314,7 @@ function ClaimFlow() {
     proof,
     requestTermsAndConditionsAcceptance,
     reset,
+    showTermsAndConditionsModal,
     submit,
     txHash,
     wrongAccountSelected,

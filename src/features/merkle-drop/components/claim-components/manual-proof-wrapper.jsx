@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from "react";
 
-import ManualProof from "./ManualProof";
+import ManualProof from "./manual-proof";
 import { Button } from "../../../common/components/button";
 
 function ManualProofWrapper({ proof, amount, requestTermsAndCondition }) {
@@ -12,13 +12,6 @@ function ManualProofWrapper({ proof, amount, requestTermsAndCondition }) {
       setShowProof(!showProof);
     }
   }, [requestTermsAndCondition, showProof]);
-
-  let showProofToggleClassNames = "fas is-clickable fa-2x ";
-  if (showProof) {
-    showProofToggleClassNames += "fa-angle-up";
-  } else {
-    showProofToggleClassNames += "fa-angle-down";
-  }
 
   return (
     <div>
@@ -45,17 +38,14 @@ function ManualProofWrapper({ proof, amount, requestTermsAndCondition }) {
           </h5>
         </Button>
       </div>
-      {/* <div className="column has-text-centered">
-        <Button
-          onClick={handleToggle}
-          className="icon borderless-button is-large has-text-info"
-          key={showProofToggleClassNames}
-        >
-          <i className={showProofToggleClassNames} />
-        </Button>
-      </div> */}
       <div>
-        {showProof && <ManualProof proof={proof} originalAmount={amount} />}
+        {showProof && (
+          <ManualProof
+            proof={proof}
+            originalAmount={amount}
+            closeModal={() => setShowProof(false)}
+          />
+        )}
       </div>
     </div>
   );

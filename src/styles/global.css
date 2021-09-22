@@ -25,7 +25,11 @@
   }
 
   .terms-and-conditions ol {
-    @apply py-2
+    @apply py-2 list-inside list-decimal
+  }
+
+  .terms-and-conditions ul {
+    @apply py-2 list-inside list-disc
   }
 
   .terms-and-conditions li {
@@ -34,6 +38,10 @@
 
   .terms-and-conditions p {
     @apply py-2
+  }
+
+  .terms-and-conditions a {
+    @apply underline
   }
 
   .terms-and-conditions pre {

@@ -2,8 +2,8 @@ import React from "react";
 
 import ClaimAmount from "./claim-amount";
 import AddressDisplay from "./address-display";
-import TermsAndConditions from "./TermsAndConditionsModal";
-import ManualProofWrapper from "./ManualProofWrapper";
+import TermsAndConditions from "./terms-modal";
+import ManualProofWrapper from "./manual-proof-wrapper";
 
 function ClaimValid({
   address,
@@ -17,6 +17,7 @@ function ClaimValid({
   onReject,
   onAccept,
   requestTermsAndCondition,
+  showTermsAndConditionsModal,
 }) {
   return (
     <div>
@@ -33,9 +34,9 @@ function ClaimValid({
           chainState={chainState}
           wrongAccount={wrongAccount}
         />
-        {/* {showTermsAndConditionsModal && (
-          <TermsAndConditions onReject={onReject} onAccept={onAccept} />
-        )} */}
+        {showTermsAndConditionsModal ? (
+          <TermsAndConditions onAccept={onAccept} onReject={onReject} />
+        ) : null}
       </div>
       <div>
         <ManualProofWrapper
