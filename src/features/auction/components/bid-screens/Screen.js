@@ -1,5 +1,5 @@
 import React from "react";
-import MainHeader from "../components/MainHeader";
+import MainHeader from "../bid-components/MainHeader";
 
 export default function Screen({ title, children, faIcon }) {
   return (

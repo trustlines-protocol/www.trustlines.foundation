@@ -1,9 +1,9 @@
 import React from "react";
-import MessageBlock from "../components/MessageBlock";
-import ActionButton from "../components/ActionButton";
+import MessageBlock from "../bid-components/MessageBlock";
+import ActionButton from "../bid-components/ActionButton";
 import Screen from "./Screen";
-import AuctionLink from "../components/AuctionLink";
-import CurrentPrice from "../CurrentPrice";
+import AuctionLink from "../bid-components/AuctionLink";
+import CurrentPrice from "../current-price";
 
 export default function MakeBid({ makeBid }) {
   return (

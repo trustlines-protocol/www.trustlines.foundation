@@ -4,6 +4,7 @@ import { Card } from "../../common/components/card";
 // import TermsModal from "./terms";
 import { Button } from "../../common/components/button";
 import TermsAndConditions from "./terms";
+import BidBox from "./bid-box";
 
 const CONTENTS = [
   {
@@ -33,8 +34,6 @@ const CONTENTS = [
 ];
 
 export function AuctionWithdraw() {
-  const [showModal, setShowModal] = React.useState(false);
-
   return (
     <section className="bg-rich-black">
       <div className="container mx-auto px-4 py-40">
@@ -43,24 +42,9 @@ export function AuctionWithdraw() {
             <h1 className="text-5xl leading-tight my-8 font-semibold text-aquamarine-green">
               Withdraw excess from your bid
             </h1>
-            <div className="flex flex-row my-2 items-center">
-              <Card className="bg-dark-green-lighter rounded-full h-16 w-16 text-3xl font-semibold text-aquamarine-green mr-4">
-                1
-              </Card>
-              <h3 className="text-3xl leading-tight font-semibold text-aquamarine-green">
-                Connect to a Wallet
-              </h3>
-            </div>
-            <div className="text-off-white text-sm mb-8">
-              To proceed you must read and accept our terms & conditions.
-            </div>
-            <Button
-              label="Terms & Conditions →"
-              className="px-8 py-4 bg-dark-green-lighter hover:bg-dark-green text-aquamarine-green-lighter"
-              onClick={() => {
-                setShowModal(true);
-              }}
-            />
+          </div>
+          <div>
+            <BidBox />
           </div>
         </div>
         <div className="pt-16">
@@ -74,43 +58,6 @@ export function AuctionWithdraw() {
           ))}
         </div>
       </div>
-      {showModal ? (
-        <>
-          <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
-            <div className="relative w-auto my-6 mx-auto max-w-3xl">
-              <div className="border-0 rounded-3xl shadow-card-gray-light relative flex flex-col w-full bg-rich-black outline-none focus:outline-none">
-                <div className="flex-1 flex-cols items-center p-10">
-                  <div className="py-5">
-                    <h1 className="text-grey text-3xl font-semibold">
-                      Terms and Conditions
-                    </h1>
-                  </div>
-                </div>
-                <div className="max-h-80 overflow-scroll px-10 text-white">
-                  <TermsAndConditions />
-                </div>
-                <div className="flex items-center justify-center p-10">
-                  <Button
-                    isDark
-                    type="button"
-                    onClick={() => setShowModal(false)}
-                    label="Reject"
-                    className="px-8 py-4 mx-2"
-                  />
-                  <Button
-                    isDark
-                    type="button"
-                    onClick={() => setShowModal(false)}
-                    label="Accept"
-                    className="px-8 py-4 mx-2"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
-        </>
-      ) : null}
     </section>
   );
 }

@@ -66,6 +66,16 @@
     width: 100px;
   }
 
+  .spinner-dark {
+    @apply animate-spin border-4 border-dark-green-darker;
+    border-bottom-color: rgba(14, 195, 144, 0.25);
+    border-radius: 50%;
+    border-right-color: #0FA87F;
+    border-top-color: #0FA87F;
+    height: 100px;
+    width: 100px;
+  }
+
   .spinner-wrapper {
     display: flex;
     flex-direction: row;

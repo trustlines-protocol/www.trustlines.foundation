@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import MessageBlock from "../components/MessageBlock";
-import ActionButton from "../components/ActionButton";
+import MessageBlock from "../bid-components/MessageBlock";
+import ActionButton from "../bid-components/ActionButton";
 import Screen from "./Screen";
-import AuctionLink from "../components/AuctionLink";
-import { formatTLNAmount } from "../../common/utils/math";
-import * as auctionWeb3 from "../web3";
+import AuctionLink from "../bid-components/AuctionLink";
+import { formatTLNAmount } from "../../../common/utils/math";
+import * as auctionWeb3 from "../../api/web3";
 
 export default function WithdrawBid({ withdraw, account }) {
   const [valueToWithdraw, setValueToWithdraw] = useState(undefined);

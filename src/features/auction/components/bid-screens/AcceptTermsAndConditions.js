@@ -1,9 +1,8 @@
 import React, { useCallback, useState } from "react";
-import MessageBlock from "../components/MessageBlock";
-import ActionButton from "../components/ActionButton";
+import ActionButton from "../bid-components/ActionButton";
 import TermsAndConditionsModal from "../modal";
 import TermsAndConditions from "../terms";
-import Screen from "./Screen";
+import { Card } from "../../../common/components/card";
 
 export default function AcceptTermsAndConditions({ onAccept, onReject }) {
   const [isVisibleTermsAndCondition, setIsVisibleTermsAndCondition] = useState(
@@ -26,16 +25,24 @@ export default function AcceptTermsAndConditions({ onAccept, onReject }) {
   }, [onReject]);
 
   return (
-    <Screen
-      faIcon="fa fa-arrow-circle-right"
-      title="Accept the Terms and Conditions"
-    >
-      <MessageBlock>
-        To proceed, you must read and accept our Terms and Conditions.
-      </MessageBlock>
+    <div>
+      <div className="flex flex-row my-2 items-center">
+        <Card className="bg-dark-green-lighter rounded-full h-16 w-16 text-3xl font-semibold text-aquamarine-green mr-4">
+          1
+        </Card>
+        <h3 className="text-3xl leading-tight font-semibold text-aquamarine-green">
+          Connect to a Wallet
+        </h3>
+      </div>
+      <div className="text-off-white text-sm mb-8">
+        To proceed you must read and accept our terms & conditions.
+      </div>
       <ActionButton
-        label="Terms & Conditions"
-        onClick={showTermsAndConditionsModal}
+        label="Terms & Conditions →"
+        className="px-8 py-4 bg-dark-green-lighter hover:bg-dark-green text-aquamarine-green-lighter"
+        onClick={() => {
+          showTermsAndConditionsModal(true);
+        }}
       />
       {isVisibleTermsAndCondition && (
         <TermsAndConditionsModal
@@ -45,6 +52,6 @@ export default function AcceptTermsAndConditions({ onAccept, onReject }) {
           <TermsAndConditions />
         </TermsAndConditionsModal>
       )}
-    </Screen>
+    </div>
   );
 }

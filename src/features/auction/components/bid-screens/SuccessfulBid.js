@@ -1,8 +1,8 @@
 import React from "react";
-import MessageBlock from "../components/MessageBlock";
+import MessageBlock from "../bid-components/MessageBlock";
 import Screen from "./Screen";
-import { formatTLNAmount } from "../../common/utils/math";
-import * as blockexplorer from "../../../common/blockexplorer";
+import { formatTLNAmount } from "../../../common/utils/math";
+import * as blockexplorer from "../../../common/utils/blockexplorer";
 
 export default function SuccessfulBid({ txHash, paidSlotPrice }) {
   return (

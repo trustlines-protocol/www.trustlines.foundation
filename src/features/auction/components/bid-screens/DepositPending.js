@@ -1,5 +1,5 @@
 import React from "react";
-import MessageBlock from "../components/MessageBlock";
+import MessageBlock from "../bid-components/MessageBlock";
 import Screen from "./Screen";
 
 export default function DepositPending() {

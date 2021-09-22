@@ -1,5 +1,5 @@
 import React from "react";
-import Error from "../components/Error";
+import Error from "../bid-components/Error";
 import moment from "moment-timezone";
 
 const DATE_FORMAT = "MMM D, YYYY, h:mm:ss a";

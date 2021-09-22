@@ -1,7 +1,7 @@
 import React from "react";
-import MessageBlock from "../components/MessageBlock";
+import MessageBlock from "../bid-components/MessageBlock";
 import Screen from "./Screen";
-import * as blockexplorer from "../../../common/blockexplorer";
+import * as blockexplorer from "../../../common/utils/blockexplorer";
 
 export default function WaitForConfirmation({ txHash }) {
   return (

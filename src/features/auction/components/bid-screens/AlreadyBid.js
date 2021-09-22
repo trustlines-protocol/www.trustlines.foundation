@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { formatTLNAmount } from "../../common/utils/math";
-import Error from "../components/Error";
-import * as auctionWeb3 from "../web3";
+import { formatTLNAmount } from "../../../common/utils/math";
+import Error from "../bid-components/Error";
+import * as auctionWeb3 from "../../api/web3";
 
 export default function AlreadyBid({ web3Account }) {
   const [paidSlotPrice, setPaidSlotPrice] = useState(0);

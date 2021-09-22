@@ -41,27 +41,24 @@ function TermsAndConditionsModal({ onReject, onAccept, children }) {
               </div>
             </div>
             <div
-              className="max-h-80 overflow-scroll px-10 text-white"
+              className="max-h-80 overflow-y-scroll px-10 text-white"
               onScroll={checkAndSetScrolledToModalBottom}
               ref={termsAndConditionsModalReference}
             >
               {children}
             </div>
-            <div className="flex items-center justify-center p-10">
+            <div className="flex flex-row space-x-2 items-center justify-center p-10">
               <Button
                 isDark
-                type="button"
                 onClick={onReject}
                 label="Reject"
-                className="mx-2"
+                className="py-4 px-8"
               />
               <Button
-                isDark
-                type="button"
                 onClick={onAccept}
                 disabled={!scrolledToModalBottom}
                 label="Accept"
-                className="mx-2"
+                className="py-4 px-8 bg-dark-green hover:bg-dark-green-lighter"
               />
             </div>
           </div>

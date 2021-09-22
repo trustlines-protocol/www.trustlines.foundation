@@ -1,9 +1,9 @@
 import React from "react";
-import MessageBlock from "../components/MessageBlock";
-import ActionButton from "../components/ActionButton";
+import MessageBlock from "../bid-components/MessageBlock";
+import ActionButton from "../bid-components/ActionButton";
 import Screen from "./Screen";
-import TLNLink from "../components/TLNLink";
-import AuctionLink from "../components/AuctionLink";
+import TLNLink from "../bid-components/TLNLink";
+import AuctionLink from "../bid-components/AuctionLink";
 
 export default function NoAllowance({ web3Account, approve }) {
   return (

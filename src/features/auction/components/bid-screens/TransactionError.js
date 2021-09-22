@@ -1,8 +1,8 @@
 import React from "react";
-import MessageBlock from "../components/MessageBlock";
-import ActionButton from "../components/ActionButton";
+import MessageBlock from "../bid-components/MessageBlock";
+import ActionButton from "../bid-components/ActionButton";
 import Screen from "./Screen";
-import * as blockexplorer from "../../../common/blockexplorer";
+import * as blockexplorer from "../../../common/utils/blockexplorer";
 
 export default function TransactionError({ errorMessage, txHash, onTryAgain }) {
   return (
