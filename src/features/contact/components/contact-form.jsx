@@ -10,9 +10,12 @@ import { AtSign } from "../../common/components/icons/at-sign";
 import { Send } from "../../common/components/icons/send";
 import { Check } from "../../common/components/icons/check";
 
+import { signupNewsletter } from "../../common/utils/newsletter";
+
 export default function ContactForm(props) {
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [showErrorMessage, setShowErrorMessage] = useState(false);
+  const [acceptSignupNewsletter, setAcceptSignupNewsletter] = useState(false);
   const [errors, setErrors] = useState(false);
   const CONTACT_MAIL = process.env.GATSBY_CONTACT_MAIL;
   const FORM_POST_URL = process.env.GATSBY_FORM_POST_URL;
@@ -48,6 +51,9 @@ export default function ContactForm(props) {
       .then(result => {
         if (result.success) {
           document.getElementById("contactUs").reset();
+          if (acceptSignupNewsletter) {
+            signupNewsletter(jsonData.email);
+          }
           setShowSuccessMessage(true);
         } else {
           setErrors(result.errors);
@@ -162,8 +168,23 @@ export default function ContactForm(props) {
                 name="signup"
                 id="signup"
                 label="Sign up to receiving the latest updates"
+                checked={acceptSignupNewsletter}
+                onChange={() =>
+                  setAcceptSignupNewsletter(!acceptSignupNewsletter)
+                }
               />
             </div>
+            {acceptSignupNewsletter ? (
+              <div className="text-sm text-rich-black-lightest p-2">
+                By submitting your email address you acknowledge that your
+                information will be transferred to Mailchimp for processing and
+                agree to our{" "}
+                <a href="/" rel="noopener noreferrer" className="underline">
+                  privacy policy
+                </a>
+                .
+              </div>
+            ) : null}
           </div>
         </Card>
       </div>
