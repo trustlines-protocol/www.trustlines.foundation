@@ -43,7 +43,8 @@ module.exports = {
         },
         "majorelle-blue": {
           lightest: "#FFF0FF",
-          lighter: "#897AE7",
+          lighter: "#BEB6EC",
+          light: "#897AE7",
           DEFAULT: "#7657ED",
           pastel: "#E5E0FF",
         },
@@ -57,6 +58,7 @@ module.exports = {
           lighter: "#89E4C5",
           light: "#E1FFF3",
           DEFAULT: "#09E0A3",
+          dark: "#07956D",
         },
         "dark-green": {
           lighter: "rgba(14, 195, 144, 0.25)",
