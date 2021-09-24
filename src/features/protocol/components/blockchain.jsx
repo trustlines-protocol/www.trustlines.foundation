@@ -15,10 +15,6 @@ const CHARACTERISTICS = [
     text: "Based on Parity's Aura consensus algorithm",
   },
   {
-    icon: <Shield />,
-    text: "Staking & slashing to combat equivocation",
-  },
-  {
     icon: <Smiley />,
     text: (
       <span>
@@ -30,6 +26,10 @@ const CHARACTERISTICS = [
     ),
   },
   {
+    icon: <Shield />,
+    text: "Staking & slashing to combat equivocation",
+  },
+  {
     icon: <Branch />,
     text: "Hard-forking as an additional defense mechanism",
   },
@@ -37,34 +37,41 @@ const CHARACTERISTICS = [
 
 export function ProtocolBlockchain() {
   return (
-    <section className="bg-off-white py-28">
-      <div className="container mx-auto px-4 flex flex-row">
+    <section className="bg-off-white md:py-28 py-10">
+      <div className="container mx-auto px-4 grid md:grid-cols-2 grid-cols-1 md:py-40 py-10">
         <div className="flex-1 flex flex-col justify-center">
           <div className="max-w-sm flex flex-col">
-            <h1 className="text-5xl font-semibold leading-tight text-rich-black-lightest">
+            <h1 className="text-4xl md:text-5xl font-semibold leading-tight text-rich-black-lightest">
               Blockchain
             </h1>
-            <p className="py-8 text-rich-black text-2xl font-semibold">
-              The Trustlines Blockchain is{" "}
-              <a href="/">minimal viable Proof-of-Stake (mPoS)</a> Ethereum
-              sidechain.
-            </p>
+            <div className="py-8 text-rich-black text-xl md:text-2xl md:font-semibold md:pr-0 pr-10">
+              <p>
+                {" "}
+                The Trustlines Blockchain is a minimal viable{" "}
+                <a href="/">Proof-of-Stake (mPoS)</a> Ethereum sidechain.
+              </p>
+              <p className="pt-4">
+                It enables us to work with the latest technology in privacy and
+                other things.
+              </p>
+            </div>
             <div className="mt-4">
               <LinkButton href="/" label="Read more about the technology →" />
             </div>
           </div>
         </div>
-        <div className="relative flex-1">
-          <img src={block} alt="block" />
-          <div className="grid grid-flow-cols grid-cols-2 grid-rows-2 gap-4 absolute top-8 left-28">
-            {CHARACTERISTICS.map((characteristic, i) => (
-              <Card className="bg-grey-lighter rounded-2xl flex-col justify-evenly items-center h-56 w-56 p-4">
-                {characteristic.icon}
-                <div className="text-rich-black text-2xl text-center">
-                  {characteristic.text}
-                </div>
-              </Card>
-            ))}
+        <div className="bg-blockchain bg-no-repeat bg-contain bg-center mt-4">
+          <div className="flex md:justify-end">
+            <div className="grid grid-cols-2 grid-rows-2 gap-4">
+              {CHARACTERISTICS.map((characteristic, i) => (
+                <Card className="bg-grey-lighter rounded-2xl flex flex-col justify-evenly items-center md:h-56 md:w-56 p-4">
+                  {characteristic.icon}
+                  <div className="text-rich-black md:text-2xl text-center">
+                    {characteristic.text}
+                  </div>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </div>

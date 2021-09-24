@@ -3,6 +3,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      backgroundImage: {
+        blockchain: "url('../features/protocol/images/block.svg')",
+      },
       fontFamily: {
         sans: ["Inter", "sans-serif"],
       },

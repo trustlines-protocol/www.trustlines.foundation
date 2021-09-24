@@ -32,27 +32,29 @@ const COMPONENTS = [
 export function ProtocolComponents() {
   return (
     <section className="bg-rich-black">
-      <div className="container mx-auto px-4 flex flex-row py-40">
+      <div className="container mx-auto px-4 grid md:grid-cols-2 grid-cols-1 md:py-40 py-10">
         <div className="flex-1">
           <div>
             <img src={protocolElements} alt="protocol elements" />
-            <h1 className="text-5xl leading-tight my-8 text-off-white font-semibold">
+            <h1 className="md:text-5xl text-4xl leading-tight my-8 text-off-white font-semibold">
               Protocol
             </h1>
-            <LinkButton isDark label="View Codebase On GitHub →" href="/" />
           </div>
         </div>
         <div className="flex-1">
           <div className="flex flex-col pl-4">
             {COMPONENTS.map((component, i) => (
               <div className="flex flex-col text-off-white mb-8">
-                <h4 className="text-2xl font-semibold mb-2">
+                <h4 className="md:text-2xl font-semibold mb-2">
                   {component.name}
                 </h4>
-                <p className="text-2xl">{component.body}</p>
+                <p className="md:text-2xl">{component.body}</p>
               </div>
             ))}
           </div>
+        </div>
+        <div>
+          <LinkButton isDark label="View Codebase On GitHub →" href="/" />
         </div>
       </div>
     </section>
