@@ -27,23 +27,25 @@ export default function AcceptTermsAndConditions({ onAccept, onReject }) {
   return (
     <div>
       <div className="flex flex-row my-2 items-center">
-        <Card className="bg-dark-green-lighter rounded-full h-16 w-16 text-3xl font-semibold text-aquamarine-green mr-4">
+        <Card className="bg-dark-green-lighter rounded-full md:h-16 md:w-16 h-10 w-10 md:text-3xl text-xl font-semibold text-aquamarine-green mr-4">
           1
         </Card>
-        <h3 className="text-3xl leading-tight font-semibold text-aquamarine-green">
+        <h3 className="md:text-3xl text-xl leading-tight font-semibold text-aquamarine-green">
           Connect to a Wallet
         </h3>
       </div>
       <div className="text-off-white text-sm mb-8">
         To proceed you must read and accept our terms & conditions.
       </div>
-      <ActionButton
-        label="Terms & Conditions →"
-        className="px-8 py-4 bg-dark-green-lighter hover:bg-dark-green text-aquamarine-green-lighter"
-        onClick={() => {
-          showTermsAndConditionsModal(true);
-        }}
-      />
+      <div className="flex flex-row md:justify-start justify-center">
+        <ActionButton
+          label="Terms & Conditions →"
+          className="px-8 py-4 bg-dark-green-lighter hover:bg-dark-green text-aquamarine-green-lighter"
+          onClick={() => {
+            showTermsAndConditionsModal(true);
+          }}
+        />
+      </div>
       {isVisibleTermsAndCondition && (
         <TermsAndConditionsModal
           onReject={rejectTermsAndCondition}

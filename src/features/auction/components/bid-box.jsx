@@ -242,26 +242,17 @@ export default function BidBox() {
       return <Loading title="Connecting..." />;
     case CHAIN_STATE.DISCONNECTED:
       return (
-        <div>
-          <MainHeader
-            faIcon="fa fa-exclamation-circle"
-            text="No Web3 browser detected"
-          />
-          <MessageBlock>
-            You can not participate directly from this website as no Web3
-            browser was detected. To participate, install the MetaMask plugin,
-            or use a Web3 enabled browser.
-          </MessageBlock>
-        </div>
+        <MessageBlock title="No Web3 browser detected">
+          You can not participate directly from this website as no Web3 browser
+          was detected. To participate, install the MetaMask plugin, or use a
+          Web3 enabled browser.
+        </MessageBlock>
       );
     case CHAIN_STATE.WRONG_CHAIN:
       return (
-        <div>
-          <MainHeader faIcon="fa fa-exclamation-circle" text="Wrong chain" />
-          <MessageBlock>
-            Please connect to the {process.env.REACT_APP_CHAIN_NAME}
-          </MessageBlock>
-        </div>
+        <MessageBlock title="Wrong chain">
+          Please connect to the {process.env.REACT_APP_CHAIN_NAME}
+        </MessageBlock>
       );
     default:
   }

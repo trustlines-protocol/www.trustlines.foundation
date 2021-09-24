@@ -1,9 +1,5 @@
 import React from "react";
 
-import { Card } from "../../common/components/card";
-// import TermsModal from "./terms";
-import { Button } from "../../common/components/button";
-import TermsAndConditions from "./terms";
 import BidBox from "./bid-box";
 
 const CONTENTS = [
@@ -36,10 +32,10 @@ const CONTENTS = [
 export function AuctionWithdraw() {
   return (
     <section className="bg-rich-black">
-      <div className="container mx-auto px-4 py-40">
+      <div className="container mx-auto px-4 py-10 md:py-40">
         <div className="pb-24">
           <div>
-            <h1 className="text-5xl leading-tight my-8 font-semibold text-aquamarine-green">
+            <h1 className="md:text-5xl text-4xl leading-tight my-8 font-semibold text-aquamarine-green">
               Withdraw excess from your bid
             </h1>
           </div>
@@ -47,13 +43,13 @@ export function AuctionWithdraw() {
             <BidBox />
           </div>
         </div>
-        <div className="pt-16">
+        <div className="md:pt-10 flex flex-col md:gap-20">
           {CONTENTS.map((content, i) => (
             <div>
               {i !== 0 ? (
                 <hr className="border-rich-black-lighter pb-2 mt-14" />
               ) : null}
-              <p className="text-grey text-sm mb-24">{content.text}</p>
+              <p className="text-grey text-sm">{content.text}</p>
             </div>
           ))}
         </div>
