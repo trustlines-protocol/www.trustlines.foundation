@@ -279,33 +279,35 @@ const CONTENTS = [
 export function MerkleDropFaqs() {
   return (
     <section>
-      <div className="container mx-auto px-4 py-32 merkle-drop-faq">
+      <div className="container mx-auto px-4 md:py-32 py-10 merkle-drop-faq">
         <div>
           <div>
-            <h1 className="text-5xl leading-tight my-8 mx-20 font-semibold text-rich-black">
+            <h1 className="text-4xl md:text-5xl leading-tight md:my-8 md:mx-20 font-semibold text-rich-black">
               Merkle Drop FAQ
             </h1>
           </div>
         </div>
         <div className="flex flex-row justify-center">
-          <div className="flex flex-col w-1/2">
+          <div className="flex flex-col md:w-1/2">
             {CONTENTS.map((content, i) => (
-              <div className="mb-12">
-                <div className="flex flex-row items-center py-8">
+              <div className="md:py-0 py-4 md:mb-12">
+                <div className="flex flex-row items-center md:py-8">
                   <div className="mr-4">
-                    <QuestionMark width="32" height="32" />
+                    <QuestionMark className="md:w-8 md:h-8 w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-semibold">
+                    <h3 className="md:text-2xl text-xl font-semibold">
                       {content.question} <button className="text-2xl">↑</button>
                     </h3>
                   </div>
                 </div>
                 <div className="flex flex-row items-center">
-                  <div className="px-4">
+                  <div className="md:px-4">
                     <ArrowDownRight />
                   </div>
-                  <div className="pl-8 text-grey text-lg">{content.answer}</div>
+                  <div className="md:pl-8 pl-4 text-grey md:text-lg">
+                    {content.answer}
+                  </div>
                 </div>
               </div>
             ))}

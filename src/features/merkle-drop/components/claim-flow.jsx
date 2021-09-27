@@ -322,13 +322,17 @@ function ClaimFlow() {
 
   return (
     <div>
-      <Card className="shadow-2xl bg-off-white p-4 rounded-sm">
-        <div className="flex flex-col justify-center w-full p-4">
-          <div className="flex flex-row items-center">
-            <div className="pr-2">
-              <QuestionMark className="stroke-current" />
-            </div>
-            <h3 className="text-lg font-semibold">Check address eligibility</h3>
+      <Card className="md:shadow-2xl md:bg-off-white bg-transparent md:p-4 rounded-sm">
+        <div className="flex flex-col w-full md:p-4">
+          <div className="flex flex-row">
+            <Card className="flex flex-row bg-off-white shadow-2xl p-4 md:p-0">
+              <div className="pr-2">
+                <QuestionMark className="stroke-current" />
+              </div>
+              <h3 className="md:text-lg font-semibold">
+                Check address eligibility
+              </h3>
+            </Card>
           </div>
           {renderClaimStatus()}
         </div>

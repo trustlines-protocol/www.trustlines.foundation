@@ -83,11 +83,6 @@
     padding-bottom: 15px;
   }
 
-  .video-container {
-    width: 1280px;
-    height: 720px;
-  }
-
   .merkle-drop-faq a {
     @apply underline text-majorelle-blue
   }
