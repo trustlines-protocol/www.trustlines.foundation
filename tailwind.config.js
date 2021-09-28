@@ -6,6 +6,7 @@ module.exports = {
       backgroundImage: {
         blockchain: "url('../features/protocol/images/block.svg')",
         key: "url('../features/merkle-drop/images/key.svg')",
+        contact: "url('../features/contact/images/contact.svg')",
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"],

@@ -9,9 +9,14 @@ import { HomeSubscribe } from "../features/home/components/subscribe";
 export default function Contact() {
   return (
     <Layout>
-      <SEO title="Contact" keywords={["trustlines contact"]} />
-      <ContactHero />
-      <HomeSlider />
+      <div
+        className="-z-1 bg-contact bg-no-repeat"
+        style={{ backgroundPosition: "center -40px", backgroundSize: "150%" }}
+      >
+        <SEO title="Contact" keywords={["trustlines contact"]} />
+        <ContactHero />
+        <HomeSlider />
+      </div>
       <HomeSubscribe />
     </Layout>
   );

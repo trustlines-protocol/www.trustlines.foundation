@@ -129,7 +129,7 @@ export default function ContactForm(props) {
                 feedback
               </h3>
             </div>
-            <div className="flex flex-row justify-center w-full">
+            <div className="flex md:flex-row flex-col justify-center w-full">
               <div className="w-full px-2">
                 <div className="flex flex-row items-center rounded-full bg-grey-lighter text-rich-black-ligther h-14 my-4">
                   <div className="pl-4">
@@ -204,11 +204,11 @@ export default function ContactForm(props) {
       <div className="py-10">
         <LinkButton
           isDark
-          className="px-10 bg-rich-black hover:text-white hover:bg-rich-black-lighter"
+          className="md:px-10 px-4 bg-rich-black hover:text-white hover:bg-rich-black-lighter"
           href={`mailto:${CONTACT_MAIL}`}
         >
           <Mail className="stroke-current text-white" />
-          <span className="px-2 w-full">{CONTACT_MAIL}</span>
+          <span className="pl-2 w-full">{CONTACT_MAIL}</span>
         </LinkButton>
       </div>
     </form>
