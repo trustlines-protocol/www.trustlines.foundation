@@ -21,14 +21,13 @@ const LINKS = [
 
 export function SocialLinks() {
   return (
-    <div className="flex flex-row justify-between">
+    <div className="flex flex-row justify-center gap-4">
       {LINKS.map((link, i) => (
         <a
           href={link.href}
           target="_blank"
           rel="noreferrer noopener"
           key={`social-link-${i}`}
-          className="mr-4"
         >
           {link.icon}
         </a>
