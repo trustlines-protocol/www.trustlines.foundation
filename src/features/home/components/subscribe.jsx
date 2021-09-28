@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useCallback } from "react";
 
 import { Check } from "../../common/components/icons/check";
 
@@ -6,12 +6,18 @@ import { isEmailValid } from "../../common/utils/validation";
 
 import mail from "../images/mail.svg";
 import { MailDot } from "../../common/components/icons/mail-dot";
+import PrivacyPolicyModal from "../../common/components/privacy-modal";
 
 export function HomeSubscribe() {
-  const [didSubscribe, setDidSubscribe] = React.useState(false);
-  const [email, setEmail] = React.useState("");
+  const [didSubscribe, setDidSubscribe] = useState(false);
+  const [email, setEmail] = useState("");
+  const [showPrivacyModal, setShowPrivacyModal] = useState(false);
 
   const submitUrl = process.env.REACT_APP_MAILCHIMP_URL;
+
+  const togglePrivacyModal = useCallback(() => {
+    setShowPrivacyModal(!showPrivacyModal);
+  }, [showPrivacyModal]);
 
   return (
     <section className="md:container md:mx-auto md:pb-0 pb-20 flex flex-row justify-center pt-16 text-rich-black-lightest">
@@ -65,11 +71,18 @@ export function HomeSubscribe() {
             By submitting your email address you acknowledge that your
             information will be transferred to Mailchimp for processing and
             agree to our{" "}
-            <a href="/" rel="noopener noreferrer" className="underline">
+            <button
+              type="button"
+              onClick={togglePrivacyModal}
+              className="underline"
+            >
               privacy policy
-            </a>
+            </button>
             .
           </div>
+          {showPrivacyModal ? (
+            <PrivacyPolicyModal onClose={togglePrivacyModal} />
+          ) : null}
         </form>
       )}
     </section>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 
 import { Card } from "../../common/components/card";
 import { LinkButton } from "../../common/components/link-button";
@@ -11,10 +11,12 @@ import { Send } from "../../common/components/icons/send";
 import { Check } from "../../common/components/icons/check";
 
 import { signupNewsletter } from "../../common/utils/newsletter";
+import PrivacyPolicyModal from "../../common/components/privacy-modal";
 
 export default function ContactForm(props) {
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [showErrorMessage, setShowErrorMessage] = useState(false);
+  const [showPrivacyModal, setShowPrivacyModal] = useState(false);
   const [acceptSignupNewsletter, setAcceptSignupNewsletter] = useState(false);
   const [errors, setErrors] = useState(false);
   const CONTACT_MAIL = process.env.GATSBY_CONTACT_MAIL;
@@ -65,6 +67,10 @@ export default function ContactForm(props) {
         alert("something went wrong");
       });
   };
+
+  const togglePrivacyModal = useCallback(() => {
+    setShowPrivacyModal(!showPrivacyModal);
+  }, [showPrivacyModal]);
 
   return (
     <form
@@ -179,11 +185,18 @@ export default function ContactForm(props) {
                 By submitting your email address you acknowledge that your
                 information will be transferred to Mailchimp for processing and
                 agree to our{" "}
-                <a href="/" rel="noopener noreferrer" className="underline">
+                <button
+                  type="button"
+                  onClick={togglePrivacyModal}
+                  className="underline"
+                >
                   privacy policy
-                </a>
+                </button>
                 .
               </div>
+            ) : null}
+            {showPrivacyModal ? (
+              <PrivacyPolicyModal onClose={togglePrivacyModal} />
             ) : null}
           </div>
         </Card>
