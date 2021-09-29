@@ -9,3 +9,6 @@ dist/
 
 yarn-error.log
 .DS_Store
+
+public
+.cache

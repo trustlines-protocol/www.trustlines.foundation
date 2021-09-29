@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  input, textarea {
+    @apply focus:outline-none
+  }
+
+  li {
+    @apply mb-2
+  }
+
+  .hero-header {
+    @apply flex flex-row justify-between
+  }
+
+  .terms-and-conditions h1 {
+    @apply text-rich-black-lighter text-3xl font-semibold py-4
+  }
+
+  .terms-and-conditions h2 {
+    @apply text-2xl py-2
+  }
+
+  .terms-and-conditions ol {
+    @apply py-2 list-inside list-decimal
+  }
+
+  .terms-and-conditions ul {
+    @apply py-2 list-inside list-disc
+  }
+
+  .terms-and-conditions li {
+    @apply py-1
+  }
+
+  .terms-and-conditions p {
+    @apply py-2
+  }
+
+  .terms-and-conditions a {
+    @apply underline
+  }
+
+  .terms-and-conditions pre {
+    @apply p-4 overflow-auto bg-rich-black-lighter rounded-xl;
+    white-space: pre-wrap;
+  }
+
+  .toggle-checkbox:checked {
+    @apply right-0 border-dark-green
+  }
+  .toggle-checkbox:checked + .toggle-label {
+    @apply bg-dark-green
+  }
+
+  .spinner {
+    @apply animate-spin border-4 border-majorelle-blue;
+    border-bottom-color: #E5E0FF;
+    border-radius: 50%;
+    border-right-color: #7657ED;
+    border-top-color: #7657ED;
+    height: 100px;
+    width: 100px;
+  }
+
+  .spinner-dark {
+    @apply animate-spin border-4 border-dark-green-darker;
+    border-bottom-color: rgba(14, 195, 144, 0.25);
+    border-radius: 50%;
+    border-right-color: #0FA87F;
+    border-top-color: #0FA87F;
+    height: 100px;
+    width: 100px;
+  }
+
+  .spinner-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 15px;
+  }
+
+  .merkle-drop-faq a {
+    @apply underline text-majorelle-blue
+  }
+
+  .merkle-drop-faq ul {
+    @apply list-disc list-inside
+  }
+}
