@@ -4,18 +4,20 @@ import { Telegram } from "./icons/telegram";
 import { Twitter } from "./icons/twitter";
 import { YouTube } from "./icons/you-tube";
 
+import * as URLS from "../content/social-links.json";
+
 const LINKS = [
   {
     icon: <Twitter className="fill-current text-rich-black" />,
-    href: "",
+    href: URLS.twitter,
   },
   {
     icon: <YouTube className="fill-current text-rich-black" />,
-    href: "",
+    href: URLS.youTube,
   },
   {
     icon: <Telegram className="fill-current text-rich-black" />,
-    href: "",
+    href: URLS.telegram,
   },
 ];
 

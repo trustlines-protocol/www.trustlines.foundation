@@ -4,15 +4,15 @@
     "items": [
       {
         "label": "Blog",
-        "href": ""
+        "href": "https://blog.trustlines.network/"
       },
       {
         "label": "Docs",
-        "href": ""
+        "href": "https://docs.trustlines.network/"
       },
       {
         "label": "Trustlines Network",
-        "href": ""
+        "href": "https://trustlines.network/"
       }
     ]
   },
@@ -21,15 +21,15 @@
     "items": [
       {
         "label": "Forum",
-        "href": ""
+        "href": "https://forum.trustlines.network/"
       },
       {
         "label": "Newsletter",
-        "href": ""
+        "href": "http://eepurl.com/gHqYyX"
       },
       {
         "label": "Telegram",
-        "href": ""
+        "href": "https://t.me/trustlines_network"
       }
     ]
   },
@@ -38,15 +38,15 @@
     "items": [
       {
         "label": "GitHub",
-        "href": ""
+        "href": "https://github.com/trustlines-protocol"
       },
       {
         "label": "Dev Docs",
-        "href": ""
+        "href": "https://dev.trustlines.network/"
       },
       {
         "label": "Technical Chat",
-        "href": ""
+        "href": "https://gitter.im/trustlines/community"
       }
     ]
   },
