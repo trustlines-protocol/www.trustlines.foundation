@@ -7,11 +7,11 @@ import footerGroups from "../content/footer-groups";
 export function Footer() {
   return (
     <div className="bg-grey-lighter">
-      <div className="container mx-auto px-4 py-20">
-        <div className="flex flex-row justify-between mb-20">
+      <div className="container mx-auto px-4 md:py-20 py-10">
+        <div className="flex md:flex-row flex-col md:justify-between md:mb-20">
           {footerGroups.map(group => (
-            <div key={group.label} className="flex flex-col">
-              <div className="text-rich-black font-semibold mb-8">
+            <div key={group.label} className="flex flex-col md:mb-0 mb-4">
+              <div className="text-rich-black text-sm md:text-base font-semibold md:mb-8 mb-1">
                 {group.label}
               </div>
               {group.items.map((item, i) => (
@@ -20,7 +20,7 @@ export function Footer() {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mb-4 text-rich-black text-sm"
+                  className="md:mb-4 mb-1 text-rich-black text-sm"
                 >
                   {item.label}
                 </a>
@@ -28,12 +28,16 @@ export function Footer() {
             </div>
           ))}
         </div>
-        <div className="flex flex-row justify-between items-center">
-          <div className="text-sm text-rich-black-lightest">
-            Copyright © 2021 Trustlines Foundation
+        <div className="flex flex-row md:py-0 py-4">
+          <div className="flex flex-1 md:flex-row flex-col md:justify-between md:items-center md:space-y-0 space-y-8">
+            <div className="flex flex-row md:items-center md:order-2">
+              <SocialLinks />
+            </div>
+            <div className="text-sm text-rich-black-lightest md:order-1">
+              Copyright © 2021 Trustlines Foundation
+            </div>
           </div>
-          <div className="flex flex-row items-center">
-            <SocialLinks />
+          <div className="flex flex-row items-end justify-end">
             <button className="ml-16">
               <CircledArrowUp />
             </button>

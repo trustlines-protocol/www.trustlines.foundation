@@ -1,36 +1,38 @@
 import React, { useState, useCallback } from "react";
-import MainHeader from "../../../js/auction/bidbox/components/MainHeader";
-import MessageBlock from "../../../js/auction/bidbox/components/MessageBlock";
-import ActionButton from "../../../js/auction/bidbox/components/ActionButton";
-import { useAccount } from "../../../js/common/state/account";
+
+import { useAccount } from "../../common/hooks/account";
 import { useChainState, CHAIN_STATE } from "../../common/hooks/chain-state";
+import { BidderState, useBidderState } from "../hooks/bidder";
+
 import {
   getDefaultAccount,
   requestPermission,
   TRANSACTION_REVERTED_ERROR_CODE,
   USER_REJECTED_ERROR_CODE,
-} from "../../../js/common/web3";
-import * as auctionWeb3 from "../../../js/auction/bidbox/web3";
-import {
-  BidderState,
-  useBidderState,
-} from "../../../js/auction/bidbox/state/bidderState";
-import Error from "../../../js/auction/bidbox/components/Error";
-import TLNLink from "../../../js/auction/bidbox/components/TLNLink";
-import CurrentPrice from "../../../js/auction/bidbox/CurrentPrice";
-import AcceptTermsAndConditions from "./screens/AcceptTermsAndConditions";
-import ConnectWallet from "./screens/ConnectWallet";
-import MakeBid from "./screens/MakeBid";
-import NoAllowance from "./screens/NoAllowance";
-import WaitForConfirmation from "./screens/WaitForConfirmation";
-import SuccessfulBid from "./screens/SuccessfulBid";
-import TransactionError from "./screens/TransactionError";
-import AlreadyBid from "./screens/AlreadyBid";
-import NotStarted from "./screens/NotStarted";
-import WithdrawBid from "./screens/WithdrawBid";
-import SuccessfulWithdraw from "./screens/SuccessfulWithdraw";
-import NothingToWithdraw from "./screens/NothingToWithdraw";
-import DepositPending from "./screens/DepositPending";
+} from "../../common/api/web3";
+import * as auctionWeb3 from "../api/web3";
+
+import MainHeader from "./bid-components/MainHeader";
+import MessageBlock from "./bid-components/MessageBlock";
+import ActionButton from "./bid-components/ActionButton";
+import Error from "./bid-components/Error";
+import TLNLink from "./bid-components/TLNLink";
+
+import CurrentPrice from "./current-price";
+import AcceptTermsAndConditions from "./bid-screens/AcceptTermsAndConditions";
+import ConnectWallet from "./bid-screens/ConnectWallet";
+import MakeBid from "./bid-screens/MakeBid";
+import NoAllowance from "./bid-screens/NoAllowance";
+import WaitForConfirmation from "./bid-screens/WaitForConfirmation";
+import SuccessfulBid from "./bid-screens/SuccessfulBid";
+import TransactionError from "./bid-screens/TransactionError";
+import AlreadyBid from "./bid-screens/AlreadyBid";
+import NotStarted from "./bid-screens/NotStarted";
+import WithdrawBid from "./bid-screens/WithdrawBid";
+import SuccessfulWithdraw from "./bid-screens/SuccessfulWithdraw";
+import NothingToWithdraw from "./bid-screens/NothingToWithdraw";
+import DepositPending from "./bid-screens/DepositPending";
+import Loading from "./bid-screens/Loading";
 
 const MAX_UINT =
   "115792089237316195423570985008687907853269984665640564039457584007913129639935";
@@ -237,34 +239,20 @@ export default function BidBox() {
 
   switch (chainState) {
     case CHAIN_STATE.CONNECTING:
-      return (
-        <div>
-          <MainHeader text="Connecting..." />
-          <MessageBlock />
-        </div>
-      );
+      return <Loading title="Connecting..." />;
     case CHAIN_STATE.DISCONNECTED:
       return (
-        <div>
-          <MainHeader
-            faIcon="fa fa-exclamation-circle"
-            text="No Web3 browser detected"
-          />
-          <MessageBlock>
-            You can not participate directly from this website as no Web3
-            browser was detected. To participate, install the MetaMask plugin,
-            or use a Web3 enabled browser.
-          </MessageBlock>
-        </div>
+        <MessageBlock title="No Web3 browser detected">
+          You can not participate directly from this website as no Web3 browser
+          was detected. To participate, install the MetaMask plugin, or use a
+          Web3 enabled browser.
+        </MessageBlock>
       );
     case CHAIN_STATE.WRONG_CHAIN:
       return (
-        <div>
-          <MainHeader faIcon="fa fa-exclamation-circle" text="Wrong chain" />
-          <MessageBlock>
-            Please connect to the {process.env.REACT_APP_CHAIN_NAME}
-          </MessageBlock>
-        </div>
+        <MessageBlock title="Wrong chain">
+          Please connect to the {process.env.REACT_APP_CHAIN_NAME}
+        </MessageBlock>
       );
     default:
   }
@@ -272,12 +260,7 @@ export default function BidBox() {
   if (internalState === STATE.READY_TO_TRANSACT_WITH_CONTRACT) {
     switch (bidderState) {
       case BidderState.LOADING:
-        return (
-          <div>
-            <MainHeader faIcon="fa fa-spinner fa-pulse" text="Loading..." />
-            <MessageBlock />
-          </div>
-        );
+        return <Loading title="Loading..." />;
       case BidderState.NO_ALLOWANCE:
         return <NoAllowance web3Account={web3Account} approve={approve} />;
       case BidderState.NOT_WHITELISTED:
@@ -353,8 +336,7 @@ export default function BidBox() {
     case STATE.WAITING_FOR_WEB3_BROWSER_ACTION:
       return (
         <div>
-          <MainHeader faIcon="fa fa-spinner fa-pulse" text="Waiting..." />
-          <MessageBlock>
+          <MessageBlock title="Waiting...">
             Please follow the instructions of your Web3 enabled browser.
           </MessageBlock>
         </div>

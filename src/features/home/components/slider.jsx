@@ -51,12 +51,12 @@ export function HomeSlider() {
 
   return (
     <section className="bg-rich-black">
-      <div className="container mx-auto h-96 flex flex-col justify-between py-11 px-4 text-2xl">
+      <div className="container mx-auto md:h-96 flex flex-col justify-between md:py-11 py-22 px-4 md:text-2xl text-lg">
         <div />
-        <div>
+        <div className="flex flex-col px-4 md:px-0 md:py-0 py-20">
           <div className="flex flex-row items-center text-white mb-2">
-            {currentSlide.titleIcon}
-            <span className="ml-2">{currentSlide.title}</span>
+            <div>{currentSlide.titleIcon}</div>
+            <span className="md:ml-2 ml-6">{currentSlide.title}</span>
           </div>
           <a
             className={`flex flex-row items-center font-semibold ${currentSlide.textColor}`}
@@ -64,28 +64,31 @@ export function HomeSlider() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            {currentSlide.linkIcon}
-            <span className="mx-2">{currentSlide.linkText}</span>
-            <ArrowRight className="fill-current h-4 w-4" />
+            <div>{currentSlide.linkIcon}</div>
+            <span className="md:ml-2 ml-6">{currentSlide.linkText} →</span>
           </a>
         </div>
-        <div className="font-semibold text-rich-black-lightest">
-          {SLIDES.map((slide, i) => (
-            <span
-              key={`home-slide-${i}`}
-              className={i === currentSlideIndex ? slide.textColor : ""}
-            >
-              <span
-                className="cursor-pointer"
-                onClick={() => setCurrentSlideIndex(i)}
-              >
-                {slide.label}
-              </span>
-              <span className="text-rich-black-lightest">
-                {i !== SLIDES.length - 1 ? " / " : ""}
-              </span>
-            </span>
-          ))}
+        <div>
+          <div className="pt-32 pb-4 md:pt-0 md:pb-0">
+            <div className="grid grid-cols-1 md:flex md:flex-row font-semibold text-rich-black-lightest">
+              {SLIDES.map((slide, i) => (
+                <div
+                  key={`home-slide-${i}`}
+                  className={i === currentSlideIndex ? slide.textColor : ""}
+                >
+                  <span className="text-rich-black-lightest">
+                    {i !== 0 ? " / " : ""}
+                  </span>
+                  <span
+                    className="cursor-pointer"
+                    onClick={() => setCurrentSlideIndex(i)}
+                  >
+                    {slide.label}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

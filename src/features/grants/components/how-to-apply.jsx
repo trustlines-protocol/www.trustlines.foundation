@@ -4,14 +4,14 @@ import { LinkButton } from "../../common/components/link-button";
 
 export function GrantsHowToApply() {
   return (
-    <section className="container mx-auto px-4 mb-32 text-rich-black-lighter">
+    <section className="container mx-auto px-4 mb-10 md:mb-32 text-rich-black-lighter">
       <div className="hero-header">
         <div className="flex-1">
-          <h1 className="md:text-6xl text-4xl font-semibold leading-tight mb-10 text-rich-black">
+          <h1 className="md:text-6xl text-4xl font-semibold leading-tight md:mb-10 text-rich-black">
             How to apply
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2">
-            <div className="flex flex-col p-4">
+            <div className="flex flex-col md:px-4 py-4">
               <div>
                 <p>
                   You can apply anytime. Once we receive your application, we
@@ -29,14 +29,14 @@ export function GrantsHowToApply() {
               </div>
               <div className="pt-4">
                 <LinkButton
-                  className="bg-aquamarine-green-lighter font-semibold text-sm"
+                  className="bg-aquamarine-green-lighter font-semibold text-sm md:w-max w-full justify-center"
                   href="https://docs.google.com/forms/d/e/1FAIpQLSdSGkkafn3jDvFmv8S_FwWVoSkGXc6UGMDjTKw6Maoibcz5Jg/viewform"
                 >
                   Apply via Google Forms →
                 </LinkButton>
               </div>
             </div>
-            <div className="p-4">
+            <div className="md:p-4">
               <Card className="bg-app-blue-lightest">
                 <div className="flex flex-col p-8">
                   <div className="pb-4">

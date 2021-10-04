@@ -41,8 +41,13 @@ function ClaimAmount({
           Yes, this address is eligible for a token claim.
         </div>
         <div className="subtitle is-6 has-text-success">
-          {parseTokenAmount(currentAmount)} TLN claimable out of original&nbsp;
-          {parseTokenAmount(originalAmount)} TLN
+          <span className="text-dark-green-darker font-semibold">
+            {parseTokenAmount(currentAmount)} TLN
+          </span>{" "}
+          claimable out of original&nbsp;
+          <span className="text-app-blue font-semibold">
+            {parseTokenAmount(originalAmount)} TLN
+          </span>
         </div>
       </div>
       {chainState === CHAIN_STATE.DISCONNECTED && (

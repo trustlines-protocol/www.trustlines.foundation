@@ -11,9 +11,11 @@ const ROLES = [
 
 export function HomeRole() {
   return (
-    <section className="container mx-auto mb-44 flex flex-col items-center justify-center px-4">
-      <h1 className="text-6xl font-semibold text-grey-lighter">Our Role</h1>
-      <div className="flex flex-row justify-between py-16">
+    <section className="container mx-auto md:mb-44 mb-20 flex flex-col items-center justify-center px-4">
+      <h1 className="md:text-6xl text-4xl font-semibold text-grey-lighter">
+        Our Role
+      </h1>
+      <div className="grid grid-cols-1 md:grid-cols-4 space-y-6 md:space-y-0 md:py-16 py-8">
         {ROLES.map((role, i) => (
           <RoleItem text={role} key={`role-${i}`} />
         ))}
@@ -51,7 +53,9 @@ function RoleItem(props) {
           strokeLinejoin="round"
         />
       </svg>
-      <p className="text-sm text-rich-black text-center mt-4">{props.text}</p>
+      <p className="text-sm text-rich-black text-center mt-4 px-10 md:px-0">
+        {props.text}
+      </p>
     </div>
   );
 }

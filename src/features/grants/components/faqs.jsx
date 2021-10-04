@@ -4,16 +4,16 @@ import { Warning } from "../../common/components/icons/warning";
 
 export function GrantsFAQ() {
   return (
-    <section className="container mx-auto px-4 mb-32 text-rich-black-lighter">
+    <section className="container mx-auto px-4 mb-0 md:mb-32 text-rich-black-lighter">
       <div className="hero-header">
         <div className="flex-1">
           <h1 className="md:text-6xl text-4xl font-semibold leading-tight mb-10 text-rich-black">
             Frequently Asked <br /> Questions
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2">
-            <div className="flex flex-col p-4">
+            <div className="flex flex-col md:p-4">
               <div>
-                <ul className="list-disc list-inside">
+                <ul className="md:list-disc list-inside space-y-4">
                   <li>
                     <span className="font-semibold">
                       I have received some form of funding already, but it is
@@ -86,19 +86,25 @@ export function GrantsFAQ() {
                 </Card>
               </div>
               <div>
-                <p>
-                  <span className="font-semibold">
-                    Do you have any further questions?
-                  </span>
-                  <br /> We are happy to help at{" "}
-                  <a
-                    href="mailto:contact@trustlines.foundation"
-                    className="underline"
-                  >
-                    contact@trustlines.foundation
-                  </a>
-                  .
-                </p>
+                <Card className="md:justify-start md:bg-transparent bg-rich-black md:text-rich-black text-off-white">
+                  <div>
+                    <div className="text-center md:text-left">
+                      <div className="font-semibold md:text-base text-lg md:p-0 p-4">
+                        Do you have any further questions?
+                      </div>
+                      <div className="flex md:inline flex-col items-center justify-center">
+                        We are happy to help at{" "}
+                        <a
+                          href="mailto:contact@trustlines.foundation"
+                          className="flex flex-row items-center justify-center my-4 md:inline md:underline md:p-0 p-3 w-max rounded-full md:rounded-none md:bg-transparent bg-off-white text-rich-black md:font-normal font-semibold self-center"
+                        >
+                          contact@trustlines.foundation
+                        </a>
+                        <span className="hidden md:inline">.</span>
+                      </div>
+                    </div>
+                  </div>
+                </Card>
               </div>
             </div>
           </div>

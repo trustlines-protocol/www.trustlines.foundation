@@ -8,8 +8,8 @@ export function Status({ status, remainingSeconds, secondsBeforeStart }) {
   });
 
   return (
-    <div className="bg-aquamarine-green-light text-dark-green rounded-full py-2 px-4 mx-14">
-      {timeString && <div>{timeString}</div>}
+    <div className="bg-aquamarine-green-lighter text-aquamarine-green-dark rounded-full py-2 px-4 mx-14">
+      {timeString && <div>Auction {timeString}</div>}
       {label && <div>{label}</div>}
     </div>
   );

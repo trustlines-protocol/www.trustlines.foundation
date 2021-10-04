@@ -5,16 +5,16 @@ import { LinkButton } from "../../common/components/link-button";
 export function MerkleDropIntroduction() {
   return (
     <section className="bg-rich-black">
-      <div className="container mx-auto px-4 flex flex-col py-40">
+      <div className="container mx-auto px-4 flex flex-col md:py-40 py-10">
         <div className="flex-1">
           <div>
-            <h1 className="text-5xl leading-tight my-8 text-off-white font-semibold">
+            <h1 className="md:text-5xl text-4xl leading-tight my-8 text-off-white font-semibold">
               Introducing The Trustlines Merkle Drop
             </h1>
           </div>
         </div>
         <div className="flex-1">
-          <div className="flex flex-col pl-4 text-off-white">
+          <div className="flex flex-col pl-4 text-grey">
             <p>
               Trustlines Blockchain requires transaction fees to be paid in
               Trustlines Network Coins (TLC). To reach a broad set of

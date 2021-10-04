@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 
 import { Card } from "../../common/components/card";
 import { LinkButton } from "../../common/components/link-button";
@@ -10,9 +10,14 @@ import { AtSign } from "../../common/components/icons/at-sign";
 import { Send } from "../../common/components/icons/send";
 import { Check } from "../../common/components/icons/check";
 
+import { signupNewsletter } from "../../common/utils/newsletter";
+import PrivacyPolicyModal from "../../common/components/privacy-modal";
+
 export default function ContactForm(props) {
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [showErrorMessage, setShowErrorMessage] = useState(false);
+  const [showPrivacyModal, setShowPrivacyModal] = useState(false);
+  const [acceptSignupNewsletter, setAcceptSignupNewsletter] = useState(false);
   const [errors, setErrors] = useState(false);
   const CONTACT_MAIL = process.env.GATSBY_CONTACT_MAIL;
   const FORM_POST_URL = process.env.GATSBY_FORM_POST_URL;
@@ -48,6 +53,9 @@ export default function ContactForm(props) {
       .then(result => {
         if (result.success) {
           document.getElementById("contactUs").reset();
+          if (acceptSignupNewsletter) {
+            signupNewsletter(jsonData.email);
+          }
           setShowSuccessMessage(true);
         } else {
           setErrors(result.errors);
@@ -59,6 +67,10 @@ export default function ContactForm(props) {
         alert("something went wrong");
       });
   };
+
+  const togglePrivacyModal = useCallback(() => {
+    setShowPrivacyModal(!showPrivacyModal);
+  }, [showPrivacyModal]);
 
   return (
     <form
@@ -117,7 +129,7 @@ export default function ContactForm(props) {
                 feedback
               </h3>
             </div>
-            <div className="flex flex-row justify-center w-full">
+            <div className="flex md:flex-row flex-col justify-center w-full">
               <div className="w-full px-2">
                 <div className="flex flex-row items-center rounded-full bg-grey-lighter text-rich-black-ligther h-14 my-4">
                   <div className="pl-4">
@@ -162,19 +174,41 @@ export default function ContactForm(props) {
                 name="signup"
                 id="signup"
                 label="Sign up to receiving the latest updates"
+                checked={acceptSignupNewsletter}
+                onChange={() =>
+                  setAcceptSignupNewsletter(!acceptSignupNewsletter)
+                }
               />
             </div>
+            {acceptSignupNewsletter ? (
+              <div className="text-sm text-rich-black-lightest p-2">
+                By submitting your email address you acknowledge that your
+                information will be transferred to Mailchimp for processing and
+                agree to our{" "}
+                <button
+                  type="button"
+                  onClick={togglePrivacyModal}
+                  className="underline"
+                >
+                  privacy policy
+                </button>
+                .
+              </div>
+            ) : null}
+            {showPrivacyModal ? (
+              <PrivacyPolicyModal onClose={togglePrivacyModal} />
+            ) : null}
           </div>
         </Card>
       </div>
       <div className="py-10">
         <LinkButton
           isDark
-          className="px-10 bg-rich-black hover:text-white hover:bg-rich-black-lighter"
+          className="md:px-10 px-4 bg-rich-black hover:text-white hover:bg-rich-black-lighter"
           href={`mailto:${CONTACT_MAIL}`}
         >
           <Mail className="stroke-current text-white" />
-          <span className="px-2 w-full">{CONTACT_MAIL}</span>
+          <span className="pl-2 w-full">{CONTACT_MAIL}</span>
         </LinkButton>
       </div>
     </form>

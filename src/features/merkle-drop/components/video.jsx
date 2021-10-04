@@ -1,49 +1,58 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import YouTube from "react-youtube";
 
 import { Button } from "../../common/components/button";
 import { Play } from "../../common/components/icons/play";
+import useWindowDimensions from "../../common/hooks/window";
 
 export function MerkleDropVideo() {
-  const [play, setPlay] = useState(false);
+  const [showPlayer, setShowPlayer] = useState(false);
+  const [player, setPlayer] = useState(null);
+
+  const handlePlayerReady = useCallback(event => {
+    setPlayer(event.target);
+  }, []);
 
   const handlePlay = () => {
-    setPlay(true);
+    setShowPlayer(true);
+    player.playVideo();
   };
 
   const opts = {
-    height: "390",
-    width: "640",
+    height: "720",
+    width: "1280",
     playerVars: {
-      autoplay: 1,
+      autoplay: 0,
+      controls: 0,
     },
   };
+
+  const { width } = useWindowDimensions();
+
+  const adjustedWidth = width <= 1280 ? width : 1280;
+  opts.width = Math.floor(adjustedWidth * 0.9);
+  opts.height = Math.floor((opts.width * 9) / 16);
 
   return (
     <section className="bg-rich-black">
       <div className="flex flex-col items-center justify-center bg-dark-green-lighter">
-        <div className="flex flex-col items-center justify-center video-container">
-          {play ? (
-            <div>
-              <YouTube videoId="bHLYpZstZKs" opts={opts} />
-              {/* <iframe
-                id="player"
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/bHLYpZstZKs"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe> */}
-            </div>
-          ) : (
-            <div>
-              <Button onClick={handlePlay}>
-                <Play />
-              </Button>
-            </div>
-          )}
+        <div className="flex flex-col items-center justify-center">
+          <div className={showPlayer ? "visible" : "invisible"}>
+            <YouTube
+              videoId="bHLYpZstZKs"
+              opts={opts}
+              onReady={handlePlayerReady}
+            />
+          </div>
+          <div
+            className={`absolute flex justify-center items-center ${
+              showPlayer ? "invisible" : "visible"
+            }`}
+          >
+            <Button onClick={handlePlay}>
+              <Play />
+            </Button>
+          </div>
         </div>
       </div>
     </section>

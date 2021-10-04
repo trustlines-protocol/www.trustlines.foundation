@@ -4,7 +4,7 @@ import { Button } from "../../../common/components/button";
 function RetryButton(props) {
   const classNames =
     props.className ||
-    "px-8 py-4 bg-majorelle-blue hover:bg-majorelle-blue-lighter hover:text-off-white";
+    "px-8 py-4 bg-majorelle-blue hover:bg-majorelle-blue-light hover:text-off-white";
 
   return (
     <div>
