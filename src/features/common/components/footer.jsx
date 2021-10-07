@@ -20,7 +20,7 @@ export function Footer() {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="md:mb-4 mb-1 text-rich-black text-sm"
+                  className="md:mb-4 mb-1 text-rich-black text-sm hover:text-majorelle-blue"
                 >
                   {item.label}
                 </a>
@@ -38,9 +38,11 @@ export function Footer() {
             </div>
           </div>
           <div className="flex flex-row items-end justify-end">
-            <button className="ml-16">
-              <CircledArrowUp />
-            </button>
+            <a href="#">
+              <button className="ml-16">
+                <CircledArrowUp />
+              </button>
+            </a>
           </div>
         </div>
       </div>

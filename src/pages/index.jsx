@@ -15,8 +15,8 @@ function IndexPage() {
       <SEO title="Home" keywords={["trustlines foundation"]} />
       <HomeHero />
       <HomeAbout />
-      <HomeNetwork />
       <HomeRole />
+      <HomeNetwork />
       <HomeSlider />
       <HomeSubscribe />
     </Layout>

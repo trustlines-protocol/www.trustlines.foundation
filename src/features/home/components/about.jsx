@@ -4,7 +4,7 @@ import { Telegram } from "../../common/components/icons/telegram";
 import { Twitter } from "../../common/components/icons/twitter";
 import { YouTube } from "../../common/components/icons/you-tube";
 
-import socialLinks from "../../common/content/social-links";
+import { ExternalLinks } from "../../../constants";
 import elements from "../images/elements.svg";
 
 const LINKS = [
@@ -12,26 +12,26 @@ const LINKS = [
     icon: (
       <Twitter className="fill-current text-grey-lighter group-hover:text-rich-black" />
     ),
-    href: socialLinks.twitter,
+    href: ExternalLinks.TWITTER,
   },
   {
     icon: (
       <YouTube className="fill-current text-grey-lighter group-hover:text-rich-black" />
     ),
-    href: socialLinks.youTube,
+    href: ExternalLinks.YOUTUBE,
   },
   {
     icon: (
       <Telegram className="fill-current text-grey-lighter group-hover:text-rich-black" />
     ),
-    href: socialLinks.telegram,
+    href: ExternalLinks.TELEGRAM,
   },
 ];
 
 export function HomeAbout() {
   return (
-    <section className="py-16 bg-rich-black">
-      <div className="max-w-lg mx-auto">
+    <section className="py-14 bg-rich-black">
+      <div className="max-w-2xl mx-auto">
         <div className="flex md:flex-row flex-col-reverse space-y-reverse space-y-4 items-center md:items-end">
           <img src={elements} alt="visual elements" />
           <div className="flex w-full pl-4">
@@ -41,7 +41,7 @@ export function HomeAbout() {
                   className={`
                 rounded-full bg-rich-black-lighter h-10 w-10
                 flex flex-row items-center justify-center
-                hover:bg-white mt-4
+                hover:bg-majorelle-blue mt-4
               `}
                   href={link.href}
                   target="_blank"
@@ -56,23 +56,13 @@ export function HomeAbout() {
         </div>
         <div className="px-4 md:px-0">
           <h1 className="py-6 text-3xl md:text-4xl leading-tight text-white font-semibold">
-            About the Foundation
+            Trustlines Foundation
           </h1>
-          <p className="text-xl md:text-2xl leading-tight text-white mb-12">
-            The Trustlines Foundation is a charitable organisation based in
-            Liechtenstein. It pursues a goal of promoting the financial and
-            economic inclusion of all people through decentralized peer-to-peer
-            network protocols that serve common accounting.
+          <p className="text-xl md:text-1xl leading-tight text-white mb-2">
+            The Trustlines Foundation is promoting financial inclusion for all. The mission is to pursue this goal through decentralized peer-to-peer network protocols. More specifically, protocols that serve common accounting.<br />
+            <br />
+            The Foundation supports the research, development, and adoption of the Trustlines Protocol. It is acting in a supporting role in the Trustlines Network, enabling a multitude of use cases.
           </p>
-          <a
-            className={`
-              bg-rich-black-lighter text-off-white rounded-full px-8 py-4 text-sm
-              hover:bg-white hover:text-rich-black
-            `}
-            href="/"
-          >
-            Read more →
-          </a>
         </div>
       </div>
     </section>

@@ -4,7 +4,7 @@ import protocolHero from "../images/protocol-hero.svg";
 
 export function ProtocolHero() {
   return (
-    <section className="container mx-auto md:py-0 py-10 px-4 mb-32 text-rich-black-lighter">
+    <section className="container mx-auto md:py-0 py-10 px-4 mb-24 text-rich-black-lighter">
       <div className="grid grid-col-1">
         <div className="hero-header items-center">
           <div className="relative container mx-auto flex flex-row justify-end">

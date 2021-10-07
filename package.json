@@ -76,11 +76,6 @@
     "deploy": "WHOAMI= yarn run build && gh-pages --dist dist --branch gh-pages -m 'Auto commit updates [ci skip]'",
     "start": "gatsby develop"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
-  },
   "dependencies": {
     "autoprefixer": "^10.3.1",
     "chart.js": "2.8.0",

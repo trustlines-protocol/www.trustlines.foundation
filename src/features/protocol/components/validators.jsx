@@ -7,7 +7,7 @@ import validators from "../images/validators.svg";
 export function ProtocolValidators() {
   return (
     <section className="md:bg-off-white">
-      <div className="container mx-auto px-4 flex flex-col-reverse md:flex-row pb-28 gap-y-4">
+      <div className="container mx-auto px-4 flex flex-col-reverse md:flex-row pb-28 gap-y-4" id="validators">
         <div className="flex-1 flex flex-col justify-center">
           <div className="max-w-lg flex flex-col">
             <h1 className="text-5xl md:text-6xl font-semibold leading-tight text-rich-black-lightest">

@@ -8,15 +8,15 @@ import * as URLS from "../content/social-links.json";
 
 const LINKS = [
   {
-    icon: <Twitter className="fill-current text-rich-black" />,
+    icon: <Twitter className="fill-current text-rich-black hover:text-majorelle-blue" />,
     href: URLS.twitter,
   },
   {
-    icon: <YouTube className="fill-current text-rich-black" />,
+    icon: <YouTube className="fill-current text-rich-black hover:text-majorelle-blue" />,
     href: URLS.youTube,
   },
   {
-    icon: <Telegram className="fill-current text-rich-black" />,
+    icon: <Telegram className="fill-current text-rich-black hover:text-majorelle-blue" />,
     href: URLS.telegram,
   },
 ];

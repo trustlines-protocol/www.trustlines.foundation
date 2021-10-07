@@ -25,8 +25,13 @@ module.exports = {
           DEFAULT: "#12121F",
         },
         grey: {
-          lighter: "#DBDBDC",
-          DEFAULT: "#AAAABB",
+          lighter: "#EDEDED",
+          DEFAULT: "#DBDBDC",
+          darker: "#98989D",
+        },
+        "white": {
+          DEFAULT: "#FFFFFF",
+          darker: "#FAFAFA",
         },
         "off-white": {
           DEFAULT: "#F9F9F9",
@@ -42,6 +47,9 @@ module.exports = {
         "app-blue": {
           lightest: "#E6EFFC",
           DEFAULT: "#007AFF",
+        },
+        "protocol-blue": {
+          DEFAULT: "#7657ed",
         },
         "majorelle-blue": {
           lightest: "#FFF0FF",

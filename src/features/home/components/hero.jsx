@@ -6,7 +6,7 @@ import worldMap from "../images/world-map.svg";
 
 export function HomeHero() {
   return (
-    <section className="container mx-auto px-4 mb-32">
+    <section className="container mx-auto px-4 mb-12">
       <div className="hero-header items-center">
         <h1 className="text-6xl font-semibold leading-tight">
           Bringing<br />
@@ -14,9 +14,6 @@ export function HomeHero() {
           <br /> to the world
         </h1>
         <img src={worldMap} alt="world map" />
-      </div>
-      <div className="flex flex-row">
-        <LinkButton href="/" label="Read about the Trustlines Foundation →" />
       </div>
     </section>
   );

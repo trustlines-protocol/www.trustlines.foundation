@@ -5,33 +5,37 @@ import { Settings } from "../../common/components/icons/settings";
 import { SquareCheck } from "../../common/components/icons/square-check";
 import { ArrowRight } from "../../common/components/icons/arrow-right";
 import { Group } from "../../common/components/icons/group";
+import { ExternalLinks } from "../../../constants";
 
 const SLIDES = [
   {
+    label: "Community Builders",
+    title: "Support our mission by ",
+    title2: "managing a Trustlines community.",
+    titleIcon: <Group />,
+    href: "https://trustlines.network/communities",
+    linkIcon: <SquareCheck />,
+    linkText: "Join the movement today",
+    textColor: "text-neon-pink",
+  },
+  {
     label: "Validators",
-    title: "Support our mission by securing the Trustlines Blockchain.",
+    title: "Support our mission by ",
+    title2: "securing the Trustlines Blockchain.",
     titleIcon: <Lock />,
-    href: "/",
+    href: ExternalLinks.VALIDATORS,
     linkIcon: <SquareCheck />,
     linkText: "Sign up to become a validator today",
     textColor: "text-aquamarine-green",
   },
   {
-    label: "Community Managers",
-    title: "Support our mission by managing a Trustlines community.",
-    titleIcon: <Group />,
-    href: "/",
-    linkIcon: <SquareCheck />,
-    linkText: "Sign up to become a validator today",
-    textColor: "text-neon-pink",
-  },
-  {
     label: "Developers",
-    title: "Support our mission by building the Trustlines infrastructure.",
+    title: "Support our mission by ",
+    title2: "building the Trustlines infrastructure.",
     titleIcon: <Settings />,
-    href: "/",
+    href: "https://dev.trustlines.network/",
     linkIcon: <SquareCheck />,
-    linkText: "Join the ecosystem as a developer today",
+    linkText: "Develop on the ecosystem today",
     textColor: "text-cyber-yellow",
   },
 ];
@@ -55,12 +59,12 @@ export function HomeSlider() {
         <div />
         <div className="flex flex-col px-4 md:px-0 md:py-0 py-20">
           <div className="flex flex-row items-center text-white mb-2">
-            <div>{currentSlide.titleIcon}</div>
-            <span className="md:ml-2 ml-6">{currentSlide.title}</span>
+            <div className="text-majorelle-blue-lighter">{currentSlide.titleIcon}</div>
+            <span className="md:ml-2 ml-6 text-majorelle-blue-lighter">{currentSlide.title}</span><span className="md:ml-2 ml-6">{currentSlide.title2}</span>
           </div>
           <a
             className={`flex flex-row items-center font-semibold ${currentSlide.textColor}`}
-            href="/"
+            href={currentSlide.href}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -69,7 +73,7 @@ export function HomeSlider() {
           </a>
         </div>
         <div>
-          <div className="pt-32 pb-4 md:pt-0 md:pb-0">
+          <div className="pt-32 pb-4 md:pt-2 md:pb-2">
             <div className="grid grid-cols-1 md:flex md:flex-row font-semibold text-rich-black-lightest">
               {SLIDES.map((slide, i) => (
                 <div
