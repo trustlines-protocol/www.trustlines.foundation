@@ -7,7 +7,10 @@ export const ExternalLinks = {
   FOUNDATION: "https://trustlines.foundation",
   NETWORK: "https://trustlines.network",
   VALIDATORS: "https://trustlines.foundation/protocol#validators",
+  VALIDATORS_BLOG: "https://blog.trustlines.network/tag/validators/",
   BLOCKCHAIN: "https://docs.trustlines.network/resources/wp_content/how_trustlines_works/#41-trustlines-blockchain",
+  GITHUB: "https://github.com/trustlines-protocol/",
+  DEV_DOCS: "https://dev.trustlines.network/",
   PEOPLE_POWERED_MONEY:
     "https://docs.trustlines.network/docs/resources/community_communications_guide.html#people-powered-money-ppm",
   NETWORK_EFFECT:

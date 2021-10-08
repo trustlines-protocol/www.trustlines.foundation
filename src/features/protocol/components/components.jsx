@@ -1,6 +1,7 @@
 import React from "react";
 
 import { LinkButton } from "../../common/components/link-button";
+import { ExternalLinks } from "../../../constants";
 
 import protocolElements from "../images/protocol-elements.svg";
 
@@ -33,7 +34,7 @@ export function ProtocolComponents() {
               Protocol
             </h1>
             <p className="text-base text-off-white max-w-md">Open-source set of rules, processes, and definitions forged into deployable code mapping trust-based relationships onto trustless infrastructure.</p>
-            <LinkButton className="transition duration-500 ease-in-out transition-all hover:bg-majorelle-blue mt-14" isDark label="View Codebase On GitHub →" href="/" />
+            <LinkButton className="transition duration-500 ease-in-out transition-all hover:bg-majorelle-blue mt-14" isDark label="Developer documentation →" href={ExternalLinks.DEV_DOCS} />
           </div>
         </div>
         <div className="flex-1">

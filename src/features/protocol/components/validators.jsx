@@ -1,12 +1,13 @@
 import React from "react";
 
 import { LinkButton } from "../../common/components/link-button";
+import { ExternalLinks } from "../../../constants";
 
 import validators from "../images/validators.svg";
 
 export function ProtocolValidators() {
   return (
-    <section className="md:bg-off-white">
+    <section className="mx-20">
       <div className="container mx-auto px-4 flex flex-col-reverse md:flex-row pb-28 gap-y-4" id="validators">
         <div className="flex-1 flex flex-col justify-center">
           <div className="max-w-lg flex flex-col">
@@ -27,11 +28,11 @@ export function ProtocolValidators() {
               </ul>
             </div>
             <div className="mt-4">
-              <LinkButton href="/" className="transition duration-500 ease-in-out transition-all hover:bg-majorelle-blue hover:text-off-white" label="Learn more in Trustlines 101 →" />
+              <LinkButton href={ExternalLinks.VALIDATORS_BLOG} className="bg-grey transition duration-500 ease-in-out transition-all hover:bg-majorelle-blue hover:text-off-white" label="Learn more in Trustlines Blog →" />
             </div>
           </div>
         </div>
-        <div className="flex-1 flex flex-row items-center justify-center">
+        <div className="flex-2 flex flex-row items-center justify-center">
           <img src={validators} alt="validators" />
         </div>
       </div>

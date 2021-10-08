@@ -8,7 +8,7 @@ export function ProtocolHero() {
       <div className="grid grid-col-1">
         <div className="hero-header items-center">
           <div className="relative container mx-auto flex flex-row justify-end">
-            <div className="absolute md:top-20 left-0 px-6">
+            <div className="absolute md:top-20 left-0 px-6 z-20">
               <h1 className="md:text-6xl text-4xl font-semibold leading-tight mb-2 md:mb-10 text-rich-black">
                 The
                 <br />
@@ -19,7 +19,7 @@ export function ProtocolHero() {
               </h3>
             </div>
             <div>
-              <img src={protocolHero} alt="lock with arrow" />
+              <img src={protocolHero} className="opacity-60 z-10" alt="layers" />
             </div>
           </div>
         </div>

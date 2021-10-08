@@ -42,7 +42,7 @@ const CHARACTERISTICS = [
 
 export function ProtocolBlockchain() {
   return (
-    <section className="bg-off-white md:py-6 py-6">
+    <section className="md:py-6 py-6 mx-4 sm:mx-20">
       <div className="container mx-auto px-4 grid md:grid-cols-2 grid-cols-1 md:py-20 py-10">
         <div className="flex-1 flex flex-col justify-center">
           <div className="max-w-sm flex flex-col">
@@ -58,13 +58,13 @@ export function ProtocolBlockchain() {
               </p>
             </div>
             <div className="mt-4">
-              <LinkButton href={ExternalLinks.BLOCKCHAIN} className="bg-grey-lighter text-rich-black transition duration-500 ease-in-out transition-all hover:bg-majorelle-blue hover:text-off-white" label="Read more about the technology →" />
+              <LinkButton href={ExternalLinks.BLOCKCHAIN} className="bg-grey text-rich-black transition duration-500 ease-in-out transition-all hover:bg-majorelle-blue hover:text-off-white" label="Read more about the technology →" />
             </div>
           </div>
         </div>
-        <div className="bg-blockchain bg-no-repeat bg-contain bg-center mt-4">
+        <div className="bg-blockchain bg-no-repeat bg-contain bg-center -ml-8 pr-4">
           <div className="flex md:justify-end">
-            <div className="grid grid-cols-2 grid-rows-2 gap-4">
+            <div className="grid grid-cols-2 grid-rows-2 gap-4 -mr-8">
               {CHARACTERISTICS.map((characteristic, i) => (
                 <Card className={`${cardStyles.divClasses} ${characteristic.bg}`}>
                   {characteristic.icon}

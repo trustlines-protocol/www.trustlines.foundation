@@ -15,7 +15,7 @@ export function HomeNetwork() {
     <section className="md:py-6 py-6">
       <div className="max-w-3xl mx-auto items-center mb-4 flex flex-col justify-items-center">
         <HeartStroked />
-        <h1 className="md:text-4xl text-3xl font-semibold leading-tight mb-8 md:px-0 px-4 animate-pulse">
+        <h1 className="md:text-4xl text-3xl font-semibold leading-tight mb-8 md:px-0 px-4">
           The Trustlines Network
         </h1>
         <p className="mx-4 md:text-base text-base mb-8 flex-col">

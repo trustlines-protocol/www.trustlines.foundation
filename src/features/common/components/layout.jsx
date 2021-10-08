@@ -5,7 +5,7 @@ import { Footer } from "./footer";
 
 export function Layout(props) {
   return (
-    <div>
+    <div className="bg-gradient-to-b from-white to-grey-lighter">
       <NavBar />
       {props.children}
       <Footer />
