@@ -55,11 +55,13 @@
     "items": [
       {
         "label": "Privacy Policy & Legal Imprint",
-        "href": ""
+        "href": "/privacy-policy",
+        "id": "privacy_policy"
       },
       {
         "label": "Merkle Drop Terms & Conditions",
-        "href": ""
+        "href": "/terms-and-conditions",
+        "id": "terms_and_conditions"
       }
     ]
   }
