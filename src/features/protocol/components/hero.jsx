@@ -15,9 +15,7 @@ export function ProtocolHero() {
                 Trustlines Protocol
               </h1>
               <h3 className="md:text-2xl text-xl font-semibold leading-snug max-w-lg text-rich-black-lighter">
-                Open-source set of rules, processes, and definitions forged into
-                deployable code mapping trust-based relationships onto trustless
-                infrastructure.
+                An open-source technology stack to encourage open collaboration, innovation, and transparency.
               </h3>
             </div>
             <div>

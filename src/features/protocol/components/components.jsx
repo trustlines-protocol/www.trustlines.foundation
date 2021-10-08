@@ -7,38 +7,33 @@ import protocolElements from "../images/protocol-elements.svg";
 const COMPONENTS = [
   {
     name: "Smart Contract System",
-    body: (
-      <span>
-        Deployed on the Trustlines Blockchain – a{" "}
-        <a href="/" className="underline">
-          mPoS
-        </a>{" "}
-        sidechain to Ethereum that stores transactions.
-      </span>
-    ),
+    body:
+      "The smart contract system is a collection of smart contracts deployed on the Trustlines Blockchain. The contracts execute transfers within the Trustlines Protocol."
   },
   {
     name: "Relay Servers",
     body:
-      "Calculate the optimal paths and relay the transactions sent by applications to which they are connected.",
+      "The relay servers act as a bridge between applications and the Trustlines Blockchain. They offer services that aren't feasible to implement on-chain or within the applications or the devices they run on.",
   },
   {
     name: "Client Library",
     body:
-      "A high-level API enabling applications to interact with the smart contract system on the blockchain via the relay servers.",
+      "The client library is a Javascript library that makes it easy to build applications on top of the Trustlines Protocol. It provides a high-level API enabling applications to interact with the smart contract system on the blockchain via the relay servers.",
   },
 ];
 
 export function ProtocolComponents() {
   return (
     <section className="bg-rich-black">
-      <div className="container mx-auto px-4 grid md:grid-cols-2 grid-cols-1 md:py-40 py-10">
+      <div className="container mx-auto px-4 grid md:grid-cols-2 grid-cols-1 md:py-40 py-4">
         <div className="flex-1">
           <div>
             <img src={protocolElements} alt="protocol elements" />
             <h1 className="md:text-5xl text-4xl leading-tight my-8 text-off-white font-semibold">
               Protocol
             </h1>
+            <p className="text-base text-off-white max-w-md">Open-source set of rules, processes, and definitions forged into deployable code mapping trust-based relationships onto trustless infrastructure.</p>
+            <LinkButton className="transition duration-500 ease-in-out transition-all hover:bg-majorelle-blue mt-14" isDark label="View Codebase On GitHub →" href="/" />
           </div>
         </div>
         <div className="flex-1">
@@ -48,13 +43,10 @@ export function ProtocolComponents() {
                 <h4 className="md:text-2xl font-semibold mb-2">
                   {component.name}
                 </h4>
-                <p className="md:text-2xl">{component.body}</p>
+                <p className="md:text-xl">{component.body}</p>
               </div>
             ))}
           </div>
-        </div>
-        <div>
-          <LinkButton isDark label="View Codebase On GitHub →" href="/" />
         </div>
       </div>
     </section>

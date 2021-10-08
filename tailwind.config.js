@@ -49,7 +49,7 @@ module.exports = {
           DEFAULT: "#007AFF",
         },
         "protocol-blue": {
-          DEFAULT: "#7657ed",
+          DEFAULT: "#1e8cc3",
         },
         "majorelle-blue": {
           lightest: "#FFF0FF",
@@ -80,6 +80,11 @@ module.exports = {
           DEFAULT: "#FFD41E",
           darker: "#DCAE0B",
           lighter: "rgba(255, 244, 209, 0.75)",
+        },
+        "card-colors": {
+          majorelle: "rgba(118, 87, 237, 0.975)",
+          green: "rgba(9, 224, 163, 0.975)",
+          blue: "rgba(0, 122, 255, 0.65)",
         },
       },
       boxShadow: {

@@ -8,47 +8,49 @@ import { Branch } from "../../common/components/icons/branch";
 
 import block from "../images/block.svg";
 import { Card } from "../../common/components/card";
+import { ExternalLinks } from "../../../constants";
+
+const cardStyles = {divClasses: 'rounded-2xl flex flex-col justify-evenly items-center md:h-56 md:w-56 p-4'}
 
 const CHARACTERISTICS = [
   {
     icon: <Loading />,
-    text: "Based on Parity's Aura consensus algorithm",
+    text: "Based on the OpenEthereum Aura consensus algorithm",
+    bg: "bg-gradient-to-br from-card-colors-majorelle to-card-colors-green",
   },
   {
     icon: <Smiley />,
-    text: (
-      <span>
-        All
-        <br /> validators
-        <br /> are
-        <br /> anonymous
+    text: (<span>All staked
+      <br />validators are
+        <br /> pseudo-
+        <br />anonymous
       </span>
     ),
+    bg: "backdrop-filter bg-gradient-to-br from-card-colors-green to-card-colors-majorelle",
   },
   {
     icon: <Shield />,
     text: "Staking & slashing to combat equivocation",
+    bg: "bg-gradient-to-br from-card-colors-green to-card-colors-majorelle",
   },
   {
     icon: <Branch />,
     text: "Hard-forking as an additional defense mechanism",
+    bg: "bg-gradient-to-br from-card-colors-majorelle to-card-colors-blue",
   },
 ];
 
 export function ProtocolBlockchain() {
   return (
-    <section className="bg-off-white md:py-28 py-10">
-      <div className="container mx-auto px-4 grid md:grid-cols-2 grid-cols-1 md:py-40 py-10">
+    <section className="bg-off-white md:py-6 py-6">
+      <div className="container mx-auto px-4 grid md:grid-cols-2 grid-cols-1 md:py-20 py-10">
         <div className="flex-1 flex flex-col justify-center">
           <div className="max-w-sm flex flex-col">
-            <h1 className="text-4xl md:text-5xl font-semibold leading-tight text-rich-black-lightest">
+            <h1 className="text-4xl md:text-6xl font-semibold leading-tight text-rich-black-lightest">
               Blockchain
             </h1>
             <div className="py-8 text-rich-black text-xl md:text-2xl md:font-semibold md:pr-0 pr-10">
-              <p>
-                {" "}
-                The Trustlines Blockchain is a minimal viable{" "}
-                <a href="/">Proof-of-Stake (mPoS)</a> Ethereum sidechain.
+              <p>The Trustlines Blockchain is a Proof-of-Stake sidechain to Ethereum.
               </p>
               <p className="pt-4">
                 It enables us to work with the latest technology in privacy and
@@ -56,7 +58,7 @@ export function ProtocolBlockchain() {
               </p>
             </div>
             <div className="mt-4">
-              <LinkButton href="/" label="Read more about the technology →" />
+              <LinkButton href={ExternalLinks.BLOCKCHAIN} className="bg-grey-lighter text-rich-black transition duration-500 ease-in-out transition-all hover:bg-majorelle-blue hover:text-off-white" label="Read more about the technology →" />
             </div>
           </div>
         </div>
@@ -64,9 +66,9 @@ export function ProtocolBlockchain() {
           <div className="flex md:justify-end">
             <div className="grid grid-cols-2 grid-rows-2 gap-4">
               {CHARACTERISTICS.map((characteristic, i) => (
-                <Card className="bg-grey-lighter rounded-2xl flex flex-col justify-evenly items-center md:h-56 md:w-56 p-4">
+                <Card className={`${cardStyles.divClasses} ${characteristic.bg}`}>
                   {characteristic.icon}
-                  <div className="text-rich-black md:text-2xl text-center">
+                  <div className="text-white md:text-xl text-center">
                     {characteristic.text}
                   </div>
                 </Card>

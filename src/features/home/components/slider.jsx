@@ -17,6 +17,7 @@ const SLIDES = [
     linkIcon: <SquareCheck />,
     linkText: "Join the movement today",
     textColor: "text-neon-pink",
+    textHoverColor: "text-coral-pastel",
   },
   {
     label: "Validators",
@@ -27,6 +28,7 @@ const SLIDES = [
     linkIcon: <SquareCheck />,
     linkText: "Sign up to become a validator today",
     textColor: "text-aquamarine-green",
+    textHoverColor: "text-aquamarine-green-lighter",
   },
   {
     label: "Developers",
@@ -37,6 +39,7 @@ const SLIDES = [
     linkIcon: <SquareCheck />,
     linkText: "Develop on the ecosystem today",
     textColor: "text-cyber-yellow",
+    textHoverColor: "text-cyber-yellow-lighter",
   },
 ];
 
@@ -63,7 +66,7 @@ export function HomeSlider() {
             <span className="md:ml-2 ml-6 text-majorelle-blue-lighter">{currentSlide.title}</span><span className="md:ml-2 ml-6">{currentSlide.title2}</span>
           </div>
           <a
-            className={`flex flex-row items-center font-semibold ${currentSlide.textColor}`}
+            className={`flex flex-row items-center font-semibold transition duration-500 ease-in-out transition-all hover:${currentSlide.textHoverColor} ${currentSlide.textColor}`}
             href={currentSlide.href}
             target="_blank"
             rel="noopener noreferrer"
@@ -78,7 +81,7 @@ export function HomeSlider() {
               {SLIDES.map((slide, i) => (
                 <div
                   key={`home-slide-${i}`}
-                  className={i === currentSlideIndex ? slide.textColor : ""}
+                  className={i === currentSlideIndex ? slide.textColor : "transition duration-500 ease-in-out transition-all hover:text-grey"}
                 >
                   <span className="text-rich-black-lightest">
                     {i !== 0 ? " / " : ""}

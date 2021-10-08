@@ -41,7 +41,7 @@ export function HomeAbout() {
                   className={`
                 rounded-full bg-rich-black-lighter h-10 w-10
                 flex flex-row items-center justify-center
-                hover:bg-majorelle-blue mt-4
+                transition duration-500 ease-in-out transition-all hover:bg-majorelle-blue mt-4
               `}
                   href={link.href}
                   target="_blank"

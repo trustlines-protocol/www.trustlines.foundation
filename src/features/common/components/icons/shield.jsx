@@ -11,7 +11,7 @@ export function Shield() {
     >
       <path
         d="M12 22.5C12 22.5 20 18.5 20 12.5V5.5L12 2.5L4 5.5V12.5C4 18.5 12 22.5 12 22.5Z"
-        stroke="#12121F"
+        stroke="#FAFAFA"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"

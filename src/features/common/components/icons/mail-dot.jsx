@@ -22,7 +22,7 @@ export function MailDot(props) {
         stroke-linecap="round"
         stroke-linejoin="round"
       />
-      <circle cx="4" cy="4" r="4" fill="#7657ED" />
+      <circle cx="4" cy="4" r="4" fill="#7657ED" className="animate-pulse"/>
     </svg>
   );
 }

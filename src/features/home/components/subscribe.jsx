@@ -58,7 +58,7 @@ export function HomeSubscribe() {
             />
             <div>
               <button
-                className="h-14 w-14 bg-dark-green-darker rounded-full flex items-center justify-center"
+                className="h-14 w-14 bg-dark-green-darker rounded-full flex items-center justify-center animate-pulse"
                 disabled={!isEmailValid(email)}
                 type="submit"
                 value="Submit"

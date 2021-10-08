@@ -14,60 +14,20 @@ export function ProtocolValidators() {
               Validators
             </h1>
             <p className="text-xl md:text-2xl text-rich-black md:font-semibold leading-tight my-8">
-              By design, the{" "}
-              <a
-                href="/"
-                className="underline"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                TLBC
-              </a>{" "}
-              needs validators. Unlike ordinary Proof-of-Authority (PoA)
-              blockchains, in the planned{" "}
-              <a
-                href="/"
-                className="underline"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                mPoS
-              </a>{" "}
-              system, validators are anonymous.
+              The validators ensure the security of the Trustlines Blockchain by validating transactions and adding blocks to the blockchain.
             </p>
             <div className="hidden md:block">
-              <ul className="list-outside pl-6 list-disc text-2xl text-rich-black leading-tight">
+              <ul className="list-outside pl-6 list-disc text-lg text-rich-black leading-tight">
                 <li className="mb-8">
-                  Validators ensure the security of the{" "}
-                  <a
-                    href="/"
-                    className="underline"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    TLBC
-                  </a>{" "}
-                  by validating transactions and adding blocks in a round-robin
-                  fashion.
+                  Candidates can gain a slot by participating in a validator auction. The staked amount will be locked for the duration of the validator period.
                 </li>
                 <li className="mb-8">
-                  Candidates can gain a slot by participating in the auction and
-                  consequently staking{" "}
-                  <a
-                    href="/"
-                    className="underline"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    TLN
-                  </a>{" "}
-                  on the Ethereum main chain for the time of the validation
-                  period.
+                  Validators earn rewards from transaction fees and block rewards in the process.
                 </li>
               </ul>
             </div>
             <div className="mt-4">
-              <LinkButton href="/" label="Learn more in Trustlines 101 →" />
+              <LinkButton href="/" className="transition duration-500 ease-in-out transition-all hover:bg-majorelle-blue hover:text-off-white" label="Learn more in Trustlines 101 →" />
             </div>
           </div>
         </div>
