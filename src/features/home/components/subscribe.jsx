@@ -20,7 +20,7 @@ export function HomeSubscribe() {
   }, [showPrivacyModal]);
 
   return (
-    <section className="md:container md:mx-auto md:pb-0 pb-8 flex flex-row justify-center pt-2 text-rich-black-lightest">
+    <section className="md:container md:mx-auto md:pb-0 pb-16 flex flex-row justify-center pt-2 text-rich-black-lightest">
       <img src={mail} alt="mail" />
       {didSubscribe ? (
         <div className="absolute pt-40 max-w-sm mx-auto flex flex-col">
