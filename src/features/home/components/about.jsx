@@ -59,9 +59,15 @@ export function HomeAbout() {
             Trustlines Foundation
           </h1>
           <p className="text-xl md:text-1xl leading-tight text-white mb-2">
-            The Trustlines Foundation is promoting financial inclusion for all. The mission is to pursue this goal through decentralized peer-to-peer network protocols. More specifically, protocols that serve common accounting.<br />
+            The Trustlines Foundation is promoting financial inclusion for all.
+            The mission is to pursue this goal through decentralized
+            peer-to-peer network protocols. More specifically, protocols that
+            serve common accounting.
             <br />
-            The Foundation supports the research, development, and adoption of the Trustlines Protocol. It is acting in a supporting role in the Trustlines Network, enabling a multitude of use cases.
+            <br />
+            The Foundation supports the research, development, and adoption of
+            the Trustlines Protocol. It is acting in a supporting role in the
+            Trustlines Network, enabling a multitude of use cases.
           </p>
         </div>
       </div>

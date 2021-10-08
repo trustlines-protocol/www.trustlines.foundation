@@ -11,7 +11,7 @@ const SLIDES = [
   {
     label: "Community Builders",
     title: "Support our mission by ",
-    title2: "managing a Trustlines community.",
+    subtitle: "managing a Trustlines community.",
     titleIcon: <Group />,
     href: "https://trustlines.network/communities",
     linkIcon: <SquareCheck />,
@@ -22,7 +22,7 @@ const SLIDES = [
   {
     label: "Validators",
     title: "Support our mission by ",
-    title2: "securing the Trustlines Blockchain.",
+    subtitle: "securing the Trustlines Blockchain.",
     titleIcon: <Lock />,
     href: ExternalLinks.VALIDATORS,
     linkIcon: <SquareCheck />,
@@ -33,7 +33,7 @@ const SLIDES = [
   {
     label: "Developers",
     title: "Support our mission by ",
-    title2: "building the Trustlines infrastructure.",
+    subtitle: "building the Trustlines infrastructure.",
     titleIcon: <Settings />,
     href: "https://dev.trustlines.network/",
     linkIcon: <SquareCheck />,
@@ -61,9 +61,14 @@ export function HomeSlider() {
       <div className="container mx-auto md:h-96 flex flex-col justify-between md:py-11 py-22 px-4 md:text-2xl text-lg">
         <div />
         <div className="flex flex-col px-4 md:px-0 md:py-0 py-20">
-          <div className="flex flex-row items-center text-white mb-2">
-            <div className="text-majorelle-blue-lighter">{currentSlide.titleIcon}</div>
-            <span className="md:ml-2 ml-6 text-majorelle-blue-lighter">{currentSlide.title}</span><span className="md:ml-2 ml-6">{currentSlide.title2}</span>
+          <div className="flex md:flex-row flex-col text-white mb-2">
+            <div className="flex flex-row text-majorelle-blue-lighter items-center">
+              <div>{currentSlide.titleIcon}</div>
+              <div className="md:ml-2 ml-6 text-majorelle-blue-lighter">
+                {currentSlide.title}
+              </div>
+            </div>
+            <div className="md:ml-2 ml-6">{currentSlide.subtitle}</div>
           </div>
           <a
             className={`flex flex-row items-center font-semibold transition duration-500 ease-in-out transition-all hover:${currentSlide.textHoverColor} ${currentSlide.textColor}`}
@@ -76,7 +81,7 @@ export function HomeSlider() {
           </a>
         </div>
         <div>
-          <div className="pt-32 pb-4 md:pt-2 md:pb-2">
+          <div className="md:pt-32 pb-4 md:pb-2">
             <div className="grid grid-cols-1 md:flex md:flex-row font-semibold text-rich-black-lightest">
               {SLIDES.map((slide, i) => (
                 <div
