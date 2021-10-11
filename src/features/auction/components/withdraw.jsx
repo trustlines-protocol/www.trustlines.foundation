@@ -43,13 +43,13 @@ export function AuctionWithdraw() {
             <BidBox />
           </div>
         </div>
-        <div className="md:pt-10 flex flex-col md:gap-20">
+        <div className="grid gap-4 grid-cols-2 justify-start px-16 mx-12">
           {CONTENTS.map((content, i) => (
-            <div>
-              {i !== 0 ? (
-                <hr className="border-rich-black-lighter pb-2 mt-14" />
+            <div className="mx-8">
+              {i >= 0 ? (
+                <hr className="border-rich-black-lighter pb-2 m-4" />
               ) : null}
-              <p className="text-grey text-sm">{content.text}</p>
+              <li className="text-grey text-sm pr-16 pl-4">{content.text}</li>
             </div>
           ))}
         </div>

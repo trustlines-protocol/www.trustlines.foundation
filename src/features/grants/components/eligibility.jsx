@@ -13,7 +13,7 @@ export function GrantsEligibility() {
           </h1>
           <div className="flex flex-col md:flex-row md:space-y-0 space-y-6">
             <div className="flex md:flex-row flex-col md:items-center md:justify-center md:p-4">
-              <div className="py-4 md:px-8">
+              <div className="py-4 md:px-8 animate-pulse">
                 <Heart />
               </div>
               <div>
@@ -27,7 +27,7 @@ export function GrantsEligibility() {
               </div>
             </div>
             <div className="flex md:flex-row flex-col md:items-center md:justify-center md:p-4">
-              <div className="py-4 md:px-8">
+              <div className="py-4 md:px-8 animate-pulse">
                 <Award />
               </div>
               <div>

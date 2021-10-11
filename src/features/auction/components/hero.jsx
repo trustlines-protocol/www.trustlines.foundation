@@ -11,30 +11,27 @@ export function AuctionHero() {
         <div className="hero-header items-center md:order-1">
           <div className="flex-1 flex flex-col">
             <h1 className="text-4xl md:text-6xl font-semibold leading-tight mb-4">
-              The Trustlines
+              Trustlines
               <br />
               Validator Auction
             </h1>
-            <p className="md:text-2xl text-xl leading-tight text-rich-black-lighter">
-              The auction is used to determine the validator set for the
-              Trustlines Blockchain. The set is valid for nine months. To
-              participate in the auction,{" "}
+            <p className="md:text-xl text-xl leading-tight text-rich-black-lighter">
+              The auction is used to determine the validator set for the Trustlines Blockchain. The set is valid for nine months. Participation in the auction requires{" "}
               <a
                 href="https://forum.trustlines.network/t/the-third-trustlines-validator-auction/131"
                 className="underline"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                a whitelisted Ethereum address
+                an Ethereum address to be whitelisted
               </a>{" "}
-              has to bid with Trustlines Network Tokens (TLN) after the auction
-              has started and before it has ended.
+              for bidding. Trustlines Network Tokens (TLN) can be used to bid after the auction has started and before it has ended.
             </p>
           </div>
         </div>
         <div className="flex flex-row mt-6 md:col-span-2 md:order-3">
           <Card className="md:bg-majorelle-blue-pastel md:text-majorelle-blue text-rich-black-lightest w-full py-2">
-            Please be sure to not send TLN directly to the auction contract!
+            Do <b>&nbsp;not&nbsp;</b> send TLN directly to the auction contract!
           </Card>
         </div>
         <div className="flex flex-col items-end justify-end md:order-2">

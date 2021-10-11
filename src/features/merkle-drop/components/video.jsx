@@ -45,7 +45,7 @@ export function MerkleDropVideo() {
             />
           </div>
           <div
-            className={`absolute flex justify-center items-center ${
+            className={`absolute animate-pulse flex justify-center items-center ${
               showPlayer ? "invisible" : "visible"
             }`}
           >

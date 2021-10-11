@@ -71,13 +71,13 @@ export function GrantsFAQ() {
                 </ul>
               </div>
               <div className="my-4">
-                <Card className="bg-cyber-yellow-lighter">
+                <Card className="bg-aquamarine-green-lighter">
                   <div className="flex flex-row p-8">
-                    <div className="mr-4">
+                    <div className="mr-4 stroke-current text-majorelle-blue-lighter">
                       <Warning />
                     </div>
                     <div className="max-w-sm">
-                      <h3 className="text-cyber-yellow font-semibold">
+                      <h3 className="text-majorelle-blue-light font-semibold">
                         Please note that these guidelines are always a work in
                         progress.
                       </h3>

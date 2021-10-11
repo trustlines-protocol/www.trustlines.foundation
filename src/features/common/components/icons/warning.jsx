@@ -7,7 +7,7 @@ export function Warning(props) {
       height="45"
       viewBox="0 0 45 45"
       fill="none"
-      stroke="#FFD41E"
+
       xmlns="http://www.w3.org/2000/svg"
     >
       <path

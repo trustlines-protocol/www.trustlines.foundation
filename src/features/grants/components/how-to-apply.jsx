@@ -29,7 +29,7 @@ export function GrantsHowToApply() {
               </div>
               <div className="pt-4">
                 <LinkButton
-                  className="bg-aquamarine-green-lighter font-semibold text-sm md:w-max w-full justify-center"
+                  className="bg-aquamarine-green-lighter hover:bg-majorelle-blue hover:text-off-white font-semibold text-sm md:w-max w-full justify-center transition duration-500 ease-in-out transition-all"
                   href="https://docs.google.com/forms/d/e/1FAIpQLSdSGkkafn3jDvFmv8S_FwWVoSkGXc6UGMDjTKw6Maoibcz5Jg/viewform"
                 >
                   Apply via Google Forms →

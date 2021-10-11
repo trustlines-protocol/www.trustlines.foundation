@@ -16,7 +16,7 @@ export function Chart(props) {
         <ChartKey />
       </div>
       <div>
-        <div className="chart-container">
+        <div className="chart-container bg-gradient-to-tr from-rich-black to-rich-black-lighter rounded-2xl p-4 text-off-white">
           <canvas id="bids"></canvas>
           <div className="chartjs-tooltip" id="tooltip"></div>
         </div>

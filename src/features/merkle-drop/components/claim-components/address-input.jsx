@@ -83,7 +83,7 @@ function AddressInput(props) {
             </div>
             <div className="flex flex-row items-center">
               <Button
-                className={`md:px-8 px-4 py-4 bg-majorelle-blue flex items-center justify-center hover:bg-dark-green`}
+                className={`md:px-8 px-4 py-4 bg-majorelle-blue flex items-center justify-center hover:bg-dark-green transition duration-500 ease-in-out transition-all`}
                 isDark
                 type="submit"
                 value="Submit"
@@ -99,8 +99,7 @@ function AddressInput(props) {
             <div className="p-2 md:p-0">
               {!address ? (
                 <p className="text-dark-green text-sm">
-                  Enter a six figure letter-number combination for your ETH
-                  address to check if it is eligible to participate.
+                  Enter your Ethereum address to check if it is eligible to claim.
                 </p>
               ) : invalid ? (
                 <p className="text-neon-pink text-sm">

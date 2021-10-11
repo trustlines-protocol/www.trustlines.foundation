@@ -10,7 +10,7 @@ const CONTENTS = [
         The Trustlines Merkle drop is a token distribution method chosen by the
         Trustlines Foundation for the Trustlines Network Token. You can read
         more about it in this{" "}
-        <a href="https://blog.trustlines.network/announcing-the-trustlines-network-token-tln-merkle-drop">
+        <a href="https://blog.trustlines.network/announcing-the-trustlines-network-token-tln-merkle-drop" target="_blank">
           blog post
         </a>
         .
@@ -24,7 +24,7 @@ const CONTENTS = [
         <p>
           The Trustlines Foundation designed the distribution method based on
           the idea of{" "}
-          <a href="https://medium.com/@DJohnstonEC/the-smartdrop-model-859888916d94">
+          <a href="https://medium.com/@DJohnstonEC/the-smartdrop-model-859888916d94" target="_blank">
             smart drops
           </a>
           .
@@ -33,15 +33,15 @@ const CONTENTS = [
         <p>The Merkle drop is used as a tool to</p>
 
         <ul>
-          <li>
+          <li className="ml-6">
             Reward early contributors, e.g. validators, testers, and developers
           </li>
-          <li>
+          <li className="ml-6">
             Target potential stakeholders of the Trustlines Network, e.g.
             individuals/ projects aligned with the mission of Trustlines, who
             may turn into users of the Trustlines Protocol
           </li>
-          <li>
+          <li className="ml-6">
             Make TLC available to a wide audience consisting of addresses and
             individuals from within the crypto and alternative currency
             ecosystems by providing them with TLN that they can convert into TLC
@@ -57,11 +57,11 @@ const CONTENTS = [
       <div>
         <p>Yes. There are two ways in which this could happen.</p>
         <ul>
-          <li>
+          <li className="ml-6">
             You happen to control the private key of multiple eligible Ethereum
             addresses.
           </li>
-          <li>
+          <li className="ml-6">
             One or more of your eligible Ethereum addresses fit into more than
             one group of Merkle drop receivers.
           </li>
@@ -88,7 +88,7 @@ const CONTENTS = [
           TLN.
         </p>
         <ul>
-          <li>
+          <li className="ml-6">
             Early contributors to the{" "}
             <a href="https://trustlines.network/" target="_blank">
               Trustlines Network
@@ -104,7 +104,7 @@ const CONTENTS = [
             validators, but did not secure a slot in the{" "}
             <a href="auction/">auction</a>.
           </li>
-          <li>
+          <li className="ml-6">
             People who were interested in participating in the drop via{" "}
             <a
               href="https://twitter.com/TrustlinesFound/status/1201901024576987137"
@@ -113,20 +113,20 @@ const CONTENTS = [
               our community channels
             </a>
           </li>
-          <li>
+          <li className="ml-6">
             <a href="https://ethberlinzwei.com/" target="_blank">
               ETHBerlin2
             </a>{" "}
             hackers
           </li>
-          <li>
+          <li className="ml-6">
             Addresses included in the Genesis block of{" "}
             <a href="https://ethereum.org/" target="_blank">
               Ethereum
             </a>{" "}
             (with at least one transfer executed)
           </li>
-          <li>
+          <li className="ml-6">
             <a href="https://makerdao.com/" target="_blank">
               Maker (MKR)
             </a>
@@ -140,7 +140,7 @@ const CONTENTS = [
             </a>{" "}
             token holders
           </li>
-          <li>
+          <li className="ml-6">
             <a
               href="https://blog.gnosis.pm/the-dxdao-has-awoken-78cb2e39661c"
               target="_blank"
@@ -153,13 +153,13 @@ const CONTENTS = [
             </a>{" "}
             human participants
           </li>
-          <li>
+          <li className="ml-6">
             <a href="https://www.poap.xyz/" target="_blank">
               POAP
             </a>
             , Proof-of-Attendance NFT holders
           </li>
-          <li>
+          <li className="ml-6">
             Collection of ETH addresses, that underwent some form of identity
             verification in the past
           </li>
@@ -173,7 +173,7 @@ const CONTENTS = [
       <div>
         TLN is an ERC20 token that can be transferred or be converted to TLC by
         sending them to the Trustlines Blockchain{" "}
-        <a href="https://etherscan.io/address/0x18BDC736b23Ff7294BED9fa988a1443357C7B0ed">
+        <a href="https://etherscan.io/address/0x18BDC736b23Ff7294BED9fa988a1443357C7B0ed" target="_blank">
           bridge contract
         </a>{" "}
         on Ethereum.
@@ -193,7 +193,7 @@ const CONTENTS = [
     answer: (
       <div>
         The{" "}
-        <a href="https://explore.tlbc.trustlines.foundation/">
+        <a href="https://explore.tlbc.trustlines.foundation/" target="_blank">
           Trustlines Blockchain
         </a>{" "}
         went live November 21st and since then people have been building use
@@ -218,7 +218,7 @@ const CONTENTS = [
       <div>
         No. You must submit a Merkle proof from an eligible Ethereum address by
         yourself. Check{" "}
-        <a href="https://www.youtube.com/watch?v=bHLYpZstZKs">this tutorial</a>{" "}
+        <a href="https://www.youtube.com/watch?v=bHLYpZstZKs" target="_blank">this tutorial</a>{" "}
         for a quick introduction on how to do so.
       </div>
     ),
@@ -244,7 +244,7 @@ const CONTENTS = [
             Merkle root
           </a>
           . People can provide a proof to this contract and withdraw tokens they
-          are entitled to. <a href="index.html">The Trustlines Foundation</a>{" "}
+          are entitled to. <a href="/">The Trustlines Foundation</a>{" "}
           has a web service that allows people to either claim their tokens via
           a web3 integration (e.g. Metamask) or calculate the needed proof. Once
           the proof has been created and eligibility established, it can be
@@ -267,7 +267,7 @@ const CONTENTS = [
       <div>
         No, you can produce your own proof for the Merkle drop. The logic behind
         the creation of the Merkle tree is{" "}
-        <a href="https://github.com/trustlines-protocol/merkle-drop/blob/master/contracts/contracts/MerkleDrop.sol">
+        <a href="https://github.com/trustlines-protocol/merkle-drop/blob/master/contracts/contracts/MerkleDrop.sol" target="_blank">
           public
         </a>{" "}
         so that anyone can construct the proof for themselves.
@@ -297,15 +297,15 @@ export function MerkleDropFaqs() {
                   </div>
                   <div>
                     <h3 className="md:text-2xl text-xl font-semibold">
-                      {content.question} <button className="text-2xl">↑</button>
+                      {content.question}
                     </h3>
                   </div>
                 </div>
                 <div className="flex flex-row items-center">
-                  <div className="md:px-4">
+                  <div className="md:px-4 animate-pulse">
                     <ArrowDownRight />
                   </div>
-                  <div className="md:pl-8 pl-4 text-grey md:text-lg">
+                  <div className="md:pl-2 pl-4 pr-8 text-rich-black-lightest md:text-lg pt-2 sm:pt-0">
                     {content.answer}
                   </div>
                 </div>
