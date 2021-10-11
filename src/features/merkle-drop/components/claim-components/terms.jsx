@@ -7,7 +7,7 @@ function TermsAndConditionsParagraph(props) {
    * be kept in sync with each other!
    */
   return (
-    <div>
+    <div className="terms-and-conditions">
       <h1>Background</h1>
 
       <h2>The Merkle Drop and the role of the Foundation</h2>

@@ -18,8 +18,8 @@ export function Footer() {
                 <a
                   key={`footer-link-${i}`}
                   href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  target={item.id || "_blank"}
+                  rel={!item.id && "noopener noreferrer"}
                   className="md:mb-4 mb-1 text-rich-black text-sm hover:text-majorelle-blue"
                 >
                   {item.label}

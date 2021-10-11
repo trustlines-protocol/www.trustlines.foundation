@@ -1,7 +1,7 @@
 import React from "react";
 export function PrivacyPolicy() {
   return (
-    <div className="merkle-drop-faq">
+    <div className="terms-and-conditions">
       <h1>Privacy Policy</h1>
       <p>
         This Privacy Policy describes how your Personal Information is
