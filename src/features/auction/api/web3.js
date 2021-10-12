@@ -1,6 +1,6 @@
 import getWeb3, { sendContractTransaction } from "../../common/api/web3";
-import AuctionABI from "../../../js/abi/auction.json";
-import TokenABI from "../../../js/abi/token.json";
+import AuctionABI from "../../common/abi/auction.json";
+import TokenABI from "../../common/abi/token.json";
 
 export const AuctionState = {
   DEPLOYED: "DeployedState",

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import * as auctionWeb3 from "../../../js/auction/bidbox/web3";
-import { AuctionState } from "../../../js/auction/bidbox/web3";
-import { fetchBalance } from "../../../js/common/web3";
+import * as auctionWeb3 from "../api/web3";
+import { AuctionState } from "../api/web3";
+import { fetchBalance } from "../../common/api/web3";
 
 export const BidderState = {
   LOADING: "loading",

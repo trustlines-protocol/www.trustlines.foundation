@@ -73,7 +73,7 @@
     "format": "eslint ./src/**/*.js ./webpack.*.js --fix",
     "prettier:big-tabs": "prettier --write --print-width 120 --no-semi --single-quote --tab-width 4  './src/**/*.js'",
     "lint": "eslint ./src/**/*.js",
-    "deploy": "WHOAMI= yarn run build && gh-pages --dist dist --branch gh-pages -m 'Auto commit updates [ci skip]'",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "start": "gatsby develop"
   },
   "dependencies": {
