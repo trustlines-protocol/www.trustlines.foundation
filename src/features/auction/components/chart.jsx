@@ -11,7 +11,7 @@ export function Chart(props) {
   }, [props.chartState]);
 
   return (
-    <div className="container mx-auto flex flex-col my-32">
+    <div className="md:container mx-auto px-2 md:px-0 flex flex-col md:my-32 my-10">
       <div className="flex flex-row justify-end">
         <ChartKey />
       </div>

@@ -9,7 +9,7 @@ const COMPONENTS = [
   {
     name: "Smart Contract System",
     body:
-      "The smart contract system is a collection of smart contracts deployed on the Trustlines Blockchain. The contracts execute transfers within the Trustlines Protocol."
+      "The smart contract system is a collection of smart contracts deployed on the Trustlines Blockchain. The contracts execute transfers within the Trustlines Protocol.",
   },
   {
     name: "Relay Servers",
@@ -33,8 +33,19 @@ export function ProtocolComponents() {
             <h1 className="md:text-5xl text-4xl leading-tight my-8 text-off-white font-semibold">
               Protocol
             </h1>
-            <p className="text-base text-off-white max-w-md">Open-source set of rules, processes, and definitions forged into deployable code mapping trust-based relationships onto trustless infrastructure.</p>
-            <LinkButton className="transition duration-500 ease-in-out transition-all hover:bg-majorelle-blue mt-14" isDark label="Developer documentation →" href={ExternalLinks.DEV_DOCS} />
+            <p className="text-base text-off-white max-w-md">
+              Open-source set of rules, processes, and definitions forged into
+              deployable code mapping trust-based relationships onto trustless
+              infrastructure.
+            </p>
+            <div className="flex flex-row items-center md:justify-start justify-center md:py-14 py-8">
+              <LinkButton
+                className="transition duration-500 ease-in-out hover:bg-majorelle-blue"
+                isDark
+                label="Developer documentation →"
+                href={ExternalLinks.DEV_DOCS}
+              />
+            </div>
           </div>
         </div>
         <div className="flex-1">

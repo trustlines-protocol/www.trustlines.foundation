@@ -16,12 +16,16 @@
     @apply flex flex-row justify-between
   }
 
+  .terms-and-conditions {
+    @apply md:text-base text-sm;
+  }
+
   .terms-and-conditions h1 {
-    @apply text-rich-black-lighter text-3xl font-semibold py-4
+    @apply text-rich-black-lighter md:text-3xl text-2xl font-semibold py-4
   }
 
   .terms-and-conditions h2 {
-    @apply text-2xl py-2
+    @apply md:text-2xl text-xl py-2
   }
 
   .terms-and-conditions ol {

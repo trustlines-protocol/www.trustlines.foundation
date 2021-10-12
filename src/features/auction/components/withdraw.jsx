@@ -33,7 +33,7 @@ export function AuctionWithdraw() {
   return (
     <section className="bg-rich-black">
       <div className="container mx-auto px-4 py-10 md:py-40">
-        <div className="pb-24">
+        <div className="md:pb-24 pb-6">
           <div>
             <h1 className="md:text-5xl text-4xl leading-tight my-8 font-semibold text-aquamarine-green">
               Withdraw excess from your bid
@@ -43,13 +43,15 @@ export function AuctionWithdraw() {
             <BidBox />
           </div>
         </div>
-        <div className="grid gap-4 grid-cols-2 justify-start px-16 mx-12">
+        <div className="grid gap-4 md:grid-cols-2 grid-cols-1 justify-start md:px-16 md:mx-12">
           {CONTENTS.map((content, i) => (
-            <div className="mx-8">
+            <div className="md:mx-8">
               {i >= 0 ? (
                 <hr className="border-rich-black-lighter pb-2 m-4" />
               ) : null}
-              <li className="text-grey text-sm pr-16 pl-4">{content.text}</li>
+              <li className="text-grey text-sm md:pr-16 pl-4">
+                {content.text}
+              </li>
             </div>
           ))}
         </div>

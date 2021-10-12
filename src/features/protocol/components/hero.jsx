@@ -15,11 +15,16 @@ export function ProtocolHero() {
                 Trustlines Protocol
               </h1>
               <h3 className="md:text-2xl text-xl font-semibold leading-snug max-w-lg text-rich-black-lighter">
-                An open-source technology stack to encourage open collaboration, innovation, and transparency.
+                An open-source technology stack to encourage open collaboration,
+                innovation, and transparency.
               </h3>
             </div>
             <div>
-              <img src={protocolHero} className="opacity-60 z-10" alt="layers" />
+              <img
+                src={protocolHero}
+                className="opacity-60 z-10"
+                alt="layers"
+              />
             </div>
           </div>
         </div>

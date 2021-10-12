@@ -99,7 +99,8 @@ function AddressInput(props) {
             <div className="p-2 md:p-0">
               {!address ? (
                 <p className="text-dark-green text-sm">
-                  Enter your Ethereum address to check if it is eligible to claim.
+                  Enter your Ethereum address to check if it is eligible to
+                  claim.
                 </p>
               ) : invalid ? (
                 <p className="text-neon-pink text-sm">

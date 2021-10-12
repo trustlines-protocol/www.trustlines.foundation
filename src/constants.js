@@ -3,7 +3,8 @@ export const ExternalLinks = {
   VALIDATORS: "https://trustlines.foundation/protocol#validators",
   VALIDATORS_BLOG: "https://blog.trustlines.network/tag/validators/",
   MERKLE_DROP_BLOG: "https://blog.trustlines.network/merkle-drop-launch/",
-  BLOCKCHAIN: "https://docs.trustlines.network/resources/wp_content/how_trustlines_works/#41-trustlines-blockchain",
+  BLOCKCHAIN:
+    "https://docs.trustlines.network/resources/wp_content/how_trustlines_works/#41-trustlines-blockchain",
   GITHUB: "https://github.com/trustlines-protocol/",
   DEV_DOCS: "https://dev.trustlines.network/",
   TWITTER: "https://twitter.com/TrustlinesFound",

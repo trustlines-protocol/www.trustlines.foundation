@@ -335,7 +335,7 @@ export function PrivacyPolicy() {
       <p>
         <iframe
           title="Matomo"
-          className="border-none h-44 w-96"
+          className="border-none md:h-44 md:w-96 w-64 h-64"
           src="https://stats.trustlines.network/index.php?module=CoreAdminHome&action=optOut&language=en&backgroundColor=ffffff&fontColor=1f2532&fontSize=16px&fontFamily='Work%20Sans'"
         ></iframe>
       </p>
