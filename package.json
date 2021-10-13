@@ -34,7 +34,7 @@
     "html-minifier": "^4.0.0",
     "husky": "^3.0.2",
     "livereload": "^0.8.0",
-    "mathjs": "^7.0.0",
+    "mathjs": "^7.5.1",
     "moment-timezone": "^0.5.26",
     "node-sass": "^4.13.1",
     "nunjucks-cli": "^1.0.0",
