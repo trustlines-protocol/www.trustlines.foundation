@@ -53,7 +53,7 @@
   "scripts": {
     "docker-preview": "yarn run build-preview && docker build . -t preview.trustlines.foundation",
     "build-preview": "yarn run clean && yarn run build-html-preview && yarn run build-css && yarn run build-js-preview && yarn run build-assets",
-    "build": "yarn run clean && yarn run build-html && yarn run build-css && yarn run build-js && yarn run build-assets",
+    "build": "gatsby build",
     "watch": "yarn run clean && yarn run build-assets && concurrently --kill-others -p \"[{name}]\" -n \"HTML,JS,CSS,SERVE,LIVERELOAD\" -c \"bgBlue.bold,bgMagenta.bold,bgGreen.bold,bgCyan.bold,bgYellow.bold\" \"yarn run watch-html\" \"yarn run watch-js\" \"yarn run watch-css\" \"serve --no-clipboard --listen 8080 ./dist\" \"livereload ./src --wait 1000 --extraExts 'njk,sass,scss,json'\"",
     "clean": "yarn run clean-html && yarn run clean-css && yarn run clean-js && yarn run clean-assets",
     "build-html": "yarn run clean-html && NODE_ENV=production dotenv -e .env.production -e .env.example -- nunjucks **/*.njk --path ./src/view/ --out ./dist/ && yarn run minify-html",
@@ -72,7 +72,8 @@
     "clean-assets": "del -f ./dist/img/**/* && del -f ./dist/CNAME && del -f ./dist/fonts/*",
     "format": "eslint ./src/**/*.js ./webpack.*.js --fix",
     "prettier:big-tabs": "prettier --write --print-width 120 --no-semi --single-quote --tab-width 4  './src/**/*.js'",
-    "lint": "eslint ./src/**/*.js",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "start": "gatsby develop"
   },
