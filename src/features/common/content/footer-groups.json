@@ -1,0 +1,68 @@
+[
+  {
+    "label": "Websites",
+    "items": [
+      {
+        "label": "Blog",
+        "href": "https://blog.trustlines.network/"
+      },
+      {
+        "label": "Docs",
+        "href": "https://docs.trustlines.network/"
+      },
+      {
+        "label": "Trustlines Network",
+        "href": "https://trustlines.network/"
+      }
+    ]
+  },
+  {
+    "label": "Community",
+    "items": [
+      {
+        "label": "Forum",
+        "href": "https://forum.trustlines.network/"
+      },
+      {
+        "label": "Newsletter",
+        "href": "http://eepurl.com/gHqYyX"
+      },
+      {
+        "label": "Telegram",
+        "href": "https://t.me/trustlines_network"
+      }
+    ]
+  },
+  {
+    "label": "Developers",
+    "items": [
+      {
+        "label": "GitHub",
+        "href": "https://github.com/trustlines-protocol"
+      },
+      {
+        "label": "Dev Docs",
+        "href": "https://dev.trustlines.network/"
+      },
+      {
+        "label": "Technical Chat",
+        "href": "https://gitter.im/trustlines/community"
+      }
+    ]
+  },
+  {
+    "label": "Legal",
+    "items": [
+      {
+        "label": "Privacy Policy & Legal Imprint",
+        "href": "/privacy-policy",
+        "id": "privacy_policy"
+      },
+      {
+        "label": "Merkle Drop Terms & Conditions",
+        "href": "/terms-and-conditions",
+        "id": "terms_and_conditions"
+      }
+    ]
+  }
+]

@@ -1,2 +1,0 @@
-export const TLN_BASE = 1000000000000000000
-export const SCROLL_THRESHOLD = 5

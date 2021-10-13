@@ -1,6 +1,6 @@
-const pkg = require("./package.json")
-const path = require("path")
-const DotEnv = require("dotenv-webpack")
+const pkg = require("./package.json");
+const path = require("path");
+const DotEnv = require("dotenv-webpack");
 
 module.exports = {
   plugins: [
@@ -53,4 +53,4 @@ module.exports = {
       },
     },
   },
-}
+};
