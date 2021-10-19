@@ -7,7 +7,6 @@ export function Paste() {
       height="24"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="#787878"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path

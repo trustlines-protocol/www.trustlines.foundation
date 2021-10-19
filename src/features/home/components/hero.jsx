@@ -4,10 +4,10 @@ import worldMap from "../images/world-map.svg";
 
 export function HomeHero() {
   return (
-    <section className="container mx-auto px-4 mb-12">
+    <section className="container mx-auto px-4 mb-12 h-80 md:h-1/2">
       <div className="hero-header items-center">
         <div className="relative container mx-auto flex flex-row justify-end">
-          <div className="absolute top-20 left-0 px-4 z-20">
+          <div className="absolute md:top-20 top-24 left-0 px-4 z-20">
             <h1 className="text-4xl md:text-6xl font-semibold leading-tight">
               Bringing
               <br /> People Powered Money

@@ -53,13 +53,13 @@ function AddressInput(props) {
     <div>
       <form>
         <div className="flex flex-row mt-2">
-          <Card className="flex-1 md:bg-transparent md:shadow-none bg-off-white shadow-2xl py-2 px-4 md:p-0">
+          <Card className="flex-1 md:bg-transparent bg-grey bg-opacity-0 md:bg-opacity-100 py-2 md:px-4 px-0 md:p-0">
             <div className="flex-1 pr-2">
               <div
-                className={`flex flex-row items-center w-full rounded-full bg-grey-lighter text-rich-black-ligther h-12 my-4 ${inputClasses}`}
+                className={`flex flex-row items-center w-full rounded-full bg-card-colors-input_grey text-grey h-12 my-4 ${inputClasses}`}
               >
                 <input
-                  className="bg-grey-lighter ml-2 pl-2 w-full rounded-full placeholder-rich-black-lightest text-sm md:text-base"
+                  className="bg-card-colors-input_grey ml-2 pl-2 w-full rounded-full placeholder-grey-darker text-sm md:text-base font-medium"
                   autoComplete="off"
                   spellCheck="false"
                   type="text"
@@ -71,7 +71,7 @@ function AddressInput(props) {
                 />
                 <div className="mr-2">
                   <Button
-                    className="px-2 py-2 rounded-full hover:bg-grey"
+                    className="px-2 py-2 rounded-full bg-card-colors-input_grey hover:bg-grey-darker stroke-current md:text-grey-darker md:stroke-current text-majorelle-blue"
                     type="button"
                     value="paste"
                     onClick={handlePaste}
@@ -83,7 +83,7 @@ function AddressInput(props) {
             </div>
             <div className="flex flex-row items-center">
               <Button
-                className={`md:px-8 px-4 py-4 bg-majorelle-blue flex items-center justify-center hover:bg-dark-green transition duration-500 ease-in-out transition-all`}
+                className={`md:px-8 px-6 py-4 bg-majorelle-blue flex items-center justify-center hover:bg-dark-green transition duration-500 ease-in-out transition-all`}
                 isDark
                 type="submit"
                 value="Submit"
@@ -95,7 +95,7 @@ function AddressInput(props) {
           </Card>
         </div>
         <div>
-          <Card className="flex-1 md:bg-transparent md:shadow-none bg-off-white shadow-2xl py-2 px-4 md:p-0 mt-2 z-20">
+          <Card className="flex-1 md:bg-transparent md:shadow-none bg-card-colors-darkest_grey shadow-2xl md:py-2 py-0 px-4 md:p-0 mt-2 z-20 p-4">
             <div className="p-2 md:p-0">
               {!address ? (
                 <p className="text-dark-green text-sm">

@@ -9,7 +9,7 @@ const ROLES = [
 
 export function HomeRole() {
   return (
-    <section className="container mx-auto md:mb-2 mb-20 flex flex-col items-center justify-center px-4 py-4 bg-rich-black max-w-full mx-auto">
+    <section className="container mx-auto md:mb-2 mb-8 flex flex-col items-center justify-center px-4 py-4 bg-rich-black max-w-full mx-auto">
       <h1 className="md:text-6xl text-4xl font-semibold text-grey-lighter">
         Our Role
       </h1>
@@ -24,7 +24,7 @@ export function HomeRole() {
 
 function RoleItem(props) {
   return (
-    <div className="flex flex-col items-center max-w-xs px-4">
+    <div className="flex flex-col items-center max-w-lg px-4">
       <svg
         width="65"
         height="64"
@@ -48,7 +48,7 @@ function RoleItem(props) {
           strokeLinejoin="round"
         />
       </svg>
-      <p className="text-sm text-white text-center mt-4 px-20 md:px-4">
+      <p className="text-base text-white text-center mt-4 px-8 md:px-4">
         {props.text}
       </p>
     </div>

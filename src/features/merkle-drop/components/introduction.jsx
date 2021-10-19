@@ -5,16 +5,16 @@ import { LinkButton } from "../../common/components/link-button";
 export function MerkleDropIntroduction() {
   return (
     <section className="bg-rich-black">
-      <div className="container mx-auto px-4 sm:px-32 flex flex-col md:py-24 py-10 w-full">
+      <div className="container mx-auto px-8 md:px-32 flex flex-col md:py-24 pt-2 pb-10 w-full">
         <div className="flex-1">
           <div>
-            <h1 className="md:text-5xl text-4xl leading-tight my-8 text-off-white font-semibold">
+            <h1 className="md:text-5xl text-4xl leading-tight my-8 text-off-white font-semibold pr-28 md:pr-28">
               Introducing the Trustlines Merkle Drop
             </h1>
           </div>
         </div>
         <div className="flex-1">
-          <div className="flex flex-col pl-1 pr-4 sm:pr-60 text-grey">
+          <div className="flex flex-col pl-1 pr-4 text-grey">
             <p>
               Trustlines Blockchain requires transaction fees to be paid in Trustlines Network Coins (TLC). To reach a broad set of individuals, we conducted a Merkle Drop of Trustlines Network Tokens (TLN) on Ethereum. TLN are ERC20 tokens that can be converted to TLC by sending them to a bridge contract.
             </p>

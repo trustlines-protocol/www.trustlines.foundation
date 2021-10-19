@@ -6,7 +6,7 @@ import { ChartKey } from "./chart-key";
 
 export function AuctionHero() {
   return (
-    <section className="container mx-auto md:py-0 py-10 px-4 md:mb-20">
+    <section className="container mx-auto md:py-0 py-10 md:mb-20 px-9">
       <div className="grid md:grid-cols-2 grid-cols-1">
         <div className="hero-header items-center md:order-1">
           <div className="flex-1 flex flex-col">
@@ -39,11 +39,11 @@ export function AuctionHero() {
             </div>
           </Card>
         </div>
-        <div className="flex flex-col items-end justify-end md:order-2 md:pt-0 pt-6">
+        <div className="flex flex-col items-end justify-end md:order-2 md:pt-0 pt-16">
           <div className="-mb-14 z-10">
             <ChartKey />
           </div>
-          <div className="m-6">
+          <div className="md:m-6 m-0 md:mt-0 mt-6">
             <img src={auctionGraph} alt="auction graph" />
           </div>
         </div>

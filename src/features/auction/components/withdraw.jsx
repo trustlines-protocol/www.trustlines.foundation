@@ -31,7 +31,7 @@ const CONTENTS = [
 
 export function AuctionWithdraw() {
   return (
-    <section className="bg-rich-black">
+    <section className="bg-rich-black px-4">
       <div className="container mx-auto px-4 py-10 md:py-40">
         <div className="md:pb-24 pb-6">
           <div>
@@ -49,9 +49,9 @@ export function AuctionWithdraw() {
               {i >= 0 ? (
                 <hr className="border-rich-black-lighter pb-2 m-4" />
               ) : null}
-              <li className="text-grey text-sm md:pr-16 pl-4">
+              <p className="text-grey text-sm md:pr-16 pl-4">
                 {content.text}
-              </li>
+              </p>
             </div>
           ))}
         </div>

@@ -33,9 +33,9 @@ export function HomeAbout() {
     <section className="py-14 bg-rich-black">
       <div className="max-w-2xl mx-auto">
         <div className="flex md:flex-row flex-col-reverse space-y-reverse space-y-4 items-center md:items-end">
-          <img src={elements} alt="visual elements" />
+          <img src={elements} className="w-96 px-4 md:px-0" alt="visual elements" />
           <div className="flex w-full pl-4">
-            <div className="flex md:flex-col flex-row space-x-2 md:space-x-0 md:ml-10">
+            <div className="flex md:flex-col flex-row space-x-2 md:space-x-0 md:ml-10 ml-4">
               {LINKS.map((link, i) => (
                 <a
                   className={`
@@ -54,7 +54,7 @@ export function HomeAbout() {
             </div>
           </div>
         </div>
-        <div className="px-4 md:px-0">
+        <div className="px-8 md:px-0">
           <h1 className="py-6 text-3xl md:text-4xl leading-tight text-white font-semibold">
             Trustlines Foundation
           </h1>

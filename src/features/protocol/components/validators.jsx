@@ -7,17 +7,17 @@ import validators from "../images/validators.svg";
 
 export function ProtocolValidators() {
   return (
-    <section className="md:mx-20 mx-4">
+    <section className="md:py-4 py-6 mx-8">
       <div
-        className="container mx-auto px-4 flex flex-col-reverse md:flex-row pb-28 gap-y-4"
+        className="md:container mx-auto px-0 grid md:grid-cols-2 grid-cols-1 md:py-20 py-10"
         id="validators"
       >
-        <div className="flex-1 flex flex-col justify-center">
-          <div className="max-w-lg flex flex-col">
-            <h1 className="text-5xl md:text-6xl font-semibold leading-tight text-rich-black-lightest">
+        <div className="flex-1 flex flex-col justify-center z-20">
+          <div className="max-w-sm flex flex-col">
+            <h1 className="text-4xl md:text-6xl font-semibold leading-tight text-rich-black-lightest">
               Validators
             </h1>
-            <p className="text-xl md:text-2xl text-rich-black md:font-semibold leading-tight my-8">
+            <p className="py-8 text-rich-black text-xl md:text-2xl md:font-semibold md:pr-0 pr-10">
               The validators ensure the security of the Trustlines Blockchain by
               validating transactions and adding blocks to the blockchain.
             </p>
@@ -38,12 +38,12 @@ export function ProtocolValidators() {
               <LinkButton
                 href={ExternalLinks.VALIDATORS_BLOG}
                 className="bg-grey transition duration-500 ease-in-out hover:bg-majorelle-blue hover:text-off-white"
-                label="Learn more in Trustlines Blog →"
+                label="Learn more in the Trustlines Blog →"
               />
             </div>
           </div>
         </div>
-        <div className="flex-2 flex flex-row items-center justify-center">
+        <div className="flex-2 flex flex-row items-center justify-center z-10 md:mt-0 -mt-96 md:opacity-100 opacity-40">
           <img src={validators} alt="validators" />
         </div>
       </div>

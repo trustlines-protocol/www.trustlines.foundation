@@ -19,7 +19,7 @@ export function ChartLegend({ chartState = {} }) {
   } = chartState;
 
   return (
-    <section className="container mx-auto px-4">
+    <section className="container mx-auto px-9">
       <Card className="bg-grey-lighter py-6">
         <div className="flex flex-col md:flex-row gap-4">
           <div>
@@ -37,7 +37,7 @@ export function ChartLegend({ chartState = {} }) {
               secondsBeforeStart={secondsBeforeStart}
             />
           </div>
-          <div className="flex flex-row items-center justify-center space-x-4 md:space-x-6">
+          <div className="flex flex-row items-center justify-center space-x-6 md:space-x-6">
             <SlotBox label="Free Slot/s" value={freeSlotsCount} />
             <SlotBox label="Max Slots" value={maxSlotsCount} />
             <SlotBox label="Taken Slot/s" value={takenSlotsCount} />

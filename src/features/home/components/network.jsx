@@ -13,12 +13,12 @@ export function HomeNetwork() {
 
   return (
     <section className="md:py-6 py-6">
-      <div className="max-w-3xl mx-auto items-center mb-4 flex flex-col justify-items-center">
+      <div className="max-w-3xl mx-auto mb-4 flex flex-col">
         <HeartStroked />
-        <h1 className="md:text-4xl text-3xl font-semibold leading-tight mb-8 md:px-0 px-4">
+        <h1 className="md:text-4xl text-3xl font-semibold leading-tight mb-8 px-0 items-left md:mx-12 mx-8">
           The Trustlines Network
         </h1>
-        <p className="mx-4 md:text-base text-base mb-8 flex-col">
+        <p className="md:mx-12 mx-8 md:text-base text-base mb-8 flex-col">
           The original idea behind the Trustlines Network came up as the current
           financial system is unable or unwilling to serve about 1.7 billion
           unbanked and underbanked people.
@@ -47,9 +47,9 @@ export function HomeNetwork() {
           href={ExternalLinks.NETWORK}
         >
           <img src={isHovered ? worldHovered : world} alt="world icon" />
-          <div className="absolute max-w-3xl mx-auto text-off-white md:pt-24 pt-4 px-10 md:px-28">
+          <div className="absolute max-w-3xl mx-auto text-white md:pt-24 pt-4 px-10 md:px-28">
             <p className="md:text-2xl text-xl mb-8">
-              Trustlines Foundation is part of the Trustlines Network Ecosystem.
+              Trustlines Foundation is part of the Trustlines Network ecosystem.
               <br />
               <br />
               Find out more by visiting the Trustlines Network website.

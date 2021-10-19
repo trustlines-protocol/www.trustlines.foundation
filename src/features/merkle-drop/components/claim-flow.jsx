@@ -322,10 +322,10 @@ function ClaimFlow() {
 
   return (
     <div>
-      <Card className="md:shadow-2xl md:bg-off-white bg-transparent md:p-4 rounded-sm">
+      <Card className="md:shadow-2xl md:bg-card-colors-darkest_grey bg-transparent md:p-4 rounded-sm">
         <div className="flex flex-col w-full md:p-4">
           <div className="flex flex-row">
-            <Card className="flex flex-row bg-off-white shadow-2xl p-4 md:p-0">
+            <Card className="flex flex-row md:bg-opacity-0 bg-opacity-100 bg-card-colors-darkest_grey shadow-2xl p-4 md:p-0 text-off-white">
               <div className="pr-2">
                 <QuestionMark className="stroke-current" />
               </div>

@@ -21,8 +21,8 @@ export function CurrentPrice({
 
   return (
     <div className="flex flex-col items-center">
-      <div className="text-rich-black-lighter">{label}</div>
-      <div className="text-rich-black-lightest md:text-5xl text-4xl font-semibold">
+      <div className="text-rich-black-lighter font-medium">{label}</div>
+      <div className="text-rich-black-lightest md:text-5xl text-5xl font-semibold md:pt-0 pt-2">
         {value}
       </div>
     </div>
