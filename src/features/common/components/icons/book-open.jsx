@@ -7,7 +7,7 @@ export function BookOpen(props) {
       height="24"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="#6C6C73"
+      stroke="#98989D"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path

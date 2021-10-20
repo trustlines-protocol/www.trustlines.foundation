@@ -1,17 +1,17 @@
 import React from "react";
 
-import { SocialLinks } from "./social-links";
-import { CircledArrowUp } from "./icons/circled-arrow-up";
+import { SocialLinks } from "./social-links-dark";
+import { CircledArrowUp } from "./icons/circled-arrow-up-dark";
 import footerGroups from "../content/footer-groups";
 
-export function Footer() {
+export function FooterDark() {
   return (
-    <div className="bg-grey-lighter md:">
-      <div className="container mx-auto md:px-24 px-4 md:py-20 py-10">
+    <div className="bg-card-colors-darkest_grey">
+      <div className="md:container mx-auto md:px-24 px-4 md:py-20 py-10">
         <div className="flex md:flex-row flex-col md:justify-between md:mb-20">
           {footerGroups.map(group => (
             <div key={group.label} className="flex flex-col md:mb-0 mb-4">
-              <div className="text-rich-black text-lg md:text-base font-semibold md:mb-8 mb-1">
+              <div className="text-grey-darker text-lg md:text-base font-semibold md:mb-8 mb-1">
                 {group.label}
               </div>
               {group.items.map((item, i) => (
@@ -20,7 +20,7 @@ export function Footer() {
                   href={item.href}
                   target={item.id || "_blank"}
                   rel={!item.id && "noopener noreferrer"}
-                  className="md:mb-4 mb-1 text-rich-black text-base hover:text-majorelle-blue"
+                  className="md:mb-4 mb-1 text-grey text-base hover:text-majorelle-blue font-medium"
                 >
                   {item.label}
                 </a>

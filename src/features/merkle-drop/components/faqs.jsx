@@ -33,15 +33,15 @@ const CONTENTS = [
         <p>The Merkle drop is used as a tool to</p>
 
         <ul>
-          <li className="ml-6">
+          <li className="ml-3 mt-1">
             Reward early contributors, e.g. validators, testers, and developers
           </li>
-          <li className="ml-6">
+          <li className="ml-3">
             Target potential stakeholders of the Trustlines Network, e.g.
             individuals/ projects aligned with the mission of Trustlines, who
             may turn into users of the Trustlines Protocol
           </li>
-          <li className="ml-6">
+          <li className="ml-3">
             Make TLC available to a wide audience consisting of addresses and
             individuals from within the crypto and alternative currency
             ecosystems by providing them with TLN that they can convert into TLC
@@ -57,11 +57,11 @@ const CONTENTS = [
       <div>
         <p>Yes. There are two ways in which this could happen.</p>
         <ul>
-          <li className="ml-6">
+          <li className="ml-3 mt-1">
             You happen to control the private key of multiple eligible Ethereum
             addresses.
           </li>
-          <li className="ml-6">
+          <li className="ml-3">
             One or more of your eligible Ethereum addresses fit into more than
             one group of Merkle drop receivers.
           </li>
@@ -88,7 +88,7 @@ const CONTENTS = [
           TLN.
         </p>
         <ul>
-          <li className="ml-6">
+          <li className="ml-3 mt-1">
             Early contributors to the{" "}
             <a href="https://trustlines.network/" target="_blank">
               Trustlines Network
@@ -104,7 +104,7 @@ const CONTENTS = [
             validators, but did not secure a slot in the{" "}
             <a href="auction/">auction</a>.
           </li>
-          <li className="ml-6">
+          <li className="ml-3">
             People who were interested in participating in the drop via{" "}
             <a
               href="https://twitter.com/TrustlinesFound/status/1201901024576987137"
@@ -113,20 +113,20 @@ const CONTENTS = [
               our community channels
             </a>
           </li>
-          <li className="ml-6">
+          <li className="ml-3">
             <a href="https://ethberlinzwei.com/" target="_blank">
               ETHBerlin2
             </a>{" "}
             hackers
           </li>
-          <li className="ml-6">
+          <li className="ml-3">
             Addresses included in the Genesis block of{" "}
             <a href="https://ethereum.org/" target="_blank">
               Ethereum
             </a>{" "}
             (with at least one transfer executed)
           </li>
-          <li className="ml-6">
+          <li className="ml-3">
             <a href="https://makerdao.com/" target="_blank">
               Maker (MKR)
             </a>
@@ -140,7 +140,7 @@ const CONTENTS = [
             </a>{" "}
             token holders
           </li>
-          <li className="ml-6">
+          <li className="ml-3">
             <a
               href="https://blog.gnosis.pm/the-dxdao-has-awoken-78cb2e39661c"
               target="_blank"
@@ -153,13 +153,13 @@ const CONTENTS = [
             </a>{" "}
             human participants
           </li>
-          <li className="ml-6">
+          <li className="ml-3">
             <a href="https://www.poap.xyz/" target="_blank">
               POAP
             </a>
             , Proof-of-Attendance NFT holders
           </li>
-          <li className="ml-6">
+          <li className="ml-3">
             Collection of ETH addresses, that underwent some form of identity
             verification in the past
           </li>
@@ -279,15 +279,15 @@ const CONTENTS = [
 export function MerkleDropFaqs() {
   return (
     <section>
-      <div className="container mx-auto px-4 md:py-32 py-10 merkle-drop-faq">
+      <div className="md:container mx-auto md:px-20 md:py-32 py-10 merkle-drop-faq">
         <div>
           <div>
-            <h1 className="text-4xl md:text-5xl leading-tight md:my-8 md:mx-20 font-semibold text-rich-black">
+            <h1 className="text-4xl md:text-5xl leading-tight md:my-8 md:mx-0 font-semibold text-grey-darker text-opacity-60 px-4">
               Merkle Drop FAQ
             </h1>
           </div>
         </div>
-        <div className="flex flex-row justify-center">
+        <div className="flex flex-row justify-center px-4">
           <div className="flex flex-col md:w-1/2">
             {CONTENTS.map((content, i) => (
               <div className="md:py-0 py-4 md:mb-12">
@@ -296,7 +296,7 @@ export function MerkleDropFaqs() {
                     <QuestionMark className="md:w-8 md:h-8 w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="md:text-2xl text-xl font-semibold">
+                    <h3 className="md:text-2xl text-xl font-semibold text-grey-darker">
                       {content.question}
                     </h3>
                   </div>
@@ -305,7 +305,7 @@ export function MerkleDropFaqs() {
                   <div className="md:px-4 animate-pulse">
                     <ArrowDownRight />
                   </div>
-                  <div className="md:pl-2 pl-4 pr-8 text-rich-black-lightest md:text-lg pt-2 sm:pt-0">
+                  <div className="md:pl-2 pl-4 pr-8 text-off-white md:text-lg pt-2 sm:pt-0 font-normal">
                     {content.answer}
                   </div>
                 </div>

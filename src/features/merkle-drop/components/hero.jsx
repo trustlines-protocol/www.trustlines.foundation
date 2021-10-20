@@ -6,18 +6,18 @@ import { ExternalLinks } from "../../../constants";
 
 export function MerkleDropHero() {
   return (
-    <section className="container mx-auto px-4 md:mb-32 mb-10 text-rich-black-lighter md:py-20 bg-key bg-no-repeat bg-contain">
-      <div className="hero-header items-center flex md:flex-row flex-col">
-        <div className="md:flex-1 sm:w-1/2 w-2/3 self-baseline md:self-center ml-4 md:ml-0">
-          <h1 className="md:text-6xl text-4xl font-semibold leading-tight mb-10 text-rich-black">
+    <section className="md:container md:mx-auto md:px-20 text-rich-black-lighter md:py-20 pt-12 pb-0">
+      <div className="hero-header items-center flex md:flex-row flex-col px-4">
+        <div className="md:flex-1 sm:w-1/2 w-2/3 self-baseline md:self-center md:ml-0">
+          <h1 className="md:text-6xl text-5xl font-semibold leading-tight mb-10 text-off-white">
             Merkle Drop
           </h1>
-          <p className="text-2xl">Claim your Trustlines Network Tokens</p>
+          <p className="text-2xl text-grey-darker">Claim your Trustlines Network Tokens</p>
           <div className="mt-12 ml-1 pb-6 sm:pb-0">
             <LinkButton
               href={ExternalLinks.MERKLE_DROP_BLOG}
-              className="bg-grey text-rich-black transition duration-500 ease-in-out hover:bg-majorelle-blue hover:text-off-white"
-              label="Read more →"
+              className="bg-grey text-rich-black transition duration-500 ease-in-out hover:bg-majorelle-blue hover:text-off-white font-medium"
+              label="Learn more →"
             />
           </div>
         </div>

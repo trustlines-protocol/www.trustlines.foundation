@@ -6,8 +6,8 @@ import { ChartKey } from "./chart-key";
 
 export function AuctionHero() {
   return (
-    <section className="container mx-auto md:py-0 py-10 px-4 md:mb-20">
-      <div className="grid md:grid-cols-2 grid-cols-1">
+    <section className="container md:mx-auto mx-0 md:py-0 py-10 md:mb-20 md:px-12 px-0">
+      <div className="grid md:grid-cols-2 grid-cols-1 px-4">
         <div className="hero-header items-center md:order-1">
           <div className="flex-1 flex flex-col">
             <h1 className="text-4xl md:text-6xl font-semibold leading-tight mb-4">
@@ -15,7 +15,7 @@ export function AuctionHero() {
               <br />
               Validator Auction
             </h1>
-            <p className="md:text-xl text-xl leading-tight text-rich-black-lighter">
+            <p className="md:text-xl md:text-xl text-md leading-tight text-rich-black-lighter">
               The auction is used to determine the validator set for the
               Trustlines Blockchain. The set is valid for nine months.
               Participation in the auction requires{" "}
@@ -39,11 +39,11 @@ export function AuctionHero() {
             </div>
           </Card>
         </div>
-        <div className="flex flex-col items-end justify-end md:order-2 md:pt-0 pt-6">
+        <div className="flex flex-col items-end justify-end md:order-2 md:pt-0 pt-16">
           <div className="-mb-14 z-10">
             <ChartKey />
           </div>
-          <div className="m-6">
+          <div className="md:m-6 m-0 md:mt-0 mt-6">
             <img src={auctionGraph} alt="auction graph" />
           </div>
         </div>

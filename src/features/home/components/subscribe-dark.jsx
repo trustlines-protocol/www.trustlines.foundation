@@ -4,8 +4,8 @@ import { Check } from "../../common/components/icons/check";
 
 import { isEmailValid } from "../../common/utils/validation";
 
-import mail from "../images/mail.svg";
-import { MailDot } from "../../common/components/icons/mail-dot";
+import mail from "../images/mail-dark.svg";
+import { MailDot } from "../../common/components/icons/mail-dot-dark";
 import PrivacyPolicyModal from "../../common/components/privacy-modal";
 
 export function HomeSubscribe() {
@@ -20,7 +20,7 @@ export function HomeSubscribe() {
   }, [showPrivacyModal]);
 
   return (
-    <section className="md:container md:mx-auto md:pb-0 pb-16 flex flex-row justify-center pt-2 text-rich-black-lightest px-0">
+    <section className="md:container md:mx-auto md:pb-0 pb-16 flex flex-row justify-center pt-2 text-rich-black-lightest">
       <img src={mail} alt="mail" />
       {didSubscribe ? (
         <div className="absolute pt-40 max-w-sm mx-auto flex flex-col">
@@ -43,7 +43,7 @@ export function HomeSubscribe() {
           }}
         >
           <MailDot />
-          <h1 className="md:text-2xl text-xl font-semibold mt-4">
+          <h1 className="md:text-2xl text-xl font-semibold mt-4 text-grey-darker">
             Be the first
             <br /> to get updates
           </h1>

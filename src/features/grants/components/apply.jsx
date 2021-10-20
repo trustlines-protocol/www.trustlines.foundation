@@ -5,23 +5,23 @@ import { LinkButton } from "../../common/components/link-button";
 
 export const GrantApply = () => {
   return (
-    <Card className="bg-gradient-to-br from-majorelle-blue to-aquamarine-green max-w-max">
+    <Card className="bg-rich-black bg-opacity-20 max-w-max">
       <div className="flex flex-col p-8">
         <div className="flex items-center justify-center pb-4">
-          <div className="mr-2 animate-pulse stroke-current text-white">
+          <div className="mr-2 animate-pulse stroke-current text-grey">
             <FileText />
           </div>
           <div>
-            <h3 className="text-sm font-semibold text-white">Apply for a grant!</h3>
+            <h3 className="text-sm font-semibold text-grey">Apply for a grant!</h3>
           </div>
         </div>
         <div>
           <LinkButton
             isDark
-            className="bg-rich-black hover:bg-majorelle-blue transition duration-500 ease-in-out transition-all"
+            className="bg-aquamarine-green hover:bg-majorelle-blue transition duration-500 ease-in-out transition-all font-semibold"
             href="https://docs.google.com/forms/d/e/1FAIpQLSdSGkkafn3jDvFmv8S_FwWVoSkGXc6UGMDjTKw6Maoibcz5Jg/viewform"
           >
-            Apply in Google Form →
+            Fill an Application Form →
           </LinkButton>
         </div>
       </div>
