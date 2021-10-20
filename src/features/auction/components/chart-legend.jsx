@@ -19,8 +19,8 @@ export function ChartLegend({ chartState = {} }) {
   } = chartState;
 
   return (
-    <section className="container mx-auto px-9">
-      <Card className="bg-grey-lighter py-6">
+    <section className="container md:mx-auto md:px-16 px-4">
+      <Card className="bg-grey-lighter py-6 px-4">
         <div className="flex flex-col md:flex-row gap-4">
           <div>
             <CurrentPrice

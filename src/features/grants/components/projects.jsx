@@ -32,23 +32,23 @@ export function GrantsProjects() {
   return (
     <section className="container mx-auto px-4 mb-10 md:mb-32 text-rich-black-lighter">
       <div className="hero-header">
-        <div className="flex-1">
-          <h1 className="md:text-6xl text-4xl font-semibold leading-tight mb-10 text-rich-black">
+        <div className="flex-1 md:px-20">
+          <h1 className="md:text-6xl text-4xl font-semibold leading-tight md:mb-10 mb-4 text-grey-darker text-opacity-60">
             Exemplary <br />
             projects
           </h1>
           <div className="flex flex-col">
-            <div className="p-4">
-              <p>
+            <div className="p-4 pl-0">
+              <p className="text-off-white">
                 There are multiple ways to contribute to the Trustlines
-                ecosystem. Here are some rough examples for your inspiration:
+                ecosystem. Here are some examples for your inspiration
               </p>
             </div>
-            <div className="flex flex-wrap">
+            <div className="flex flex-wrap justify-center md:ml-0 md:mt-4">
               {CHARACTERISTICS.map((characteristic, i) => (
-                <Card className="bg-transparent border-4 border-rich-black h-56 w-56 p-4 m-2">
-                  <div className="text-rich-black text-sm h-full">
-                    <div className="font-semibold py-2">
+                <Card className="bg-gradient-to-br from-app-blue to-majorelle-blue border-0 border-grey-darker md:h-60 md:w-52 h-68 w-40 p-4 md:m-0 md:mb-2 mb-4 md:mx-2 mx-7 ml-0 hover:from-majorelle-blue hover:to-aquamarine-green">
+                  <div className="text-off-white text-sm h-full">
+                    <div className="font-semibold py-2 md:text-lg text-base leading-tight">
                       {characteristic.title}
                     </div>
                     <div>{characteristic.text}</div>

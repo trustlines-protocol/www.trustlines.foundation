@@ -49,8 +49,8 @@ const CHARACTERISTICS = [
 
 export function ProtocolBlockchain() {
   return (
-    <section className="md:py-6 py-6 mx-8">
-      <div className="md:container mx-auto px-0 grid md:grid-cols-2 grid-cols-1 md:py-20 py-10">
+    <section className="md:py-6 py-6 md:px-12">
+      <div className="md:container mx-auto px-0 mx-0 grid md:grid-cols-2 grid-cols-1 md:py-20 py-10 w-screen px-4">
         <div className="flex-1 flex flex-col justify-center">
           <div className="max-w-sm flex flex-col">
             <h1 className="text-4xl md:text-6xl font-semibold leading-tight text-rich-black-lightest">

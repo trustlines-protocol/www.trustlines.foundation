@@ -81,8 +81,8 @@ export function HomeSlider() {
           </a>
         </div>
         <div>
-          <div className="md:pt-2 pb-4 md:pb-2 md:h-10 h-32 md:ml-0 ml-2 md:px-20">
-            <div className="grid grid-cols-1 md:flex md:flex-row font-semibold text-rich-black-lightest">
+          <div className="md:pt-2 pb-4 md:pb-2 md:h-10 h-32 md:ml-0 md:px-20">
+            <div className="grid grid-cols-1 md:flex md:flex-row font-semibold text-rich-black-lightest md:mx-0">
               {SLIDES.map((slide, i) => (
                 <div
                   key={`home-slide-${i}`}

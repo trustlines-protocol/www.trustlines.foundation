@@ -13,7 +13,7 @@ export function HomeRole() {
       <h1 className="md:text-6xl text-4xl font-semibold text-grey-lighter">
         Our Role
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-4 space-y-6 md:space-y-0 md:py-16 py-8">
+      <div className="grid grid-cols-1 md:grid-cols-4 space-y-6 md:space-y-0 md:py-16 py-8 px-12 md:px-20 md:max-w-7xl">
         {ROLES.map((role, i) => (
           <RoleItem text={role} key={`role-${i}`} />
         ))}
@@ -24,7 +24,7 @@ export function HomeRole() {
 
 function RoleItem(props) {
   return (
-    <div className="flex flex-col items-center max-w-lg px-4">
+    <div className="flex flex-col items-center max-w-sm px-2">
       <svg
         width="65"
         height="64"

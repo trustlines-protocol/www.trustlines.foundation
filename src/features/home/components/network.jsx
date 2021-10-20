@@ -13,12 +13,12 @@ export function HomeNetwork() {
 
   return (
     <section className="md:py-6 py-6">
-      <div className="max-w-3xl mx-auto mb-4 flex flex-col">
+      <div className="max-w-7xl mx-auto mb-4 flex flex-col md:px-28">
         <HeartStroked />
-        <h1 className="md:text-4xl text-3xl font-semibold leading-tight mb-8 px-0 items-left md:mx-12 mx-8">
+        <h1 className="md:text-4xl text-3xl font-semibold leading-tight mb-8 px-0 items-left md:mx-0 mx-4">
           The Trustlines Network
         </h1>
-        <p className="md:mx-12 mx-8 md:text-base text-base mb-8 flex-col">
+        <p className="md:mx-0 mx-4 md:text-base text-base mb-8 flex-col">
           The original idea behind the Trustlines Network came up as the current
           financial system is unable or unwilling to serve about 1.7 billion
           unbanked and underbanked people.
@@ -35,12 +35,12 @@ export function HomeNetwork() {
           bank account or depositing any money upfront.
         </p>
       </div>
-      <div className="mx-4">
+      <div>
         <a
           className={`
-          max-w-3xl mx-auto flex flex-row justify-end
+          md:max-w-3xl max-w-sm md:mx-auto flex flex-row justify-end
           bg-gradient-to-b from-coral-red to-neon-pink
-          rounded-lg overflow-hidden mb-4
+          rounded-lg overflow-hidden mb-4 mx-4
         `}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}

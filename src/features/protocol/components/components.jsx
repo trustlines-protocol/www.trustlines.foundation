@@ -25,9 +25,9 @@ const COMPONENTS = [
 
 export function ProtocolComponents() {
   return (
-    <section className="bg-rich-black">
-      <div className="container mx-auto px-8 grid md:grid-cols-2 grid-cols-1 md:py-40 py-4">
-        <div className="flex-1">
+    <section className="bg-rich-black md:px-12">
+      <div className="md:container md:mx-auto grid md:grid-cols-2 grid-cols-1 md:py-40 py-4">
+        <div className="flex-1 px-4 md:px-0">
           <div>
             <img src={protocolElements} alt="protocol elements" />
             <h1 className="md:text-5xl text-4xl leading-tight my-8 text-off-white font-semibold">
@@ -49,7 +49,7 @@ export function ProtocolComponents() {
           </div>
         </div>
         <div className="flex-1">
-          <div className="flex flex-col">
+          <div className="flex flex-col px-4">
             {COMPONENTS.map((component, i) => (
               <div className="flex flex-col text-off-white mb-8">
                 <h4 className="md:text-2xl font-semibold mb-2">

@@ -31,8 +31,8 @@ const CONTENTS = [
 
 export function AuctionWithdraw() {
   return (
-    <section className="bg-rich-black px-4">
-      <div className="container mx-auto px-4 py-10 md:py-40">
+    <section className="bg-rich-black md:px-12">
+      <div className="md:container mx-auto px-4 py-10 md:py-40">
         <div className="md:pb-24 pb-6">
           <div>
             <h1 className="md:text-5xl text-4xl leading-tight my-8 font-semibold text-aquamarine-green">
@@ -47,9 +47,9 @@ export function AuctionWithdraw() {
           {CONTENTS.map((content, i) => (
             <div className="md:mx-8">
               {i >= 0 ? (
-                <hr className="border-rich-black-lighter pb-2 m-4" />
+                <hr className="border-rich-black-lighter pb-2 md:mx-4 md:my-2 mx-0 my-2" />
               ) : null}
-              <p className="text-grey text-sm md:pr-16 pl-4">
+              <p className="text-grey text-sm md:pr-16 md:px-4 px-0">
                 {content.text}
               </p>
             </div>

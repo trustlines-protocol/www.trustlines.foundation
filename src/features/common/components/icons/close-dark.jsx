@@ -1,26 +1,28 @@
 import React from "react";
 
-export function ArrowDownRight(props) {
+export function Close() {
   return (
     <svg
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
+      width="44"
+      height="44"
+      viewBox="0 0 44 44"
       fill="none"
-      stroke="#F9F9F9"
       xmlns="http://www.w3.org/2000/svg"
     >
+      <rect width="44" height="44" rx="22" fill="#363636" />
       <path
-        d="M15 10L20 15L15 20"
+        d="M28 16L16 28"
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
+        stroke="#EDEDED"
       />
       <path
-        d="M4 4V11C4 12.0609 4.42143 13.0783 5.17157 13.8284C5.92172 14.5786 6.93913 15 8 15H20"
+        d="M16 16L28 28"
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
+        stroke="#EDEDED"
       />
     </svg>
   );

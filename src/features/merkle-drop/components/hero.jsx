@@ -6,8 +6,8 @@ import { ExternalLinks } from "../../../constants";
 
 export function MerkleDropHero() {
   return (
-    <section className="mx-0 px-8 md:px-28 text-rich-black-lighter md:py-20 pt-12 pb-0 bg-gradient-to-b from-rich-black-lighter to-rich-black">
-      <div className="hero-header items-center flex md:flex-row flex-col">
+    <section className="md:container md:mx-auto md:px-20 text-rich-black-lighter md:py-20 pt-12 pb-0">
+      <div className="hero-header items-center flex md:flex-row flex-col px-4">
         <div className="md:flex-1 sm:w-1/2 w-2/3 self-baseline md:self-center md:ml-0">
           <h1 className="md:text-6xl text-5xl font-semibold leading-tight mb-10 text-off-white">
             Merkle Drop

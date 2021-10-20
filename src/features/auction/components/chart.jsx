@@ -11,8 +11,8 @@ export function Chart(props) {
   }, [props.chartState]);
 
   return (
-    <div className="md:container mx-auto px-1 md:px-9 flex flex-col md:my-32 my-10 w-screen">
-      <div className="flex flex-row justify-end md:-mb-4 mb-4 z-20">
+    <div className="md:container mx-auto px-1 md:px-12 flex flex-col md:my-32 my-10 w-screen md:px-16 px-4">
+      <div className="flex flex-row justify-end md:-mb-4 mb-4 z-20 px-4">
         <ChartKey />
       </div>
       <div>

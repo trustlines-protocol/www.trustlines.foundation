@@ -7,12 +7,12 @@ import validators from "../images/validators.svg";
 
 export function ProtocolValidators() {
   return (
-    <section className="md:py-4 py-6 mx-8">
+    <section className="md:py-6 py-6 md:mx-2">
       <div
-        className="md:container mx-auto px-0 grid md:grid-cols-2 grid-cols-1 md:py-20 py-10"
+        className="md:container mx-auto grid md:grid-cols-2 grid-cols-1 md:py-20 py-10 md:px-12"
         id="validators"
       >
-        <div className="flex-1 flex flex-col justify-center z-20">
+        <div className="flex-1 flex flex-col justify-center z-20 px-4">
           <div className="max-w-sm flex flex-col">
             <h1 className="text-4xl md:text-6xl font-semibold leading-tight text-rich-black-lightest">
               Validators

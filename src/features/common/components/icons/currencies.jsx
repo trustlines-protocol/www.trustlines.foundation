@@ -7,7 +7,7 @@ export function Currencies(props) {
       height="24"
       viewBox="0 0 27 24"
       fill="none"
-      stroke="#6C6C73"
+      stroke="#98989D"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -28,7 +28,7 @@ export function Currencies(props) {
         stroke-linecap="round"
         stroke-linejoin="round"
       />
-      <circle cx="12" cy="11" r="3" fill="#6C6C73" />
+      <circle cx="12" cy="11" r="3" fill="#98989D" />
       <path
         d="M26 9.5V16C26 18.2091 24.2091 20 22 20H5.5"
         stroke-width="2"
