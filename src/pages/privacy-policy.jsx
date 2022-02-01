@@ -7,7 +7,7 @@ import { PrivacyPolicy } from "../features/common/components/privacy-policy";
 export default function PrivacyPolicyPage() {
   return (
     <Layout>
-      <SEO title="Privacy Policy" keywords={["trustlines privacy policy"]} />
+      <SEO title="Privacy Policy - Trustlines Foundation" keywords={["trustlines privacy policy"]} />
       <div className="container mx-auto">
         <PrivacyPolicy />
       </div>

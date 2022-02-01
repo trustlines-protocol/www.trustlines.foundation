@@ -8,7 +8,7 @@ export default function TermsAndConditionsPage() {
   return (
     <Layout>
       <SEO
-        title="Terms and Conditions"
+        title="Terms and Conditions - Trustlines Foundation"
         keywords={["trustlines merkle drop terms and conditions"]}
       />
       <div className="container mx-auto">

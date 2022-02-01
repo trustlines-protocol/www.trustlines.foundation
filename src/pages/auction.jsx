@@ -23,7 +23,7 @@ export default function Auction() {
 
   return (
     <Layout>
-      <SEO title="Auction" keywords={["trustlines auction"]} />
+      <SEO title="Validator Auction - Trustlines Foundation" keywords={["validator auction"]} />
       <AuctionHero />
       <ChartLegend chartState={chartState} />
       <Chart chartState={chartState} />

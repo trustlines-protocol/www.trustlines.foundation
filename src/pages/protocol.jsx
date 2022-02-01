@@ -10,7 +10,7 @@ import { ProtocolValidators } from "../features/protocol/components/validators";
 export default function Protocol() {
   return (
     <Layout>
-      <SEO title="Protocol" keywords={["trustlines protocol"]} />
+      <SEO title="Trustlines Protocol - Trustlines Foundation" keywords={["trustlines protocol"]} />
       <ProtocolHero />
       <ProtocolComponents />
       <ProtocolBlockchain />

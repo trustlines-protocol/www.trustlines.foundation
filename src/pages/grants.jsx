@@ -13,7 +13,7 @@ import { HomeSubscribe } from "../features/home/components/subscribe-dark";
 export default function Grants() {
   return (
     <LayoutDark>
-      <SEO title="Grants" keywords={["trustlines grants"]} />
+      <SEO title="Grants - Trustlines Foundation" keywords={["trustlines grants"]} />
       <GrantsHero />
       <GrantsEligibility />
       <GrantsProjects />
