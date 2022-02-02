@@ -13,7 +13,7 @@ export default function Contact() {
         className="-z-1 bg-contact bg-no-repeat"
         style={{ backgroundPosition: "center -40px", backgroundSize: "150%" }}
       >
-        <SEO title="Contact" keywords={["trustlines contact"]} />
+        <SEO title="Contact - Trustlines Foundation" keywords={["trustlines contact"]} />
         <ContactHero />
         <HomeSlider />
       </div>

@@ -12,7 +12,7 @@ import { HomeSubscribe } from "../features/home/components/subscribe";
 function IndexPage() {
   return (
     <Layout>
-      <SEO title="Home" keywords={["trustlines foundation"]} />
+      <SEO title="Home - Trustlines Foundation" keywords={["trustlines foundation", "trustlines", "mutual credit", "community currency"]} />
       <HomeHero />
       <HomeAbout />
       <HomeRole />

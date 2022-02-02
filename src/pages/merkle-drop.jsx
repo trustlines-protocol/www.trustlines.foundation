@@ -11,7 +11,7 @@ import { MerkleDropFaqs } from "../features/merkle-drop/components/faqs";
 export default function MerkleDrop() {
   return (
     <LayoutDark>
-      <SEO title="Merkle Drop" keywords={["trustlines merkle drop"]} />
+      <SEO title="Merkle Drop - Trustlines Foundation" keywords={["trustlines merkle drop"]} />
       <MerkleDropHero />
       <MerkleDropIntroduction />
       <MerkleDropVideo />
