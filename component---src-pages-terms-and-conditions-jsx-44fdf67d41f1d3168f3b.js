@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunktrustlines_foundation_website=self.webpackChunktrustlines_foundation_website||[]).push([[946],{52618:function(e,t,n){n.r(t),n.d(t,{default:function(){return l}});var r=n(67294),s=n(42253),i=n(15823),u=n(95865);function l(){return r.createElement(s.A,null,r.createElement(i.H,{title:"Terms and Conditions",keywords:["trustlines merkle drop terms and conditions"]}),r.createElement("div",{className:"container mx-auto"},r.createElement(u.Z,null)))}}}]);
-//# sourceMappingURL=component---src-pages-terms-and-conditions-jsx-44fdf67d41f1d3168f3b.js.map
