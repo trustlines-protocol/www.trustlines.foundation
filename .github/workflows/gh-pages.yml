@@ -25,8 +25,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - run: echo ${{ secrets.ENV_PRODUCTION_FILE }} | base64 -d > .env.production
-
       - run: yarn
       - run: yarn build
 
