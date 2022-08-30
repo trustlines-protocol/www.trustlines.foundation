@@ -35,7 +35,7 @@
     "husky": "^3.0.2",
     "livereload": "^0.8.0",
     "mathjs": "^7.0.0",
-    "moment-timezone": "^0.5.26",
+    "moment-timezone": "^0.5.35",
     "node-sass": "^4.13.1",
     "nunjucks-cli": "^1.0.0",
     "prettier": "^1.18.2",
